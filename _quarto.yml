@@ -1,0 +1,36 @@
+project:
+  type: book
+
+book:
+  title: "A Study of Various Activating Mutations and Conditions of the Epithelial Sodium Channel"
+  author: "Richard Posert"
+  date: "7/21/2023"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+  search:
+    location: navbar
+    type: overlay
+
+toc: true
+bibliography: henac.bib
+csl: cell.csl
+
+format:
+  html: 
+    theme:
+      light: flatly
+      dark: darkly
+  pdf:
+    documentclass: scrbook
+    colorlinks: false
+    geometry:
+      - left=2in
+      - right=2in
+      - marginparwidth=1.5in
+      - twoside=true
+
+
+

@@ -1,0 +1,8 @@
+.DS_Store
+maps/
+*.cxs
+old-quarto
+figures/intersubunit-glyc/2d-classes/images
+figures/intersubunit-glyc/2d-classes/plots
+*.mrc
+*.cs
