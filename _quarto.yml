@@ -17,7 +17,6 @@ book:
 
 toc: true
 bibliography: henac.bib
-csl: cell.csl
 
 format:
   html: 
