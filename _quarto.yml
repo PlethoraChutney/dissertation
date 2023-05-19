@@ -7,9 +7,10 @@ book:
   date: "7/21/2023"
   chapters:
     - index.qmd
-    - intro.qmd
-    - summary.qmd
-    - references.qmd
+    - part: parts/introduction.qmd
+      chapters:
+       - parts/introduction/intro_enac-in-the-body.qmd
+    - parts/references.qmd
   search:
     location: navbar
     type: overlay
