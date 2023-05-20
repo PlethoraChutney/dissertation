@@ -9,5 +9,23 @@ Too low, and vital organs do not receive sufficient oxygen and nutrients to func
 It is not surprising, then, that the human body has evolved several mechanisms for responding to changes in blood pressure, each with their own timescale [@guyton1991].
 ENaC is the essential mechanism of the longest-term control, kidney excretion.
 
-When the kidney is not receiving enough salt (which could be a result of a low-salt diet or reduced blood pressure), it initiates a cascade which ends with the mineralocorticoid hormone aldosterone augmenting the activity of ENaC in the distal nephron.
-Apical sodium permeability is increased both by synthesis of new channels as well as trafficking of an existing pool of channels to the cell surface [@asher1996; @frindt09].[Of note: Asher and colleagues report an aldosterone-mediated increase in expression of the &beta; and &gamma;, but not &alpha;, subunits. A trend of subunit-specific regulation is widely observed in the literature.]{.aside}
+When the kidney is not receiving enough salt, it initiates a cascade which ends with the mineralocorticoid hormone aldosterone augmenting the activity of ENaC in the distal nephron.
+Apical sodium permeability is increased both by synthesis of new channels as well as trafficking of an existing pool of channels to the cell surface [@asher1996; @frindt09].[Of note: Asher and colleagues report an aldosterone mediated increase in expression of the &beta; and &gamma;, but not &alpha;, subunits. A trend of subunit-specific regulation is widely observed in the literature, but poorly understood.]{.aside}
+Despite its expression relatively late in the nephron, ENaC is the rate-limiting step of sodium reabsorption in the kidney.
+<!-- TODO: need citation here -->
+Sodium in the principal cells is transported across the basolateral membrane by the Na^+^/K^+^ ATPase, and therefore induces retention of extra water to maintain the tightly-controlled plasma sodium level.
+Thus, ENaC controls three essential functions of kidney filtration: first, the amount of sodium reabsorbed by the kidney; second, blood volume (and therefore pressure); third, the amount of potassium passed from the plasma into the urine.
+
+A variety of ENaC mutations have dramatic effects on patients' blood pressure.
+One of the earliest described is Liddle syndrome [@liddle63].
+Liddle syndrome (also called pseudoaldosteronism) results from an autosomal dominant gain-of-function mutation in ENaC.
+Severe hypertension, hypokalemia, and low renin and aldosterone are hallmarks of the disease.
+It is a rare disorder, with only 72 families described as of 2018 [@tetti2018].
+However, after excluding patients with other clear causes (primary aldosteronism, kidney or heart diseases, and obstructive sleep apnea), approximately one in one hundred hypertensive patients had Liddle syndrome, indicating that the prevalence may be higher than is currently thought [@wang2015; @liu2018].
+All but one of the described cases involve mutation of the &beta; or &gamma; subunits [@tetti2018; @liu2018].
+
+A majority of the mutations in the &beta; and &gamma; subunits disrupt or remove entirely a proline-rich PY motif at the C-terminus of those channels [@yang2014].
+This PY motif is the binding site for the E3 ubiquitin ligase NEDD4-2 (see section <!-- TODO: crossref nedd4-2 section -->).
+Study of ENaC surface dwell time is complicated by a reserve pool maintained by the cells to be cycled up to the membrane, but there is a consensus that ENaC is recycled quickly; surface half life estimates range from fifteen minutes to three hours, with the low end having more support [@butterworth2009].
+ENaC lacking the PY motif cannot be pulled back in from the membrane, thus increasing sodium permeability by increasing *N* rather than the conductivity or P~O~ of the channels [@schild1995; @abriel1999; @lu2007].[It is worth noting here that the &alpha; subunit does have a PY motif, but no Liddle syndrome mutation of the &alpha; PY has been described. This is discussed further in <!-- TODO: crossref nedd4-2 section -->]{.aside}
+The remaining minority of described Liddle syndrome mutations (including the sole ENaC~&alpha;~ mutation) which do not affect PY-motif binding instead directly augment channel P~O~ [@tetti2018].

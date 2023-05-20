@@ -15,11 +15,14 @@ book:
     location: navbar
     type: overlay
 
+csl: nature.csl
 toc: true
 bibliography: henac.bib
+format-links: true
 
 format:
   html: 
+    mainfont: Charter
     theme:
       light: flatly
       dark: darkly
@@ -31,6 +34,17 @@ format:
       - right=2in
       - marginparwidth=1.5in
       - twoside=true
+    include-in-header:
+      - text: |
+          \usepackage{fontspec}
+          \newfontfamily\defaultfont{Charter}
+          \newfontfamily\greekfont{Fira Sans}
+
+          \usepackage{ucharclasses}
+          \setTransitionsForLatin{\defaultfont}{}
+          \setTransitionsForGreek{\greekfont}{\defaultfont}
+  docx:
+    reference-doc: dissertation-reference.docx
 
 
 
