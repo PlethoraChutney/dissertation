@@ -6,7 +6,7 @@
 
 Blood pressure must be maintained within a narrow window of acceptable values.
 Too low, and vital organs do not receive sufficient oxygen and nutrients to function, but blood vessels sustain damage when pressure is too high.
-It is not surprising, then, that the human body has evolved several mechanisms for responding to changes in blood pressure, each with their own timescale [@guyton91].
+It is not surprising, then, that the human body has evolved several mechanisms for responding to changes in blood pressure, each with their own timescale [@guyton1991].
 ENaC is the essential mechanism of the longest-term control, kidney excretion.
 
 When the kidney is not receiving enough salt (which could be a result of a low-salt diet or reduced blood pressure), it initiates a cascade which ends with the mineralocorticoid hormone aldosterone augmenting the activity of ENaC in the distal nephron.
