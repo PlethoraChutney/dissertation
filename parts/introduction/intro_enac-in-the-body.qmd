@@ -1,7 +1,5 @@
 # ENaC in the Body
 
-
-
 ## ENaC in the kidney
 
 Blood pressure must be maintained within a narrow window of acceptable values.
@@ -27,5 +25,5 @@ All but one of the described cases involve mutation of the &beta; or &gamma; sub
 A majority of the mutations in the &beta; and &gamma; subunits disrupt or remove entirely a proline-rich PY motif at the C-terminus of those channels [@yang2014].
 This PY motif is the binding site for the E3 ubiquitin ligase NEDD4-2 (see section <!-- TODO: crossref nedd4-2 section -->).
 Study of ENaC surface dwell time is complicated by a reserve pool maintained by the cells to be cycled up to the membrane, but there is a consensus that ENaC is recycled quickly; surface half life estimates range from fifteen minutes to three hours, with the low end having more support [@butterworth2009].
-ENaC lacking the PY motif cannot be pulled back in from the membrane, thus increasing sodium permeability by increasing *N* rather than the conductivity or P~O~ of the channels [@schild1995; @abriel1999; @lu2007].[It is worth noting here that the &alpha; subunit does have a PY motif, but no Liddle syndrome mutation of the &alpha; PY has been described. This is discussed further in <!-- TODO: crossref nedd4-2 section -->]{.aside}
+ENaC lacking the PY motif cannot be pulled back in from the membrane, thus increasing sodium permeability by increasing *N* rather than the conductivity or P~O~ of the channels [@schild1995; @abriel1999; @lu2007].[The &alpha; subunit does have a PY motif, but no Liddle syndrome mutation of the &alpha; PY has been described. This is discussed further in <!-- TODO: crossref nedd4-2 section -->]{.aside}
 The remaining minority of described Liddle syndrome mutations (including the sole ENaC~&alpha;~ mutation) which do not affect PY-motif binding instead directly augment channel P~O~ [@tetti2018].

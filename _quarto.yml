@@ -2,8 +2,11 @@ project:
   type: book
 
 book:
-  title: "A Study of Various Activating Mutations and Conditions of the Epithelial Sodium Channel"
-  author: "Richard Posert"
+  title: ENaC isn't ASIC
+  subtitle: "A Study of Various Activating Mutations and Conditions of the Epithelial Sodium Channel"
+  author:
+    - name: "Richard Posert"
+      affiliation: Baconguis Lab, Vollum Institute, OHSU
   date: "7/21/2023"
   chapters:
     - index.qmd
@@ -11,9 +14,15 @@ book:
       chapters:
        - parts/introduction/intro_enac-in-the-body.qmd
     - parts/references.qmd
+  navbar: 
+    logo: figures/other/domain-cartoon_ECD.png
   search:
     location: navbar
     type: overlay
+  downloads:
+    - pdf
+    - docx
+  output-file: posert-dissertation
 
 csl: nature.csl
 toc: true
@@ -45,6 +54,3 @@ format:
           \setTransitionsForGreek{\greekfont}{\defaultfont}
   docx:
     reference-doc: dissertation-reference.docx
-
-
-
