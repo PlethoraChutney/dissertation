@@ -17,7 +17,7 @@ Thus, ENaC controls three essential functions of kidney filtration: first, the a
 A variety of ENaC mutations have dramatic effects on patients' blood pressure.
 One of the earliest described is Liddle syndrome [@liddle63].
 Liddle syndrome (also called pseudoaldosteronism) results from an autosomal dominant gain-of-function mutation in ENaC.
-Severe hypertension, hypokalemia, and low renin and aldosterone are hallmarks of the disease.
+Severe hypertension, low potassium, high blood pH, low renin activity, and low aldosterone are hallmarks of the disease [@hanukoglu16].
 It is a rare disorder, with only 72 families described as of 2018 [@tetti2018].
 However, after excluding patients with other clear causes (primary aldosteronism, kidney or heart diseases, and obstructive sleep apnea), approximately one in one hundred hypertensive patients had Liddle syndrome, indicating that the prevalence may be higher than is currently thought [@wang2015; @liu2018].
 All but one of the described cases involve mutation of the &beta; or &gamma; subunits [@tetti2018; @liu2018].
@@ -25,5 +25,15 @@ All but one of the described cases involve mutation of the &beta; or &gamma; sub
 A majority of the mutations in the &beta; and &gamma; subunits disrupt or remove entirely a proline-rich PY motif at the C-terminus of those channels [@yang2014].
 This PY motif is the binding site for the E3 ubiquitin ligase NEDD4-2 (see section <!-- TODO: crossref nedd4-2 section -->).
 Study of ENaC surface dwell time is complicated by a reserve pool maintained by the cells to be cycled up to the membrane, but there is a consensus that ENaC is recycled quickly; surface half life estimates range from fifteen minutes to three hours, with the low end having more support [@butterworth2009].
-ENaC lacking the PY motif cannot be pulled back in from the membrane, thus increasing sodium permeability by increasing *N* rather than the conductivity or P~O~ of the channels [@schild1995; @abriel1999; @lu2007].[The &alpha; subunit does have a PY motif, but no Liddle syndrome mutation of the &alpha; PY has been described. This is discussed further in <!-- TODO: crossref nedd4-2 section -->]{.aside}
+ENaC lacking the PY motif cannot be pulled back in from the membrane, thus increasing sodium permeability by increasing *N* rather than the conductivity or P~O~ of the channels [@schild1995; @abriel1999; @lu2007].The &alpha; subunit does have a PY motif, but no Liddle syndrome mutation of the &alpha; PY has been described. This is discussed further in <!-- TODO: crossref nedd4-2 section -->]{.aside}
 The remaining minority of described Liddle syndrome mutations (including the sole ENaC~&alpha;~ mutation) which do not affect PY-motif binding instead directly augment channel P~O~ [@tetti2018].
+Liddle syndrome is typically treated with small molecules that block ENaC (amiloride or triamterene) and a low-salt diet.
+
+Loss-of-function mutations also cause severe phenotypes.
+Type 1 pseudohypoaldosteronism (PHA1) was first described in a severely dehydrated infant who did not respond to aldosterone treatment [@cheek1958].
+There are two forms of PHA1: renal PHA1, which is milder and involves a mutation in the mineralocorticoid receptor; and systemic PHA1, which involves a mutation in a gene for ENaC &alpha;, &beta;, or &gamma; [@geller1998; @chang1996].
+Patients with systemic PHA1 are unable to retain any salt, and so become severely dehydrated and have high potassium, low sodium, and increased acidity in their blood [@hanukoglu16].
+This makes the disease particularly deadly to newborns, and requires life-long supplementation with sodium and the potassium elimination drug Kayexalate [@edelheit2005].
+Contrary to the pattern observed for Liddle Syndrome, most systemic PHA1 mutations occur in the gene encoding ENaC~&alpha;~ [@edelheit2005].[Although the genes for the &beta; and &gamma; subunits are both on chromosome 16 and the gene for ENaC~&alpha;~ is on chromosome 12, no difference in the rates of mutation for the affected genes are seen between patients and control groups [@edelheit2005].]{.aside}
+The majority of described PHA1 mutations are nonsense mutations, although three missense mutations have been described [@chang1996; @schaedel1999; @edelheit2005].
+One of these mutations occurs in the palm domain, one in the transmembrane domain, and one likely in the intracellular domain.
