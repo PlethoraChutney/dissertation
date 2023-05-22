@@ -31,6 +31,10 @@ format-links: true
 
 format:
   html: 
+    filters:
+      - lightbox
+    lightbox:
+      match: auto
     mainfont: Charter
     theme:
       light: flatly
