@@ -14,6 +14,8 @@ book:
       chapters:
        - parts/introduction/intro_enac-in-the-body.qmd
     - parts/references.qmd
+  appendices: 
+    - parts/mat-meth.qmd
   navbar: 
     logo: figures/other/domain-cartoon_ECD.png
   search:

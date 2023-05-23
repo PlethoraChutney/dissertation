@@ -1,0 +1,323 @@
+
+# Materials and Methods
+
+## ENaC Expression
+
+### Human ENaC
+
+Human embryonic kidney cells (HEK293T/17) were grown in suspension in Freestyle medium with 2% FBS at a density of 2 &ndash; 4$\times 10^6$ cells/mL.
+BacMam virus carrying the genes for the appropriate ENaC subunits were added to the flasks at an MOI of 1 and incubated at 37&nbsp;&deg;C for 8 hours, after which 1 $\mu$M amiloride was added and the flasks were moved to 30&nbsp;&deg;C.
+After a total incubation time of 72 hours, cultures were centrifuged at 4,790 xg for 20 minutes to collect pellets.
+The pellets were washed with **TBS** (20 mM Tris pH 8.0, 200 mM NaCl) and centrifuged again before snap-freezing in liquid nitrogen.
+Cell pellets were stored at -80&nbsp;&deg;C until use.
+
+### Mouse ENaC
+
+Sf9 cells were grown in suspension in Sf900-II serum-free media at 27&nbsp;&deg;C.
+Cells were infected at log phase with virus encoding full-length mouse ENaC~&alpha;~, ENaC~&beta;~, and ENaC~&gamma;~.
+After 5&ndash;6 hours of growth, 1&nbsp;&mu;M amiloride was added to the culture.
+Cells were harvested 24&nbsp;hours later, washed with TBS, flash frozen in liquid nitrogen, and stored at -80&nbsp;&deg;C until used.
+
+## ENaC Purification
+
+### Human ENaC
+
+Throughout this protocol, quantities of resin and buffer are given "per flask".
+ I grow cell culture in quantities of 800 mL culture per flask, meaning that, e.g., pelleted cells from 1.6 L of cells require twice the quoted quantities of buffer and resin.
+In datasets with NaCl listed as the salt, solubilization buffer, wash buffers, elution buffer, and SEC buffer used NaCl in place of KCl.
+
+To purify ENaC, frozen whole-cell pellets were removed from the -80&nbsp;&deg;C freezer and thawed in a 37&nbsp;&deg;C water bath.
+While the pellets were thawing, 50 mL **Solubilization Buffer** (20 mM Tris pH 7.5, 200 mM KCl, 1 tablet per 100 mL Pierce EDTA-free protease inhibitor tablets, 25 U/mL ThermoFisher universal nuclease, 2.5 mM ATP, 5 mM MgCl~2~, 10 mg/mL digitonin, and 10 $\mu$M amiloride) was prepared per flask.
+The solubilization buffer was prepared fresh at 2X concentration (i.e., half the final volume).
+Once pellets were fully thawed, they were added to the solubilization buffer and the mixture was brought to the final volume with DI water and poured into a screw-cap bottle.
+The solubilization mixture was left at 8&nbsp;&deg;C for 1.5 hours.
+
+After solubilization was complete, the crude lysate was decanted into ultracentrifuge tubes and centrifuged at 100,000 xg for 45 minutes at 4&nbsp;&deg;C.
+<!-- TODO: where did I get the GNB gene? -->
+Meanwhile, in-house-made GFP-nanobody CNBr resin (0.8 mL per flask) was loaded into an XK 16 column and washed with 2 CV of **TBK** (20 mM Tris pH 7.5, 200 mM KCl) and the following buffers were prepared in the listed quantities:
+**wash A** (10 column volumes [CV]): 20 mM Tris pH 7.5, 200 mM KCl, 0.7 mg/mL digitonin, 2 mM MgCl~2~, 2 mM ATP, 2 nM phenamil;
+**wash B** (10 CV): 20 mM Tris pH 7.5, 200 mM KCl, 0.7 mg/mL digitonin, 5 mM CaCl~2~, 2 nM phenamil;
+**elution buffer** (5 CV): wash B with 33 $\mu$g/mL thrombin.
+The column was washed with 2 CV of wash A, then clarified lysate was bound to the column under 4 mL/min flow.
+A small aliquot of pre-column and post-column clarified lysate was reserved to assess binding efficiency by GFP FSEC[@kawate06].
+If binding efficiency fell below 90% of the initial efficiency the resin was discarded.
+Otherwise, it was regenerated with pulsed pH cleaning.
+The GFP-nanobody column was washed with 5 CV wash A and B.
+
+To elute ENaC from the GFP nanobody resin, the column was washed 3 times with 1.5 CV elution buffer and once with TBK + 0.7 mg/mL digitonin.
+As each wash was flowed on, the eluant was collected in 1 mL or 0.25 CV fractions, whichever was smaller.
+This results in four sets of fractions: the first comprises largely wash B with little protein (from the initial flow-on of elution buffer), and the remaining three elution buffer.
+All fractions were run on an SDS-PAGE gel, and fractions with bands at the expected molecular weight for ENaC were pooled and concentrated to a final volume of 0.5 mL.
+If the preparation was acid-shocked, the protein was desalted into **acid shock** buffer at this stage (20 mM Tris pH 6, 200 mM KCl, 0.7 mg/mL digitonin, 2 nM phenamil).
+If the preparation required Fabs, they were added in two-fold excess of protein concentration (as determined by nanodrop A~280~) at this stage.
+A final concentration of 1 mM C8 PIP~2~ was added to the CKO/DEG monofab samples just before grid preparation.
+
+The concentrated eluant was loaded onto a Superose 6 Increase 10/300 column (Cytiva) equilibrated in **SEC buffer** (20 mM Tris pH 7.5, 200 mM KCl, 0.7 mg/mL digitonin, 2 nM phenamil) for further purification via SEC.
+SEC was typically run overnight, meaning fractions remained at 4&nbsp;&deg;C until the next morning.
+Fractions from the SEC peak were collected and assayed for purity and monodispersity by SDS-PAGE and tryptophan FSEC.
+Monodisperse peaks were pooled and used the same day.
+Thus, total time between cell pellet thaw and protein use was typically less than 36 hours.
+
+### Mouse ENaC
+
+Frozen cell pellet was thawed on ice.
+Membranes were prepared by sonication and centrifugation, then re-frozen until purification.
+For each gram of membranes, 15&nbsp;mL of **solubilization buffer** (4&nbsp;mM GDN, 20&nbsp;mM HEPES pH&nbsp;7.6, 150&nbsp;mM NaCl, 2&nbsp;mM ATP, 2&nbsp;mM MgSO~4~, 1&nbsp;mM TCEP, 100&nbsp;&mu;M amiloride, 1&nbsp;tablet per 100&nbsp;mL Pierce EDTA-free protease inhibitor tablets) was added.
+Membrane pellet was mixed thoroughly and homogenized with a Dounce homogenizer.
+Cell pellet was stirred for 1&nbsp; hour at 4&nbsp;&deg;C.
+Solubilized membranes were centrifuged at 100,000&nbsp;xg for 45&nbsp;minutes at 4&nbsp;&deg;C.
+
+Next, 300&nbsp;&mu;L GFP nanobody CNBr resin per gram of membrane was loaded into a gravity column and washed with 10&nbsp;CV **HBS** (20&nbsp;mM HEPES pH&nbsp;7.6, 150&nbsp;mM NaCl) and 3&nbsp;CV **wash A** (0.1&nbsp;mg/mL GDN, 20&nbsp;mM HEPES pH 7.6, 150&nbsp;mM NaCl, 1&nbsp;mM TCEP, 100&nbsp;nM phenamil).
+Clarified lysate was flowed over this column under gravity.
+The column was washed with 6 CV each of wash A, **wash B** (wash A plus 2&nbsp;mM ATP, 2&nbsp;mM MgSO~4~), **wash C** (wash A plus 25 U/mL ThermoFisher Universal Nuclease), and **elution buffer** (wash A plus 5&nbsp;mM CaCl~2~).
+ENaC was eluted by flowing 1&nbsp;CV of elution buffer plus 30&nbsp;&mu;g/mL thrombin onto the column and collecting the supernatant.
+After an hour, this process was repeated.
+These elution steps were repeated for a total of four elutions of 1&nbsp;CV each.
+
+The first three elutions were pooled and concentrated to 0.5&nbsp;mL.
+Fab was added at a one-to-one ratio with nominal protein concentration by nanodrop.
+Sample was incubated for 10&nbsp;minutes at room temperature, then centrifuged at 100,000&nbsp;xg for 20&nbsp;minutes at 4&nbsp;&deg;C.
+The clarified sample was loaded onto a Superose 6 Increase 10/300 column (Cytiva) equilibrated in fresh wash A buffer.
+Fractions were assessed for purity via SDS-PAGE and FSEC before proceeding to grid preparation or other uses.
+
+## ENaC nanodisc preparation
+
+To prepare nanodiscs, 15 mg of a chloroform stock of POPC (Avanti) was dried down under an argon stream.
+The lipid film was left overnight in a vacuum desiccator to remove all chloroform.
+The lipids were then resuspended in 350 $\mu$L **reconstitution buffer** (20 mM HEPES pH 7.4, 100 mM KCl, 1 mM EDTA) and sonicated until the solution was milky in appearance and no lipids remained adhered to the sides of the tube, typically 5--10 minutes.
+To this solution, 150 $\mu$L of 350 $\mu$M DM in reconstitution buffer was added.
+The resulting 500 $\mu$L suspension was sonicated in 5 minute bursts until completely clear.
+To this suspension, 1 mL TBS was added to prepare a final lipid concentration of 10 mg/mL.
+
+Lipids, ENaC, and MSP2N2 were mixed at a final MSP:POPC:ENaC molar ratio of 1:31:0.04.
+The final concentration of MSP2N2 was kept at 100 $\mu$M by further concentrating ENaC or adding lipid reconstitution buffer with 35 mM DM as necessary.
+This reconstitution mixture was incubated at room temperature for 1 hour.
+During this incubation, biobeads were washed once in 100% methanol, three times in water, and once in TBS.
+After 90 minutes, 215 mg washed biobeads per 1 mL reconstitution mixture were added.
+After 1 hour, the reconstitution mixture was moved to a fresh aliquot of equilibrated biobeads and left nutating overnight at room temperature, approximately 16 hours.
+The reconstitution mixture was pipetted off the biobeads, filtered with a 0.2 $\mu$m filter, and purified via SEC using a Superose 6 Increase 10/300 column in TBS.
+Typical yields were extremely low, between 5--10% of input ENaC.
+The protein assembly was stable with minimal aggregation at 4&nbsp;&deg;C (assessed by cryoEM and SEC) for at least two weeks.
+
+## Western Blots
+
+SDS-PAGE gels were blotted onto nitrocellulose membranes.
+Membranes were blocked in 50&nbsp;mg/mL milk in TBST for 1&nbsp;hour at room temperature.
+<!-- TODO: get lot number for gamma antibody -->
+Primary antibody (**ENaC~&alpha;~**: Santa Cruz Biotechnology &alpha;ENaC (H-95) sc-21012 lot no. L2812; **ENaC~&gamma;~**: abcam Anti-epithelial Sodium Channel gamma ab133430) was added to this same blocking buffer at 10&nbsp;&mu;g/blot and incubated overnight at 4&nbsp;&deg;C.
+Membranes were washed 3&nbsp;times with TBST for 5&nbsp;minutes before addition of secondary antibody (LI-COR IRDye 800 CW Goat anti-Mouse 925-32210 lot no. D21115-21) in TBST.
+Membranes were incubated at room temperature with secondary for 1&nbsp;hour, washed 3&nbsp;times with TBST and once with TBS, then imaged (LI-COR Odyssey DLx).
+
+## cryoEM Grid Preparation
+
+Grid preparation different slightly for each dataset, but followed the same general procedure (@tbl-model-building).
+Purified GFP-cleaved ENaC was concentrated for grid preparation just before blotting and freezing.
+All grids were glow discharged at 15 mA for 60 seconds on a Pelco easiGlow before blotting.
+Grids were frozen using a Vitrobot Mark III (Thermo Fisher).
+Vitrobot parameters were set as follows: blot time 2, wait time 0, drain time 0, blot force 1, humidity 100%, temperature 12 &deg;C.
+"Double-blotted" grids had a protein droplet loaded, manually blotted with torn Whatman filter paper, and a fresh droplet loaded onto the grid before Vitrobot blotting (with Vitrobot filter paper rings) and freezing.
+This double-blotting process typically took approximately five seconds from first drop to plunge-freeze.
+In all cases, each protein droplet was 3 $\mu$L.
+
+Most datasets were collected with at least one of our two pseudosymmetry-breaking Fabs, developed previously[@noreng18].
+ I have switched from using both Fabs to only using one, because the &beta;-binding Fab is more flexible than the &alpha;-binding Fab, and this flexibility reduces overall alignment property.
+Additionally, one of the two human CKO datasets was first incorporated into nanodiscs and solved without any Fabs.
+As expected based on our previous studies of electrophysiology of the Fab-bound channels, our ECD models with and without Fab are largely indistinguishable (Supplemental @fig-fab-compare B,C)[@noreng20].
+Neither fab significantly distorts the surrounding ECD environment when bound.
+The &alpha;-binding Fab induces a slight shift in a region near the &beta;-ball, while the &beta;-binding Fab induces no detectable change at all.
+
+## cryoEM Data Collection
+Datasets were collected using SerialEM by microscopy core staff at the facilities used (@tbl-model-building)[@mastronarde2003].
+In all cases, multi-shot multi-hole regimes were used to maximize the number of movies recorded.
+Number of shots per hole and maximum beam shift were a function of ice quality and grid type, but typically a 3x3 pattern of holes was imaged 2--4 times per hole.
+
+## cryoEM Image Processing
+
+Each dataset was processed slightly differently, but following the same general pipeline.
+First, movies were imported into cryoSPARC for pre-processing.
+Default parameters were used for both motion correction and CTF estimation.
+Next, particles were picked using the blob picker in cryoSPARC.
+Adjustments were made to the minimum and maximum radii to account for the number of Fabs present in each sample.
+Blob picks for several micrographs were manually inspected and adjusted.
+First, the NCC parameter was adjusted until few contaminant and carbon-edge picks remained.
+Next, in a low-defocus micrograph, the low power threshold was adjusted to remove empty ice picks.
+Finally, in a high-defocus micrograph, the high power threshold was adjusted to remove all carbon-edge and contaminant picks.
+These initial blob picks were cleaned by 2D classification, and the resulting particle sets used to generate templates for template picking.
+Template picked thresholds were adjusted as for blob picked particles.
+
+The template picked particles were repeatedly 3D classified using heterogeneous refinement in cryoSPARC, providing one "good" class and a number of "junk" classes (typically noisy or bad *ab initio* models of the blob picked particles) until all particles produced reasonable ENaC classes.
+The final particle set was never 2D classified, since I find that 2D classification reduces the frequency of rare particle views.
+From this point, processing proceeded *ad hoc* to produce the final maps (Supplemental Image Processing).
+
+During image processing, I began to suspect that the pixel sizes provided by S^2^C^2^ are likely miscalibrated.
+First, other users reported pixel size calibration issues with S^2^C^2^ microscopes around the time these datasets were collected (Patrick Mitchell, S^2^C^2^ Director of Operations, personal communication).
+Second, scaling the CKO/DEG difab pixel size from the nominally-correct 0.43 to 0.414  (a change of approximately 3.6%) changes the map correlation value from 0.72 to 0.93 (Supplemental @fig-pixel-size-calibration A).
+Finally, a comparison of the correlation between seven recently-collected ENaC maps shows that S^2^C^2^ is an outlier, with unscaled maps generated from data collected at PNCC and Janelia Farm correlating better with themselves and each other than with those collected at S^2^C^2^ regardless of construct (Supplemental @fig-pixel-size-calibration B).
+ I therefore decided to scale both S^2^C^2^ maps to correlate best with the same condition and construct recorded at PNCC after processing was complete.
+ I present the models built into the scaled maps in this work.
+
+## Model Building
+
+The starting model for mouse ENaC was generated using a local installation of AlphaFold[@jumper2021].
+The amino acid sequences for mENaC &alpha; (Uniprot ID Q61180), &beta; (Uniprot ID Q9WU38), and &gamma; (Uniprot ID Q9WU39) were joined using 10xGS linkers between &alpha; and &beta;, and &beta; and &gamma;.
+This meta-sequence was then entered as the AlphaFold target.
+The linkers and large, unstructured, low-confidence loops were removed from the model before proceeding.
+
+Before docking into experimental maps, starting models had Fabs and waters deleted to ease early model building steps.
+Initial models were rigid-body fitted into the experimental maps.
+Any loops in poor or missing regions of the map were deleted.
+The whole models were simulated with distance restraints using ISOLDE and ChimeraX[@croll2018; @pettersen2021].
+Once models were roughly fit into the potential, strained distance restraints were released.
+Once the backbone appeared to fit reasonably well into the map, all distance restraints were released.
+Simulating one chain at a time, a pass over every residue in ENaC was performed, focusing on Ramachandran values and rotamers.
+Once all chains had been optimized in this manner, glycans were added using Coot's carbohydrate module[@emsley2010].
+Fabs were rigid-body fitted and simulated similarly to the initial models once these steps were complete.
+
+Models were refined using Phenix real-space refinement[@liebschner2019].
+In some cases, the TMD map was used as-is for refinement.
+In other cases, the ECD and TMD map were combined using Phenix's "Combine Focused Maps" job and the resulting map was used for refinement.
+In these cases, the lowest GSFSC resolution was provided to Phenix.
+Parameters were left as default, except rotamers were only refined when they had both poor map quality *and* were outliers (rather than *or*).
+ I changed this setting because rotamer and clash statistics were significantly worse if it was left as the default.
+Model quality was assessed using MolProbity within Phenix, Q-scores calculated in ChimeraX, and 3DFSC as implemented in cryoSPARC (@tbl-model-building and Supplemental Model Validation)[@williams2018; @pintilie2020; @aiyer2021].
+
+## Constructs
+
+```{r}
+#| echo: false
+#| warning: false
+#| error: false
+#| results: asis
+#| label: tbl-model-building
+#| tbl-cap: Image processing and model building statistics.
+
+library(tidyverse)
+library(gt)
+library(gtExtras)
+
+particles <- read_csv('../figures/table-one/model-building.csv', na = '')
+models <- read_csv('../figures/table-one/processed_tables.csv', col_types = 'cccccccc')
+data <- bind_rows(particles, models)
+
+# TODO: update Q-scores
+data |> 
+  add_row(
+    Section = 'Model Building',
+    Parameter = 'Q-score',
+    Digitonin = '0.80',
+    Difab = '0.71',
+    Monofab = '0.71',
+    Nanodisc = "0.71",
+    Uncleaved = "0.68",
+    Trypsin = "0.72"
+  ) |>
+  janitor::remove_empty(
+    which = c('rows', 'cols')
+  ) |>
+  gt(
+    rowname_col = 'Parameter',
+    groupname_col = 'Section'
+  ) |> 
+  tab_spanner(
+    label = 'human CKO',
+    columns = c('Digitonin', 'Nanodisc')
+  ) |> 
+  tab_spanner(
+    label = 'human CKO/DEG',
+    columns = c('Difab', 'Monofab')
+  ) |> 
+  tab_spanner(
+    label = 'mouse',
+    columns = c('Uncleaved', 'Trypsin')
+  ) |> 
+  fmt_markdown(columns = c('Parameter')) |>
+  # unicode 2014 is an em dash
+  sub_missing(missing_text = '\u2014') |> 
+  tab_style_body(
+    cell_borders(sides = c('right'), weight = 2, color = '#CCCCCC'),
+    fn = (\(x) TRUE),
+    extents = c('stub')
+  ) |> 
+  cols_align(align = 'center') |>
+  tab_footnote(
+    footnote = 'All grids are Quantifoil grids with gold mesh',
+    locations = cells_stub(rows = 'Grid Type')
+  ) |>
+  tab_footnote(
+    footnote = 'Electron flux is 1 e\u207b/\u00C5\u00b2/frame',
+    locations = cells_stub(rows = 'Frames')
+  ) |>
+  tab_footnote(
+    footnote = 'All datsets collected in super-resolution mode and Fourier-cropped back to this physical size.',
+    locations = cells_stub(rows = 'Pixel Size (&Aring;/pix)')
+  ) |>
+  tab_footnote(
+    footnote = 'Resolutions here are nominal resolutions given by the microscopy facility. I have resion to believe the S\u00b2C\u00b2 pixel size is incorrect, and built the models into a corrected pixel size (see Materials and Methods).',
+    locations = cells_stub(rows = 'Pixel Size (&Aring;/pix)')
+  ) |>
+  tab_footnote(
+    footnote = 'These values were used for processing and are listed to the precision given by the microscopy facility at the time of collection.',
+    locations = cells_stub(rows = 'Pixel Size (&Aring;/pix)')
+  ) |>
+  tab_footnote(
+    footnote = 'A dash indicates that a focused map for this region was not used in model building',
+    locations = cells_stub(rows = c(
+      'ECD resolution (&Aring;)',
+      'Whole protein resolution (&Aring;)',
+      'ECD sharpening factor',
+      'Whole protein sharpening factor'
+    ))
+  ) |>
+  tab_footnote(
+    footnote = 'GSFSC resolution',
+    locations = cells_stub(rows = c(
+      'ECD resolution (&Aring;)',
+      'Whole protein resolution (&Aring;)'
+    ))
+  ) |>
+  tab_footnote(
+    footnote = 'NAG, MAN, and BMA. UNK is counted as a residue instead.',
+    locations = cells_stub(rows = 'No. ligands')
+  ) |>
+  tab_footnote(
+    footnote = 'Residues modeled as UNK excluded from Q-score',
+    locations = cells_stub(rows = 'Q-score')
+  ) |>
+  tab_options(
+    table.font.size = '14px'
+  )
+```
+
+
+The four constructs I present here can broadly be split into those I expect to be open (CKO/DEG and mouse trypsin) and those I expect to be closed (CKO, mouse) (@tbl-model-building).
+All human channels in this work have mutant furin sites (&alpha;R178A R204A and &gamma;R138A).
+Additionally, all human channels are "cysteine knock-out" (CKO) mutants, with the following mutations: &alpha;C63A, &beta;C30A, and &gamma;C33A C41A.
+Some (but not all) cysteines in the ENaC TMD are known to be palmitoylated[@mukherjee14; @mueller10; @mueller12].
+CKO channels express at approximately eight times the yield of wild-type-like channels, with similar electrophysiological traits (Supplemental @fig-ephys).
+Mouse channels presented in this work have no mutations from the consensus gene.
+ I expect mouse and CKO channels to be closed.
+
+DEG channels have two mutations: &beta;S520K and &alpha;T240W.
+The former mutation at what has been named the "DEG site" holds the channel in an open state regardless of proteolytic cleavage state[@snyder2000].
+The DEG site sits in the TMD just above the predicted amiloride-binding site.
+The latter mutation in &alpha; lies in the GRIP domain and also increases the P~O~ of uncleaved ENaC[@kashlan2010].
+
+## Whole cell patch clamp
+
+Human embryonic kidney cells (HEK293S/17) were grown in suspension in Freestyle medium with 10% FBS to a density of 1$\times 10^6$ cells/mL, at which point they were infected with virus carrying the appropriate ENaC genes.
+Cells were incubated at 37&nbsp;&deg;C overnight with 1 $\mu$M amiloride.
+Cells were then pipetted over a dish of DMEM plus 10% FBS with several small coverslips and allowed to adhere at 37&nbsp;&deg;C while the electrophysiology rig was prepared, approximately 2 hours.
+Pipettes were pulled to 2--3 M$\Omega$ resistance and filled with filtered **internal solution** (150 mM KCl, 2 mM MgCl~2~, 5 mM EGTA, 10 mM HEPES pH 7.4).
+Working one coverslip at a time, cells were moved from DMEM at 37&nbsp;&deg;C to a dish on the rig (at room temperature) containing **K^+^ external solution** (150 mM KCl, 2 mM MgCl~2~, 2 mM CaCl~2~, and 10 mM HEPES pH 7.4).
+Also prepared were solutions of Na^+^ and Li^+^, the same as the K^+^ solution but with NaCl or LiCl replacing the KCl, respectively.
+Each salt solution also had a counterpart with 100 $\mu$M amiloride added.
+Finally, a KCl + 5 $\mu$g/mL **trypsin solution** was prepared.
+
+Amiloride sensitive current was determined by placing a cell in the amiloride external solution for 1 second, the amiloride-free solution for 2 seconds, and returning to the amiloride solution for 1 second.
+Average current during no-amiloride traces was subtracted to set the baseline to 0 A, and the maximum current during the 2 second no-amiloride duration taken as the amiloride-sensitive current.
+The K^+^ recordings show a current spike when returning to the amiloride-containing solution, which I exclude from the calculations.
+This process was performed once for each holding potential between -80 and +80 mV, stepping by 20 mV.
+Then, this entire voltage sweep was repeated for each of the two remaining salts.
+The cell was then exposed to the trypsin solution for 5 minutes, and the entire set of voltage and salt sweeps repeated for the post-trypsin measurements.
+Thus, the full combination of voltage, salt, and proteolytic cleavage states was recorded on each cell.
+Once a dish had been exposed to the trypsin solution, the dish was replaced with a fresh dish and coverslip to prevent early cleavage of unmeasured cells.
