@@ -6,5 +6,9 @@
 .quarto/
 
 /.quarto/
-index.xdv
-index.fdb_latexmk
+*.xdv
+*.fdb_latexmk
+*.tex
+*.aux
+*.fls
+*.log

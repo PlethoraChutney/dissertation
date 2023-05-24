@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.340">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>ENaC isn’t ASIC - Appendix D — Code and Computation</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../parts/appendices/validation.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating nav-fixed slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../figures/other/domain-cartoon_ECD.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">ENaC isn’t ASIC</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools ms-auto">
+    <div class="dropdown">
+      <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download"><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools ms-auto-item" href="../../posert-dissertation.pdf">
+              <i class="bi bi-bi-file-pdf pe-1"></i>
+            Download PDF
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools ms-auto-item" href="../../posert-dissertation.docx">
+              <i class="bi bi-bi-file-word pe-1"></i>
+            Download Docx
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../parts/appendices/mat-meth.html">Appendices</a></li><li class="breadcrumb-item"><a href="../../parts/appendices/code.html"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Code and Computation</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Frontmatter</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../parts/introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../parts/introduction/intro_enac-in-the-body.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">ENaC in the Body</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../parts/references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../parts/appendices/mat-meth.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Materials and Methods</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../parts/appendices/processing-flow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Image Processing</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../parts/appendices/validation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Map Validation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../parts/appendices/code.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Code and Computation</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#appia" id="toc-appia" class="nav-link active" data-scroll-target="#appia"><span class="header-section-number">D.1</span> Appia</a>
+  <ul class="collapse">
+  <li><a href="#structure" id="toc-structure" class="nav-link" data-scroll-target="#structure"><span class="header-section-number">D.1.1</span> Structure</a></li>
+  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation"><span class="header-section-number">D.1.2</span> Installation</a></li>
+  <li><a href="#writing-a-new-processor" id="toc-writing-a-new-processor" class="nav-link" data-scroll-target="#writing-a-new-processor"><span class="header-section-number">D.1.3</span> Writing a new processor</a></li>
+  </ul></li>
+  <li><a href="#model-building-tools" id="toc-model-building-tools" class="nav-link" data-scroll-target="#model-building-tools"><span class="header-section-number">D.2</span> Model-building tools</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Appendix D — Code and Computation</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="appia" class="level2 page-columns page-full" data-number="D.1">
+<h2 data-number="D.1" class="anchored" data-anchor-id="appia"><span class="header-section-number">D.1</span> Appia</h2>
+<div class="page-columns page-full"><p>Modern structural biology makes extensive use of size-exclusion chromatography (SEC). The two types of SEC I encountered most often were <em>analytic chromatography</em>, in which samples are assessed for monodispersity and relative amount; and <em>preparative chromatography</em>, in which samples are purified based on their size. In an environment where only a heuristic assessment of these parameters is important (e.g., assessing whether a sample is homogeneous enough to make grids of, or whether a protein interacts with another) these parameters can be assessed by eye (<a href="#fig-appia-peaks">Figure&nbsp;<span>D.1</span></a>). However, chromatography instrument manufacturers must include capacity for more complex analyses in their software. This necessarily makes the software more complex and arcane in the service of features that biochemists rarely need. To solve this mismatch I created Appia, a web-based chromatography visualization package<span class="citation" data-cites="posert2023"><sup><a href="../references.html#ref-posert2023" role="doc-biblioref">1</a></sup></span>. In this section I will provide a brief summery of Appia’s functionality and intended use, the installation process, and then some guidance for adding support for new chromatography instruments.</p><div class="no-row-height column-margin column-container"><span class="">Appia can be installed via <code>pip</code>, or the source can be inspected at <a href="https://github.com/plethorachutney/appia">my github</a>.</span></div></div>
+<div id="fig-appia-peaks" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><a href="figures/code/peaks.png" class="lightbox" title="Heuristic chromatography parameters are easily assessed by eye. Users can approximate affinity for the stationary phase (size, in the case of SEC), quantity, homogeneity, and the number of distinct species by inspecting peak shifts, peak height, peak width, and number of peaks respectively." data-gallery="quarto-lightbox-gallery-1"><img src="figures/code/peaks.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Figure&nbsp;D.1: Heuristic chromatography parameters are easily assessed by eye. Users can approximate affinity for the stationary phase (size, in the case of SEC), quantity, homogeneity, and the number of distinct species by inspecting peak shifts, peak height, peak width, and number of peaks respectively.</figcaption>
+</figure>
+</div>
+<section id="structure" class="level3" data-number="D.1.1">
+<h3 data-number="D.1.1" class="anchored" data-anchor-id="structure"><span class="header-section-number">D.1.1</span> Structure</h3>
+<p>Appia is divided into two conceptual parts: the local processor and the web interface. The local processor is written entirely in python and processes all supported data formats into a unified Appia experiment. Several options are available at processing time, such as applying a scaling factor for various manufacturers or automatic trace plotting. Additionally, the local processor includes a user settings system. This system stores information such as flow rates to apply to a specific chromatography method and database login information. Experiments, to Appia, are collections of analytic and preparative traces. Importantly, Appia is agnostic as to the origins of the data in a single experiment — experiments may contain traces from any number of manufacturers and/or instruments, provided Appia has a processor for that manufacturer. The experiments are stored on the local machine in both long (appropriate for ggplot2 and other grammar-of-graphics plotting systems) and wide (appropriate for, e.g., Excel or Prism) formats (<a href="#fig-appia-tidy">Figure&nbsp;<span>D.2</span></a>). These experiments are packaged with an experiment ID and uploaded to the other half of Appia, Appia Web.</p>
+<div id="fig-appia-tidy" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><a href="figures/code/tidy-explainer.png" class="lightbox" title="Data formats saved by Appia and available for user download. Traces made up of individual samples (A) are represented as a single row in the long format (B). The wide format (C) instead represents the independent variable with its own column (Time, red), the response variable with the table body (Signal, white), and all other variables in column headers (various colors)." data-gallery="quarto-lightbox-gallery-2"><img src="figures/code/tidy-explainer.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Figure&nbsp;D.2: Data formats saved by Appia and available for user download. Traces made up of individual samples (A) are represented as a single row in the long format (B). The wide format (C) instead represents the independent variable with its own column (Time, red), the response variable with the table body (Signal, white), and all other variables in column headers (various colors).</figcaption>
+</figure>
+</div>
+<p>Appia Web provides a browser-based GUI and centralized trace database. The database is a CouchDB database containing a simple dictionary of experiments stored under their experiment IDs. The browser-based GUI is written in python and plotly dash, and loads user-requested data from the database and presents it using a series of line plots. Analytic data is presented with one line per sample per channel, while preparative data is presented as a single line per injection with fractions highlighted by fill. Analytic data is also presented with a normalization applied, such that the maximum of each trace is 1 and the minimum is 0. The user may select a region of the analytic traces and re-normalize them to set the maximum over that range to 1, scaling the rest of the trace linearly (<a href="#fig-appia-normalization">Figure&nbsp;<span>D.3</span></a>). This normalization process is intended to aid in comparison of relative peak heights between different samples which may have a different total amount of material, or to compare peaks within a trace compared to some standard peak height. Importantly, this process uses the simple readout of peak height. More complex analyses or analyses requiring quantitative accuracy are outside the scope of Appia and should use manufacturer-provided peak calling and fitting. Users can also download images and raw data from Appia Web.</p>
+<div id="fig-appia-normalization" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><a href="figures/code/normalization.png" class="lightbox" title="Appia’s normalization process. A user-selected region is used to linearly scale all traces such that their maximum value over that region is 1." data-gallery="quarto-lightbox-gallery-3"><img src="figures/code/normalization.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Figure&nbsp;D.3: Appia’s normalization process. A user-selected region is used to linearly scale all traces such that their maximum value over that region is 1.</figcaption>
+</figure>
+</div>
+</section>
+<section id="installation" class="level3" data-number="D.1.2">
+<h3 data-number="D.1.2" class="anchored" data-anchor-id="installation"><span class="header-section-number">D.1.2</span> Installation</h3>
+<p>Appia can be used solely to locally process chromatography data into a standard format for later plotting. However, we recommend installing a processing installation on each instrument computer and a single centralized Appia Web installation on some networked computer. This allows for single-click processing and upload of data to a central repository which users can then inspect, manipulate, and download from their personal computers without installing Appia. To facilitate this process, I have created Docker images for Appia Web. Images are available for both x86-64 and ARM architectures, and docker-compose templates are available in the project repository. Running one of these templates creates and networks the database and Appia Web automatically, requiring only that the user expose the correct ports (5984 for CouchDB and 8080 for Appia Web).</p>
+<p>Below is an example process for installing Appia Web on a Windows PC which is accessible at <code>example.ohsu.edu</code>:</p>
+<ol type="1">
+<li>Install docker desktop</li>
+<li>Download <code>install-appia-web_pc.ps1</code> and run it. Provide the desired configuration information</li>
+<li>Run <code>docker-compose up -d</code></li>
+<li>Ensure that ports 5984 (database) and 8080 (web interface) are accessible</li>
+</ol>
+<p>The Appia Web interface would now be available at example.ohsu.edu:8080/traces. All that is left is installing the processor on the instrument computer, a much simpler process:</p>
+<ol type="1">
+<li>Install python</li>
+<li>Run <code>python -m pip install appia</code></li>
+<li>Run <code>appia utils --database-setup</code> and provide the information set up during Appia Web installation.</li>
+</ol>
+<p>Now when a user finishes a chromatography experiment, they first export it to whatever format Appia expects (typically the default text format) and run (assuming the files end in <code>.txt</code>) <code>appia process *.txt -d</code> to upload the data to the web interface. The files will automatically be organized and stored on the local computer as well. This command can be wrapped in a script to avoid the need for users to interact with the command line.</p>
+</section>
+<section id="writing-a-new-processor" class="level3 page-columns page-full" data-number="D.1.3">
+<h3 data-number="D.1.3" class="anchored" data-anchor-id="writing-a-new-processor"><span class="header-section-number">D.1.3</span> Writing a new processor</h3>
+<p><em>This section is intended for the advanced reader who wishes to add support for a chromatography instrument to Appia.</em></p>
+<p>Processors are each a class which inherits from either <code>HplcProcessor</code> or <code>FplcProcessor</code> (for analytic or preparative data, respectively). At the time of writing, Appia supports the following data formats:</p>
+<ul>
+<li>Waters Empower <code>.arw</code> files</li>
+<li>Shimadzu <code>.asc</code> files</li>
+<li>Shimadzu <code>.txt</code> files</li>
+<li>Agilent <code>.csv</code> files</li>
+<li>Cytiva/GE <code>.csv</code> files</li>
+</ul>
+<p>Your processor can perform any necessary setup in <code>__init__()</code>, but it must eventually run</p>
+<!-- TODO: figure out PDF code font -->
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">super</span>().<span class="fu">__init__</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    filename,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    manufacturer <span class="op">=</span> {appropriate_string},</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">**</span>kwargs</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>When Appia processes files, for each file, it creates an instance of every <code>Processor</code> child. These <code>Processors</code> all decide whether they can process a file using their <code>claim_file()</code> method, which you must implement. This method should accept a filename and return <code>True</code> if the processor thinks that is a type of file it can process and <code>False</code> otherwise. For instance, here is <code>WatersProcessor.claim_file()</code>:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="at">@classmethod</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> claim_file(cls, filename) <span class="op">-&gt;</span> <span class="bu">bool</span>:</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> filename[<span class="op">-</span><span class="dv">4</span>:].lower() <span class="op">==</span> <span class="st">'.arw'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>It simply checks whether the file ends in <code>.arw</code>. Depending on the data format for the new manufacturer, the method may require more complex checks, or you may have to add more specificity to other <code>claim_file()</code> methods.</p>
+<p>If your processor claims the file, it will <em>automatically</em> run two methods: <code>prepare_sample()</code> and <code>process_file()</code>. The distinction between these is arbitrary, as they are both always run in sequence. It is intended that <code>prepare_sample()</code> collects metadata about the sample (method name, flow rate, sample set name, etc.) and <code>process_file()</code> creates the actual data frame. The data frame <em>must be in the long format</em>, should be stored in your processor’s <code>df</code> attribute, and should have exactly the following column names:</p>
+<ul>
+<li><strong>mL</strong>: the retention volume in mL.</li>
+<li><strong>Time</strong>: the retention time in minutes.</li>
+<li><strong>Sample</strong>: the sample name.</li>
+<li><strong>Channel</strong>: the signal channel. Values in this column are arbitrary but should follow some kind of internal logic.</li>
+<li><strong>Normalization</strong>: whether this row is normalized (“Normalized”) or raw (“Signal”).</li>
+<li><strong>Value</strong>: the y-axis position for this row.</li>
+</ul>
+<div class="page-columns page-full"><p>At this point, your <code>Processor</code> is done. As long as only one <code>Processor</code> claimed a file, the Appia <code>parser</code> will handle concatenation, plotting, and upload for you.</p><div class="no-row-height column-margin column-container"><span class="">I would encourage you to write a test as well, of course.</span></div></div>
+<p>The parent classes provide a few conveniences for you. For example, the <code>flow_rate</code> and <code>column_volume</code> getters will prompt the user for the relevant info, if necessary, and then offer to store it in the user settings. It will also handle overrides of various parameters, which are accepted through <code>kwargs</code>. Additionally, <code>appia.processors.core</code> provides the <code>normalize</code> function, which handles trace normalization. I encourage you to take a look at the <code>Processors</code> I’ve already written before embarking on writing your own.</p>
+</section>
+</section>
+<section id="model-building-tools" class="level2 page-columns page-full" data-number="D.2">
+<h2 data-number="D.2" class="anchored" data-anchor-id="model-building-tools"><span class="header-section-number">D.2</span> Model-building tools</h2>
+<p>I’ve written a few tools to aid with model building and general structure analysis. They’re all available <a href="https://github.com/plethorachutney/model-building-tools">on my github</a>.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div id="fig-ca-bilder" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><a href="figures/code/ca-bilder.png" class="lightbox" title="A ca_bilder.py image highlighting the movement of the finger and thumb between the resting and desensitized states of ASIC1." data-gallery="quarto-lightbox-gallery-4"><img src="figures/code/ca-bilder.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Figure&nbsp;D.4: A <code>ca_bilder.py</code> image highlighting the movement of the finger and thumb between the resting and desensitized states of ASIC1.</figcaption>
+</figure>
+</div>
+</div></div><p><code>ca_bilder.py</code> creates a <code>.bild</code> file visualizing Cα shifts between two given models. Cylinders are drawn between each pair of Cα atoms, colored by the distance. The colors are scaled per-model, with the darkest color corresponding to the greatest shift. The models must be aligned before they are run through the script. If the models are multi-chain, cylinders will be drawn between the same chain ID. If the models are of two different proteins, you must provide a FASTA alignment and indicate which chain belongs to which sequence. These visualizations can be useful to highlight when certain domains move while others stay still, such as ASIC1’s gating cycle (<a href="#fig-ca-bilder">Figure&nbsp;<span>D.4</span></a>).</p>
+<p><code>check_for_glyc.py</code> searches a PDB model for the sequence NXS/T, the canonical N-linked glycosylation sequence. All asparagines matching this requirement are added to a ChimeraX command HTML file. Opening this file with ChimeraX creates a list of clickable asparagine names. Clicking these links orients the camera on the appropriate residue and removes the link from the list, creating a checklist of sorts. If the model and map are both open, this is a convenient way to step through all potential glycosylation sites in a model and assess whether they are indeed glycosylated. The user may then add sugars via the normal commands.</p>
+<p><code>model_map.py</code>, <code>orientation_plotter.py</code>, <code>phenix-table-reader.py</code>, and the three R scripts all read information from PHENIX or 3DFSC output and produce more aesthetically appealing plots. <code>phenix-table-reader.py</code> is a convenient way to automatically update a Table 1 (for instance, <a href="mat-meth.html#tbl-model-building">Table&nbsp;<span>A.1</span></a>) during the model building process. Output from the other scripts can be seen in <a href="validation.html"><span>Appendix&nbsp;C</span></a>.</p>
+<p><code>mutator.py</code> checks the sequence of a model against a FASTA sequence and alerts the user to any mismatches. It also creates a ChimeraX command file which can be run to mutate the model to match the FASTA file. Any known deviations can be passed to the script as a <code>.txt</code> file with one mutation per line in a ChimeraX-like format. For instance, if chain A has a C→K mutation at position 260, the <code>.txt</code> file should have a line reading <code>/A:C260K</code>.</p>
+<p><code>translator.py</code> is currently ENaC specific, but could be generalized by a user. It is a simple script to translate residue numbers between the same gene of different organisms using a FASTA file. It is mostly useful when reading or writing and trying to incorporate data from multiple organisms. An example of this script in use:</p>
+<pre><code>$ translator.py mA260
+Mouse αK260 =&gt; Human αK233</code></pre>
+<p>At time of writing, PHENIX adds waters to a seemingly random chain (perhaps based on proximity?) and with a number overlapping other residue numbers. This makes analysis extremely frustrating, since waters have the exact same atom specifier as other residues and are spread over the chains. <code>water_fixer.py</code> solves this problem by reading through a PDB file and moving all waters to chain H and numbering them starting at 1. This has the unfortunate side effect of waters not being numbered in a spatially coherent way, but it’s better than nothing.</p>
+
+
+<div id="refs" class="references csl-bib-body" role="list" style="display: none">
+<div id="ref-posert2023" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">Posert, R., and Baconguis, I. (2023). Appia: <span>Simpler</span> chromatography analysis and visualization. PLOS ONE <em>18</em>, e0280255. <a href="https://doi.org/10.1371/journal.pone.0280255">10.1371/journal.pone.0280255</a>.</div>
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../parts/appendices/validation.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Map Validation</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom","loop":true});</script>
+
+
+
+</body></html>

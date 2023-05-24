@@ -1,6 +1,5 @@
 project:
   type: book
-  execute-dir: project
 
 book:
   title: ENaC isn't ASIC
@@ -19,6 +18,7 @@ book:
     - parts/appendices/mat-meth.qmd
     - parts/appendices/processing-flow.qmd
     - parts/appendices/validation.qmd
+    - parts/appendices/code.qmd
   navbar: 
     logo: figures/other/domain-cartoon_ECD.png
   search:
@@ -29,7 +29,7 @@ book:
     - docx
   output-file: posert-dissertation
 
-csl: nature.csl
+csl: cell.csl
 toc: true
 bibliography: henac.bib
 format-links: true

@@ -208,6 +208,12 @@ div.csl-indent {
  <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Map Validation</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../parts/appendices/code.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Code and Computation</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -379,7 +385,7 @@ div.csl-indent {
 <p>Grid preparation different slightly for each dataset, but followed the same general procedure (<a href="#tbl-model-building">Table&nbsp;<span>A.1</span></a>). Purified GFP-cleaved ENaC was concentrated for grid preparation just before blotting and freezing. All grids were glow discharged at 15&nbsp;mA for 60 seconds on a Pelco easiGlow before blotting. Grids were frozen using a Vitrobot Mark III (Thermo Fisher). Vitrobot parameters were set as follows: blot time 2, wait time 0, drain time 0, blot force 1, humidity 100%, temperature 12&nbsp;°C. “Double-blotted” grids had a protein droplet loaded, manually blotted with torn Whatman filter paper, and a fresh droplet loaded onto the grid before Vitrobot blotting (with Vitrobot filter paper rings) and freezing. This double-blotting process typically took approximately five seconds from first drop to plunge-freeze. In all cases, each protein droplet was 3 <span class="math inline">\(\mu\)</span>L.</p>
 <div id="fig-fab-compare" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="figures/matmeth/fabs/fabs.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Fab binding induces only minor changes in the extracellular domain of ENaC. A: Human CKO/DEG map. A low-pass filtered map is outlined to show pseudosymmetry-breaking glycosylation sites (arrows). B: the α subunit, C: the β subunit. Human CKO nanodisc model is colored by subunit, the human CKO/DEG ENaC is white, and human CKO/DEG Fabs are grey."><img src="figures/matmeth/fabs/fabs.png" class="img-fluid figure-img"></a></p>
+<p><a href="figures/matmeth/fabs/fabs.png" class="lightbox" title="Fab binding induces only minor changes in the extracellular domain of ENaC. A: Human CKO/DEG map. A low-pass filtered map is outlined to show pseudosymmetry-breaking glycosylation sites (arrows). B: the α subunit, C: the β subunit. Human CKO nanodisc model is colored by subunit, the human CKO/DEG ENaC is white, and human CKO/DEG Fabs are grey." data-gallery="quarto-lightbox-gallery-1"><img src="figures/matmeth/fabs/fabs.png" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;A.1: Fab binding induces only minor changes in the extracellular domain of ENaC. A: Human CKO/DEG map. A low-pass filtered map is outlined to show pseudosymmetry-breaking glycosylation sites (arrows). B: the α subunit, C: the β subunit. Human CKO nanodisc model is colored by subunit, the human CKO/DEG ENaC is white, and human CKO/DEG Fabs are grey.</figcaption>
 </figure>
 </div>
@@ -395,7 +401,7 @@ div.csl-indent {
 <p>The template picked particles were repeatedly 3D classified using heterogeneous refinement in cryoSPARC, providing one “good” class and a number of “junk” classes (typically noisy or bad <em>ab initio</em> models of the blob picked particles) until all particles produced reasonable ENaC classes. The final particle set was never 2D classified, since I find that 2D classification reduces the frequency of rare particle views. From this point, processing proceeded <em>ad hoc</em> to produce the final maps (Image Processing).</p>
 <div id="fig-pixel-size-calibration" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="figures/matmeth/ecd-pix-size/pixel-size.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="S2C2 pixel sizes seem miscalibrated. A: Scaling the nominal pixel size for human CKO/DEG dramatically increases the correlation with human CKO digitonin. B: Correlation coefficients for all maps. Maps were aligned prior to taking correlation coefficients. Abbreviated as follows: hCKO: human CKO; hCD-MF: human CKO/DEG monofab; mTrypsin: trypsin-cleaved mouse; hCKO/DEG: human CKO/DEG difab; hCKO-ND: human CKO nanodisc; mUncleaved: mouse uncleaved; mJanelia2: a second uncleaved mouse dataset collected at Janelia, but not presented here."><img src="figures/matmeth/ecd-pix-size/pixel-size.png" class="img-fluid figure-img"></a></p>
+<p><a href="figures/matmeth/ecd-pix-size/pixel-size.png" class="lightbox" title="S2C2 pixel sizes seem miscalibrated. A: Scaling the nominal pixel size for human CKO/DEG dramatically increases the correlation with human CKO digitonin. B: Correlation coefficients for all maps. Maps were aligned prior to taking correlation coefficients. Abbreviated as follows: hCKO: human CKO; hCD-MF: human CKO/DEG monofab; mTrypsin: trypsin-cleaved mouse; hCKO/DEG: human CKO/DEG difab; hCKO-ND: human CKO nanodisc; mUncleaved: mouse uncleaved; mJanelia2: a second uncleaved mouse dataset collected at Janelia, but not presented here." data-gallery="quarto-lightbox-gallery-2"><img src="figures/matmeth/ecd-pix-size/pixel-size.png" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;A.2: S<sup>2</sup>C<sup>2</sup> pixel sizes seem miscalibrated. <strong>A</strong>: Scaling the nominal pixel size for human CKO/DEG dramatically increases the correlation with human CKO digitonin. <strong>B</strong>: Correlation coefficients for all maps. Maps were aligned prior to taking correlation coefficients. Abbreviated as follows: hCKO: human CKO; hCD-MF: human CKO/DEG monofab; mTrypsin: trypsin-cleaved mouse; hCKO/DEG: human CKO/DEG difab; hCKO-ND: human CKO nanodisc; mUncleaved: mouse uncleaved; mJanelia2: a second uncleaved mouse dataset collected at Janelia, but not presented here.</figcaption>
 </figure>
 </div>
@@ -415,23 +421,23 @@ div.csl-indent {
 <div class="cell-output-display">
 <div id="tbl-model-building" class="anchored">
 
-<div id="kovfddrgsh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#kovfddrgsh table {
+<div id="fnucxdmbpq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#fnucxdmbpq table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#kovfddrgsh thead, #kovfddrgsh tbody, #kovfddrgsh tfoot, #kovfddrgsh tr, #kovfddrgsh td, #kovfddrgsh th {
+#fnucxdmbpq thead, #fnucxdmbpq tbody, #fnucxdmbpq tfoot, #fnucxdmbpq tr, #fnucxdmbpq td, #fnucxdmbpq th {
   border-style: none;
 }
 
-#kovfddrgsh p {
+#fnucxdmbpq p {
   margin: 0;
   padding: 0;
 }
 
-#kovfddrgsh .gt_table {
+#fnucxdmbpq .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -457,12 +463,12 @@ div.csl-indent {
   border-left-color: #D3D3D3;
 }
 
-#kovfddrgsh .gt_caption {
+#fnucxdmbpq .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#kovfddrgsh .gt_title {
+#fnucxdmbpq .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -474,7 +480,7 @@ div.csl-indent {
   border-bottom-width: 0;
 }
 
-#kovfddrgsh .gt_subtitle {
+#fnucxdmbpq .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -486,7 +492,7 @@ div.csl-indent {
   border-top-width: 0;
 }
 
-#kovfddrgsh .gt_heading {
+#fnucxdmbpq .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -498,13 +504,13 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#kovfddrgsh .gt_bottom_border {
+#fnucxdmbpq .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#kovfddrgsh .gt_col_headings {
+#fnucxdmbpq .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -519,7 +525,7 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#kovfddrgsh .gt_col_heading {
+#fnucxdmbpq .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -539,7 +545,7 @@ div.csl-indent {
   overflow-x: hidden;
 }
 
-#kovfddrgsh .gt_column_spanner_outer {
+#fnucxdmbpq .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -551,15 +557,15 @@ div.csl-indent {
   padding-right: 4px;
 }
 
-#kovfddrgsh .gt_column_spanner_outer:first-child {
+#fnucxdmbpq .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#kovfddrgsh .gt_column_spanner_outer:last-child {
+#fnucxdmbpq .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#kovfddrgsh .gt_column_spanner {
+#fnucxdmbpq .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -571,11 +577,11 @@ div.csl-indent {
   width: 100%;
 }
 
-#kovfddrgsh .gt_spanner_row {
+#fnucxdmbpq .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#kovfddrgsh .gt_group_heading {
+#fnucxdmbpq .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -601,7 +607,7 @@ div.csl-indent {
   text-align: left;
 }
 
-#kovfddrgsh .gt_empty_group_heading {
+#fnucxdmbpq .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -616,15 +622,15 @@ div.csl-indent {
   vertical-align: middle;
 }
 
-#kovfddrgsh .gt_from_md > :first-child {
+#fnucxdmbpq .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#kovfddrgsh .gt_from_md > :last-child {
+#fnucxdmbpq .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#kovfddrgsh .gt_row {
+#fnucxdmbpq .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -643,7 +649,7 @@ div.csl-indent {
   overflow-x: hidden;
 }
 
-#kovfddrgsh .gt_stub {
+#fnucxdmbpq .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -656,7 +662,7 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#kovfddrgsh .gt_stub_row_group {
+#fnucxdmbpq .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -670,15 +676,15 @@ div.csl-indent {
   vertical-align: top;
 }
 
-#kovfddrgsh .gt_row_group_first td {
+#fnucxdmbpq .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#kovfddrgsh .gt_row_group_first th {
+#fnucxdmbpq .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#kovfddrgsh .gt_summary_row {
+#fnucxdmbpq .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -688,16 +694,16 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#kovfddrgsh .gt_first_summary_row {
+#fnucxdmbpq .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#kovfddrgsh .gt_first_summary_row.thick {
+#fnucxdmbpq .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#kovfddrgsh .gt_last_summary_row {
+#fnucxdmbpq .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -707,7 +713,7 @@ div.csl-indent {
   border-bottom-color: #D3D3D3;
 }
 
-#kovfddrgsh .gt_grand_summary_row {
+#fnucxdmbpq .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -717,7 +723,7 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#kovfddrgsh .gt_first_grand_summary_row {
+#fnucxdmbpq .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -727,7 +733,7 @@ div.csl-indent {
   border-top-color: #D3D3D3;
 }
 
-#kovfddrgsh .gt_last_grand_summary_row_top {
+#fnucxdmbpq .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -737,11 +743,11 @@ div.csl-indent {
   border-bottom-color: #D3D3D3;
 }
 
-#kovfddrgsh .gt_striped {
+#fnucxdmbpq .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#kovfddrgsh .gt_table_body {
+#fnucxdmbpq .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -750,7 +756,7 @@ div.csl-indent {
   border-bottom-color: #D3D3D3;
 }
 
-#kovfddrgsh .gt_footnotes {
+#fnucxdmbpq .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -764,7 +770,7 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#kovfddrgsh .gt_footnote {
+#fnucxdmbpq .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -773,7 +779,7 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#kovfddrgsh .gt_sourcenotes {
+#fnucxdmbpq .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -787,7 +793,7 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#kovfddrgsh .gt_sourcenote {
+#fnucxdmbpq .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -795,63 +801,63 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#kovfddrgsh .gt_left {
+#fnucxdmbpq .gt_left {
   text-align: left;
 }
 
-#kovfddrgsh .gt_center {
+#fnucxdmbpq .gt_center {
   text-align: center;
 }
 
-#kovfddrgsh .gt_right {
+#fnucxdmbpq .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#kovfddrgsh .gt_font_normal {
+#fnucxdmbpq .gt_font_normal {
   font-weight: normal;
 }
 
-#kovfddrgsh .gt_font_bold {
+#fnucxdmbpq .gt_font_bold {
   font-weight: bold;
 }
 
-#kovfddrgsh .gt_font_italic {
+#fnucxdmbpq .gt_font_italic {
   font-style: italic;
 }
 
-#kovfddrgsh .gt_super {
+#fnucxdmbpq .gt_super {
   font-size: 65%;
 }
 
-#kovfddrgsh .gt_footnote_marks {
+#fnucxdmbpq .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#kovfddrgsh .gt_asterisk {
+#fnucxdmbpq .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#kovfddrgsh .gt_indent_1 {
+#fnucxdmbpq .gt_indent_1 {
   text-indent: 5px;
 }
 
-#kovfddrgsh .gt_indent_2 {
+#fnucxdmbpq .gt_indent_2 {
   text-indent: 10px;
 }
 
-#kovfddrgsh .gt_indent_3 {
+#fnucxdmbpq .gt_indent_3 {
   text-indent: 15px;
 }
 
-#kovfddrgsh .gt_indent_4 {
+#fnucxdmbpq .gt_indent_4 {
   text-indent: 20px;
 }
 
-#kovfddrgsh .gt_indent_5 {
+#fnucxdmbpq .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -1214,7 +1220,7 @@ div.csl-indent {
 <p>The four constructs I present here can broadly be split into those I expect to be open (CKO/DEG and mouse trypsin) and those I expect to be closed (CKO, mouse) (<a href="#tbl-model-building">Table&nbsp;<span>A.1</span></a>). All human channels in this work have mutant furin sites (αR178A R204A and γR138A). Additionally, all human channels are “cysteine knock-out” (CKO) mutants, with the following mutations: αC63A, βC30A, and γC33A C41A. Some (but not all) cysteines in the ENaC TMD are known to be palmitoylated<span class="citation" data-cites="mukherjee14 mueller10 mueller12"><sup><a href="../references.html#ref-mukherjee14" role="doc-biblioref">13</a>–<a href="../references.html#ref-mueller12" role="doc-biblioref">15</a></sup></span>. CKO channels express at approximately eight times the yield of wild-type-like channels, with similar electrophysiological traits (<a href="#fig-ephys">Figure&nbsp;<span>A.3</span></a>). Mouse channels presented in this work have no mutations from the consensus gene. I expect mouse and CKO channels to be closed.</p>
 <div id="fig-ephys" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="figures/matmeth/ephys/491-mean-iv.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="I/V curves for human CKO and CKO/DEG channels. Values are normalized per-cell to the inward current at -80 mV before trypsin treatment. Cells were treated with trypsin for five minutes before being re-recorded. Each point is the average of three cells. Error bars represent +/- one standard deviation."><img src="figures/matmeth/ephys/491-mean-iv.png" class="img-fluid figure-img"></a></p>
+<p><a href="figures/matmeth/ephys/491-mean-iv.png" class="lightbox" title="I/V curves for human CKO and CKO/DEG channels. Values are normalized per-cell to the inward current at -80 mV before trypsin treatment. Cells were treated with trypsin for five minutes before being re-recorded. Each point is the average of three cells. Error bars represent +/- one standard deviation." data-gallery="quarto-lightbox-gallery-3"><img src="figures/matmeth/ephys/491-mean-iv.png" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;A.3: I/V curves for human CKO and CKO/DEG channels. Values are normalized per-cell to the inward current at -80 mV before trypsin treatment. Cells were treated with trypsin for five minutes before being re-recorded. Each point is the average of three cells. Error bars represent +/- one standard deviation.</figcaption>
 </figure>
 </div>
@@ -1240,57 +1246,57 @@ div.csl-indent {
 <p>Amiloride sensitive current was determined by placing a cell in the amiloride external solution for 1 second, the amiloride-free solution for 2 seconds, and returning to the amiloride solution for 1 second. Average current during no-amiloride traces was subtracted to set the baseline to 0 A, and the maximum current during the 2 second no-amiloride duration taken as the amiloride-sensitive current. The K<sup>+</sup> recordings show a current spike when returning to the amiloride-containing solution, which I exclude from the calculations. This process was performed once for each holding potential between -80 and +80 mV, stepping by 20 mV. Then, this entire voltage sweep was repeated for each of the two remaining salts. The cell was then exposed to the trypsin solution for 5 minutes, and the entire set of voltage and salt sweeps repeated for the post-trypsin measurements. Thus, the full combination of voltage, salt, and proteolytic cleavage states was recorded on each cell. Once a dish had been exposed to the trypsin solution, the dish was replaced with a fresh dish and coverslip to prevent early cleavage of unmeasured cells.</p>
 
 
-<div id="refs" class="references csl-bib-body" data-line-spacing="2" role="list" style="display: none">
+<div id="refs" class="references csl-bib-body" role="list" style="display: none">
 <div id="ref-kawate06" class="csl-entry" role="listitem">
-<div class="csl-left-margin">1. </div><div class="csl-right-inline">Kawate, T. &amp; Gouaux, E. <a href="https://doi.org/10.1016/j.str.2006.01.013">Fluorescence-<span>Detection Size-Exclusion Chromatography</span> for <span>Precrystallization Screening</span> of <span>Integral Membrane Proteins</span></a>. <em>Structure</em> <strong>14</strong>, 673–681 (2006/04/01/).</div>
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">Kawate, T., and Gouaux, E. (2006/04/01/). Fluorescence-<span>Detection Size-Exclusion Chromatography</span> for <span>Precrystallization Screening</span> of <span>Integral Membrane Proteins</span>. Structure <em>14</em>, 673–681. <a href="https://doi.org/10.1016/j.str.2006.01.013">10.1016/j.str.2006.01.013</a>.</div>
 </div>
 <div id="ref-noreng18" class="csl-entry" role="listitem">
-<div class="csl-left-margin">2. </div><div class="csl-right-inline">Noreng, S., Bharadwaj, A., Posert, R., Yoshioka, C. &amp; Baconguis, I. <a href="https://doi.org/10.7554/eLife.39340">Structure of the human epithelial sodium channel by cryo-electron microscopy</a>. <em>eLife</em> <strong>7</strong>, e39340 (2018).</div>
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">Noreng, S., Bharadwaj, A., Posert, R., Yoshioka, C., and Baconguis, I. (2018). Structure of the human epithelial sodium channel by cryo-electron microscopy. eLife <em>7</em>, e39340. <a href="https://doi.org/10.7554/eLife.39340">10.7554/eLife.39340</a>.</div>
 </div>
 <div id="ref-noreng20" class="csl-entry" role="listitem">
-<div class="csl-left-margin">3. </div><div class="csl-right-inline">Noreng, S., Posert, R., Bharadwaj, A., Houser, A. &amp; Baconguis, I. <a href="https://doi.org/10.7554/eLife.59038">Molecular principles of assembly, activation, and inhibition in epithelial sodium channel</a>. <em>eLife</em> <strong>9</strong>, e59038 (2020).</div>
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">Noreng, S., Posert, R., Bharadwaj, A., Houser, A., and Baconguis, I. (2020). Molecular principles of assembly, activation, and inhibition in epithelial sodium channel. eLife <em>9</em>, e59038. <a href="https://doi.org/10.7554/eLife.59038">10.7554/eLife.59038</a>.</div>
 </div>
 <div id="ref-mastronarde2003" class="csl-entry" role="listitem">
-<div class="csl-left-margin">4. </div><div class="csl-right-inline">Mastronarde, D. N. <a href="https://doi.org/10.1017/S1431927603445911"><span>SerialEM</span>: <span>A Program</span> for <span>Automated Tilt Series Acquisition</span> on <span>Tecnai Microscopes Using Prediction</span> of <span>Specimen Position</span></a>. <em>Microscopy and Microanalysis</em> <strong>9</strong>, 1182–1183 (2003).</div>
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">Mastronarde, D.N. (2003). <span>SerialEM</span>: <span>A Program</span> for <span>Automated Tilt Series Acquisition</span> on <span>Tecnai Microscopes Using Prediction</span> of <span>Specimen Position</span>. Microscopy and Microanalysis <em>9</em>, 1182–1183. <a href="https://doi.org/10.1017/S1431927603445911">10.1017/S1431927603445911</a>.</div>
 </div>
 <div id="ref-jumper2021" class="csl-entry" role="listitem">
-<div class="csl-left-margin">5. </div><div class="csl-right-inline">Jumper, J. <em>et al.</em> <a href="https://doi.org/10.1038/s41586-021-03819-2">Highly accurate protein structure prediction with <span>AlphaFold</span></a>. <em>Nature</em> <strong>596</strong>, 583–589 (2021).</div>
+<div class="csl-left-margin">5. </div><div class="csl-right-inline">Jumper, J., Evans, R., Pritzel, A., Green, T., Figurnov, M., Ronneberger, O., Tunyasuvunakool, K., Bates, R., Žídek, A., Potapenko, A., et al. (2021). Highly accurate protein structure prediction with <span>AlphaFold</span>. Nature <em>596</em>, 583–589. <a href="https://doi.org/10.1038/s41586-021-03819-2">10.1038/s41586-021-03819-2</a>.</div>
 </div>
 <div id="ref-croll2018" class="csl-entry" role="listitem">
-<div class="csl-left-margin">6. </div><div class="csl-right-inline">Croll, T. <a href="https://doi.org/10.1107/S2059798318002425"><span>ISOLDE</span>: A physically realistic environment for model building into low-resolution electron-density maps</a>. <em>Acta Crystallographica Section D</em> <strong>74</strong>, 519–530 (2018).</div>
+<div class="csl-left-margin">6. </div><div class="csl-right-inline">Croll, T. (2018). <a href="https://doi.org/10.1107/S2059798318002425"><span>ISOLDE</span>: A physically realistic environment for model building into low-resolution electron-density maps</a>. Acta Crystallographica Section D <em>74</em>, 519–530.</div>
 </div>
 <div id="ref-pettersen2021" class="csl-entry" role="listitem">
-<div class="csl-left-margin">7. </div><div class="csl-right-inline">Pettersen, E. F. <em>et al.</em> <a href="https://doi.org/10.1002/pro.3943"><span>UCSF ChimeraX</span>: <span>Structure</span> visualization for researchers, educators, and developers.</a> <em>Protein Sci</em> <strong>30</strong>, 70–82 (2021).</div>
+<div class="csl-left-margin">7. </div><div class="csl-right-inline">Pettersen, E.F., Goddard, T.D., Huang, C.C., Meng, E.C., Couch, G.S., Croll, T.I., Morris, J.H., and Ferrin, T.E. (2021). <span>UCSF ChimeraX</span>: <span>Structure</span> visualization for researchers, educators, and developers. Protein Sci <em>30</em>, 70–82. <a href="https://doi.org/10.1002/pro.3943">10.1002/pro.3943</a>.</div>
 </div>
 <div id="ref-emsley2010" class="csl-entry" role="listitem">
-<div class="csl-left-margin">8. </div><div class="csl-right-inline">Emsley, P., Lohkamp, B., Scott, W. G. &amp; Cowtan, K. <a href="https://doi.org/10.1107/S0907444910007493">Features and development of <span>Coot</span></a>. <em>Acta Crystallographica Section D</em> <strong>66</strong>, 486–501 (2010).</div>
+<div class="csl-left-margin">8. </div><div class="csl-right-inline">Emsley, P., Lohkamp, B., Scott, W.G., and Cowtan, K. (2010). <a href="https://doi.org/10.1107/S0907444910007493">Features and development of <span>Coot</span></a>. Acta Crystallographica Section D <em>66</em>, 486–501.</div>
 </div>
 <div id="ref-liebschner2019" class="csl-entry" role="listitem">
-<div class="csl-left-margin">9. </div><div class="csl-right-inline">Liebschner, D. <em>et al.</em> <a href="https://doi.org/10.1107/S2059798319011471">Macromolecular structure determination using <span class="nocase">X-rays</span>, neutrons and electrons: Recent developments in <span>Phenix</span></a>. <em>Acta Crystallographica Section D</em> <strong>75</strong>, 861–877 (2019).</div>
+<div class="csl-left-margin">9. </div><div class="csl-right-inline">Liebschner, D., Afonine, P.V., Baker, M.L., Bunkoczi, G., Chen, V.B., Croll, T.I., Hintze, B., Hung, L.-W., Jain, S., McCoy, A.J., et al. (2019). <a href="https://doi.org/10.1107/S2059798319011471">Macromolecular structure determination using <span class="nocase">X-rays</span>, neutrons and electrons: Recent developments in <span>Phenix</span></a>. Acta Crystallographica Section D <em>75</em>, 861–877.</div>
 </div>
 <div id="ref-williams2018" class="csl-entry" role="listitem">
-<div class="csl-left-margin">10. </div><div class="csl-right-inline">Williams, C. J. <em>et al.</em> <a href="https://doi.org/10.1002/pro.3330"><span>MolProbity</span>: <span>More</span> and better reference data for improved all-atom structure validation</a>. <em>Protein Science</em> <strong>27</strong>, 293–315 (2018).</div>
+<div class="csl-left-margin">10. </div><div class="csl-right-inline">Williams, C.J., Headd, J.J., Moriarty, N.W., Prisant, M.G., Videau, L.L., Deis, L.N., Verma, V., Keedy, D.A., Hintze, B.J., Chen, V.B., et al. (2018). <span>MolProbity</span>: <span>More</span> and better reference data for improved all-atom structure validation. Protein Science <em>27</em>, 293–315. <a href="https://doi.org/10.1002/pro.3330">10.1002/pro.3330</a>.</div>
 </div>
 <div id="ref-pintilie2020" class="csl-entry" role="listitem">
-<div class="csl-left-margin">11. </div><div class="csl-right-inline">Pintilie, G. <em>et al.</em> <a href="https://doi.org/10.1038/s41592-020-0731-1">Measurement of atom resolvability in cryo-<span>EM</span> maps with <span class="nocase">Q-scores</span></a>. <em>Nature Methods</em> <strong>17</strong>, 328–334 (2020).</div>
+<div class="csl-left-margin">11. </div><div class="csl-right-inline">Pintilie, G., Zhang, K., Su, Z., Li, S., Schmid, M.F., and Chiu, W. (2020). Measurement of atom resolvability in cryo-<span>EM</span> maps with <span class="nocase">Q-scores</span>. Nature Methods <em>17</em>, 328–334. <a href="https://doi.org/10.1038/s41592-020-0731-1">10.1038/s41592-020-0731-1</a>.</div>
 </div>
 <div id="ref-aiyer2021" class="csl-entry" role="listitem">
-<div class="csl-left-margin">12. </div><div class="csl-right-inline">Aiyer, S., Zhang, C., Baldwin, P. R. &amp; Lyumkis, D. Evaluating <span>Local</span> and <span>Directional Resolution</span> of <span class="nocase">Cryo-EMCryo-electron</span> microscopy (<span>Cryo-EM</span>) <span>Density Maps</span>. in <em><span class="nocase">cryoEM</span>: <span>Methods</span> and <span>Protocols</span></em> (eds. Gonen, T. &amp; Nannenga, B. L.) 161–187 (<span>Springer US</span>, 2021). doi:<a href="https://doi.org/10.1007/978-1-0716-0966-8_8">10.1007/978-1-0716-0966-8_8</a>.</div>
+<div class="csl-left-margin">12. </div><div class="csl-right-inline">Aiyer, S., Zhang, C., Baldwin, P.R., and Lyumkis, D. (2021). Evaluating <span>Local</span> and <span>Directional Resolution</span> of <span class="nocase">Cryo-EMCryo-electron</span> microscopy (<span>Cryo-EM</span>) <span>Density Maps</span>. In <span class="nocase">cryoEM</span>: <span>Methods</span> and <span>Protocols</span>, T. Gonen and B. L. Nannenga, eds. (<span>Springer US</span>), pp. 161–187. <a href="https://doi.org/10.1007/978-1-0716-0966-8_8">10.1007/978-1-0716-0966-8_8</a>.</div>
 </div>
 <div id="ref-mukherjee14" class="csl-entry" role="listitem">
-<div class="csl-left-margin">13. </div><div class="csl-right-inline">Mukherjee, A. <em>et al.</em> <a href="https://doi.org/10.1074/jbc.M113.526020">Cysteine <span>Palmitoylation</span> of the γ <span>Subunit Has</span> a <span>Dominant Role</span> in <span>Modulating Activity</span> of the <span>Epithelial Sodium Channel</span>*</a>. <em>J. Biol. Chem.</em> <strong>289</strong>, 14351–14359 (2014/05/16/).</div>
+<div class="csl-left-margin">13. </div><div class="csl-right-inline">Mukherjee, A., Mueller, G.M., Kinlough, C.L., Sheng, N., Wang, Z., Mustafa, S.A., Kashlan, O.B., Kleyman, T.R., and Hughey, R.P. (2014/05/16/). Cysteine <span>Palmitoylation</span> of the γ <span>Subunit Has</span> a <span>Dominant Role</span> in <span>Modulating Activity</span> of the <span>Epithelial Sodium Channel</span>*. J. Biol. Chem. <em>289</em>, 14351–14359. <a href="https://doi.org/10.1074/jbc.M113.526020">10.1074/jbc.M113.526020</a>.</div>
 </div>
 <div id="ref-mueller10" class="csl-entry" role="listitem">
-<div class="csl-left-margin">14. </div><div class="csl-right-inline">Mueller, G. M. <em>et al.</em> Cys <span>Palmitoylation</span> of the <span>Beta Subunit Modulates Gating</span> of the <span>Epithelial Sodium Channel</span>. <em>J. Biol. Chem.</em> <strong>285</strong>, 30453–30462 (2010).</div>
+<div class="csl-left-margin">14. </div><div class="csl-right-inline">Mueller, G.M., Maarouf, A.B., Kinlough, C.L., Sheng, N., Kashlan, O.B., Okumura, S., Luthy, S., Kleyman, T.R., and Hughey, R.P. (2010). Cys <span>Palmitoylation</span> of the <span>Beta Subunit Modulates Gating</span> of the <span>Epithelial Sodium Channel</span>. J. Biol. Chem. <em>285</em>, 30453–30462.</div>
 </div>
 <div id="ref-mueller12" class="csl-entry" role="listitem">
-<div class="csl-left-margin">15. </div><div class="csl-right-inline">Mueller, G. M. <em>et al.</em> <a href="https://doi.org/10.1152/ajprenal.00493.2011">Multiple residues in the distal <span>C</span> terminus of the α-subunit have roles in modulating human epithelial sodium channel activity</a>. <em>American Journal of Physiology-Renal Physiology</em> <strong>303</strong>, F220–F228 (2012).</div>
+<div class="csl-left-margin">15. </div><div class="csl-right-inline">Mueller, G.M., Yan, W., Copelovitch, L., Jarman, S., Wang, Z., Kinlough, C.L., Tolino, M.A., Hughey, R.P., Kleyman, T.R., and Rubenstein, R.C. (2012). Multiple residues in the distal <span>C</span> terminus of the α-subunit have roles in modulating human epithelial sodium channel activity. American Journal of Physiology-Renal Physiology <em>303</em>, F220–F228. <a href="https://doi.org/10.1152/ajprenal.00493.2011">10.1152/ajprenal.00493.2011</a>.</div>
 </div>
 <div id="ref-snyder2000" class="csl-entry" role="listitem">
-<div class="csl-left-margin">16. </div><div class="csl-right-inline">Snyder, P. M., Bucher, D. B. &amp; Olson, D. R. <a href="https://doi.org/10.1085/jgp.116.6.781">Gating <span>Induces</span> a <span>Conformational Change</span> in the <span>Outer Vestibule</span> of <span>Enac</span></a>. <em>Journal of General Physiology</em> <strong>116</strong>, 781–790 (2000).</div>
+<div class="csl-left-margin">16. </div><div class="csl-right-inline">Snyder, P.M., Bucher, D.B., and Olson, D.R. (2000). Gating <span>Induces</span> a <span>Conformational Change</span> in the <span>Outer Vestibule</span> of <span>Enac</span>. Journal of General Physiology <em>116</em>, 781–790. <a href="https://doi.org/10.1085/jgp.116.6.781">10.1085/jgp.116.6.781</a>.</div>
 </div>
 <div id="ref-kashlan2010" class="csl-entry" role="listitem">
-<div class="csl-left-margin">17. </div><div class="csl-right-inline">Kashlan, O. B. <em>et al.</em> <a href="https://doi.org/10.1074/jbc.M110.167064">Allosteric inhibition of the epithelial <span>Na</span>+ channel through peptide binding at peripheral finger and thumb domains.</a> <em>J Biol Chem</em> <strong>285</strong>, 35216–35223 (2010).</div>
+<div class="csl-left-margin">17. </div><div class="csl-right-inline">Kashlan, O.B., Boyd, C.R., Argyropoulos, C., Okumura, S., Hughey, R.P., Grabe, M., and Kleyman, T.R. (2010). Allosteric inhibition of the epithelial <span>Na</span>+ channel through peptide binding at peripheral finger and thumb domains. J Biol Chem <em>285</em>, 35216–35223. <a href="https://doi.org/10.1074/jbc.M110.167064">10.1074/jbc.M110.167064</a>.</div>
 </div>
 </div>
 </section>
@@ -1657,7 +1663,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","selector":".lightbox","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","loop":true,"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom"});</script>
 
 
 
