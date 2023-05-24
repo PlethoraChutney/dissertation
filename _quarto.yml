@@ -16,6 +16,7 @@ book:
     - parts/references.qmd
   appendices: 
     - parts/mat-meth.qmd
+    - parts/validation.qmd
   navbar: 
     logo: figures/other/domain-cartoon_ECD.png
   search:

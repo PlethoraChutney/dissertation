@@ -253,7 +253,7 @@ In other cases, the ECD and TMD map were combined using Phenix's "Combine Focuse
 In these cases, the lowest GSFSC resolution was provided to Phenix.
 Parameters were left as default, except rotamers were only refined when they had both poor map quality *and* were outliers (rather than *or*).
 I changed this setting because rotamer and clash statistics were significantly worse if it was left as the default.
-Model quality was assessed using MolProbity within Phenix, Q-scores calculated in ChimeraX, and 3DFSC as implemented in cryoSPARC (@tbl-model-building and Model Validation)[@williams2018; @pintilie2020; @aiyer2021].
+Model quality was assessed using MolProbity within Phenix, Q-scores calculated in ChimeraX, and 3DFSC as implemented in cryoSPARC (@tbl-model-building and @sec-validation)[@williams2018; @pintilie2020; @aiyer2021].
 
 ## Constructs
 <!-- TODO: fix LaTeX table output -->
@@ -361,6 +361,8 @@ data |>
     table.font.size = '14px'
   )
 ```
+
+<!-- TODO: figure out quote marks -->
 
 The four constructs I present here can broadly be split into those I expect to be open (CKO/DEG and mouse trypsin) and those I expect to be closed (CKO, mouse) (@tbl-model-building).
 All human channels in this work have mutant furin sites (&alpha;R178A R204A and &gamma;R138A).
