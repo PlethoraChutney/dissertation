@@ -6,3 +6,5 @@
 .quarto/
 
 /.quarto/
+index.xdv
+index.fdb_latexmk

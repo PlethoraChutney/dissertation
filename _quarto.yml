@@ -43,6 +43,8 @@ format:
       dark: darkly
   pdf:
     documentclass: scrbook
+    pdf-engine: latexmk
+    pdf-engine-opt: -xelatex
     colorlinks: false
     geometry:
       - left=2in
