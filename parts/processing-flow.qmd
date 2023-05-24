@@ -1,0 +1,19 @@
+# Image Processing
+Below are the image processing workflows for each map.
+The human CKO digitonin map workflow includes more detail for the initial steps &mdash; these steps are the same for each map, and so are elided in the others.
+In each case, maps are contoured to 0.5.
+Additionally, particle and movie numbers are rounded for ease of comparison.
+See @tbl-model-building for precise numbers.
+
+
+![Human CKO processing pipeline. The TMD volumes are gaussian filtered to reduce noise.](../figures/processing-overviews/hum-pko/human-cko.png){#fig-cko-final}
+
+![Human CKO nanodisc pipeline. Masks are contoured to 0.5. Note that the CKO/DEG map was provided in the form of low-pass filtered templates for particle picking, but never to an alignment.](../figures/processing-overviews/hum-pko-nd/cko-nd.png){#fig-cko-nd}
+
+![Human CKO/DEG Difab pipeline.](../figures/processing-overviews/hum-pko-deg/cko-deg-difab.png){#fig-cko-deg-final}
+
+![Human CKO/DEG Monofab pipeline.](../figures/processing-overviews/hum-pko-deg_monofab/cko-deg-monofab.png){#fig-cd-monofab-final}
+
+![Mouse uncleaved pipeline.](../figures/processing-overviews/mouse-uncleave/mouse-uncleave.png){#fig-mouse-uncleaved-final}
+
+![Mouse trypsin pipeline. ECD mask is contoured to 0.5. The chimeric mask used to refine the TMD is contoured at 0.5 (orange) and 0.125 (blue). Note that the ECD is not contained within the mask beyond 0.25.](../figures/processing-overviews/mouse-trypsin/mouse-trypsin.png){#fig-mouse-tryp-final}

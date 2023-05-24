@@ -103,5 +103,12 @@
     "title": "Appendix B — Map Validation",
     "section": "",
     "text": "These figures present validation of my 3D models. In each, panel A is a local resolution estimation for the α, β, and γ subunits moving from left to right. The color scales for this panel vary slightly in an attempt to capture the resolution range of each map. Panel B is a particle orientation distribution plot. Note that in this panel the color scheme is logarithmic. Panel C is a global and 3DFSC plot. The global FSC is plotted in black, while the histogram of directional FSCs are plotted as a grey histogram. The exact values of the histogram are presented below the histogram as black marks, jittered slightly to give a sense of overlap. Finally, panel D is the model-map FSC.\n\n\n\nFigure B.1: Validation of human CKO map and model.\n\n\n\n\n\nFigure B.2: Validation of human CKO-DEG map and model.\n\n\n\n\n\nFigure B.3: Validation of human CKO-DEG monofab map and model.\n\n\n\n\n\nFigure B.4: Validation of human CKO nanodisc map and model.\n\n\n\n\n\nFigure B.5: Validation of mouse uncleaved map and model.\n\n\n\n\n\nFigure B.6: Validation of trypsin-cleaved mouse map and model."
+  },
+  {
+    "objectID": "parts/processing-flow.html",
+    "href": "parts/processing-flow.html",
+    "title": "Appendix C — Image Processing",
+    "section": "",
+    "text": "Below are the image processing workflows for each map. The human CKO digitonin map workflow includes more detail for the initial steps — these steps are the same for each map, and so are elided in the others. In each case, maps are contoured to 0.5. Additionally, particle and movie numbers are rounded for ease of comparison. See Table A.1 for precise numbers.\n\n\n\nFigure C.1: Human CKO processing pipeline. The TMD volumes are gaussian filtered to reduce noise.\n\n\n\n\n\nFigure C.2: Human CKO nanodisc pipeline. Masks are contoured to 0.5. Note that the CKO/DEG map was provided in the form of low-pass filtered templates for particle picking, but never to an alignment.\n\n\n\n\n\nFigure C.3: Human CKO/DEG Difab pipeline.\n\n\n\n\n\nFigure C.4: Human CKO/DEG Monofab pipeline.\n\n\n\n\n\nFigure C.5: Mouse uncleaved pipeline.\n\n\n\n\n\nFigure C.6: Mouse trypsin pipeline. ECD mask is contoured to 0.5. The chimeric mask used to refine the TMD is contoured at 0.5 (orange) and 0.125 (blue). Note that the ECD is not contained within the mask beyond 0.25."
   }
 ]
