@@ -2,14 +2,14 @@
 
 These figures present validation of my 3D models. In each, panel A is a local resolution estimation for the &alpha;, &beta;, and &gamma; subunits moving from left to right. The color scales for this panel vary slightly in an attempt to capture the resolution range of each map. Panel B is a particle orientation distribution plot. Note that in this panel the color scheme is logarithmic. Panel C is a global and 3DFSC plot. The global FSC is plotted in black, while the histogram of directional FSCs are plotted as a grey histogram. The exact values of the histogram are presented below the histogram as black marks, jittered slightly to give a sense of overlap. Finally, panel D is the model-map FSC.
 
-![Validation of human CKO map and model.](../figures/validation/hCKO-validation.png){#fig-val-hcko}
+![Validation of human CKO map and model.](figures/validation/hCKO-validation.png){#fig-val-hcko}
 
-![Validation of human CKO-DEG map and model.](../figures/validation/hCKO-DEG-validation.png){#fig-val-hcko-deg}
+![Validation of human CKO-DEG map and model.](figures/validation/hCKO-DEG-validation.png){#fig-val-hcko-deg}
 
-![Validation of human CKO-DEG monofab map and model.](../figures/validation/hCKO-DEG-monofab-validation.png){#fig-val-hcko-deg-monofab}
+![Validation of human CKO-DEG monofab map and model.](figures/validation/hCKO-DEG-monofab-validation.png){#fig-val-hcko-deg-monofab}
 
-![Validation of human CKO nanodisc map and model.](../figures/validation/hCKO-ND-validation.png){#fig-val-hcko-nd}
+![Validation of human CKO nanodisc map and model.](figures/validation/hCKO-ND-validation.png){#fig-val-hcko-nd}
 
-![Validation of mouse uncleaved map and model.](../figures/validation/mouse-uncleave-validation.png){#fig-val-mouse-uncleave}
+![Validation of mouse uncleaved map and model.](figures/validation/mouse-uncleave-validation.png){#fig-val-mouse-uncleave}
 
-![Validation of trypsin-cleaved mouse map and model.](../figures/validation/mouse-trypsin-validation.png){#fig-val-mouse-tryp}
+![Validation of trypsin-cleaved mouse map and model.](figures/validation/mouse-trypsin-validation.png){#fig-val-mouse-tryp}

@@ -7,7 +7,7 @@ Too low, and vital organs do not receive sufficient oxygen and nutrients to func
 It is not surprising, then, that the human body has evolved several mechanisms for responding to changes in blood pressure, each with their own timescale [@guyton1991].
 ENaC is the essential mechanism of the longest-term control, kidney excretion.
 
-![Simplified model of ENaC regulation in a principal cell of the distal nephron in the kidney.](/figures/intro/kidney-cartoon/kidney-cartoon.png){#fig-intro_kidney-reg}
+![Simplified model of ENaC regulation in a principal cell of the distal nephron in the kidney.](figures/kidney-cartoon/kidney-cartoon.png){#fig-intro_kidney-reg}
 
 When the kidney is not receiving enough salt, it initiates a cascade which ends with the mineralocorticoid hormone aldosterone augmenting the activity of ENaC in the distal nephron (@fig-intro_kidney-reg).
 Apical sodium permeability is increased both by synthesis of new channels as well as trafficking of an existing pool of channels to the cell surface [@asher1996; @frindt09].[Of note: Asher and colleagues report an aldosterone mediated increase in expression of the &beta; and &gamma;, but not &alpha;, subunits. A trend of subunit-specific regulation is widely observed in the literature, but poorly understood.]{.aside}

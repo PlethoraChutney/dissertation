@@ -1,5 +1,6 @@
 project:
   type: book
+  execute-dir: project
 
 book:
   title: ENaC isn't ASIC
@@ -15,9 +16,9 @@ book:
        - parts/introduction/intro_enac-in-the-body.qmd
     - parts/references.qmd
   appendices: 
-    - parts/mat-meth.qmd
-    - parts/processing-flow.qmd
-    - parts/validation.qmd
+    - parts/appendices/mat-meth.qmd
+    - parts/appendices/processing-flow.qmd
+    - parts/appendices/validation.qmd
   navbar: 
     logo: figures/other/domain-cartoon_ECD.png
   search:

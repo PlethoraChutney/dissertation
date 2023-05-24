@@ -189,7 +189,7 @@ Vitrobot parameters were set as follows: blot time 2, wait time 0, drain time 0,
 This double-blotting process typically took approximately five seconds from first drop to plunge-freeze.
 In all cases, each protein droplet was 3 $\mu$L.
 
-![Fab binding induces only minor changes in the extracellular domain of ENaC. A: Human CKO/DEG map. A low-pass filtered map is outlined to show pseudosymmetry-breaking glycosylation sites (arrows). B: the α subunit, C: the β subunit. Human CKO nanodisc model is colored by subunit, the human CKO/DEG ENaC is white, and human CKO/DEG Fabs are grey.](../figures/matmeth/fabs/fabs.png){#fig-fab-compare}
+![Fab binding induces only minor changes in the extracellular domain of ENaC. A: Human CKO/DEG map. A low-pass filtered map is outlined to show pseudosymmetry-breaking glycosylation sites (arrows). B: the α subunit, C: the β subunit. Human CKO nanodisc model is colored by subunit, the human CKO/DEG ENaC is white, and human CKO/DEG Fabs are grey.](figures/matmeth/fabs/fabs.png){#fig-fab-compare}
 
 Most datasets were collected with at least one of our two pseudosymmetry-breaking Fabs, developed previously[@noreng18].
 I have switched from using both Fabs to only using one, because the &beta;-binding Fab is more flexible than the &alpha;-binding Fab, and this flexibility reduces overall alignment property.
@@ -221,7 +221,7 @@ The template picked particles were repeatedly 3D classified using heterogeneous 
 The final particle set was never 2D classified, since I find that 2D classification reduces the frequency of rare particle views.
 From this point, processing proceeded *ad hoc* to produce the final maps (Image Processing).
 
-![S^2^C^2^ pixel sizes seem miscalibrated. **A**: Scaling the nominal pixel size for human CKO/DEG dramatically increases the correlation with human CKO digitonin. **B**: Correlation coefficients for all maps. Maps were aligned prior to taking correlation coefficients. Abbreviated as follows: hCKO: human CKO; hCD-MF: human CKO/DEG monofab; mTrypsin: trypsin-cleaved mouse; hCKO/DEG: human CKO/DEG difab; hCKO-ND: human CKO nanodisc; mUncleaved: mouse uncleaved; mJanelia2: a second uncleaved mouse dataset collected at Janelia, but not presented here.](../figures/matmeth/ecd-pix-size/pixel-size.png){#fig-pixel-size-calibration}
+![S^2^C^2^ pixel sizes seem miscalibrated. **A**: Scaling the nominal pixel size for human CKO/DEG dramatically increases the correlation with human CKO digitonin. **B**: Correlation coefficients for all maps. Maps were aligned prior to taking correlation coefficients. Abbreviated as follows: hCKO: human CKO; hCD-MF: human CKO/DEG monofab; mTrypsin: trypsin-cleaved mouse; hCKO/DEG: human CKO/DEG difab; hCKO-ND: human CKO nanodisc; mUncleaved: mouse uncleaved; mJanelia2: a second uncleaved mouse dataset collected at Janelia, but not presented here.](figures/matmeth/ecd-pix-size/pixel-size.png){#fig-pixel-size-calibration}
 
 During image processing, I began to suspect that the pixel sizes provided by S^2^C^2^ are likely miscalibrated.
 First, other users reported pixel size calibration issues with S^2^C^2^ microscopes around the time these datasets were collected (Patrick Mitchell, S^2^C^2^ Director of Operations, personal communication).
@@ -269,8 +269,8 @@ library(tidyverse)
 library(gt)
 library(gtExtras)
 
-particles <- read_csv('../figures/matmeth/table-one/model-building.csv', na = '')
-models <- read_csv('../figures/matmeth/table-one/processed_tables.csv', col_types = 'cccccccc')
+particles <- read_csv('figures/matmeth/table-one/model-building.csv', na = '')
+models <- read_csv('figures/matmeth/table-one/processed_tables.csv', col_types = 'cccccccc')
 data <- bind_rows(particles, models)
 
 # TODO: update Q-scores
@@ -372,7 +372,7 @@ CKO channels express at approximately eight times the yield of wild-type-like ch
 Mouse channels presented in this work have no mutations from the consensus gene.
 I expect mouse and CKO channels to be closed.
 
-![I/V curves for human CKO and CKO/DEG channels. Values are normalized per-cell to the inward current at -80 mV before trypsin treatment. Cells were treated with trypsin for five minutes before being re-recorded. Each point is the average of three cells. Error bars represent +/- one standard deviation.](../figures/matmeth/ephys/491-mean-iv.png){#fig-ephys}
+![I/V curves for human CKO and CKO/DEG channels. Values are normalized per-cell to the inward current at -80 mV before trypsin treatment. Cells were treated with trypsin for five minutes before being re-recorded. Each point is the average of three cells. Error bars represent +/- one standard deviation.](figures/matmeth/ephys/491-mean-iv.png){#fig-ephys}
 
 DEG channels have two mutations: &beta;S520K and &alpha;T240W.
 The former mutation at what has been named the "DEG site" holds the channel in an open state regardless of proteolytic cleavage state[@snyder2000].
