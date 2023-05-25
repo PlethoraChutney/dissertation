@@ -2,6 +2,7 @@
 
 ENaC is a highly-specific triheteromeric sodium channel expressed throughout the human body.
 The channel comprises one copy each of the &alpha;, &beta;, and &gamma; subunits.
+ENaC is thought to be activated by proteolytic removal of a portion of its extracellular domain, and is potently inhibited by a small molecule called amiloride and its derivatives.
 <!-- TODO: ENaC mechanism crossref --> delves more deeply into the suspected molecular mechanism of ENaC and the source of its selectivity.
 However, I will begin with a background in the function of the channel, especially as it relates to human health.
 I will begin with the system in which ENaC's function is best understood, the kidney.
@@ -47,3 +48,14 @@ This makes the disease particularly deadly to newborns, and requires life-long s
 Contrary to the pattern observed for Liddle Syndrome, most systemic PHA1 mutations occur in the gene encoding ENaC~&alpha;~ [@edelheit2005].[Although the genes for the &beta; and &gamma; subunits are both on chromosome 16 and the gene for ENaC~&alpha;~ is on chromosome 12, no difference in the rates of mutation for the affected genes are seen between patients and control groups [@edelheit2005].]{.aside}
 The majority of described PHA1 mutations are nonsense mutations, although three missense mutations have been described [@chang1996; @schaedel1999; @edelheit2005].
 One of these mutations occurs in the palm domain, one in the transmembrane domain, and one likely in the intracellular domain.
+
+## ENaC in the lung
+
+Cystic fibrosis (CF) is a recessive genetic disorder which affects many organs, but most prominently the lungs.
+Patients with CF have thick airway mucus they are unable to clear, causing chronic airway infections and lung damage.
+Patients with CF also lose salt but, unlike patients with PHA1, the causative mutation is in the *CFTR* gene rather than an ENaC gene.
+
+*CFTR* encodes a chloride channel (CFTR) which transports chloride and bicarbonate across epithelia.
+In the lung, this chloride transport is balanced by sodium uptake via ENaC, which in turn regulates the thickness of the airway surface liquid (ASL) [@randell2006].
+Defective CFTR increases the absorption of sodium, dehydrating and thickening the ASL.
+Mice which overexpress &beta;ENaC in the airway show CF-like symptoms, including reduced airway liquid height and mucous clearance [@mall2004].[Interestingly, mice overexpressing the &alpha; or &gamma; subunits did not show CF-like symptoms. The authors point to prior research showing that &alpha;&beta;-only channels have a higher P~O~ than &alpha;&beta;&gamma; [@fyfe1998].]{.aside}

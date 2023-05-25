@@ -127,7 +127,7 @@ I've written a few tools to aid with model building and general structure analys
 They're all available [on my github](https://github.com/plethorachutney/model-building-tools).
 
 :::{.column-margin}
-![A `ca_bilder.py` image highlighting the movement of the finger and thumb between the resting and desensitized states of ASIC1.](figures/code/ca-bilder.png){#fig-ca-bilder}
+![An image from `ca_bilder.py` highlighting the movement of the finger and thumb between the resting and desensitized states of ASIC1.](figures/code/ca-bilder.png){#fig-ca-bilder}
 :::
 
 `ca_bilder.py` creates a `.bild` file visualizing C&alpha; shifts between two given models.
