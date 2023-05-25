@@ -78,9 +78,7 @@ At the time of writing, Appia supports the following data formats:
 
 Your processor can perform any necessary setup in `__init__()`, but it must eventually run
 
-<!-- TODO: figure out PDF code font -->
-
-```python
+``` python
 super().__init__(
     filename,
     manufacturer = {appropriate_string},
@@ -120,7 +118,7 @@ As long as only one `Processor` claimed a file, the Appia `parser` will handle c
 The parent classes provide a few conveniences for you.
 For example, the `flow_rate` and `column_volume` getters will prompt the user for the relevant info, if necessary, and then offer to store it in the user settings.
 It will also handle overrides of various parameters, which are accepted through `kwargs`.
-Additionally, `appia.processors.core` provides the `normalize` function, which handles trace normalization.
+Additionally, `appia.processors.core` provides the `normalize()` function, which handles trace normalization.
 I encourage you to take a look at the `Processors` I've already written before embarking on writing your own.
 
 ## Model-building tools

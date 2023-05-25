@@ -362,8 +362,6 @@ data |>
   )
 ```
 
-<!-- TODO: figure out quote marks -->
-
 The four constructs I present here can broadly be split into those I expect to be open (CKO/DEG and mouse trypsin) and those I expect to be closed (CKO, mouse) (@tbl-model-building).
 All human channels in this work have mutant furin sites (&alpha;R178A R204A and &gamma;R138A).
 Additionally, all human channels are "cysteine knock-out" (CKO) mutants, with the following mutations: &alpha;C63A, &beta;C30A, and &gamma;C33A C41A.

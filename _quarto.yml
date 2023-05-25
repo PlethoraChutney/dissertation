@@ -48,6 +48,8 @@ format:
     documentclass: scrbook
     pdf-engine: latexmk
     pdf-engine-opt: -xelatex
+    latex-max-runs: 3
+    keep-tex: true
     colorlinks: false
     geometry:
       - left=2in
@@ -57,11 +59,17 @@ format:
     include-in-header:
       - text: |
           \usepackage{fontspec}
-          \newfontfamily\defaultfont{Charter}
-          \newfontfamily\greekfont{Fira Sans}
+          \usepackage{newunicodechar}
+          \newfontfamily\symbolfont{Fira Sans}
+          \setmainfont{Charter}
+          \setmonofont{JetBrains Mono NL}
+
+          \DeclareTextFontCommand{\textfallback}{\symbolfont}
+          \newunicodechar{→}{\textfallback{→}}
+          \newunicodechar{₂}{\textfallback{₂}}
+          \newunicodechar{⁻}{\textfallback{⁻}}
 
           \usepackage{ucharclasses}
-          \setTransitionsForLatin{\defaultfont}{}
-          \setTransitionsForGreek{\greekfont}{\defaultfont}
+          \setTransitionsForGreek{\begingroup\symbolfont}{\endgroup}
   docx:
     reference-doc: dissertation-reference.docx
