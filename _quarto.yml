@@ -62,6 +62,7 @@ format:
           \usepackage{newunicodechar}
           \newfontfamily\symbolfont{Fira Sans}
           \setmainfont{Charter}
+          \setsansfont{Montserrat}
           \setmonofont{JetBrains Mono NL}
 
           \DeclareTextFontCommand{\textfallback}{\symbolfont}
