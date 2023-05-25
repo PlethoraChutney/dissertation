@@ -1,5 +1,13 @@
 # ENaC in the Body
 
+ENaC is a highly-specific triheteromeric sodium channel expressed throughout the human body.
+The channel comprises one copy each of the &alpha;, &beta;, and &gamma; subunits.
+<!-- TODO: ENaC mechanism crossref --> delves more deeply into the suspected molecular mechanism of ENaC and the source of its selectivity.
+However, I will begin with a background in the function of the channel, especially as it relates to human health.
+I will begin with the system in which ENaC's function is best understood, the kidney.
+Next I will cover the channel's role in controlling the thickness of the airway mucosal layer.
+Finally, I will cover less-studied domains of ENaC expression &mdash; namely, the tongue, heart, and colon.
+
 ## ENaC in the kidney
 
 Blood pressure must be maintained within a narrow window of acceptable values.

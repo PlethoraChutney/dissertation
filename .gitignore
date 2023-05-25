@@ -12,3 +12,6 @@
 *.aux
 *.fls
 *.log
+
+/.luarc.json
+todo.md
