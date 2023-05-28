@@ -1,4 +1,7 @@
-
+---
+execute:
+  freeze: auto
+---
 # Materials and Methods
 
 ## ENaC Expression
@@ -6,9 +9,9 @@
 ### Human ENaC
 
 Human embryonic kidney cells (HEK293T/17) were grown in suspension in Freestyle medium with 2% FBS at a density of 2 &ndash; 4$\times 10^6$ cells/mL.
-BacMam virus carrying the genes for the appropriate ENaC subunits were added to the flasks at an MOI of 1 and incubated at 37&nbsp;&deg;C for 8 hours, after which 1 $\mu$M amiloride was added and the flasks were moved to 30&nbsp;&deg;C.
+BacMam virus carrying the genes for the appropriate ENaC subunits were added to the flasks at an MOI of 1 and incubated at 37&nbsp;&deg;C for 8 hours, after which 1 &mu;M amiloride was added and the flasks were moved to 30&nbsp;&deg;C.
 After a total incubation time of 72 hours, cultures were centrifuged at 4,790 xg for 20 minutes to collect pellets.
-The pellets were washed with **TBS** (20 mM Tris pH 8.0, 200 mM NaCl) and centrifuged again before snap-freezing in liquid nitrogen.
+The pellets were washed with **TBS** (20&nbsp;mM Tris pH&nbsp;8.0, 200&nbsp;mM NaCl) and centrifuged again before snap-freezing in liquid nitrogen.
 Cell pellets were stored at -80&nbsp;&deg;C until use.
 
 ### Mouse ENaC
@@ -23,76 +26,76 @@ Cells were harvested 24&nbsp;hours later, washed with TBS, flash frozen in liqui
 ### Human ENaC
 
 Throughout this protocol, quantities of resin and buffer are given "per flask".
-I grow cell culture in quantities of 800 mL culture per flask, meaning that, e.g., pelleted cells from 1.6 L of cells require twice the quoted quantities of buffer and resin.
+I grow cell culture in quantities of 800&nbsp;mL culture per flask, meaning that, e.g., pelleted cells from 1.6 L of cells require twice the quoted quantities of buffer and resin.
 In datasets with NaCl listed as the salt, solubilization buffer, wash buffers, elution buffer, and SEC buffer used NaCl in place of KCl.
 
 To purify ENaC, frozen whole-cell pellets were removed from the -80&nbsp;&deg;C freezer and thawed in a 37&nbsp;&deg;C water bath.
-While the pellets were thawing, 50 mL **Solubilization Buffer** was prepared per flask:
+While the pellets were thawing, 50&nbsp;mL **Solubilization Buffer** was prepared per flask:
 
- * 20 mM Tris pH 7.5, 200 mM KCl
- * 1 tablet per 100 mL Pierce EDTA-free protease inhibitor tablets
+ * 20&nbsp;mM Tris pH&nbsp;7.5, 200&nbsp;mM KCl
+ * 1 tablet per 100&nbsp;mL Pierce EDTA-free protease inhibitor tablets
  * 25 U/mL ThermoFisher universal nuclease
- * 2.5 mM ATP, 5 mM MgCl~2~
- * 10 mg/mL digitonin
- * 10 $\mu$M amiloride
+ * 2.5&nbsp;mM ATP, 5&nbsp;mM MgCl~2~
+ * 10&nbsp;mg/mL digitonin
+ * 10 &mu;M amiloride
 
-The solubilization buffer was prepared fresh at 2X concentration (i.e., half the final volume).
+The solubilization buffer was prepared fresh at 2x concentration (i.e., half the final volume).
 Once pellets were fully thawed, they were added to the solubilization buffer and the mixture was brought to the final volume with DI water and poured into a screw-cap bottle.
 The solubilization mixture was left at 8&nbsp;&deg;C for 1.5 hours.
 
 After solubilization was complete, the crude lysate was decanted into ultracentrifuge tubes and centrifuged at 100,000 xg for 45 minutes at 4&nbsp;&deg;C.
 <!-- TODO: where did I get the GNB gene? -->
-Meanwhile, in-house-made GFP-nanobody CNBr resin (0.8 mL per flask) was loaded into an XK 16 column and washed with 2 CV of TBK
+Meanwhile, in-house-made GFP-nanobody CNBr resin (0.8&nbsp;mL per flask) was loaded into an XK 16 column and washed with 2&nbsp;CV of TBK
 
- * 20 mM Tris pH 7.5
- * 200 mM KCl
+ * 20&nbsp;mM Tris pH&nbsp;7.5
+ * 200&nbsp;mM KCl
 
 and the following buffers were prepared in the listed quantities:
 
 **wash A** (10 column volumes [CV]):
 
- * 20 mM Tris pH 7.5, 200 mM KCl
- * 0.7 mg/mL digitonin
- * 2 mM MgCl~2~
- * 2 mM ATP
- * 2 nM phenamil
+ * 20&nbsp;mM Tris pH&nbsp;7.5, 200&nbsp;mM KCl
+ * 0.7&nbsp;mg/mL digitonin
+ * 2&nbsp;mM MgCl~2~
+ * 2&nbsp;mM ATP
+ * 2&nbsp;nM phenamil
 
-**wash B** (10 CV):
+**wash B** (10&nbsp;CV):
 
- * 20 mM Tris pH 7.5
- * 200 mM KCl
- * 0.7 mg/mL digitonin
- * 5 mM CaCl~2~
- * 2 nM phenamil;
+ * 20&nbsp;mM Tris pH&nbsp;7.5
+ * 200&nbsp;mM KCl
+ * 0.7&nbsp;mg/mL digitonin
+ * 5&nbsp;mM CaCl~2~
+ * 2&nbsp;nM phenamil;
 
-**elution buffer** (5 CV): wash B with 33 $\mu$g/mL thrombin
+**elution buffer** (5&nbsp;CV): wash B with 33 &mu;g/mL thrombin
 
-The column was washed with 2 CV of wash A, then clarified lysate was bound to the column under 4 mL/min flow.
+The column was washed with 2&nbsp;CV of wash A, then clarified lysate was bound to the column under 4&nbsp;mL/min flow.
 A small aliquot of pre-column and post-column clarified lysate was reserved to assess binding efficiency by GFP FSEC[@kawate06].
 If binding efficiency fell below 90% of the initial efficiency the resin was discarded.
-Otherwise, it was regenerated with pulsed pH cleaning.
-The GFP-nanobody column was washed with 5 CV wash A and B.
+Otherwise, it was regenerated with pulsed pH&nbsp;cleaning.
+The GFP-nanobody column was washed with 5&nbsp;CV wash A and B.
 
-To elute ENaC from the GFP nanobody resin, the column was washed 3 times with 1.5 CV elution buffer and once with TBK + 0.7 mg/mL digitonin.
-As each wash was flowed on, the eluant was collected in 1 mL or 0.25 CV fractions, whichever was smaller.
+To elute ENaC from the GFP nanobody resin, the column was washed 3 times with 1.5&nbsp;CV elution buffer and once with TBK with 0.7&nbsp;mg/mL digitonin.
+As each wash was flowed on, the eluant was collected in 1&nbsp;mL or 0.25 CV fractions, whichever was smaller.
 This results in four sets of fractions: the first comprises largely wash B with little protein (from the initial flow-on of elution buffer), and the remaining three elution buffer.
-All fractions were run on an SDS-PAGE gel, and fractions with bands at the expected molecular weight for ENaC were pooled and concentrated to a final volume of 0.5 mL.
+All fractions were run on an SDS-PAGE gel, and fractions with bands at the expected molecular weight for ENaC were pooled and concentrated to a final volume of 0.5&nbsp;mL.
 If the preparation was acid-shocked, the protein was desalted into **acid shock** buffer at this stage:
 
- * 20 mM Tris pH 6
- * 200 mM KCl
- * 0.7 mg/mL digitonin
- * 2 nM phenamil
+ * 20&nbsp;mM Tris pH&nbsp;6
+ * 200&nbsp;mM KCl
+ * 0.7&nbsp;mg/mL digitonin
+ * 2&nbsp;nM phenamil
 
 If the preparation required Fabs, they were added in two-fold excess of protein concentration (as determined by nanodrop A~280~) at this stage.
-A final concentration of 1 mM C8 PIP~2~ was added to the CKO/DEG monofab samples just before grid preparation.
+A final concentration of 1&nbsp;mM C8 PIP~2~ was added to the CKO/DEG monofab samples just before grid preparation.
 
 The concentrated eluant was loaded onto a Superose 6 Increase 10/300 column (Cytiva) equilibrated in **SEC buffer** for further purification via SEC.
 
- * 20 mM Tris pH 7.5
- * 200 mM KCl
- * 0.7 mg/mL digitonin
- * 2 nM phenamil
+ * 20&nbsp;mM Tris pH&nbsp;7.5
+ * 200&nbsp;mM KCl
+ * 0.7&nbsp;mg/mL digitonin
+ * 2&nbsp;nM phenamil
 
 SEC was typically run overnight, meaning fractions remained at 4&nbsp;&deg;C until the next morning.
 Fractions from the SEC peak were collected and assayed for purity and monodispersity by SDS-PAGE and tryptophan FSEC.
@@ -127,14 +130,14 @@ Next, 300&nbsp;&mu;L GFP nanobody CNBr resin per gram of membrane was loaded int
  and 3&nbsp;CV **wash A**
  
  * 0.1&nbsp;mg/mL GDN
- * 20&nbsp;mM HEPES pH 7.6
+ * 20&nbsp;mM HEPES pH&nbsp;7.6
  * 150&nbsp;mM NaCl
  * 1&nbsp;mM TCEP
  * 100&nbsp;nM phenamil
 
 Clarified lysate was flowed over this column under gravity.
-The column was washed with 6 CV each of wash A, **wash B** (wash A plus 2&nbsp;mM ATP, 2&nbsp;mM MgSO~4~), **wash C** (wash A plus 25 U/mL ThermoFisher Universal Nuclease), and **elution buffer** (wash A plus 5&nbsp;mM CaCl~2~).
-ENaC was eluted by flowing 1&nbsp;CV of elution buffer plus 30&nbsp;&mu;g/mL thrombin onto the column and collecting the supernatant.
+The column was washed with 6&nbsp;CV each of wash A, **wash B** (wash A with 2&nbsp;mM ATP, 2&nbsp;mM MgSO~4~), **wash C** (wash A with 25 U/mL ThermoFisher Universal Nuclease), and **elution buffer** (wash A with 5&nbsp;mM CaCl~2~).
+ENaC was eluted by flowing 1&nbsp;CV of elution buffer with 30&nbsp;&mu;g/mL thrombin onto the column and collecting the supernatant.
 After an hour, this process was repeated.
 These elution steps were repeated for a total of four elutions of 1&nbsp;CV each.
 
@@ -146,26 +149,26 @@ Fractions were assessed for purity via SDS-PAGE and FSEC before proceeding to gr
 
 ## ENaC nanodisc preparation
 
-To prepare nanodiscs, 15 mg of a chloroform stock of POPC (Avanti) was dried down under an argon stream.
+To prepare nanodiscs, 15&nbsp;mg of a chloroform stock of POPC (Avanti) was dried down under an argon stream.
 The lipid film was left overnight in a vacuum desiccator to remove all chloroform.
-The lipids were then resuspended in 350 $\mu$L **reconstitution buffer**
+The lipids were then resuspended in 350 &mu;L **reconstitution buffer**
 
- * 20 mM HEPES pH 7.4
- * 100 mM KCl
- * 1 mM EDTA
+ * 20&nbsp;mM HEPES pH&nbsp;7.4
+ * 100&nbsp;mM KCl
+ * 1&nbsp;mM EDTA
 
 and sonicated until the solution was milky in appearance and no lipids remained adhered to the sides of the tube, typically 5--10 minutes.
-To this solution, 150 $\mu$L of 350 $\mu$M DM in reconstitution buffer was added.
-The resulting 500 $\mu$L suspension was sonicated in 5 minute bursts until completely clear.
-To this suspension, 1 mL TBS was added to prepare a final lipid concentration of 10 mg/mL.
+To this solution, 150 &mu;L of 350 &mu;M DM in reconstitution buffer was added.
+The resulting 500 &mu;L suspension was sonicated in 5 minute bursts until completely clear.
+To this suspension, 1&nbsp;mL TBS was added to prepare a final lipid concentration of 10&nbsp;mg/mL.
 
 Lipids, ENaC, and MSP2N2 were mixed at a final MSP:POPC:ENaC molar ratio of 1:31:0.04.
-The final concentration of MSP2N2 was kept at 100 $\mu$M by further concentrating ENaC or adding lipid reconstitution buffer with 35 mM DM as necessary.
+The final concentration of MSP2N2 was kept at 100 &mu;M by further concentrating ENaC or adding lipid reconstitution buffer with 35&nbsp;mM DM as necessary.
 This reconstitution mixture was incubated at room temperature for 1 hour.
 During this incubation, biobeads were washed once in 100% methanol, three times in water, and once in TBS.
-After 90 minutes, 215 mg washed biobeads per 1 mL reconstitution mixture were added.
+After 90 minutes, 215&nbsp;mg washed biobeads per 1&nbsp;mL reconstitution mixture were added.
 After 1 hour, the reconstitution mixture was moved to a fresh aliquot of equilibrated biobeads and left nutating overnight at room temperature, approximately 16 hours.
-The reconstitution mixture was pipetted off the biobeads, filtered with a 0.2 $\mu$m filter, and purified via SEC using a Superose 6 Increase 10/300 column in TBS.
+The reconstitution mixture was pipetted off the biobeads, filtered with a 0.2 &mu;m filter, and purified via SEC using a Superose 6 Increase 10/300 column in TBS.
 Typical yields were extremely low, between 5--10% of input ENaC.
 The protein assembly was stable with minimal aggregation at 4&nbsp;&deg;C (assessed by cryoEM and SEC) for at least two weeks.
 
@@ -182,12 +185,12 @@ Membranes were incubated at room temperature with secondary for 1&nbsp;hour, was
 
 Grid preparation different slightly for each dataset, but followed the same general procedure (@tbl-model-building).
 Purified GFP-cleaved ENaC was concentrated for grid preparation just before blotting and freezing.
-All grids were glow discharged at 15 mA for 60 seconds on a Pelco easiGlow before blotting.
+All grids were glow discharged at 15 mA for 60 seconds on a Pelco easiGlow before blotting.
 Grids were frozen using a Vitrobot Mark III (Thermo Fisher).
-Vitrobot parameters were set as follows: blot time 2, wait time 0, drain time 0, blot force 1, humidity 100%, temperature 12 &deg;C.
+Vitrobot parameters were set as follows: blot time 2, wait time 0, drain time 0, blot force 1, humidity 100%, temperature 12 &deg;C.
 "Double-blotted" grids had a protein droplet loaded, manually blotted with torn Whatman filter paper, and a fresh droplet loaded onto the grid before Vitrobot blotting (with Vitrobot filter paper rings) and freezing.
 This double-blotting process typically took approximately five seconds from first drop to plunge-freeze.
-In all cases, each protein droplet was 3 $\mu$L.
+In all cases, each protein droplet was 3 &mu;L.
 
 ![Fab binding induces only minor changes in the extracellular domain of ENaC. A: Human CKO/DEG map. A low-pass filtered map is outlined to show pseudosymmetry-breaking glycosylation sites (arrows). B: the α subunit, C: the β subunit. Human CKO nanodisc model is colored by subunit, the human CKO/DEG ENaC is white, and human CKO/DEG Fabs are grey.](figures/matmeth/fabs/fabs.png){#fig-fab-compare}
 
@@ -380,25 +383,25 @@ The latter mutation in &alpha; lies in the GRIP domain and also increases the P~
 ## Whole cell patch clamp
 
 Human embryonic kidney cells (HEK293S/17) were grown in suspension in Freestyle medium with 10% FBS to a density of 1$\times 10^6$ cells/mL, at which point they were infected with virus carrying the appropriate ENaC genes.
-Cells were incubated at 37&nbsp;&deg;C overnight with 1 $\mu$M amiloride.
-Cells were then pipetted over a dish of DMEM plus 10% FBS with several small coverslips and allowed to adhere at 37&nbsp;&deg;C while the electrophysiology rig was prepared, approximately 2 hours.
-Pipettes were pulled to 2--3 M$\Omega$ resistance and filled with filtered **internal solution**
+Cells were incubated at 37&nbsp;&deg;C overnight with 1 &mu;M amiloride.
+Cells were then pipetted over a dish of DMEM with 10% FBS with several small coverslips and allowed to adhere at 37&nbsp;&deg;C while the electrophysiology rig was prepared, approximately 2 hours.
+Pipettes were pulled to 2--3 M&Omega; resistance and filled with filtered **internal solution**
 
- * 150 mM KCl
- * 2 mM MgCl~2~
- * 5 mM EGTA
- * 10 mM HEPES pH 7.4
+ * 150&nbsp;mM KCl
+ * 2&nbsp;mM MgCl~2~
+ * 5&nbsp;mM EGTA
+ * 10&nbsp;mM HEPES pH&nbsp;7.4
 
 Working one coverslip at a time, cells were moved from DMEM at 37&nbsp;&deg;C to a dish on the rig (at room temperature) containing **K^+^ external solution**
 
- * 150 mM KCl
- * 2 mM MgCl~2~
- * 2 mM CaCl~2~
- * and 10 mM HEPES pH 7.4
+ * 150&nbsp;mM KCl
+ * 2&nbsp;mM MgCl~2~
+ * 2&nbsp;mM CaCl~2~
+ * and 10&nbsp;mM HEPES pH&nbsp;7.4
 
 Also prepared were solutions of Na^+^ and Li^+^, the same as the K^+^ solution but with NaCl or LiCl replacing the KCl, respectively.
-Each salt solution also had a counterpart with 100 $\mu$M amiloride added.
-Finally, a **trypsin solution** (KCl external solution + 5 $\mu$g/mL trypsin) was prepared.
+Each salt solution also had a counterpart with 100 &mu;M amiloride added.
+Finally, a **trypsin solution** (KCl external solution with 5 &mu;g/mL trypsin) was prepared.
 
 Amiloride sensitive current was determined by placing a cell in the amiloride external solution for 1 second, the amiloride-free solution for 2 seconds, and returning to the amiloride solution for 1 second.
 Average current during no-amiloride traces was subtracted to set the baseline to 0 A, and the maximum current during the 2 second no-amiloride duration taken as the amiloride-sensitive current.
