@@ -55,7 +55,22 @@ Cystic fibrosis (CF) is a recessive genetic disorder which affects many organs, 
 Patients with CF have thick airway mucus they are unable to clear, causing chronic airway infections and lung damage.
 Patients with CF also lose salt but, unlike patients with PHA1, the causative mutation is in the *CFTR* gene rather than an ENaC gene.
 
-*CFTR* encodes a chloride channel (CFTR) which transports chloride and bicarbonate across epithelia.
-In the lung, this chloride transport is balanced by sodium uptake via ENaC, which in turn regulates the thickness of the airway surface liquid (ASL) [@randell2006].
-Defective CFTR increases the absorption of sodium, dehydrating and thickening the ASL.
+*CFTR* encodes a cAMP-regulated chloride channel, CFTR [@riordan1989].
+Pathogenic CFTR mutations dramatically reduce chloride permeability, resulting in poor reabsorption of NaCl [@quinton1983].
+In the lung, this chloride secretion is balanced by sodium uptake via ENaC, which in turn regulates the thickness of the airway surface liquid (ASL) [@zabner1998].
+Reduced chloride absorption due to mutant CFTR increases the absorption of sodium.
+This, in turn, dehydrates and thickens the ASL, which damages the underlying tissue and prevents mucous clearance [@randell2006; @button2012].
+
+The interplay between CFTR and ENaC in CF patients is complicated and not fully understood.
+Treatment of normal, but not CF, lung epithelia with amiloride augments Cl^-^ transport [@knowles1983].
+Cells co-expressing CFTR and ENaC show smaller ENaC currents than do cells expressing only ENaC, but this effect depends both CFTR's ability to pass Cl^-^ and ENaC's intracellular termini [@ji2000].
 Mice which overexpress &beta;ENaC in the airway show CF-like symptoms, including reduced airway liquid height and mucous clearance [@mall2004].[Interestingly, mice overexpressing the &alpha; or &gamma; subunits did not show CF-like symptoms. The authors point to prior research showing that &alpha;&beta;-only channels have a higher P~O~ than &alpha;&beta;&gamma; [@fyfe1998].]{.aside}
+It seems, then, that the function of the two ion channels is linked both by electrochemical gradients and potentially other regulatory partners.
+
+The picture turns out not to be quite so neat.
+Double-mutant mice which overexpress &beta;ENaC and CFTR have normal Cl^-^ secretion but neither a concomitant decrease in Na^+^ absorption nor a rescue of the CF-like phenotype [@grubb2012].
+Additionally, Liddle syndrome patients have increased sodium absorption throughout their body but neither they nor Liddle syndrome mice develop lung disease [@mall2010].
+Human patients with *reduced* &beta;ENaC function develop CF-like phenotypes of lung infection and elevated sweat chloride, but PHA1 patients produce excessive airway liquid without infection [@sheridan2005; @kerem1999].
+There are many hypothesis as to how these contradictions may be resolved, reviewed well by Collawn and colleagues, but more work on the subject is desperately needed [@collawn2012].
+One important point is that the mouse model does not recapitulate human disease well.
+Indeed, mice with CFTR mutations which are pathogenic in humans do not develop lung disease at all [@grubb1999].
