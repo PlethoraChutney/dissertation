@@ -74,3 +74,5 @@ format:
           \setTransitionsForGreek{\begingroup\symbolfont}{\endgroup}
   docx:
     reference-doc: dissertation-reference.docx
+    filters:
+      - no_asides.lua
