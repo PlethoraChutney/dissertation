@@ -34,9 +34,9 @@ However, after excluding patients with other clear causes (primary aldosteronism
 All but one of the described cases involve mutation of the &beta; or &gamma; subunits [@tetti2018; @liu2018].
 
 A majority of the mutations in the &beta; and &gamma; subunits disrupt or remove entirely a proline-rich PY motif at the C-terminus of those channels [@yang2014].
-This PY motif is the binding site for the E3 ubiquitin ligase NEDD4-2 (see section <!-- TODO: crossref nedd4-2 section -->).
+This PY motif is the binding site for the E3 ubiquitin ligase NEDD4-2 (see section <!-- TODO: crossref NEDD4-2 section -->).
 Study of ENaC surface dwell time is complicated by a reserve pool maintained by the cells to be cycled up to the membrane, but there is a consensus that ENaC is recycled quickly; surface half life estimates range from fifteen minutes to three hours, with the low end having more support [@butterworth2009].
-ENaC lacking the PY motif cannot be pulled back in from the membrane, thus increasing sodium permeability by increasing *N* rather than the conductivity or P~O~ of the channels [@schild1995; @abriel1999; @lu2007].The &alpha; subunit does have a PY motif, but no Liddle syndrome mutation of the &alpha; PY has been described. This is discussed further in <!-- TODO: crossref nedd4-2 section -->]{.aside}
+ENaC lacking the PY motif cannot be pulled back in from the membrane, thus increasing sodium permeability by increasing *N* rather than the conductivity or P~O~ of the channels [@schild1995; @abriel1999; @lu2007].[The &alpha; subunit does have a PY motif, but no Liddle syndrome mutation of the &alpha; PY has been described. This is discussed further in <!-- TODO: crossref NEDD4-2 section -->]{.aside}
 The remaining minority of described Liddle syndrome mutations (including the sole ENaC~&alpha;~ mutation) which do not affect PY-motif binding instead directly augment channel P~O~ [@tetti2018].
 Liddle syndrome is typically treated with small molecules that block ENaC (amiloride or triamterene) and a low-salt diet.
 
@@ -98,5 +98,13 @@ This result is further complicated by the fact that amiloride-sensitive salt per
 Thus the possibility remains that salt taste in mice is mediated by &alpha;&beta;&gamma;ENaC and is simply harder to detect with this experimental setup.
 However, as discussed further in section <!-- TODO: reference stoichiometry section -->, &alpha;ENaC is sufficient to form small (100 times smaller than &alpha;&beta;&gamma;) currents when expressed alone in oocytes [@canessa1994].
 Homomeric &alpha; channels may instead carry the amiloride-sensitive salt taste.
-Perhaps more importantly, salt taste in humans is far less sensitive to amiloride than in mice <!-- TODO: read this paper -->[@desor1989].
-Additionally, humans express &delta;ENaC (a pseudogene in rats and mice) in the taste bud, rather than &alpha;ENaC [@stahler2008].
+Perhaps more importantly, salt taste in humans is insensitive to amiloride [@desor1989].
+Additionally, humans express &delta;ENaC (a fourth subunit which is a pseudogene in rats and mice) in the taste bud, rather than &alpha;ENaC [@stahler2008].
+
+The mouse model of taste, much like that of cystic fibrosis, seems to be a poor facsimile of the process in humans.
+Despite this fact, salty taste illustrates an important unanswered question regarding ENaC: what is the full compliment of physiologically-relevant functional ENaC channels?
+As covered in <!-- TODO: reference stoichiometry section -->, the two canonical channels comprise one each of the &beta;, &gamma;, and either &alpha; or &delta; subunits.
+However, the combination of &alpha;ENaC knock-out mice and ENaC expression patterns makes it apparent that channels with only a single ENaC subunit, while rare, are physiologically relevant.
+I note here that we cannot say these channels are homomeric &alpha;ENaC channels.
+They may be assemblies of ENaC with other ENaC/DEG family members or as-yet unknown other proteins.
+Regardless of the ultimate identity of the amiloride-sensitive salt taste receptor, the patterns observed in taste are difficult to explain if the only physiologically relevant ENaC is the &alpha;/&delta;&beta;&gamma; triheteromer, which makes it an interesting and valuable system for further study.
