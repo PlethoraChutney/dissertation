@@ -83,10 +83,20 @@ It is therefore useful as a spotlight on how little we still know about the very
 
 The organization of taste in the mammalian tongue is complex, but well-reviewed by Yarmolinsnky and colleagues [@yarmolinsky2009].
 Briefly, taste buds comprise 50&ndash;100 taste receptor cells (TRCs).
-Each TRC expresses receptors for just one of the five basic tastes: salty, sweet, sour, bitter, and umami [@chandrashekar2006].
+Each TRC expresses receptors for and responds to just one of the five basic tastes: salty, sweet, sour, bitter, and umami [@zhao2003; @chandrashekar2006].
 These receptors are highly diverse, with closely-related species having widely varying taste responses to the same molecule.[For instance, hamsters do not taste aspartame as sweet [@danilova1998].]{.aside}
 
 Salt sensation is further divided into an appetitive taste (a potato chip) and an aversive taste (sea water).
 Amiloride blocks rats' ability to taste the difference between KCl and NaCl and reduces their voluntary NaCl (but not KCl) consumption [@spector1996; @gannon1995].
 Thus, the appetitive taste is taken to result from Na^+^ currents in amiloride-sensitive TRCs, while the aversive NaCl taste results from Cl^-^ currents in amiloride-insensitive TRCs [@roebber2019].
-ENaC seems a prime candidate for the amiloride-sensitive Na^+^ current; indeed all three subunits are detected in taste buds but not the surrounding epithelia [@kretz1999].[Kretz and colleagues note that the relative abundance of &alpha;, &beta;, and &gamma; mRNA differs in different regions of the tongue. More evidence for tissue-specific, subunit-level regulation of ENaC.]{.aside}
+ENaC seems a prime candidate for the amiloride-sensitive Na^+^ current; indeed all three subunits are detected in taste buds but not the surrounding epithelia [@kretz1999].
+Mice with &alpha;ENaC specifically knocked-out in mature TRCs lost their preference for salt, and those TRCs no longer responded to low Na^+^ concentrations [@chandrashekar2010].
+However, recent work has significantly complicated the role of &alpha;&beta;&gamma; ENaC in salt taste.
+
+Investigation of ENaC expression patterns in mouse taste buds show that no taste bud cell expresses both the &alpha; and &beta; subunits[@lossow2020].
+This result is further complicated by the fact that amiloride-sensitive salt perception depends on the mouse line, and the line used in the expression pattern study has a low amiloride sensitivity [@shigemura2008].
+Thus the possibility remains that salt taste in mice is mediated by &alpha;&beta;&gamma;ENaC and is simply harder to detect with this experimental setup.
+However, as discussed further in section <!-- TODO: reference stoichiometry section -->, &alpha;ENaC is sufficient to form small (100 times smaller than &alpha;&beta;&gamma;) currents when expressed alone in oocytes [@canessa1994].
+Homomeric &alpha; channels may instead carry the amiloride-sensitive salt taste.
+Perhaps more importantly, salt taste in humans is far less sensitive to amiloride than in mice <!-- TODO: read this paper -->[@desor1989].
+Additionally, humans express &delta;ENaC (a pseudogene in rats and mice) in the taste bud, rather than &alpha;ENaC [@stahler2008].
