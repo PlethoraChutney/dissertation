@@ -7,7 +7,8 @@ ENaC is thought to be activated by proteolytic removal of a portion of its extra
 However, I will begin with a background in the function of the channel, especially as it relates to human health.
 I will begin with ENaC's regulation of blood pressure from the kidney, function and tissue in which it is best understood.
 Next I will cover the channel's role in controlling the thickness of the airway surface mucosal layer, which seems to be a major component in the pathogenesis of cystic fibrosis.
-Finally, I will cover a few interesting but less-studied domains of ENaC expression &mdash; namely, taste buds, blood vessels, and colon.
+I then briefly cover a few interesting but less-studied domains of ENaC expression &mdash; namely, taste buds, blood vessels, and colon.
+Finally, I provide an overview of specific proteins and processes known to regulate ENaC.
 
 ## ENaC in the kidney
 
@@ -133,3 +134,12 @@ Patients with Crohn's disease, a chronic inflammatory bowl disease, have reduced
 Similarly, patients with ulcerative colitis have diarrhea due to inhibition of ENaC expression by inflammatory cytokines [@amasheh2004].
 To be clear, the colon relies on a wide array of systems to reabsorb ions and water.
 These results indicate that ENaC is one of the players in this process.
+
+## Regulation {#sec-regulation}
+
+It should come as no surprise that expression of ENaC is under tight control, given the number of important processes ENaC is implicated in.
+This overview of ENaC regulation is necessarily brief and focuses on regulation in the kidney (@fig-intro_kidney-reg), since that system is best understood.
+The patterns observed in the kidney largely hold in other tissues, with the notable exception of gene expression response to aldosterone.
+
+In aldosterone-responsive tissues, aldosterone binds the mineralocorticoid receptor and induces expression of ENaC subunits.
+The exact amount of increase for each subunit varies tissue to tissue.
