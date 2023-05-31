@@ -1,16 +1,15 @@
-# ENaC in the Body
+# ENaC Biology
 
 ENaC is a highly-specific triheteromeric sodium channel expressed throughout the human body.
 The channel comprises one copy each of the &alpha;, &beta;, and &gamma; subunits.
 ENaC is thought to be activated by proteolytic removal of a portion of its extracellular domain, and is potently inhibited by a small molecule called amiloride and its derivatives.
 <!-- TODO: ENaC mechanism crossref --> delves more deeply into the suspected molecular mechanism of ENaC and the source of its selectivity.
-However, I will begin with a background in the function of the channel, especially as it relates to human health.
-I will begin with ENaC's regulation of blood pressure from the kidney, function and tissue in which it is best understood.
-Next I will cover the channel's role in controlling the thickness of the airway surface mucosal layer, which seems to be a major component in the pathogenesis of cystic fibrosis.
-I then briefly cover a few interesting but less-studied domains of ENaC expression &mdash; namely, taste buds, blood vessels, and colon.
-Finally, I provide an overview of specific proteins and processes known to regulate ENaC.
+However, I will begin with a background in the physiological functions of the channel, especially as it relates to human health.
+I focus on the systems for which we best understand ENaC's role, the lung and kidney, before moving on to other systems which provide important information about ENaC but have a smaller body of research.
+I will finish the chapter with an overview of the molecular mechanisms of ENaC regulation.
 
-## ENaC in the kidney
+## ENaC in the body {#sec-intro_enac-in-body}
+### ENaC in the kidney {#sec-intro_liddle}
 
 Blood pressure must be maintained within a narrow window of acceptable values.
 Too low, and vital organs do not receive sufficient oxygen and nutrients to function, but too high and blood vessels sustain damage.
@@ -35,9 +34,9 @@ However, after excluding patients with other clear causes (primary aldosteronism
 All but one of the described cases involve mutation of the &beta; or &gamma; subunits [@tetti2018; @liu2018].
 
 A majority of the mutations in the &beta; and &gamma; subunits disrupt or remove entirely a proline-rich PY motif at the C-terminus of those channels [@yang2014].
-This PY motif is the binding site for the E3 ubiquitin ligase NEDD4-2 (see section <!-- TODO: crossref NEDD4-2 section -->).
+This PY motif is the binding site for the E3 ubiquitin ligase Nedd4-2 (see section <!-- TODO: crossref Nedd4-2 section -->).
 Study of ENaC surface dwell time is complicated by a reserve pool maintained by the cells to be cycled up to the membrane, but there is a consensus that ENaC is recycled quickly; surface half life estimates range from fifteen minutes to three hours, with the low end having more support [@butterworth2009].
-ENaC lacking the PY motif cannot be pulled back in from the membrane, thus increasing sodium permeability by increasing *N* rather than the conductivity or P~O~ of the channels [@schild1995; @abriel1999; @lu2007].[The &alpha; subunit does have a PY motif, but no Liddle syndrome mutation of the &alpha; PY has been described. This is discussed further in <!-- TODO: crossref NEDD4-2 section -->]{.aside}
+ENaC lacking the PY motif cannot be pulled back in from the membrane, thus increasing sodium permeability by increasing *N* rather than the conductivity or P~O~ of the channels [@schild1995; @abriel1999; @lu2007].[The &alpha; subunit does have a PY motif, but no Liddle syndrome mutation of the &alpha; PY has been described. This is discussed further in <!-- TODO: crossref Nedd4-2 section -->]{.aside}
 The remaining minority of described Liddle syndrome mutations (including the sole ENaC~&alpha;~ mutation) which do not affect PY-motif binding instead directly augment channel P~O~ [@tetti2018].
 Liddle syndrome is typically treated with small molecules that block ENaC (amiloride or triamterene) and a low-salt diet.
 
@@ -50,7 +49,7 @@ Contrary to the pattern observed for Liddle Syndrome, most systemic PHA1 mutatio
 The majority of described PHA1 mutations are nonsense mutations, although three missense mutations have been described [@chang1996; @schaedel1999; @edelheit2005].
 One of these mutations occurs in the palm domain, one in the transmembrane domain, and one likely in the intracellular domain.
 
-## ENaC in the lung
+### ENaC in the lung
 
 Cystic fibrosis (CF) is a recessive genetic disorder which affects many organs, but most prominently the lungs.
 Patients with CF have thick airway mucus they are unable to clear, causing chronic airway infections and lung damage.
@@ -76,7 +75,7 @@ There are many hypothesis as to how these contradictions may be resolved, review
 One important point is that the mouse model does not recapitulate human disease well.
 Indeed, mice with CFTR mutations which are pathogenic in humans do not develop lung disease at all [@grubb1999].
 
-## ENaC in the tongue
+### ENaC in the tongue
 
 As one might expect for a sodium-specific ion channel, ENaC is also implicated in taste.
 Although it may seem a less clinically-essential tissue, ENaC function and expression in the tongue differs significantly from what is expected based on the better-studied kidney.
@@ -110,9 +109,7 @@ I note here that we cannot say these channels are homomeric &alpha;ENaC channels
 They may be assemblies of ENaC with other ENaC/DEG family members or as-yet unknown other proteins.
 Regardless of the ultimate identity of the amiloride-sensitive salt taste receptor, the patterns observed in taste are difficult to explain if the only physiologically relevant ENaC is the &alpha;/&delta;&beta;&gamma; triheteromer, which makes it an interesting and valuable system for further study.
 
-## ENaC in Other Tissues
-
-### Blood vessels
+### ENaC in blood vessels
 
 Myogenic vasoconstriction is an important component of blood pressure regulation in which the diameter of a blood vessel decreases in response to increased blood pressure.
 This response is essential for maintaining proper blood flow.
@@ -126,10 +123,10 @@ These neurons express &beta; and &gamma;, but not &alpha;, ENaC [@drummond1998].
 Treatment with amiloride or its derivatives blocks both the response of these neurons to physical stimulation and blood pressure regulation.
 It therefore seems likely that ENaC is used by baroreceptors to sense blood pressure, but further research is necessary to strictly define this role.
 
-### Colon
+### ENaC in the colon
 
 ENaC plays an important role in sodium reabsorption in the colon.
-Colon expression of &beta; and &gamma;, but not &alpha;, ENaC increases response to aldosterone treatment [@epple2000; @bertog2008].
+Colon expression of the &beta; and &gamma;, but not &alpha;, subunits increases in response to aldosterone treatment [@epple2000; @bertog2008].
 Patients with Crohn's disease, a chronic inflammatory bowl disease, have reduced sodium reabsorption in the colon, which leads to diarrhea [@sandle1990; @zeissig2008].
 Similarly, patients with ulcerative colitis have diarrhea due to inhibition of ENaC expression by inflammatory cytokines [@amasheh2004].
 To be clear, the colon relies on a wide array of systems to reabsorb ions and water.
@@ -139,7 +136,34 @@ These results indicate that ENaC is one of the players in this process.
 
 It should come as no surprise that expression of ENaC is under tight control, given the number of important processes ENaC is implicated in.
 This overview of ENaC regulation is necessarily brief and focuses on regulation in the kidney (@fig-intro_kidney-reg), since that system is best understood.
-The patterns observed in the kidney largely hold in other tissues, with the notable exception of gene expression response to aldosterone.
+Fortunately, the patterns observed in the kidney largely hold in other tissues.
+
+### Aldosterone
 
 In aldosterone-responsive tissues, aldosterone binds the mineralocorticoid receptor and induces expression of ENaC subunits.
-The exact amount of increase for each subunit varies tissue to tissue.
+The exact amount of increase for each subunit varies tissue to tissue, but generally aldosterone induces expression of &beta; and &gamma;ENaC, while &alpha;ENaC is constitutively expressed <!-- TODO: cite -->.
+However, as covered in @sec-intro_enac-in-body, not all tissues express all three ENaC subunits.
+
+### Nedd4-2
+
+Nedd4-2, also known as Nedd4L, is a HECT E3 ubiquitin ligase.
+E3 ligases perform the final step in the ubiquitination cascade, the transfer of an activated ubiquitin (Ub) from an E2 to the substrate.
+Nedd4-2 is the cognate E3 ligase for ENaC in humans, rats, and mice (but not *Xenopus*).
+Liddle syndrome (@sec-intro_liddle) is most often caused by the disruption of the Nedd4-2/ENaC interaction, and so is a perfect illustration of the regulatory mechanism.
+Binding of ENaC and subsequent ubiquitination recycles the protein from the cell surface, reducing cellular Na^+^ permeability.
+
+Like all members of the HECT ligase family, Nedd4-2 has an N-terminal C2 domain, a number of WW domains, and a C-terminal HECT domain.
+As the astute reader has already guessed, humans also express a closely-related HECT E3 ligase, Nedd4, which does not regulate ENaC *in vivo* [@kamynina01; @snyder2004].
+It is important to note that expressing *either* of these two ligases heterologously *does* inhibit ENaC.
+This makes evaluation of the Nedd4-2/ENaC literature complicated, as conclusions drawn from heterologous systems may not hold in the organism.
+In any case, the two proteins are 63% identical, and although there are differences in substrate affinity, the function of the domains in an abstract sense is quite similar.
+As such, I will present research on both proteins, preferring results from Nedd4-2 when possible, and highlighting points where the findings may not be fully generalizable.
+
+The C2 domain is a Ca^2+^-dependent phospholipid and protein binding domain[For a good review of general C2 domain evolution, structure, and function see Rizo and S&uuml;dhof[@rizo1998]]{.aside}.
+Increased intracellular Ca^2+^ induces translocation of Nedd4 from the cytosol to the membrane [@plant97].
+Interestingly, the Nedd4-2 C2 domain specifically localizes the protein to the apical membrane (to which ENaC also localizes).
+This apical targeting is the result of an interaction between the C2 domain and Annexin XIIIb [@plant00].
+
+The importance of the C2 domain is unclear.
+In heterologous systems, Nedd4 is able to inhibit ENaC currents with or without a C2 domain, and both rats and humans express splice variants of Nedd4-2 which is missing the C2 domain [@snyder2000; @itani03; @umemura2006].
+However, mice with their Nedd4-2 C2 domain knocked out fail to regulate ENaC in response to a high-salt diet and develop hypertension [@minegishi16].
