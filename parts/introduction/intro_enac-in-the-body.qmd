@@ -152,7 +152,9 @@ Nedd4-2 is the cognate E3 ligase for ENaC in humans, rats, and mice (but not *Xe
 Liddle syndrome (@sec-intro_liddle) is most often caused by the disruption of the Nedd4-2/ENaC interaction, and so is a perfect illustration of the regulatory mechanism.
 Binding of ENaC and subsequent ubiquitination recycles the protein from the cell surface, reducing cellular Na^+^ permeability.
 
-Like all members of the HECT ligase family, Nedd4-2 has an N-terminal C2 domain, a number of WW domains, and a C-terminal HECT domain.
+#### Nedd4-2 Structure
+
+Like many members of the HECT ligase family, Nedd4-2 has an N-terminal C2 domain, a number of WW domains, and a C-terminal HECT domain.
 As the astute reader has already guessed, humans also express a closely-related HECT E3 ligase, Nedd4, which does not regulate ENaC *in vivo* [@kamynina01; @snyder2004].
 It is important to note that expressing *either* of these two ligases heterologously *does* inhibit ENaC.
 This makes evaluation of the Nedd4-2/ENaC literature complicated, as conclusions drawn from heterologous systems may not hold in the organism.
@@ -164,6 +166,33 @@ Increased intracellular Ca^2+^ induces translocation of Nedd4 from the cytosol t
 Interestingly, the Nedd4-2 C2 domain specifically localizes the protein to the apical membrane (to which ENaC also localizes).
 This apical targeting is the result of an interaction between the C2 domain and Annexin XIIIb [@plant00].
 
-The importance of the C2 domain is unclear.
-In heterologous systems, Nedd4 is able to inhibit ENaC currents with or without a C2 domain, and both rats and humans express splice variants of Nedd4-2 which is missing the C2 domain [@snyder2000; @itani03; @umemura2006].
-However, mice with their Nedd4-2 C2 domain knocked out fail to regulate ENaC in response to a high-salt diet and develop hypertension [@minegishi16].
+The functional importance of the C2 domain is unclear.
+In heterologous systems, both Nedd4 and Nedd4-2 are able to inhibit ENaC currents with or without a C2 domain, and both rats and humans express splice variants of Nedd4-2 which is missing the C2 domain [@snyder2000; @itani03; @itani05; @umemura2006].
+However, mice expressing Nedd4-2 without a C2 domain fail to regulate ENaC in response to a high-salt diet and develop hypertension [@minegishi16].
+It seems likely in any case that a great deal of substrate targeting depends instead on the WW domains.
+
+WW domains are protein-protein interaction domains comprising a three-stranded &beta;-sheet.
+These small domains bind PY-motifs (PPXY), including those found in each ENaC subunit (PPAY, PPNY, PPKY in human &alpha;, &beta;, and &gamma; respectively).
+It is the removal of these domains that causes Liddle syndrome in truncation mutants [@schild1996].
+Nedd4-2 cannot bind the Liddle mutants, and so the cell cannot pull the open channels from the surface, resulting in a gain of function.
+Interestingly, mice and rat Nedd4-2 have three WW domains, while human Nedd4-2 has four.
+All three domains of murine Nedd4 are required, in heterologous systems, for ENaC suppression [@harvey99].
+Human Nedd4-2 without the first WW domain can still bind ENaC [@fotia02].
+
+The HECT domain is the business end of the protein.
+Unlike RING ligases, HECT ligases form a thioester bond with Ub before transferring it to the substrate.
+The domain itself is split into the N-lobe, which is larger and interacts with the E2 enzyme, and the C-lobe, which contains the catalytic cysteine[Buetow and Huang's review of E3 ligase structure is very good, and includes HECT ligases [@buetow2016]]{.aside}.
+
+The HECT domain is highly regulated.
+The C2 domain of a related HECT ligase intramolecularly binds the HECT domain near the catalytic cysteine, blocking function [@wiesner07].
+The HECT domain also has an internal PY motif which is bound by its own WW domain [@bruce08].[It is not currently known which WW domain binds this internal PY motif, or if the association is intra- or intermolecular]{.aside}
+Nedd4-2 remains bound this way until it encounters a substrate, at which point it binds and ubiquitinates the target.
+The enzyme then ubiquitinates itself, targeting it for degradation.
+Finally, the linker between WW domains 2 and 3 blocks function of the HECT domain in Nedd4 [@chen17].
+
+
+
+<!-- Move this to the end of content so the margins are right in citations -->
+:::{.content-hidden unless-format="pdf"}
+\newgeometry{left=1in, right=1in}
+:::

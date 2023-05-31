@@ -50,6 +50,7 @@ format:
     pdf-engine-opt: -xelatex
     latex-max-runs: 3
     keep-tex: true
+    link-citations: true
     colorlinks: false
     geometry:
       - left=2in

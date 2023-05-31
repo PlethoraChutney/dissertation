@@ -1,3 +1,7 @@
 # References {.unnumbered}
 ::: {#refs}
 :::
+
+:::{.content-hidden unless-format="pdf"}
+\restoregeometry{}
+:::
