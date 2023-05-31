@@ -134,15 +134,21 @@ These results indicate that ENaC is one of the players in this process.
 
 ## Regulation {#sec-regulation}
 
-It should come as no surprise that expression of ENaC is under tight control, given the number of important processes ENaC is implicated in.
+It should come as no surprise that expression of ENaC is under tight control, given the number of important processes ENaC is implicated in.[There is a great body of research on the regulation of ENaC in *X. laevis*. Unfortunately, its expression and regulation patterns do not agree well with what is observed in humans and rodents. I focus here on mammalian ENaC regulation, as it is more relevant to this work.]{.aside}
 This overview of ENaC regulation is necessarily brief and focuses on regulation in the kidney (@fig-intro_kidney-reg), since that system is best understood.
 Fortunately, the patterns observed in the kidney largely hold in other tissues.
 
 ### Aldosterone
 
-In aldosterone-responsive tissues, aldosterone binds the mineralocorticoid receptor and induces expression of ENaC subunits.
+ENaC is constitutively expressed in tissues in the kidney, colon, lung, and other tissues.
+In the kidney, the &alpha; subunit expressed at significantly higher levels than the &beta; or &gamma; subunits.
+When rats are treated with aldosterone, the cortical collecting tubules increase translation of &beta; and &gamma; (but not &alpha;) ENaC [@asher1996].
+The increased translation occurs on a time scale of between three and twenty-four hours.
+
 The exact amount of increase for each subunit varies tissue to tissue, but generally aldosterone induces expression of &beta; and &gamma;ENaC, while &alpha;ENaC is constitutively expressed <!-- TODO: cite -->.
 However, as covered in @sec-intro_enac-in-body, not all tissues express all three ENaC subunits.
+
+<!-- TODO: come back and write up the aldosterone section -->
 
 ### Nedd4-2
 
@@ -166,11 +172,6 @@ Increased intracellular Ca^2+^ induces translocation of Nedd4 from the cytosol t
 Interestingly, the Nedd4-2 C2 domain specifically localizes the protein to the apical membrane (to which ENaC also localizes).
 This apical targeting is the result of an interaction between the C2 domain and Annexin XIIIb [@plant00].
 
-The functional importance of the C2 domain is unclear.
-In heterologous systems, both Nedd4 and Nedd4-2 are able to inhibit ENaC currents with or without a C2 domain, and both rats and humans express splice variants of Nedd4-2 which is missing the C2 domain [@snyder2000; @itani03; @itani05; @umemura2006].
-However, mice expressing Nedd4-2 without a C2 domain fail to regulate ENaC in response to a high-salt diet and develop hypertension [@minegishi16].
-It seems likely in any case that a great deal of substrate targeting depends instead on the WW domains.
-
 WW domains are protein-protein interaction domains comprising a three-stranded &beta;-sheet.
 These small domains bind PY-motifs (PPXY), including those found in each ENaC subunit (PPAY, PPNY, PPKY in human &alpha;, &beta;, and &gamma; respectively).
 It is the removal of these domains that causes Liddle syndrome in truncation mutants [@schild1996].
@@ -189,6 +190,17 @@ The HECT domain also has an internal PY motif which is bound by its own WW domai
 Nedd4-2 remains bound this way until it encounters a substrate, at which point it binds and ubiquitinates the target.
 The enzyme then ubiquitinates itself, targeting it for degradation.
 Finally, the linker between WW domains 2 and 3 blocks function of the HECT domain in Nedd4 [@chen17].
+
+#### Nedd4-2 and ENaC
+
+Nedd4-2 is expressed in response to 
+It binds and ubiquitinates ENaC on N-terminal lysines, causing the channels to be internalized and recycled in either the lysosome or proteasome [@goulet1998; @malik2001; @staub97].[Interestingly, ubiquitination of &alpha;ENaC seems to require lysines on the &gamma; subunit [@staub97].]{.aside}
+Degradation of ENaC in this fashion only occurs with a high-salt diet [@kellenberger1998].
+
+The functional importance of the C2 domain for ENaC regulation is unclear.
+In heterologous systems, both Nedd4 and Nedd4-2 are able to inhibit ENaC currents with or without a C2 domain, and both rats and humans express splice variants of Nedd4-2 which is missing the C2 domain [@snyder01; @itani03; @itani05; @umemura2006].
+In fact, C2-less Nedd4 suppresses ENaC currents more than WT Nedd4 in heterologous systems, indicating that the auto-inhibitory role of the C2 domain may be what prevents Nedd4 regulation of ENaC *in vivo* given the similarity of their WW domains [@snyder01; @kamynina2001].
+However, mice expressing Nedd4-2 without a C2 domain fail to regulate ENaC in response to a high-salt diet and develop hypertension [@minegishi16].
 
 
 
