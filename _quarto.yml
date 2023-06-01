@@ -47,9 +47,9 @@ format:
   pdf:
     documentclass: scrbook
     pdf-engine: latexmk
-    pdf-engine-opt: -xelatex
+    pdf-engine-opt: --xelatex
     latex-max-runs: 3
-    keep-tex: true
+    keep-tex: false
     link-citations: true
     colorlinks: false
     geometry:
