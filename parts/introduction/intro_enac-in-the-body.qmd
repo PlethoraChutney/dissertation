@@ -177,14 +177,12 @@ These small domains bind PY-motifs (PPXY), including those found in each ENaC su
 It is the removal of these domains that causes Liddle syndrome in truncation mutants [@schild1996].
 Nedd4-2 cannot bind the Liddle mutants, and so the cell cannot pull the open channels from the surface, resulting in a gain of function.
 Interestingly, mice and rat Nedd4-2 have three WW domains, while human Nedd4-2 has four.
-All three domains of murine Nedd4 are required, in heterologous systems, for ENaC suppression [@harvey99].
-Human Nedd4-2 without the first WW domain can still bind ENaC [@fotia02].
 
 The HECT domain is the business end of the protein.
 Unlike RING ligases, HECT ligases form a thioester bond with Ub before transferring it to the substrate.
 The domain itself is split into the N-lobe, which is larger and interacts with the E2 enzyme, and the C-lobe, which contains the catalytic cysteine[Buetow and Huang's review of E3 ligase structure is very good, and includes HECT ligases [@buetow2016]]{.aside}.
 
-The HECT domain is highly regulated.
+HECT ligases have several auto-inhibitory functions to prevent inappropriate ubiquitination.
 The C2 domain of a related HECT ligase intramolecularly binds the HECT domain near the catalytic cysteine, blocking function [@wiesner07].
 The HECT domain also has an internal PY motif which is bound by its own WW domain [@bruce08].[It is not currently known which WW domain binds this internal PY motif, or if the association is intra- or intermolecular]{.aside}
 Nedd4-2 remains bound this way until it encounters a substrate, at which point it binds and ubiquitinates the target.
@@ -193,14 +191,21 @@ Finally, the linker between WW domains 2 and 3 blocks function of the HECT domai
 
 #### Nedd4-2 and ENaC
 
-Nedd4-2 is expressed in response to 
+Nedd4-2 is expressed throughout the body, but is most abundant in the kidney and lung [@araki2008].
 It binds and ubiquitinates ENaC on N-terminal lysines, causing the channels to be internalized and recycled in either the lysosome or proteasome [@goulet1998; @malik2001; @staub97].[Interestingly, ubiquitination of &alpha;ENaC seems to require lysines on the &gamma; subunit [@staub97].]{.aside}
-Degradation of ENaC in this fashion only occurs with a high-salt diet [@kellenberger1998].
+Degradation of ENaC is significantly augmented in a high-salt diet [@kellenberger1998].
+This is not a result of direct regulation of Nedd4-2 by aldosterone, but rather by aldosterone regulation of SGK which in turn regulates Nedd4-2.
 
-The functional importance of the C2 domain for ENaC regulation is unclear.
+The functional importance of lipid binding by the C2 domain for ENaC regulation is unclear.
 In heterologous systems, both Nedd4 and Nedd4-2 are able to inhibit ENaC currents with or without a C2 domain, and both rats and humans express splice variants of Nedd4-2 which is missing the C2 domain [@snyder01; @itani03; @itani05; @umemura2006].
-In fact, C2-less Nedd4 suppresses ENaC currents more than WT Nedd4 in heterologous systems, indicating that the auto-inhibitory role of the C2 domain may be what prevents Nedd4 regulation of ENaC *in vivo* given the similarity of their WW domains [@snyder01; @kamynina2001].
-However, mice expressing Nedd4-2 without a C2 domain fail to regulate ENaC in response to a high-salt diet and develop hypertension [@minegishi16].
+In fact, C2-less Nedd4 suppresses ENaC currents more than WT Nedd4 in heterologous systems [@snyder01; @kamynina2001].
+Many heterologous studies in which Nedd4 inhibits ENaC were performed with a C2-less isoform, further indicating that it may be the C2 inhibition of the HECT domain that prevents ubiquitination of ENaC by Nedd4.
+However, mice expressing Nedd4-2 without a C2 domain fail to regulate ENaC in response to a high-salt diet and develop hypertension, leaving open the possibility that the membrane-binding functionality is more important *in vivo* [@minegishi16].
+
+The WW domains are essential for binding and regulation of ENaC.
+Human Nedd4-2 requires WW3 and WW4 to ubiquitinate ENaC [@fotia02].
+WW2 weekly binds, while WW1 does not seem to interact with any ENaC subunit.
+Mutations of single WW domains in Nedd4 have varying effects on ENaC currents, implying that certain WW domains have higher affinity than others [@snyder01].
 
 
 
