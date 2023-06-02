@@ -15,13 +15,6 @@ Blood pressure must be maintained within a narrow window of acceptable values.
 Too low, and vital organs do not receive sufficient oxygen and nutrients to function, but too high and blood vessels sustain damage.
 It is not surprising, then, that the human body has evolved several mechanisms for responding to changes in blood pressure, each with their own timescale [@guyton1991].
 ENaC is the essential mechanism of the longest-term control, kidney excretion.
-
-![Simplified model of ENaC regulation in a principal cell of the distal nephron in the kidney.](figures/kidney-cartoon/kidney-cartoon.png){#fig-intro_kidney-reg}
-
-When the kidney is not receiving enough salt, it initiates a cascade which ends with the mineralocorticoid hormone aldosterone augmenting the activity of ENaC in the distal nephron (@fig-intro_kidney-reg).
-Apical sodium permeability is increased both by synthesis of new channels as well as trafficking of an existing pool of channels to the cell surface [@asher1996; @frindt09].[Of note: Asher and colleagues report an aldosterone mediated increase in expression of the &beta; and &gamma;, but not &alpha;, subunits. A trend of subunit-specific regulation is widely observed in the literature, but poorly understood.]{.aside}
-Despite its expression relatively late in the nephron, ENaC is the rate-limiting step of sodium reabsorption in the kidney.
-<!-- TODO: need citation here -->
 Sodium in the principal cells is transported across the basolateral membrane by the Na^+^/K^+^ ATPase, and therefore induces retention of extra water to maintain the tightly-controlled plasma sodium level.
 Thus, ENaC controls three essential functions of kidney filtration: first, the amount of sodium reabsorbed by the kidney; second, blood volume (and therefore pressure); third, the amount of potassium passed from the plasma into the urine.
 
@@ -34,7 +27,7 @@ However, after excluding patients with other clear causes (primary aldosteronism
 All but one of the described cases involve mutation of the &beta; or &gamma; subunits [@tetti2018; @liu2018].
 
 A majority of the mutations in the &beta; and &gamma; subunits disrupt or remove entirely a proline-rich PY motif at the C-terminus of those channels [@yang2014].
-This PY motif is the binding site for the E3 ubiquitin ligase Nedd4-2 (see section <!-- TODO: crossref Nedd4-2 section -->).
+This PY motif is the binding site for the E3 ubiquitin ligase Nedd4-2 (see @sec-intro_nedd42).
 Study of ENaC surface dwell time is complicated by a reserve pool maintained by the cells to be cycled up to the membrane, but there is a consensus that ENaC is recycled quickly; surface half life estimates range from fifteen minutes to three hours, with the low end having more support [@butterworth2009].
 ENaC lacking the PY motif cannot be pulled back in from the membrane, thus increasing sodium permeability by increasing *N* rather than the conductivity or P~O~ of the channels [@schild1995; @abriel1999; @lu2007].[The &alpha; subunit does have a PY motif, but no Liddle syndrome mutation of the &alpha; PY has been described. This is discussed further in <!-- TODO: crossref Nedd4-2 section -->]{.aside}
 The remaining minority of described Liddle syndrome mutations (including the sole ENaC~&alpha;~ mutation) which do not affect PY-motif binding instead directly augment channel P~O~ [@tetti2018].
@@ -134,23 +127,25 @@ These results indicate that ENaC is one of the players in this process.
 
 ## Regulation {#sec-regulation}
 
-It should come as no surprise that expression of ENaC is under tight control, given the number of important processes ENaC is implicated in.[There is a great body of research on the regulation of ENaC in *X. laevis*. Unfortunately, its expression and regulation patterns do not agree well with what is observed in humans and rodents. I focus here on mammalian ENaC regulation, as it is more relevant to this work.]{.aside}
+![Simplified model of ENaC regulation in a principal cell of the distal nephron in the kidney.](figures/kidney-cartoon/kidney-cartoon.png){#fig-intro_kidney-reg}
+
+It should come as no surprise that expression of ENaC is under tight control, given the number of important processes ENaC is implicated in.
 This overview of ENaC regulation is necessarily brief and focuses on regulation in the kidney (@fig-intro_kidney-reg), since that system is best understood.
 Fortunately, the patterns observed in the kidney largely hold in other tissues.
 
 ### Aldosterone
 
-ENaC is constitutively expressed in tissues in the kidney, colon, lung, and other tissues.
-In the kidney, the &alpha; subunit expressed at significantly higher levels than the &beta; or &gamma; subunits.
-When rats are treated with aldosterone, the cortical collecting tubules increase translation of &beta; and &gamma; (but not &alpha;) ENaC [@asher1996].
-The increased translation occurs on a time scale of between three and twenty-four hours.
+Aldosterone is the primary means by which the body regulates Na^+^ retention.
+It fills this role both by directly regulation gene expression of ENaC, but also by controlling expression and function of an array of other proteins which regulate ENaC.
+When the kidney is not receiving enough salt, it initiates a cascade which ends with the mineralocorticoid hormone aldosterone augmenting the activity of ENaC in the distal nephron.[For a review of the Renin-Angiotensin-Aldosterone System (RAAS) consider Weir and Dzau [@wiesner07]]{.aside}
+The exact molecular mechanism by which aldosterone increases ENaC at the apical surface is still not well understood, but it involves some combination of new protein synthesis and trafficking of an existing pool of channels to the cell surface [@asher1996; @frindt09].
+Interestingly, aldosterone increases transcription of the &beta;- and &gamma;- (but not &alpha;-) ENaC genes [@asher1996; @may1997].
 
-The exact amount of increase for each subunit varies tissue to tissue, but generally aldosterone induces expression of &beta; and &gamma;ENaC, while &alpha;ENaC is constitutively expressed <!-- TODO: cite -->.
-However, as covered in @sec-intro_enac-in-body, not all tissues express all three ENaC subunits.
+
 
 <!-- TODO: come back and write up the aldosterone section -->
 
-### Nedd4-2
+### Nedd4-2 {#sec-intro_nedd42}
 
 Nedd4-2, also known as Nedd4L, is a HECT E3 ubiquitin ligase.
 E3 ligases perform the final step in the ubiquitination cascade, the transfer of an activated ubiquitin (Ub) from an E2 to the substrate.
