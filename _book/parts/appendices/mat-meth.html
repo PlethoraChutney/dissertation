@@ -385,7 +385,7 @@ div.csl-indent {
 <p>Grid preparation different slightly for each dataset, but followed the same general procedure (<a href="#tbl-model-building">Table&nbsp;<span>A.1</span></a>). Purified GFP-cleaved ENaC was concentrated for grid preparation just before blotting and freezing. All grids were glow discharged at 15 mA for 60 seconds on a Pelco easiGlow before blotting. Grids were frozen using a Vitrobot Mark III (Thermo Fisher). Vitrobot parameters were set as follows: blot time 2, wait time 0, drain time 0, blot force 1, humidity 100%, temperature 12 °C. “Double-blotted” grids had a protein droplet loaded, manually blotted with torn Whatman filter paper, and a fresh droplet loaded onto the grid before Vitrobot blotting (with Vitrobot filter paper rings) and freezing. This double-blotting process typically took approximately five seconds from first drop to plunge-freeze. In all cases, each protein droplet was 3 μL.</p>
 <div id="fig-fab-compare" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="figures/matmeth/fabs/fabs.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Fab binding induces only minor changes in the extracellular domain of ENaC. A: Human CKO/DEG map. A low-pass filtered map is outlined to show pseudosymmetry-breaking glycosylation sites (arrows). B: the α subunit, C: the β subunit. Human CKO nanodisc model is colored by subunit, the human CKO/DEG ENaC is white, and human CKO/DEG Fabs are grey."><img src="figures/matmeth/fabs/fabs.png" class="img-fluid figure-img"></a></p>
+<p><a href="figures/matmeth/fabs/fabs.png" class="lightbox" title="Fab binding induces only minor changes in the extracellular domain of ENaC. A: Human CKO/DEG map. A low-pass filtered map is outlined to show pseudosymmetry-breaking glycosylation sites (arrows). B: the α subunit, C: the β subunit. Human CKO nanodisc model is colored by subunit, the human CKO/DEG ENaC is white, and human CKO/DEG Fabs are grey." data-gallery="quarto-lightbox-gallery-1"><img src="figures/matmeth/fabs/fabs.png" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;A.1: Fab binding induces only minor changes in the extracellular domain of ENaC. A: Human CKO/DEG map. A low-pass filtered map is outlined to show pseudosymmetry-breaking glycosylation sites (arrows). B: the α subunit, C: the β subunit. Human CKO nanodisc model is colored by subunit, the human CKO/DEG ENaC is white, and human CKO/DEG Fabs are grey.</figcaption>
 </figure>
 </div>
@@ -401,7 +401,7 @@ div.csl-indent {
 <p>The template picked particles were repeatedly 3D classified using heterogeneous refinement in cryoSPARC, providing one “good” class and a number of “junk” classes (typically noisy or bad <em>ab initio</em> models of the blob picked particles) until all particles produced reasonable ENaC classes. The final particle set was never 2D classified, since I find that 2D classification reduces the frequency of rare particle views. From this point, processing proceeded <em>ad hoc</em> to produce the final maps (Image Processing).</p>
 <div id="fig-pixel-size-calibration" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="figures/matmeth/ecd-pix-size/pixel-size.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="S2C2 pixel sizes seem miscalibrated. A: Scaling the nominal pixel size for human CKO/DEG dramatically increases the correlation with human CKO digitonin. B: Correlation coefficients for all maps. Maps were aligned prior to taking correlation coefficients. Abbreviated as follows: hCKO: human CKO; hCD-MF: human CKO/DEG monofab; mTrypsin: trypsin-cleaved mouse; hCKO/DEG: human CKO/DEG difab; hCKO-ND: human CKO nanodisc; mUncleaved: mouse uncleaved; mJanelia2: a second uncleaved mouse dataset collected at Janelia, but not presented here."><img src="figures/matmeth/ecd-pix-size/pixel-size.png" class="img-fluid figure-img"></a></p>
+<p><a href="figures/matmeth/ecd-pix-size/pixel-size.png" class="lightbox" title="S2C2 pixel sizes seem miscalibrated. A: Scaling the nominal pixel size for human CKO/DEG dramatically increases the correlation with human CKO digitonin. B: Correlation coefficients for all maps. Maps were aligned prior to taking correlation coefficients. Abbreviated as follows: hCKO: human CKO; hCD-MF: human CKO/DEG monofab; mTrypsin: trypsin-cleaved mouse; hCKO/DEG: human CKO/DEG difab; hCKO-ND: human CKO nanodisc; mUncleaved: mouse uncleaved; mJanelia2: a second uncleaved mouse dataset collected at Janelia, but not presented here." data-gallery="quarto-lightbox-gallery-2"><img src="figures/matmeth/ecd-pix-size/pixel-size.png" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;A.2: S<sup>2</sup>C<sup>2</sup> pixel sizes seem miscalibrated. <strong>A</strong>: Scaling the nominal pixel size for human CKO/DEG dramatically increases the correlation with human CKO digitonin. <strong>B</strong>: Correlation coefficients for all maps. Maps were aligned prior to taking correlation coefficients. Abbreviated as follows: hCKO: human CKO; hCD-MF: human CKO/DEG monofab; mTrypsin: trypsin-cleaved mouse; hCKO/DEG: human CKO/DEG difab; hCKO-ND: human CKO nanodisc; mUncleaved: mouse uncleaved; mJanelia2: a second uncleaved mouse dataset collected at Janelia, but not presented here.</figcaption>
 </figure>
 </div>
@@ -411,7 +411,7 @@ div.csl-indent {
 <h2 data-number="A.8" class="anchored" data-anchor-id="model-building"><span class="header-section-number">A.8</span> Model Building</h2>
 <p>The starting model for mouse ENaC was generated using a local installation of AlphaFold<span class="citation" data-cites="jumper2021"><sup><a href="../references.html#ref-jumper2021" role="doc-biblioref">5</a></sup></span>. The amino acid sequences for mENaC α (Uniprot ID Q61180), β (Uniprot ID Q9WU38), and γ (Uniprot ID Q9WU39) were joined using 10xGS linkers between α and β, and β and γ. This meta-sequence was then entered as the AlphaFold target. The linkers and large, unstructured, low-confidence loops were removed from the model before proceeding.</p>
 <p>Before docking into experimental maps, starting models had Fabs and waters deleted to ease early model building steps. Initial models were rigid-body fitted into the experimental maps. Any loops in poor or missing regions of the map were deleted. The whole models were simulated with distance restraints using ISOLDE and ChimeraX<span class="citation" data-cites="croll2018 pettersen2021"><sup><a href="../references.html#ref-croll2018" role="doc-biblioref">6</a>,<a href="../references.html#ref-pettersen2021" role="doc-biblioref">7</a></sup></span>. Once models were roughly fit into the potential, strained distance restraints were released. Once the backbone appeared to fit reasonably well into the map, all distance restraints were released. Simulating one chain at a time, a pass over every residue in ENaC was performed, focusing on Ramachandran values and rotamers. Once all chains had been optimized in this manner, glycans were added using Coot’s carbohydrate module<span class="citation" data-cites="emsley2010"><sup><a href="../references.html#ref-emsley2010" role="doc-biblioref">8</a></sup></span>. Fabs were rigid-body fitted and simulated similarly to the initial models once these steps were complete.</p>
-<p>Models were refined using Phenix real-space refinement<span class="citation" data-cites="liebschner2019"><sup><a href="../references.html#ref-liebschner2019" role="doc-biblioref">9</a></sup></span>. In some cases, the TMD map was used as-is for refinement. In other cases, the ECD and TMD map were combined using Phenix’s “Combine Focused Maps” job and the resulting map was used for refinement. In these cases, the lowest GSFSC resolution was provided to Phenix. Parameters were left as default, except rotamers were only refined when they had both poor map quality <em>and</em> were outliers (rather than <em>or</em>). I changed this setting because rotamer and clash statistics were significantly worse if it was left as the default. Model quality was assessed using MolProbity within Phenix, Q-scores calculated in ChimeraX, and 3DFSC as implemented in cryoSPARC (<a href="#tbl-model-building">Table&nbsp;<span>A.1</span></a> and <span class="quarto-unresolved-ref">?sec-validation</span>)<span class="citation" data-cites="williams2018 pintilie2020 aiyer2021"><sup><a href="../references.html#ref-williams2018" role="doc-biblioref">10</a>–<a href="../references.html#ref-aiyer2021" role="doc-biblioref">12</a></sup></span>.</p>
+<p>Models were refined using Phenix real-space refinement<span class="citation" data-cites="liebschner2019"><sup><a href="../references.html#ref-liebschner2019" role="doc-biblioref">9</a></sup></span>. In some cases, the TMD map was used as-is for refinement. In other cases, the ECD and TMD map were combined using Phenix’s “Combine Focused Maps” job and the resulting map was used for refinement. In these cases, the lowest GSFSC resolution was provided to Phenix. Parameters were left as default, except rotamers were only refined when they had both poor map quality <em>and</em> were outliers (rather than <em>or</em>). I changed this setting because rotamer and clash statistics were significantly worse if it was left as the default. Model quality was assessed using MolProbity within Phenix, Q-scores calculated in ChimeraX, and 3DFSC as implemented in cryoSPARC (<a href="#tbl-model-building">Table&nbsp;<span>A.1</span></a> and <a href="validation.html"><span>Appendix&nbsp;C</span></a>)<span class="citation" data-cites="williams2018 pintilie2020 aiyer2021"><sup><a href="../references.html#ref-williams2018" role="doc-biblioref">10</a>–<a href="../references.html#ref-aiyer2021" role="doc-biblioref">12</a></sup></span>.</p>
 </section>
 <section id="constructs" class="level2" data-number="A.9">
 <h2 data-number="A.9" class="anchored" data-anchor-id="constructs"><span class="header-section-number">A.9</span> Constructs</h2>
@@ -419,15 +419,28 @@ div.csl-indent {
 <!-- TODO: fix LaTeX table output -->
 <div class="cell">
 <div class="cell-output-display">
+<div id="tbl-model-building" class="anchored">
 
-<div id="clmionaevm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>html {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+<div id="ekqcspcoed" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ekqcspcoed table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-#clmionaevm .gt_table {
+#ekqcspcoed thead, #ekqcspcoed tbody, #ekqcspcoed tfoot, #ekqcspcoed tr, #ekqcspcoed td, #ekqcspcoed th {
+  border-style: none;
+}
+
+#ekqcspcoed p {
+  margin: 0;
+  padding: 0;
+}
+
+#ekqcspcoed .gt_table {
   display: table;
   border-collapse: collapse;
+  line-height: normal;
   margin-left: auto;
   margin-right: auto;
   color: #333333;
@@ -450,24 +463,12 @@ div.csl-indent {
   border-left-color: #D3D3D3;
 }
 
-#clmionaevm .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#clmionaevm .gt_caption {
+#ekqcspcoed .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#clmionaevm .gt_title {
+#ekqcspcoed .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -479,25 +480,37 @@ div.csl-indent {
   border-bottom-width: 0;
 }
 
-#clmionaevm .gt_subtitle {
+#ekqcspcoed .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
-  padding-top: 0;
-  padding-bottom: 6px;
+  padding-top: 3px;
+  padding-bottom: 5px;
   padding-left: 5px;
   padding-right: 5px;
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
 
-#clmionaevm .gt_bottom_border {
+#ekqcspcoed .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ekqcspcoed .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#clmionaevm .gt_col_headings {
+#ekqcspcoed .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -512,7 +525,7 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#clmionaevm .gt_col_heading {
+#ekqcspcoed .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -532,7 +545,7 @@ div.csl-indent {
   overflow-x: hidden;
 }
 
-#clmionaevm .gt_column_spanner_outer {
+#ekqcspcoed .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -544,15 +557,15 @@ div.csl-indent {
   padding-right: 4px;
 }
 
-#clmionaevm .gt_column_spanner_outer:first-child {
+#ekqcspcoed .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#clmionaevm .gt_column_spanner_outer:last-child {
+#ekqcspcoed .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#clmionaevm .gt_column_spanner {
+#ekqcspcoed .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -564,7 +577,11 @@ div.csl-indent {
   width: 100%;
 }
 
-#clmionaevm .gt_group_heading {
+#ekqcspcoed .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#ekqcspcoed .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -590,7 +607,7 @@ div.csl-indent {
   text-align: left;
 }
 
-#clmionaevm .gt_empty_group_heading {
+#ekqcspcoed .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -605,15 +622,15 @@ div.csl-indent {
   vertical-align: middle;
 }
 
-#clmionaevm .gt_from_md > :first-child {
+#ekqcspcoed .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#clmionaevm .gt_from_md > :last-child {
+#ekqcspcoed .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#clmionaevm .gt_row {
+#ekqcspcoed .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -632,7 +649,7 @@ div.csl-indent {
   overflow-x: hidden;
 }
 
-#clmionaevm .gt_stub {
+#ekqcspcoed .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -645,7 +662,7 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#clmionaevm .gt_stub_row_group {
+#ekqcspcoed .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -659,11 +676,15 @@ div.csl-indent {
   vertical-align: top;
 }
 
-#clmionaevm .gt_row_group_first td {
+#ekqcspcoed .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#clmionaevm .gt_summary_row {
+#ekqcspcoed .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#ekqcspcoed .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -673,16 +694,16 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#clmionaevm .gt_first_summary_row {
+#ekqcspcoed .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#clmionaevm .gt_first_summary_row.thick {
+#ekqcspcoed .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#clmionaevm .gt_last_summary_row {
+#ekqcspcoed .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -692,7 +713,7 @@ div.csl-indent {
   border-bottom-color: #D3D3D3;
 }
 
-#clmionaevm .gt_grand_summary_row {
+#ekqcspcoed .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -702,7 +723,7 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#clmionaevm .gt_first_grand_summary_row {
+#ekqcspcoed .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -712,11 +733,21 @@ div.csl-indent {
   border-top-color: #D3D3D3;
 }
 
-#clmionaevm .gt_striped {
+#ekqcspcoed .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ekqcspcoed .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#clmionaevm .gt_table_body {
+#ekqcspcoed .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -725,7 +756,7 @@ div.csl-indent {
   border-bottom-color: #D3D3D3;
 }
 
-#clmionaevm .gt_footnotes {
+#ekqcspcoed .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -739,30 +770,8 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#clmionaevm .gt_footnote {
+#ekqcspcoed .gt_footnote {
   margin: 0px;
-  font-size: 90%;
-  padding-left: 4px;
-  padding-right: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#clmionaevm .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#clmionaevm .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -770,548 +779,447 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#clmionaevm .gt_left {
+#ekqcspcoed .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ekqcspcoed .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ekqcspcoed .gt_left {
   text-align: left;
 }
 
-#clmionaevm .gt_center {
+#ekqcspcoed .gt_center {
   text-align: center;
 }
 
-#clmionaevm .gt_right {
+#ekqcspcoed .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#clmionaevm .gt_font_normal {
+#ekqcspcoed .gt_font_normal {
   font-weight: normal;
 }
 
-#clmionaevm .gt_font_bold {
+#ekqcspcoed .gt_font_bold {
   font-weight: bold;
 }
 
-#clmionaevm .gt_font_italic {
+#ekqcspcoed .gt_font_italic {
   font-style: italic;
 }
 
-#clmionaevm .gt_super {
+#ekqcspcoed .gt_super {
   font-size: 65%;
 }
 
-#clmionaevm .gt_footnote_marks {
-  font-style: italic;
-  font-weight: normal;
+#ekqcspcoed .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
+  position: initial;
 }
 
-#clmionaevm .gt_asterisk {
+#ekqcspcoed .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#clmionaevm .gt_indent_1 {
+#ekqcspcoed .gt_indent_1 {
   text-indent: 5px;
 }
 
-#clmionaevm .gt_indent_2 {
+#ekqcspcoed .gt_indent_2 {
   text-indent: 10px;
 }
 
-#clmionaevm .gt_indent_3 {
+#ekqcspcoed .gt_indent_3 {
   text-indent: 15px;
 }
 
-#clmionaevm .gt_indent_4 {
+#ekqcspcoed .gt_indent_4 {
   text-indent: 20px;
 }
 
-#clmionaevm .gt_indent_5 {
+#ekqcspcoed .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
-
-<div id="tbl-model-building" class="anchored">
-<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true">
-<caption>Table&nbsp;A.1: Image processing and model building statistics.</caption>
-<colgroup>
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-</colgroup>
-<thead class="gt_col_headings">
-<tr class="header">
-<th rowspan="2" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"></th>
-<th colspan="2" id="human CKO" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><span class="gt_column_spanner">human CKO</span></th>
-<th colspan="2" id="human CKO/DEG" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><span class="gt_column_spanner">human CKO/DEG</span></th>
-<th colspan="2" id="mouse" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><span class="gt_column_spanner">mouse</span></th>
-</tr>
-<tr class="odd">
-<th id="Digitonin" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Digitonin</th>
-<th id="Nanodisc" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Nanodisc</th>
-<th id="Difab" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Difab</th>
-<th id="Monofab" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Monofab</th>
-<th id="Uncleaved" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Uncleaved</th>
-<th id="Trypsin" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Trypsin</th>
-</tr>
-</thead>
-<tbody class="gt_table_body">
-<tr class="odd gt_group_heading_row">
-<td colspan="7" id="Construct Summary" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Construct Summary</td>
-</tr>
-<tr class="even gt_row_group_first">
-<td id="stub_1_1" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC"><div class="gt_from_md">
-<p>α mutations</p>
-</div></td>
-<td class="gt_row gt_center" headers="Construct Summary stub_1_1 Digitonin">C63A, R178A, R204A</td>
-<td class="gt_row gt_center" headers="Construct Summary stub_1_1 Nanodisc">C63A, R178A, R204A</td>
-<td class="gt_row gt_center" headers="Construct Summary stub_1_1 Difab">C63A, R178A, R204A, T240W</td>
-<td class="gt_row gt_center" headers="Construct Summary stub_1_1 Monofab">C63A, R178A, R204A, T240W</td>
-<td class="gt_row gt_center" headers="Construct Summary stub_1_1 Uncleaved">—</td>
-<td class="gt_row gt_center" headers="Construct Summary stub_1_1 Trypsin">—</td>
-</tr>
-<tr class="odd">
-<td id="stub_1_2" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC"><div class="gt_from_md">
-<p>β mutations</p>
-</div></td>
-<td class="gt_row gt_center" headers="Construct Summary stub_1_2 Digitonin">C30A</td>
-<td class="gt_row gt_center" headers="Construct Summary stub_1_2 Nanodisc">C30A</td>
-<td class="gt_row gt_center" headers="Construct Summary stub_1_2 Difab">C30A, S520K</td>
-<td class="gt_row gt_center" headers="Construct Summary stub_1_2 Monofab">C30A, S520K</td>
-<td class="gt_row gt_center" headers="Construct Summary stub_1_2 Uncleaved">—</td>
-<td class="gt_row gt_center" headers="Construct Summary stub_1_2 Trypsin">—</td>
-</tr>
-<tr class="even">
-<td id="stub_1_3" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC"><div class="gt_from_md">
-<p>γ mutations</p>
-</div></td>
-<td class="gt_row gt_center" headers="Construct Summary stub_1_3 Digitonin">C33A, C41A, R138A</td>
-<td class="gt_row gt_center" headers="Construct Summary stub_1_3 Nanodisc">C33A, C41A, R138A</td>
-<td class="gt_row gt_center" headers="Construct Summary stub_1_3 Difab">C33A, C41A, R138A</td>
-<td class="gt_row gt_center" headers="Construct Summary stub_1_3 Monofab">C33A, C41A, R138A</td>
-<td class="gt_row gt_center" headers="Construct Summary stub_1_3 Uncleaved">—</td>
-<td class="gt_row gt_center" headers="Construct Summary stub_1_3 Trypsin">—</td>
-</tr>
-<tr class="odd">
-<td id="stub_1_4" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC"><div class="gt_from_md">
-<p>Other treatments</p>
-</div></td>
-<td class="gt_row gt_center" headers="Construct Summary stub_1_4 Digitonin">—</td>
-<td class="gt_row gt_center" headers="Construct Summary stub_1_4 Nanodisc">POPC nanodisc</td>
-<td class="gt_row gt_center" headers="Construct Summary stub_1_4 Difab">—</td>
-<td class="gt_row gt_center" headers="Construct Summary stub_1_4 Monofab">1 mM C8 PIP₂</td>
-<td class="gt_row gt_center" headers="Construct Summary stub_1_4 Uncleaved">—</td>
-<td class="gt_row gt_center" headers="Construct Summary stub_1_4 Trypsin">10 μg/mL trypsin for 5 minutes</td>
-</tr>
-<tr class="even gt_group_heading_row">
-<td colspan="7" id="Grid Preparation" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Grid Preparation</td>
-</tr>
-<tr class="odd gt_row_group_first">
-<td id="stub_1_5" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC"><div class="gt_from_md">
-<p>ENaC (μM)</p>
-</div></td>
-<td class="gt_row gt_center" headers="Grid Preparation stub_1_5 Digitonin">19.8</td>
-<td class="gt_row gt_center" headers="Grid Preparation stub_1_5 Nanodisc">2</td>
-<td class="gt_row gt_center" headers="Grid Preparation stub_1_5 Difab">21.3</td>
-<td class="gt_row gt_center" headers="Grid Preparation stub_1_5 Monofab">24</td>
-<td class="gt_row gt_center" headers="Grid Preparation stub_1_5 Uncleaved">9.6</td>
-<td class="gt_row gt_center" headers="Grid Preparation stub_1_5 Trypsin">9.6</td>
-</tr>
-<tr class="even">
-<td id="stub_1_6" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC"><div class="gt_from_md">
-<p>Salt</p>
-</div></td>
-<td class="gt_row gt_center" headers="Grid Preparation stub_1_6 Digitonin">NaCl</td>
-<td class="gt_row gt_center" headers="Grid Preparation stub_1_6 Nanodisc">KCl</td>
-<td class="gt_row gt_center" headers="Grid Preparation stub_1_6 Difab">KCl</td>
-<td class="gt_row gt_center" headers="Grid Preparation stub_1_6 Monofab">KCl</td>
-<td class="gt_row gt_center" headers="Grid Preparation stub_1_6 Uncleaved">KCl</td>
-<td class="gt_row gt_center" headers="Grid Preparation stub_1_6 Trypsin">KCl</td>
-</tr>
-<tr class="odd">
-<td id="stub_1_7" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC"><div class="gt_from_md">
-<p>Acid Shock</p>
-</div></td>
-<td class="gt_row gt_center" headers="Grid Preparation stub_1_7 Digitonin">Yes</td>
-<td class="gt_row gt_center" headers="Grid Preparation stub_1_7 Nanodisc">No</td>
-<td class="gt_row gt_center" headers="Grid Preparation stub_1_7 Difab">Yes</td>
-<td class="gt_row gt_center" headers="Grid Preparation stub_1_7 Monofab">No</td>
-<td class="gt_row gt_center" headers="Grid Preparation stub_1_7 Uncleaved">No</td>
-<td class="gt_row gt_center" headers="Grid Preparation stub_1_7 Trypsin">No</td>
-</tr>
-<tr class="even">
-<td id="stub_1_8" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC"><div class="gt_from_md">
-<p>Fabs</p>
-</div></td>
-<td class="gt_row gt_center" headers="Grid Preparation stub_1_8 Digitonin">α and β</td>
-<td class="gt_row gt_center" headers="Grid Preparation stub_1_8 Nanodisc">—</td>
-<td class="gt_row gt_center" headers="Grid Preparation stub_1_8 Difab">α and β</td>
-<td class="gt_row gt_center" headers="Grid Preparation stub_1_8 Monofab">α</td>
-<td class="gt_row gt_center" headers="Grid Preparation stub_1_8 Uncleaved">α</td>
-<td class="gt_row gt_center" headers="Grid Preparation stub_1_8 Trypsin">α</td>
-</tr>
-<tr class="odd">
-<td id="stub_1_9" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC"><div class="gt_from_md">
-<p>Grid Type<sup>1</sup></p>
-</div></td>
-<td class="gt_row gt_center" headers="Grid Preparation stub_1_9 Digitonin">2/1 200</td>
-<td class="gt_row gt_center" headers="Grid Preparation stub_1_9 Nanodisc">2/2 200 + 2 nm carbon</td>
-<td class="gt_row gt_center" headers="Grid Preparation stub_1_9 Difab">2/1 200</td>
-<td class="gt_row gt_center" headers="Grid Preparation stub_1_9 Monofab">2/1 200</td>
-<td class="gt_row gt_center" headers="Grid Preparation stub_1_9 Uncleaved">2/2 200</td>
-<td class="gt_row gt_center" headers="Grid Preparation stub_1_9 Trypsin">2/1 200</td>
-</tr>
-<tr class="even">
-<td id="stub_1_10" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC"><div class="gt_from_md">
-<p>FOM (μM)</p>
-</div></td>
-<td class="gt_row gt_center" headers="Grid Preparation stub_1_10 Digitonin">2</td>
-<td class="gt_row gt_center" headers="Grid Preparation stub_1_10 Nanodisc">10</td>
-<td class="gt_row gt_center" headers="Grid Preparation stub_1_10 Difab">10</td>
-<td class="gt_row gt_center" headers="Grid Preparation stub_1_10 Monofab">2</td>
-<td class="gt_row gt_center" headers="Grid Preparation stub_1_10 Uncleaved">100</td>
-<td class="gt_row gt_center" headers="Grid Preparation stub_1_10 Trypsin">2</td>
-</tr>
-<tr class="odd gt_group_heading_row">
-<td colspan="7" id="Microscopy" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Microscopy</td>
-</tr>
-<tr class="even gt_row_group_first">
-<td id="stub_1_11" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC"><div class="gt_from_md">
-<p>Facility</p>
-</div></td>
-<td class="gt_row gt_center" headers="Microscopy stub_1_11 Digitonin">PNCC</td>
-<td class="gt_row gt_center" headers="Microscopy stub_1_11 Nanodisc">S2C2</td>
-<td class="gt_row gt_center" headers="Microscopy stub_1_11 Difab">S2C2</td>
-<td class="gt_row gt_center" headers="Microscopy stub_1_11 Monofab">PNCC</td>
-<td class="gt_row gt_center" headers="Microscopy stub_1_11 Uncleaved">Janelia Farm</td>
-<td class="gt_row gt_center" headers="Microscopy stub_1_11 Trypsin">Janelia Farm</td>
-</tr>
-<tr class="odd">
-<td id="stub_1_12" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC"><div class="gt_from_md">
-<p>No. Movies</p>
-</div></td>
-<td class="gt_row gt_center" headers="Microscopy stub_1_12 Digitonin">13,689</td>
-<td class="gt_row gt_center" headers="Microscopy stub_1_12 Nanodisc">9,882</td>
-<td class="gt_row gt_center" headers="Microscopy stub_1_12 Difab">5,126</td>
-<td class="gt_row gt_center" headers="Microscopy stub_1_12 Monofab">5,832</td>
-<td class="gt_row gt_center" headers="Microscopy stub_1_12 Uncleaved">11,334</td>
-<td class="gt_row gt_center" headers="Microscopy stub_1_12 Trypsin">6,960</td>
-</tr>
-<tr class="even">
-<td id="stub_1_13" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC"><div class="gt_from_md">
-<p>Frames<sup>2</sup></p>
-</div></td>
-<td class="gt_row gt_center" headers="Microscopy stub_1_13 Digitonin">50</td>
-<td class="gt_row gt_center" headers="Microscopy stub_1_13 Nanodisc">65</td>
-<td class="gt_row gt_center" headers="Microscopy stub_1_13 Difab">50</td>
-<td class="gt_row gt_center" headers="Microscopy stub_1_13 Monofab">50</td>
-<td class="gt_row gt_center" headers="Microscopy stub_1_13 Uncleaved">65</td>
-<td class="gt_row gt_center" headers="Microscopy stub_1_13 Trypsin">65</td>
-</tr>
-<tr class="odd">
-<td id="stub_1_14" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC"><div class="gt_from_md">
-<p>Pixel Size (Å/pix)<sup>3,4,5</sup></p>
-</div></td>
-<td class="gt_row gt_center" headers="Microscopy stub_1_14 Digitonin">0.8015</td>
-<td class="gt_row gt_center" headers="Microscopy stub_1_14 Nanodisc">0.86</td>
-<td class="gt_row gt_center" headers="Microscopy stub_1_14 Difab">0.86</td>
-<td class="gt_row gt_center" headers="Microscopy stub_1_14 Monofab">0.830</td>
-<td class="gt_row gt_center" headers="Microscopy stub_1_14 Uncleaved">0.844</td>
-<td class="gt_row gt_center" headers="Microscopy stub_1_14 Trypsin">0.788</td>
-</tr>
-<tr class="even gt_group_heading_row">
-<td colspan="7" id="Processing" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Processing</td>
-</tr>
-<tr class="odd gt_row_group_first">
-<td id="stub_1_15" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC"><div class="gt_from_md">
-<p>No. particles</p>
-</div></td>
-<td class="gt_row gt_center" headers="Processing stub_1_15 Digitonin">612,591</td>
-<td class="gt_row gt_center" headers="Processing stub_1_15 Nanodisc">237,730</td>
-<td class="gt_row gt_center" headers="Processing stub_1_15 Difab">257,341</td>
-<td class="gt_row gt_center" headers="Processing stub_1_15 Monofab">373,495</td>
-<td class="gt_row gt_center" headers="Processing stub_1_15 Uncleaved">499,081</td>
-<td class="gt_row gt_center" headers="Processing stub_1_15 Trypsin">264,228</td>
-</tr>
-<tr class="even">
-<td id="stub_1_16" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC"><div class="gt_from_md">
-<p>ECD resolution (Å)<sup>6,7</sup></p>
-</div></td>
-<td class="gt_row gt_center" headers="Processing stub_1_16 Digitonin">2.34</td>
-<td class="gt_row gt_center" headers="Processing stub_1_16 Nanodisc">3.06</td>
-<td class="gt_row gt_center" headers="Processing stub_1_16 Difab">2.94</td>
-<td class="gt_row gt_center" headers="Processing stub_1_16 Monofab">—</td>
-<td class="gt_row gt_center" headers="Processing stub_1_16 Uncleaved">—</td>
-<td class="gt_row gt_center" headers="Processing stub_1_16 Trypsin">3.03</td>
-</tr>
-<tr class="odd">
-<td id="stub_1_17" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC"><div class="gt_from_md">
-<p>Whole protein resolution (Å)<sup>6,7</sup></p>
-</div></td>
-<td class="gt_row gt_center" headers="Processing stub_1_17 Digitonin">2.89</td>
-<td class="gt_row gt_center" headers="Processing stub_1_17 Nanodisc">—</td>
-<td class="gt_row gt_center" headers="Processing stub_1_17 Difab">3.26</td>
-<td class="gt_row gt_center" headers="Processing stub_1_17 Monofab">3.04</td>
-<td class="gt_row gt_center" headers="Processing stub_1_17 Uncleaved">3.24</td>
-<td class="gt_row gt_center" headers="Processing stub_1_17 Trypsin">3.30</td>
-</tr>
-<tr class="even">
-<td id="stub_1_18" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC"><div class="gt_from_md">
-<p>ECD sharpening factor<sup>6</sup></p>
-</div></td>
-<td class="gt_row gt_center" headers="Processing stub_1_18 Digitonin">-56.6</td>
-<td class="gt_row gt_center" headers="Processing stub_1_18 Nanodisc">-77.1</td>
-<td class="gt_row gt_center" headers="Processing stub_1_18 Difab">-88.9</td>
-<td class="gt_row gt_center" headers="Processing stub_1_18 Monofab">—</td>
-<td class="gt_row gt_center" headers="Processing stub_1_18 Uncleaved">—</td>
-<td class="gt_row gt_center" headers="Processing stub_1_18 Trypsin">-66.7</td>
-</tr>
-<tr class="odd">
-<td id="stub_1_19" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC"><div class="gt_from_md">
-<p>Whole protein sharpening factor<sup>6</sup></p>
-</div></td>
-<td class="gt_row gt_center" headers="Processing stub_1_19 Digitonin">-66.0</td>
-<td class="gt_row gt_center" headers="Processing stub_1_19 Nanodisc">—</td>
-<td class="gt_row gt_center" headers="Processing stub_1_19 Difab">-110.4</td>
-<td class="gt_row gt_center" headers="Processing stub_1_19 Monofab">-104.4</td>
-<td class="gt_row gt_center" headers="Processing stub_1_19 Uncleaved">-96.4</td>
-<td class="gt_row gt_center" headers="Processing stub_1_19 Trypsin">-67.4</td>
-</tr>
-<tr class="even gt_group_heading_row">
-<td colspan="7" id="Model Building" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Model Building</td>
-</tr>
-<tr class="odd gt_row_group_first">
-<td id="stub_1_20" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC"><div class="gt_from_md">
-<p>Starting model</p>
-</div></td>
-<td class="gt_row gt_center" headers="Model Building stub_1_20 Digitonin">6WTH</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_20 Nanodisc">CKO digitonin</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_20 Difab">6WTH</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_20 Monofab">CKO/DEG difab</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_20 Uncleaved">AlphaFold</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_20 Trypsin">mouse uncleaved</td>
-</tr>
-<tr class="even">
-<td id="stub_1_21" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC"><div class="gt_from_md">
-<p>No. non-H atoms</p>
-</div></td>
-<td class="gt_row gt_center" headers="Model Building stub_1_21 Digitonin">12,416</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_21 Nanodisc">9,971</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_21 Difab">12,807</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_21 Monofab">11,588</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_21 Uncleaved">11,466</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_21 Trypsin">11,617</td>
-</tr>
-<tr class="odd">
-<td id="stub_1_22" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC"><div class="gt_from_md">
-<p>No. residues</p>
-</div></td>
-<td class="gt_row gt_center" headers="Model Building stub_1_22 Digitonin">1,628</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_22 Nanodisc">1,174</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_22 Difab">1,714</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_22 Monofab">1,476</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_22 Uncleaved">1,506</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_22 Trypsin">1,540</td>
-</tr>
-<tr class="even">
-<td id="stub_1_23" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC"><div class="gt_from_md">
-<p>No. ligands<sup>8</sup></p>
-</div></td>
-<td class="gt_row gt_center" headers="Model Building stub_1_23 Digitonin">49</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_23 Nanodisc">38</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_23 Difab">35</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_23 Monofab">43</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_23 Uncleaved">26</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_23 Trypsin">29</td>
-</tr>
-<tr class="odd">
-<td id="stub_1_24" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC"><div class="gt_from_md">
-<p>Bond length RMSD</p>
-</div></td>
-<td class="gt_row gt_center" headers="Model Building stub_1_24 Digitonin">0.006</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_24 Nanodisc">0.003</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_24 Difab">0.003</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_24 Monofab">0.004</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_24 Uncleaved">0.003</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_24 Trypsin">0.003</td>
-</tr>
-<tr class="even">
-<td id="stub_1_25" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC"><div class="gt_from_md">
-<p>Bond angle RMSD</p>
-</div></td>
-<td class="gt_row gt_center" headers="Model Building stub_1_25 Digitonin">0.709</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_25 Nanodisc">0.505</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_25 Difab">0.519</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_25 Monofab">0.499</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_25 Uncleaved">0.438</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_25 Trypsin">0.446</td>
-</tr>
-<tr class="odd">
-<td id="stub_1_26" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC"><div class="gt_from_md">
-<p>Molprobity score</p>
-</div></td>
-<td class="gt_row gt_center" headers="Model Building stub_1_26 Digitonin">1.49</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_26 Nanodisc">1.11</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_26 Difab">1.10</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_26 Monofab">1.27</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_26 Uncleaved">1.48</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_26 Trypsin">1.44</td>
-</tr>
-<tr class="even">
-<td id="stub_1_27" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC"><div class="gt_from_md">
-<p>Clash score</p>
-</div></td>
-<td class="gt_row gt_center" headers="Model Building stub_1_27 Digitonin">4.61</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_27 Nanodisc">3.14</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_27 Difab">3.06</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_27 Monofab">5.03</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_27 Uncleaved">6.44</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_27 Trypsin">5.70</td>
-</tr>
-<tr class="odd">
-<td id="stub_1_28" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC"><div class="gt_from_md">
-<p>Rama. outliers (%)</p>
-</div></td>
-<td class="gt_row gt_center" headers="Model Building stub_1_28 Digitonin">0.00</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_28 Nanodisc">0.00</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_28 Difab">0.00</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_28 Monofab">0.00</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_28 Uncleaved">0.00</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_28 Trypsin">0.00</td>
-</tr>
-<tr class="even">
-<td id="stub_1_29" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC"><div class="gt_from_md">
-<p>Rama. allowed (%)</p>
-</div></td>
-<td class="gt_row gt_center" headers="Model Building stub_1_29 Digitonin">2.00</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_29 Nanodisc">1.57</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_29 Difab">1.26</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_29 Monofab">1.82</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_29 Uncleaved">2.65</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_29 Trypsin">2.67</td>
-</tr>
-<tr class="odd">
-<td id="stub_1_30" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC"><div class="gt_from_md">
-<p>Rama. favored (%)</p>
-</div></td>
-<td class="gt_row gt_center" headers="Model Building stub_1_30 Digitonin">98.00</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_30 Nanodisc">98.43</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_30 Difab">98.74</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_30 Monofab">98.18</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_30 Uncleaved">97.35</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_30 Trypsin">97.33</td>
-</tr>
-<tr class="even">
-<td id="stub_1_31" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC"><div class="gt_from_md">
-<p>Rotamer outliers</p>
-</div></td>
-<td class="gt_row gt_center" headers="Model Building stub_1_31 Digitonin">2.15</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_31 Nanodisc">0.09</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_31 Difab">0.72</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_31 Monofab">0.28</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_31 Uncleaved">0.09</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_31 Trypsin">0.00</td>
-</tr>
-<tr class="odd">
-<td id="stub_1_32" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC"><div class="gt_from_md">
-<p>Cβ outliers</p>
-</div></td>
-<td class="gt_row gt_center" headers="Model Building stub_1_32 Digitonin">0.00</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_32 Nanodisc">0.00</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_32 Difab">0.00</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_32 Monofab">0.00</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_32 Uncleaved">0.00</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_32 Trypsin">0.00</td>
-</tr>
-<tr class="even">
-<td id="stub_1_33" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC"><div class="gt_from_md">
-<p>CaBLAM outliers</p>
-</div></td>
-<td class="gt_row gt_center" headers="Model Building stub_1_33 Digitonin">0.81</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_33 Nanodisc">0.44</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_33 Difab">0.40</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_33 Monofab">1.15</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_33 Uncleaved">1.52</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_33 Trypsin">0.86</td>
-</tr>
-<tr class="odd">
-<td id="stub_1_34" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC"><div class="gt_from_md">
-<p>Resolution (0.143 FSC)</p>
-</div></td>
-<td class="gt_row gt_center" headers="Model Building stub_1_34 Digitonin">2.3</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_34 Nanodisc">2.9</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_34 Difab">2.8</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_34 Monofab">3.1</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_34 Uncleaved">3.2</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_34 Trypsin">3.0</td>
-</tr>
-<tr class="even">
-<td id="stub_1_35" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC"><div class="gt_from_md">
-<p>CC (mask)</p>
-</div></td>
-<td class="gt_row gt_center" headers="Model Building stub_1_35 Digitonin">0.85</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_35 Nanodisc">0.84</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_35 Difab">0.83</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_35 Monofab">0.82</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_35 Uncleaved">0.83</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_35 Trypsin">0.84</td>
-</tr>
-<tr class="odd">
-<td id="stub_1_36" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC"><div class="gt_from_md">
-<p>Q-score<sup>9</sup></p>
-</div></td>
-<td class="gt_row gt_center" headers="Model Building stub_1_36 Digitonin">0.80</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_36 Nanodisc">0.71</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_36 Difab">0.71</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_36 Monofab">0.71</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_36 Uncleaved">0.68</td>
-<td class="gt_row gt_center" headers="Model Building stub_1_36 Trypsin">0.72</td>
-</tr>
-</tbody><tfoot class="gt_footnotes">
-<tr class="odd">
-<td colspan="7" class="gt_footnote"><sup>1</sup> All grids are Quantifoil grids with gold mesh</td>
-</tr>
-<tr class="even">
-<td colspan="7" class="gt_footnote"><sup>2</sup> Electron flux is 1 e⁻/Å²/frame</td>
-</tr>
-<tr class="odd">
-<td colspan="7" class="gt_footnote"><sup>3</sup> All datsets collected in super-resolution mode and Fourier-cropped back to this physical size.</td>
-</tr>
-<tr class="even">
-<td colspan="7" class="gt_footnote"><sup>4</sup> Resolutions here are nominal resolutions given by the microscopy facility. I have resion to believe the S²C² pixel size is incorrect, and built the models into a corrected pixel size (see Materials and Methods).</td>
-</tr>
-<tr class="odd">
-<td colspan="7" class="gt_footnote"><sup>5</sup> These values were used for processing and are listed to the precision given by the microscopy facility at the time of collection.</td>
-</tr>
-<tr class="even">
-<td colspan="7" class="gt_footnote"><sup>6</sup> A dash indicates that a focused map for this region was not used in model building</td>
-</tr>
-<tr class="odd">
-<td colspan="7" class="gt_footnote"><sup>7</sup> GSFSC resolution</td>
-</tr>
-<tr class="even">
-<td colspan="7" class="gt_footnote"><sup>8</sup> NAG, MAN, and BMA. UNK is counted as a residue instead.</td>
-</tr>
-<tr class="odd">
-<td colspan="7" class="gt_footnote"><sup>9</sup> Residues modeled as UNK excluded from Q-score</td>
-</tr>
-</tfoot>
-
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false"><caption>Table&nbsp;A.1:  <p>Image processing and model building statistics.</p> </caption>
+  <thead>
+    
+    <tr class="gt_col_headings gt_spanner_row">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" scope="col" id=""></th>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="human CKO">
+        <span class="gt_column_spanner">human CKO</span>
+      </th>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="human CKO/DEG">
+        <span class="gt_column_spanner">human CKO/DEG</span>
+      </th>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="mouse">
+        <span class="gt_column_spanner">mouse</span>
+      </th>
+    </tr>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Digitonin">Digitonin</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Nanodisc">Nanodisc</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Difab">Difab</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Monofab">Monofab</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Uncleaved">Uncleaved</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Trypsin">Trypsin</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr class="gt_group_heading_row">
+      <th colspan="7" class="gt_group_heading" scope="colgroup" id="Construct Summary">Construct Summary</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_1" scope="row" class="gt_row gt_center gt_stub" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC;"><div class="gt_from_md"><p>α mutations</p>
+</div></th>
+<td headers="Construct Summary stub_1_1 Digitonin" class="gt_row gt_center">C63A, R178A, R204A</td>
+<td headers="Construct Summary stub_1_1 Nanodisc" class="gt_row gt_center">C63A, R178A, R204A</td>
+<td headers="Construct Summary stub_1_1 Difab" class="gt_row gt_center">C63A, R178A, R204A, T240W</td>
+<td headers="Construct Summary stub_1_1 Monofab" class="gt_row gt_center">C63A, R178A, R204A, T240W</td>
+<td headers="Construct Summary stub_1_1 Uncleaved" class="gt_row gt_center">—</td>
+<td headers="Construct Summary stub_1_1 Trypsin" class="gt_row gt_center">—</td></tr>
+    <tr><th id="stub_1_2" scope="row" class="gt_row gt_center gt_stub" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC;"><div class="gt_from_md"><p>β mutations</p>
+</div></th>
+<td headers="Construct Summary stub_1_2 Digitonin" class="gt_row gt_center">C30A</td>
+<td headers="Construct Summary stub_1_2 Nanodisc" class="gt_row gt_center">C30A</td>
+<td headers="Construct Summary stub_1_2 Difab" class="gt_row gt_center">C30A, S520K</td>
+<td headers="Construct Summary stub_1_2 Monofab" class="gt_row gt_center">C30A, S520K</td>
+<td headers="Construct Summary stub_1_2 Uncleaved" class="gt_row gt_center">—</td>
+<td headers="Construct Summary stub_1_2 Trypsin" class="gt_row gt_center">—</td></tr>
+    <tr><th id="stub_1_3" scope="row" class="gt_row gt_center gt_stub" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC;"><div class="gt_from_md"><p>γ mutations</p>
+</div></th>
+<td headers="Construct Summary stub_1_3 Digitonin" class="gt_row gt_center">C33A, C41A, R138A</td>
+<td headers="Construct Summary stub_1_3 Nanodisc" class="gt_row gt_center">C33A, C41A, R138A</td>
+<td headers="Construct Summary stub_1_3 Difab" class="gt_row gt_center">C33A, C41A, R138A</td>
+<td headers="Construct Summary stub_1_3 Monofab" class="gt_row gt_center">C33A, C41A, R138A</td>
+<td headers="Construct Summary stub_1_3 Uncleaved" class="gt_row gt_center">—</td>
+<td headers="Construct Summary stub_1_3 Trypsin" class="gt_row gt_center">—</td></tr>
+    <tr><th id="stub_1_4" scope="row" class="gt_row gt_center gt_stub" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC;"><div class="gt_from_md"><p>Other treatments</p>
+</div></th>
+<td headers="Construct Summary stub_1_4 Digitonin" class="gt_row gt_center">—</td>
+<td headers="Construct Summary stub_1_4 Nanodisc" class="gt_row gt_center">POPC nanodisc</td>
+<td headers="Construct Summary stub_1_4 Difab" class="gt_row gt_center">—</td>
+<td headers="Construct Summary stub_1_4 Monofab" class="gt_row gt_center">1 mM C8 PIP₂</td>
+<td headers="Construct Summary stub_1_4 Uncleaved" class="gt_row gt_center">—</td>
+<td headers="Construct Summary stub_1_4 Trypsin" class="gt_row gt_center">10 μg/mL trypsin for 5 minutes</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="7" class="gt_group_heading" scope="colgroup" id="Grid Preparation">Grid Preparation</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_5" scope="row" class="gt_row gt_center gt_stub" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC;"><div class="gt_from_md"><p>ENaC (μM)</p>
+</div></th>
+<td headers="Grid Preparation stub_1_5 Digitonin" class="gt_row gt_center">19.8</td>
+<td headers="Grid Preparation stub_1_5 Nanodisc" class="gt_row gt_center">2</td>
+<td headers="Grid Preparation stub_1_5 Difab" class="gt_row gt_center">21.3</td>
+<td headers="Grid Preparation stub_1_5 Monofab" class="gt_row gt_center">24</td>
+<td headers="Grid Preparation stub_1_5 Uncleaved" class="gt_row gt_center">9.6</td>
+<td headers="Grid Preparation stub_1_5 Trypsin" class="gt_row gt_center">9.6</td></tr>
+    <tr><th id="stub_1_6" scope="row" class="gt_row gt_center gt_stub" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC;"><div class="gt_from_md"><p>Salt</p>
+</div></th>
+<td headers="Grid Preparation stub_1_6 Digitonin" class="gt_row gt_center">NaCl</td>
+<td headers="Grid Preparation stub_1_6 Nanodisc" class="gt_row gt_center">KCl</td>
+<td headers="Grid Preparation stub_1_6 Difab" class="gt_row gt_center">KCl</td>
+<td headers="Grid Preparation stub_1_6 Monofab" class="gt_row gt_center">KCl</td>
+<td headers="Grid Preparation stub_1_6 Uncleaved" class="gt_row gt_center">KCl</td>
+<td headers="Grid Preparation stub_1_6 Trypsin" class="gt_row gt_center">KCl</td></tr>
+    <tr><th id="stub_1_7" scope="row" class="gt_row gt_center gt_stub" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC;"><div class="gt_from_md"><p>Acid Shock</p>
+</div></th>
+<td headers="Grid Preparation stub_1_7 Digitonin" class="gt_row gt_center">Yes</td>
+<td headers="Grid Preparation stub_1_7 Nanodisc" class="gt_row gt_center">No</td>
+<td headers="Grid Preparation stub_1_7 Difab" class="gt_row gt_center">Yes</td>
+<td headers="Grid Preparation stub_1_7 Monofab" class="gt_row gt_center">No</td>
+<td headers="Grid Preparation stub_1_7 Uncleaved" class="gt_row gt_center">No</td>
+<td headers="Grid Preparation stub_1_7 Trypsin" class="gt_row gt_center">No</td></tr>
+    <tr><th id="stub_1_8" scope="row" class="gt_row gt_center gt_stub" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC;"><div class="gt_from_md"><p>Fabs</p>
+</div></th>
+<td headers="Grid Preparation stub_1_8 Digitonin" class="gt_row gt_center">α and β</td>
+<td headers="Grid Preparation stub_1_8 Nanodisc" class="gt_row gt_center">—</td>
+<td headers="Grid Preparation stub_1_8 Difab" class="gt_row gt_center">α and β</td>
+<td headers="Grid Preparation stub_1_8 Monofab" class="gt_row gt_center">α</td>
+<td headers="Grid Preparation stub_1_8 Uncleaved" class="gt_row gt_center">α</td>
+<td headers="Grid Preparation stub_1_8 Trypsin" class="gt_row gt_center">α</td></tr>
+    <tr><th id="stub_1_9" scope="row" class="gt_row gt_center gt_stub" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC;"><div class="gt_from_md"><p>Grid Type<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span></p></div></th>
+<td headers="Grid Preparation stub_1_9 Digitonin" class="gt_row gt_center">2/1 200</td>
+<td headers="Grid Preparation stub_1_9 Nanodisc" class="gt_row gt_center">2/2 200 + 2 nm carbon</td>
+<td headers="Grid Preparation stub_1_9 Difab" class="gt_row gt_center">2/1 200</td>
+<td headers="Grid Preparation stub_1_9 Monofab" class="gt_row gt_center">2/1 200</td>
+<td headers="Grid Preparation stub_1_9 Uncleaved" class="gt_row gt_center">2/2 200</td>
+<td headers="Grid Preparation stub_1_9 Trypsin" class="gt_row gt_center">2/1 200</td></tr>
+    <tr><th id="stub_1_10" scope="row" class="gt_row gt_center gt_stub" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC;"><div class="gt_from_md"><p>FOM (μM)</p>
+</div></th>
+<td headers="Grid Preparation stub_1_10 Digitonin" class="gt_row gt_center">2</td>
+<td headers="Grid Preparation stub_1_10 Nanodisc" class="gt_row gt_center">10</td>
+<td headers="Grid Preparation stub_1_10 Difab" class="gt_row gt_center">10</td>
+<td headers="Grid Preparation stub_1_10 Monofab" class="gt_row gt_center">2</td>
+<td headers="Grid Preparation stub_1_10 Uncleaved" class="gt_row gt_center">100</td>
+<td headers="Grid Preparation stub_1_10 Trypsin" class="gt_row gt_center">2</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="7" class="gt_group_heading" scope="colgroup" id="Microscopy">Microscopy</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_11" scope="row" class="gt_row gt_center gt_stub" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC;"><div class="gt_from_md"><p>Facility</p>
+</div></th>
+<td headers="Microscopy stub_1_11 Digitonin" class="gt_row gt_center">PNCC</td>
+<td headers="Microscopy stub_1_11 Nanodisc" class="gt_row gt_center">S2C2</td>
+<td headers="Microscopy stub_1_11 Difab" class="gt_row gt_center">S2C2</td>
+<td headers="Microscopy stub_1_11 Monofab" class="gt_row gt_center">PNCC</td>
+<td headers="Microscopy stub_1_11 Uncleaved" class="gt_row gt_center">Janelia Farm</td>
+<td headers="Microscopy stub_1_11 Trypsin" class="gt_row gt_center">Janelia Farm</td></tr>
+    <tr><th id="stub_1_12" scope="row" class="gt_row gt_center gt_stub" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC;"><div class="gt_from_md"><p>No. Movies</p>
+</div></th>
+<td headers="Microscopy stub_1_12 Digitonin" class="gt_row gt_center">13,689</td>
+<td headers="Microscopy stub_1_12 Nanodisc" class="gt_row gt_center">9,882</td>
+<td headers="Microscopy stub_1_12 Difab" class="gt_row gt_center">5,126</td>
+<td headers="Microscopy stub_1_12 Monofab" class="gt_row gt_center">5,832</td>
+<td headers="Microscopy stub_1_12 Uncleaved" class="gt_row gt_center">11,334</td>
+<td headers="Microscopy stub_1_12 Trypsin" class="gt_row gt_center">6,960</td></tr>
+    <tr><th id="stub_1_13" scope="row" class="gt_row gt_center gt_stub" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC;"><div class="gt_from_md"><p>Frames<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>2</sup></span></p></div></th>
+<td headers="Microscopy stub_1_13 Digitonin" class="gt_row gt_center">50</td>
+<td headers="Microscopy stub_1_13 Nanodisc" class="gt_row gt_center">65</td>
+<td headers="Microscopy stub_1_13 Difab" class="gt_row gt_center">50</td>
+<td headers="Microscopy stub_1_13 Monofab" class="gt_row gt_center">50</td>
+<td headers="Microscopy stub_1_13 Uncleaved" class="gt_row gt_center">65</td>
+<td headers="Microscopy stub_1_13 Trypsin" class="gt_row gt_center">65</td></tr>
+    <tr><th id="stub_1_14" scope="row" class="gt_row gt_center gt_stub" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC;"><div class="gt_from_md"><p>Pixel Size (Å/pix)<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>3,4,5</sup></span></p></div></th>
+<td headers="Microscopy stub_1_14 Digitonin" class="gt_row gt_center">0.8015</td>
+<td headers="Microscopy stub_1_14 Nanodisc" class="gt_row gt_center">0.86</td>
+<td headers="Microscopy stub_1_14 Difab" class="gt_row gt_center">0.86</td>
+<td headers="Microscopy stub_1_14 Monofab" class="gt_row gt_center">0.830</td>
+<td headers="Microscopy stub_1_14 Uncleaved" class="gt_row gt_center">0.844</td>
+<td headers="Microscopy stub_1_14 Trypsin" class="gt_row gt_center">0.788</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="7" class="gt_group_heading" scope="colgroup" id="Processing">Processing</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_15" scope="row" class="gt_row gt_center gt_stub" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC;"><div class="gt_from_md"><p>No. particles</p>
+</div></th>
+<td headers="Processing stub_1_15 Digitonin" class="gt_row gt_center">612,591</td>
+<td headers="Processing stub_1_15 Nanodisc" class="gt_row gt_center">237,730</td>
+<td headers="Processing stub_1_15 Difab" class="gt_row gt_center">257,341</td>
+<td headers="Processing stub_1_15 Monofab" class="gt_row gt_center">373,495</td>
+<td headers="Processing stub_1_15 Uncleaved" class="gt_row gt_center">499,081</td>
+<td headers="Processing stub_1_15 Trypsin" class="gt_row gt_center">264,228</td></tr>
+    <tr><th id="stub_1_16" scope="row" class="gt_row gt_center gt_stub" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC;"><div class="gt_from_md"><p>ECD resolution (Å)<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>6,7</sup></span></p></div></th>
+<td headers="Processing stub_1_16 Digitonin" class="gt_row gt_center">2.34</td>
+<td headers="Processing stub_1_16 Nanodisc" class="gt_row gt_center">3.06</td>
+<td headers="Processing stub_1_16 Difab" class="gt_row gt_center">2.94</td>
+<td headers="Processing stub_1_16 Monofab" class="gt_row gt_center">—</td>
+<td headers="Processing stub_1_16 Uncleaved" class="gt_row gt_center">—</td>
+<td headers="Processing stub_1_16 Trypsin" class="gt_row gt_center">3.03</td></tr>
+    <tr><th id="stub_1_17" scope="row" class="gt_row gt_center gt_stub" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC;"><div class="gt_from_md"><p>Whole protein resolution (Å)<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>6,7</sup></span></p></div></th>
+<td headers="Processing stub_1_17 Digitonin" class="gt_row gt_center">2.89</td>
+<td headers="Processing stub_1_17 Nanodisc" class="gt_row gt_center">—</td>
+<td headers="Processing stub_1_17 Difab" class="gt_row gt_center">3.26</td>
+<td headers="Processing stub_1_17 Monofab" class="gt_row gt_center">3.04</td>
+<td headers="Processing stub_1_17 Uncleaved" class="gt_row gt_center">3.24</td>
+<td headers="Processing stub_1_17 Trypsin" class="gt_row gt_center">3.30</td></tr>
+    <tr><th id="stub_1_18" scope="row" class="gt_row gt_center gt_stub" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC;"><div class="gt_from_md"><p>ECD sharpening factor<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>6</sup></span></p></div></th>
+<td headers="Processing stub_1_18 Digitonin" class="gt_row gt_center">-56.6</td>
+<td headers="Processing stub_1_18 Nanodisc" class="gt_row gt_center">-77.1</td>
+<td headers="Processing stub_1_18 Difab" class="gt_row gt_center">-88.9</td>
+<td headers="Processing stub_1_18 Monofab" class="gt_row gt_center">—</td>
+<td headers="Processing stub_1_18 Uncleaved" class="gt_row gt_center">—</td>
+<td headers="Processing stub_1_18 Trypsin" class="gt_row gt_center">-66.7</td></tr>
+    <tr><th id="stub_1_19" scope="row" class="gt_row gt_center gt_stub" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC;"><div class="gt_from_md"><p>Whole protein sharpening factor<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>6</sup></span></p></div></th>
+<td headers="Processing stub_1_19 Digitonin" class="gt_row gt_center">-66.0</td>
+<td headers="Processing stub_1_19 Nanodisc" class="gt_row gt_center">—</td>
+<td headers="Processing stub_1_19 Difab" class="gt_row gt_center">-110.4</td>
+<td headers="Processing stub_1_19 Monofab" class="gt_row gt_center">-104.4</td>
+<td headers="Processing stub_1_19 Uncleaved" class="gt_row gt_center">-96.4</td>
+<td headers="Processing stub_1_19 Trypsin" class="gt_row gt_center">-67.4</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="7" class="gt_group_heading" scope="colgroup" id="Model Building">Model Building</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_20" scope="row" class="gt_row gt_center gt_stub" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC;"><div class="gt_from_md"><p>Starting model</p>
+</div></th>
+<td headers="Model Building stub_1_20 Digitonin" class="gt_row gt_center">6WTH</td>
+<td headers="Model Building stub_1_20 Nanodisc" class="gt_row gt_center">CKO digitonin</td>
+<td headers="Model Building stub_1_20 Difab" class="gt_row gt_center">6WTH</td>
+<td headers="Model Building stub_1_20 Monofab" class="gt_row gt_center">CKO/DEG difab</td>
+<td headers="Model Building stub_1_20 Uncleaved" class="gt_row gt_center">AlphaFold</td>
+<td headers="Model Building stub_1_20 Trypsin" class="gt_row gt_center">mouse uncleaved</td></tr>
+    <tr><th id="stub_1_21" scope="row" class="gt_row gt_center gt_stub" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC;"><div class="gt_from_md"><p>No. non-H atoms</p>
+</div></th>
+<td headers="Model Building stub_1_21 Digitonin" class="gt_row gt_center">12,416</td>
+<td headers="Model Building stub_1_21 Nanodisc" class="gt_row gt_center">9,971</td>
+<td headers="Model Building stub_1_21 Difab" class="gt_row gt_center">12,807</td>
+<td headers="Model Building stub_1_21 Monofab" class="gt_row gt_center">11,588</td>
+<td headers="Model Building stub_1_21 Uncleaved" class="gt_row gt_center">11,466</td>
+<td headers="Model Building stub_1_21 Trypsin" class="gt_row gt_center">11,617</td></tr>
+    <tr><th id="stub_1_22" scope="row" class="gt_row gt_center gt_stub" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC;"><div class="gt_from_md"><p>No. residues</p>
+</div></th>
+<td headers="Model Building stub_1_22 Digitonin" class="gt_row gt_center">1,628</td>
+<td headers="Model Building stub_1_22 Nanodisc" class="gt_row gt_center">1,174</td>
+<td headers="Model Building stub_1_22 Difab" class="gt_row gt_center">1,714</td>
+<td headers="Model Building stub_1_22 Monofab" class="gt_row gt_center">1,476</td>
+<td headers="Model Building stub_1_22 Uncleaved" class="gt_row gt_center">1,506</td>
+<td headers="Model Building stub_1_22 Trypsin" class="gt_row gt_center">1,540</td></tr>
+    <tr><th id="stub_1_23" scope="row" class="gt_row gt_center gt_stub" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC;"><div class="gt_from_md"><p>No. ligands<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>8</sup></span></p></div></th>
+<td headers="Model Building stub_1_23 Digitonin" class="gt_row gt_center">49</td>
+<td headers="Model Building stub_1_23 Nanodisc" class="gt_row gt_center">38</td>
+<td headers="Model Building stub_1_23 Difab" class="gt_row gt_center">35</td>
+<td headers="Model Building stub_1_23 Monofab" class="gt_row gt_center">43</td>
+<td headers="Model Building stub_1_23 Uncleaved" class="gt_row gt_center">26</td>
+<td headers="Model Building stub_1_23 Trypsin" class="gt_row gt_center">29</td></tr>
+    <tr><th id="stub_1_24" scope="row" class="gt_row gt_center gt_stub" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC;"><div class="gt_from_md"><p>Bond length RMSD</p>
+</div></th>
+<td headers="Model Building stub_1_24 Digitonin" class="gt_row gt_center">0.006</td>
+<td headers="Model Building stub_1_24 Nanodisc" class="gt_row gt_center">0.003</td>
+<td headers="Model Building stub_1_24 Difab" class="gt_row gt_center">0.003</td>
+<td headers="Model Building stub_1_24 Monofab" class="gt_row gt_center">0.004</td>
+<td headers="Model Building stub_1_24 Uncleaved" class="gt_row gt_center">0.003</td>
+<td headers="Model Building stub_1_24 Trypsin" class="gt_row gt_center">0.003</td></tr>
+    <tr><th id="stub_1_25" scope="row" class="gt_row gt_center gt_stub" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC;"><div class="gt_from_md"><p>Bond angle RMSD</p>
+</div></th>
+<td headers="Model Building stub_1_25 Digitonin" class="gt_row gt_center">0.709</td>
+<td headers="Model Building stub_1_25 Nanodisc" class="gt_row gt_center">0.505</td>
+<td headers="Model Building stub_1_25 Difab" class="gt_row gt_center">0.519</td>
+<td headers="Model Building stub_1_25 Monofab" class="gt_row gt_center">0.499</td>
+<td headers="Model Building stub_1_25 Uncleaved" class="gt_row gt_center">0.438</td>
+<td headers="Model Building stub_1_25 Trypsin" class="gt_row gt_center">0.446</td></tr>
+    <tr><th id="stub_1_26" scope="row" class="gt_row gt_center gt_stub" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC;"><div class="gt_from_md"><p>Molprobity score</p>
+</div></th>
+<td headers="Model Building stub_1_26 Digitonin" class="gt_row gt_center">1.49</td>
+<td headers="Model Building stub_1_26 Nanodisc" class="gt_row gt_center">1.11</td>
+<td headers="Model Building stub_1_26 Difab" class="gt_row gt_center">1.10</td>
+<td headers="Model Building stub_1_26 Monofab" class="gt_row gt_center">1.27</td>
+<td headers="Model Building stub_1_26 Uncleaved" class="gt_row gt_center">1.48</td>
+<td headers="Model Building stub_1_26 Trypsin" class="gt_row gt_center">1.44</td></tr>
+    <tr><th id="stub_1_27" scope="row" class="gt_row gt_center gt_stub" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC;"><div class="gt_from_md"><p>Clash score</p>
+</div></th>
+<td headers="Model Building stub_1_27 Digitonin" class="gt_row gt_center">4.61</td>
+<td headers="Model Building stub_1_27 Nanodisc" class="gt_row gt_center">3.14</td>
+<td headers="Model Building stub_1_27 Difab" class="gt_row gt_center">3.06</td>
+<td headers="Model Building stub_1_27 Monofab" class="gt_row gt_center">5.03</td>
+<td headers="Model Building stub_1_27 Uncleaved" class="gt_row gt_center">6.44</td>
+<td headers="Model Building stub_1_27 Trypsin" class="gt_row gt_center">5.70</td></tr>
+    <tr><th id="stub_1_28" scope="row" class="gt_row gt_center gt_stub" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC;"><div class="gt_from_md"><p>Rama. outliers (%)</p>
+</div></th>
+<td headers="Model Building stub_1_28 Digitonin" class="gt_row gt_center">0.00</td>
+<td headers="Model Building stub_1_28 Nanodisc" class="gt_row gt_center">0.00</td>
+<td headers="Model Building stub_1_28 Difab" class="gt_row gt_center">0.00</td>
+<td headers="Model Building stub_1_28 Monofab" class="gt_row gt_center">0.00</td>
+<td headers="Model Building stub_1_28 Uncleaved" class="gt_row gt_center">0.00</td>
+<td headers="Model Building stub_1_28 Trypsin" class="gt_row gt_center">0.00</td></tr>
+    <tr><th id="stub_1_29" scope="row" class="gt_row gt_center gt_stub" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC;"><div class="gt_from_md"><p>Rama. allowed (%)</p>
+</div></th>
+<td headers="Model Building stub_1_29 Digitonin" class="gt_row gt_center">2.00</td>
+<td headers="Model Building stub_1_29 Nanodisc" class="gt_row gt_center">1.57</td>
+<td headers="Model Building stub_1_29 Difab" class="gt_row gt_center">1.26</td>
+<td headers="Model Building stub_1_29 Monofab" class="gt_row gt_center">1.82</td>
+<td headers="Model Building stub_1_29 Uncleaved" class="gt_row gt_center">2.65</td>
+<td headers="Model Building stub_1_29 Trypsin" class="gt_row gt_center">2.67</td></tr>
+    <tr><th id="stub_1_30" scope="row" class="gt_row gt_center gt_stub" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC;"><div class="gt_from_md"><p>Rama. favored (%)</p>
+</div></th>
+<td headers="Model Building stub_1_30 Digitonin" class="gt_row gt_center">98.00</td>
+<td headers="Model Building stub_1_30 Nanodisc" class="gt_row gt_center">98.43</td>
+<td headers="Model Building stub_1_30 Difab" class="gt_row gt_center">98.74</td>
+<td headers="Model Building stub_1_30 Monofab" class="gt_row gt_center">98.18</td>
+<td headers="Model Building stub_1_30 Uncleaved" class="gt_row gt_center">97.35</td>
+<td headers="Model Building stub_1_30 Trypsin" class="gt_row gt_center">97.33</td></tr>
+    <tr><th id="stub_1_31" scope="row" class="gt_row gt_center gt_stub" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC;"><div class="gt_from_md"><p>Rotamer outliers</p>
+</div></th>
+<td headers="Model Building stub_1_31 Digitonin" class="gt_row gt_center">2.15</td>
+<td headers="Model Building stub_1_31 Nanodisc" class="gt_row gt_center">0.09</td>
+<td headers="Model Building stub_1_31 Difab" class="gt_row gt_center">0.72</td>
+<td headers="Model Building stub_1_31 Monofab" class="gt_row gt_center">0.28</td>
+<td headers="Model Building stub_1_31 Uncleaved" class="gt_row gt_center">0.09</td>
+<td headers="Model Building stub_1_31 Trypsin" class="gt_row gt_center">0.00</td></tr>
+    <tr><th id="stub_1_32" scope="row" class="gt_row gt_center gt_stub" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC;"><div class="gt_from_md"><p>Cβ outliers</p>
+</div></th>
+<td headers="Model Building stub_1_32 Digitonin" class="gt_row gt_center">0.00</td>
+<td headers="Model Building stub_1_32 Nanodisc" class="gt_row gt_center">0.00</td>
+<td headers="Model Building stub_1_32 Difab" class="gt_row gt_center">0.00</td>
+<td headers="Model Building stub_1_32 Monofab" class="gt_row gt_center">0.00</td>
+<td headers="Model Building stub_1_32 Uncleaved" class="gt_row gt_center">0.00</td>
+<td headers="Model Building stub_1_32 Trypsin" class="gt_row gt_center">0.00</td></tr>
+    <tr><th id="stub_1_33" scope="row" class="gt_row gt_center gt_stub" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC;"><div class="gt_from_md"><p>CaBLAM outliers</p>
+</div></th>
+<td headers="Model Building stub_1_33 Digitonin" class="gt_row gt_center">0.81</td>
+<td headers="Model Building stub_1_33 Nanodisc" class="gt_row gt_center">0.44</td>
+<td headers="Model Building stub_1_33 Difab" class="gt_row gt_center">0.40</td>
+<td headers="Model Building stub_1_33 Monofab" class="gt_row gt_center">1.15</td>
+<td headers="Model Building stub_1_33 Uncleaved" class="gt_row gt_center">1.52</td>
+<td headers="Model Building stub_1_33 Trypsin" class="gt_row gt_center">0.86</td></tr>
+    <tr><th id="stub_1_34" scope="row" class="gt_row gt_center gt_stub" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC;"><div class="gt_from_md"><p>Resolution (0.143 FSC)</p>
+</div></th>
+<td headers="Model Building stub_1_34 Digitonin" class="gt_row gt_center">2.3</td>
+<td headers="Model Building stub_1_34 Nanodisc" class="gt_row gt_center">2.9</td>
+<td headers="Model Building stub_1_34 Difab" class="gt_row gt_center">2.8</td>
+<td headers="Model Building stub_1_34 Monofab" class="gt_row gt_center">3.1</td>
+<td headers="Model Building stub_1_34 Uncleaved" class="gt_row gt_center">3.2</td>
+<td headers="Model Building stub_1_34 Trypsin" class="gt_row gt_center">3.0</td></tr>
+    <tr><th id="stub_1_35" scope="row" class="gt_row gt_center gt_stub" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC;"><div class="gt_from_md"><p>CC (mask)</p>
+</div></th>
+<td headers="Model Building stub_1_35 Digitonin" class="gt_row gt_center">0.85</td>
+<td headers="Model Building stub_1_35 Nanodisc" class="gt_row gt_center">0.84</td>
+<td headers="Model Building stub_1_35 Difab" class="gt_row gt_center">0.83</td>
+<td headers="Model Building stub_1_35 Monofab" class="gt_row gt_center">0.82</td>
+<td headers="Model Building stub_1_35 Uncleaved" class="gt_row gt_center">0.83</td>
+<td headers="Model Building stub_1_35 Trypsin" class="gt_row gt_center">0.84</td></tr>
+    <tr><th id="stub_1_36" scope="row" class="gt_row gt_center gt_stub" style="border-right-width: 2; border-right-style: solid; border-right-color: #CCCCCC;"><div class="gt_from_md"><p>Q-score<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>9</sup></span></p></div></th>
+<td headers="Model Building stub_1_36 Digitonin" class="gt_row gt_center">0.80</td>
+<td headers="Model Building stub_1_36 Nanodisc" class="gt_row gt_center">0.71</td>
+<td headers="Model Building stub_1_36 Difab" class="gt_row gt_center">0.71</td>
+<td headers="Model Building stub_1_36 Monofab" class="gt_row gt_center">0.71</td>
+<td headers="Model Building stub_1_36 Uncleaved" class="gt_row gt_center">0.68</td>
+<td headers="Model Building stub_1_36 Trypsin" class="gt_row gt_center">0.72</td></tr>
+  </tbody>
+  
+  <tfoot class="gt_footnotes">
+    <tr>
+      <td class="gt_footnote" colspan="7"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span> All grids are Quantifoil grids with gold mesh</td>
+    </tr>
+    <tr>
+      <td class="gt_footnote" colspan="7"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>2</sup></span> Electron flux is 1 e⁻/Å²/frame</td>
+    </tr>
+    <tr>
+      <td class="gt_footnote" colspan="7"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>3</sup></span> All datsets collected in super-resolution mode and Fourier-cropped back to this physical size.</td>
+    </tr>
+    <tr>
+      <td class="gt_footnote" colspan="7"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>4</sup></span> Resolutions here are nominal resolutions given by the microscopy facility. I have resion to believe the S²C² pixel size is incorrect, and built the models into a corrected pixel size (see Materials and Methods).</td>
+    </tr>
+    <tr>
+      <td class="gt_footnote" colspan="7"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>5</sup></span> These values were used for processing and are listed to the precision given by the microscopy facility at the time of collection.</td>
+    </tr>
+    <tr>
+      <td class="gt_footnote" colspan="7"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>6</sup></span> A dash indicates that a focused map for this region was not used in model building</td>
+    </tr>
+    <tr>
+      <td class="gt_footnote" colspan="7"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>7</sup></span> GSFSC resolution</td>
+    </tr>
+    <tr>
+      <td class="gt_footnote" colspan="7"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>8</sup></span> NAG, MAN, and BMA. UNK is counted as a residue instead.</td>
+    </tr>
+    <tr>
+      <td class="gt_footnote" colspan="7"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>9</sup></span> Residues modeled as UNK excluded from Q-score</td>
+    </tr>
+  </tfoot>
 </table>
 </div>
-
 </div>
 </div>
 </div>
 <p>The four constructs I present here can broadly be split into those I expect to be open (CKO/DEG and mouse trypsin) and those I expect to be closed (CKO, mouse) (<a href="#tbl-model-building">Table&nbsp;<span>A.1</span></a>). All human channels in this work have mutant furin sites (αR178A R204A and γR138A). Additionally, all human channels are “cysteine knock-out” (CKO) mutants, with the following mutations: αC63A, βC30A, and γC33A C41A. Some (but not all) cysteines in the ENaC TMD are known to be palmitoylated<span class="citation" data-cites="mukherjee14 mueller10 mueller12"><sup><a href="../references.html#ref-mukherjee14" role="doc-biblioref">13</a>–<a href="../references.html#ref-mueller12" role="doc-biblioref">15</a></sup></span>. CKO channels express at approximately eight times the yield of wild-type-like channels, with similar electrophysiological traits (<a href="#fig-ephys">Figure&nbsp;<span>A.3</span></a>). Mouse channels presented in this work have no mutations from the consensus gene. I expect mouse and CKO channels to be closed.</p>
 <div id="fig-ephys" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="figures/matmeth/ephys/491-mean-iv.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="I/V curves for human CKO and CKO/DEG channels. Values are normalized per-cell to the inward current at -80 mV before trypsin treatment. Cells were treated with trypsin for five minutes before being re-recorded. Each point is the average of three cells. Error bars represent +/- one standard deviation."><img src="figures/matmeth/ephys/491-mean-iv.png" class="img-fluid figure-img"></a></p>
+<p><a href="figures/matmeth/ephys/491-mean-iv.png" class="lightbox" title="I/V curves for human CKO and CKO/DEG channels. Values are normalized per-cell to the inward current at -80 mV before trypsin treatment. Cells were treated with trypsin for five minutes before being re-recorded. Each point is the average of three cells. Error bars represent +/- one standard deviation." data-gallery="quarto-lightbox-gallery-3"><img src="figures/matmeth/ephys/491-mean-iv.png" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;A.3: I/V curves for human CKO and CKO/DEG channels. Values are normalized per-cell to the inward current at -80 mV before trypsin treatment. Cells were treated with trypsin for five minutes before being re-recorded. Each point is the average of three cells. Error bars represent +/- one standard deviation.</figcaption>
 </figure>
 </div>
@@ -1754,7 +1662,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":true,"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":true,"openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom","selector":".lightbox"});</script>
 
 
 

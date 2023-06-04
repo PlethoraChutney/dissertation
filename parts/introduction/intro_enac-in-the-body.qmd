@@ -29,7 +29,7 @@ All but one of the described cases involve mutation of the &beta; or &gamma; sub
 A majority of the mutations in the &beta; and &gamma; subunits disrupt or remove entirely a proline-rich PY motif at the C-terminus of those channels [@yang2014].
 This PY motif is the binding site for the E3 ubiquitin ligase Nedd4-2 (see @sec-intro_nedd42).
 Study of ENaC surface dwell time is complicated by a reserve pool maintained by the cells to be cycled up to the membrane, but there is a consensus that ENaC is recycled quickly; surface half life estimates range from fifteen minutes to three hours, with the low end having more support [@butterworth2009].
-ENaC lacking the PY motif cannot be pulled back in from the membrane, thus increasing sodium permeability by increasing *N* rather than the conductivity or P~O~ of the channels [@schild1995; @abriel1999; @lu2007].[The &alpha; subunit does have a PY motif, but no Liddle syndrome mutation of the &alpha; PY has been described. This is discussed further in <!-- TODO: crossref Nedd4-2 section -->]{.aside}
+ENaC lacking the PY motif cannot be pulled back in from the membrane, thus increasing sodium permeability by increasing *N* rather than the conductivity or P~O~ of the channels [@schild1995; @abriel1999; @lu2007].[The &alpha; subunit does have a PY motif, but no Liddle syndrome mutation of the &alpha; PY has been described. This is discussed further in <!-- TODO: crossref Nedd4-2 section -->.]{.aside}
 The remaining minority of described Liddle syndrome mutations (including the sole ENaC~&alpha;~ mutation) which do not affect PY-motif binding instead directly augment channel P~O~ [@tetti2018].
 Liddle syndrome is typically treated with small molecules that block ENaC (amiloride or triamterene) and a low-salt diet.
 
@@ -135,35 +135,38 @@ Fortunately, the patterns observed in the kidney largely hold in other tissues.
 
 ### Aldosterone
 
-Aldosterone is the primary means by which the body regulates Na^+^ retention.
-It fills this role both by directly regulation gene expression of ENaC, but also by controlling expression and function of an array of other proteins which regulate ENaC.
-When the kidney is not receiving enough salt, it initiates a cascade which ends with the mineralocorticoid hormone aldosterone augmenting the activity of ENaC in the distal nephron.[For a review of the Renin-Angiotensin-Aldosterone System (RAAS) consider Weir and Dzau [@wiesner07].]{.aside}
-The exact molecular mechanism by which aldosterone increases ENaC at the apical surface is still not well understood, but it involves some combination of new protein synthesis and trafficking of an existing pool of channels to the cell surface [@asher1996; @frindt09; @weisz2000; @loffing2000].
-In some studies, aldosterone increases transcription of the &beta;- and &gamma;- (but not &alpha;-) ENaC genes [@asher1996; @may1997; @stockand2000].
-In others, increases in &alpha;ENaC transcription are also (or exclusively) observed [@masilamani1999; @dagenais2001; @loffing2000; @mick2001].
+When the kidney is not receiving enough salt, it initiates a cascade to increase activity of ENaC via the hormone aldosterone.[For a review of the Renin-Angiotensin-Aldosterone System (RAAS) consider Weir and Dzau [@wiesner07]. For a review more focused on aldosterone alone, Stockand's is quite thorough and readable [@stockand2002].]{.aside}
+Aldosterone is therefore the main hormonal control over sodium homeostasis.
+Aldosterone response is divided into two phases, aptly named the early and late phases.
+Aldosterone increases ENaC P~O~ in part via increased activity of serum and glucocorticoid-regulated kinase (SGK, @sec-intro_sgk) [@kemendy1992; @naray-fejes-toth2000].
+SGK both directly regulates ENaC P~O~ and the ability of Nedd4-2 to mark ENaC for degradation [@kellenberger98; @chen1999].
+Aldosterone also stimulates phosphatidylinositol 3-kinase (PI3K), which increases ENaC P~O~ [@paunescu2000].
+<!-- TODO: refer to PI3K section -->
 
-
-
-<!-- TODO: come back and write up the aldosterone section -->
+Aldosterone's late phase increase of sodium permeability is mediated both by direct increase of ENaC gene expression and movement of ENaC from an internal pool to the apical membrane [@asher1996; @frindt09; @weisz2000; @loffing2000].
+In some studies, aldosterone increases transcription of the &beta;- and &gamma;- (but not &alpha;-) ENaC genes [@asher1996; @may1997; @stockand2000; @escoubet1997].
+In others, increases in &alpha;ENaC transcription are also (or exclusively) observed [@masilamani1999; @dagenais2001; @loffing2000; @mick2001; @dijkink1999].
+The effect of aldosterone does seem to be consistent within tissue types: most studies demonstrating an increase in &alpha;ENaC transcription are performed in the kidney, while aldosterone increases &beta; and &gamma; transcription in the colon.
+ENaC transcription in the lung is less dependent on circulating aldosterone levels than other tissues [@renard1995].
 
 ### Nedd4-2 {#sec-intro_nedd42}
 
 Nedd4-2, also known as Nedd4L, is a HECT E3 ubiquitin ligase.
-E3 ligases perform the final step in the ubiquitination cascade, the transfer of an activated ubiquitin (Ub) from an E2 to the substrate.
+E3 ligases perform the final step in the ubiquitination cascade: the transfer of an activated ubiquitin (Ub) from an E2 to the substrate.
 Nedd4-2 is the cognate E3 ligase for ENaC in humans, rats, and mice (but not *Xenopus*).
-Liddle syndrome (@sec-intro_liddle) is most often caused by the disruption of the Nedd4-2/ENaC interaction, and so is a perfect illustration of the regulatory mechanism.
-Binding of ENaC and subsequent ubiquitination recycles the protein from the cell surface, reducing cellular Na^+^ permeability.
+Ubiquitination of ENaC by Nedd4-2 results in internalization and degradation of the channel, reducing the cell's Na^+^ permeability.[In older literature, this process is called "Sodium Feedback Inhibition".]{.aside}
+Disruption of this mechanism is the most common cause of Liddle syndrome (@sec-intro_liddle), indicating the essential role Nedd4-2 plays in regulation of ENaC surface expression.
 
 #### Nedd4-2 Structure
 
-Like many members of the HECT ligase family, Nedd4-2 has an N-terminal C2 domain, a number of WW domains, and a C-terminal HECT domain.
+Like many members of the HECT ligase family, Nedd4-2 has an N-terminal C2 domain, three or four (depending on the species) WW domains, and a C-terminal HECT domain.
 As the astute reader has already guessed, humans also express a closely-related HECT E3 ligase, Nedd4, which does not regulate ENaC *in vivo* [@kamynina01; @snyder2004].
 It is important to note that expressing *either* of these two ligases heterologously *does* inhibit ENaC.
 This makes evaluation of the Nedd4-2/ENaC literature complicated, as conclusions drawn from heterologous systems may not hold in the organism.
 In any case, the two proteins are 63% identical, and although there are differences in substrate affinity, the function of the domains in an abstract sense is quite similar.
 As such, I will present research on both proteins, preferring results from Nedd4-2 when possible, and highlighting points where the findings may not be fully generalizable.
 
-The C2 domain is a Ca^2+^-dependent phospholipid and protein binding domain[For a good review of general C2 domain evolution, structure, and function see Rizo and S&uuml;dhof[@rizo1998]]{.aside}.
+The C2 domain is a Ca^2+^-dependent phospholipid and protein binding domain[For a good review of general C2 domain evolution, structure, and function see Rizo and S&uuml;dhof[@rizo1998].]{.aside}.
 Increased intracellular Ca^2+^ induces translocation of Nedd4 from the cytosol to the membrane [@plant97].
 Interestingly, the Nedd4-2 C2 domain specifically localizes the protein to the apical membrane (to which ENaC also localizes).
 This apical targeting is the result of an interaction between the C2 domain and Annexin XIIIb [@plant00].
@@ -176,11 +179,11 @@ Interestingly, mice and rat Nedd4-2 have three WW domains, while human Nedd4-2 h
 
 The HECT domain is the business end of the protein.
 Unlike RING ligases, HECT ligases form a thioester bond with Ub before transferring it to the substrate.
-The domain itself is split into the N-lobe, which is larger and interacts with the E2 enzyme, and the C-lobe, which contains the catalytic cysteine[Buetow and Huang's review of E3 ligase structure is very good, and includes HECT ligases [@buetow2016]]{.aside}.
+The domain itself is split into the N-lobe, which is larger and interacts with the E2 enzyme, and the C-lobe, which contains the catalytic cysteine[Buetow and Huang's review of E3 ligase structure is very good, and includes HECT ligases [@buetow2016].]{.aside}.
 
 HECT ligases have several auto-inhibitory functions to prevent inappropriate ubiquitination.
 The C2 domain of a related HECT ligase intramolecularly binds the HECT domain near the catalytic cysteine, blocking function [@wiesner07].
-The HECT domain also has an internal PY motif which is bound by its own WW domain [@bruce08].[It is not currently known which WW domain binds this internal PY motif, or if the association is intra- or intermolecular]{.aside}
+The HECT domain also has an internal PY motif which is bound by its own WW domain [@bruce08].[It is not currently known which WW domain binds this internal PY motif, or if the association is intra- or intermolecular.]{.aside}
 Nedd4-2 remains bound this way until it encounters a substrate, at which point it binds and ubiquitinates the target.
 The enzyme then ubiquitinates itself, targeting it for degradation.
 Finally, the linker between WW domains 2 and 3 blocks function of the HECT domain in Nedd4 [@chen17].
@@ -188,20 +191,27 @@ Finally, the linker between WW domains 2 and 3 blocks function of the HECT domai
 #### Nedd4-2 and ENaC
 
 Nedd4-2 is expressed throughout the body, but is most abundant in the kidney and lung [@araki2008].
-It binds and ubiquitinates ENaC on N-terminal lysines, causing the channels to be internalized and recycled in either the lysosome or proteasome [@goulet1998; @malik2001; @staub97].[Interestingly, ubiquitination of &alpha;ENaC seems to require lysines on the &gamma; subunit [@staub97].]{.aside}
-Degradation of ENaC is significantly augmented in a high-salt diet [@kellenberger98].
-This is not a result of direct regulation of Nedd4-2 by aldosterone, but rather by aldosterone regulation of SGK which in turn regulates Nedd4-2.
-
-The functional importance of lipid binding by the C2 domain for ENaC regulation is unclear.
+In a high-salt binds and ubiquitinates ENaC, causing the channels to be internalized and degraded [@goulet1998; @malik2001; @staub97; @kellenberger98].
+The functional importance of lipid binding by the C2 domain for this role is unclear.
 In heterologous systems, both Nedd4 and Nedd4-2 are able to inhibit ENaC currents with or without a C2 domain, and both rats and humans express splice variants of Nedd4-2 which is missing the C2 domain [@snyder01; @itani03; @itani05; @umemura2006].
 In fact, C2-less Nedd4 suppresses ENaC currents more than WT Nedd4 in heterologous systems [@snyder01; @kamynina2001].
 Many heterologous studies in which Nedd4 inhibits ENaC were performed with a C2-less isoform, further indicating that it may be the C2 inhibition of the HECT domain that prevents ubiquitination of ENaC by Nedd4.
 However, mice expressing Nedd4-2 without a C2 domain fail to regulate ENaC in response to a high-salt diet and develop hypertension, leaving open the possibility that the membrane-binding functionality is more important *in vivo* [@minegishi16].
 
-The WW domains are essential for binding and regulation of ENaC.
-Human Nedd4-2 requires WW3 and WW4 to ubiquitinate ENaC [@fotia02].
-WW2 weekly binds, while WW1 does not seem to interact with any ENaC subunit.
-Mutations of single WW domains in Nedd4 have varying effects on ENaC currents, implying that certain WW domains have higher affinity than others [@snyder01].
+Nedd4-2 relies on a subset of its WW domains to bind and regulate ENaC.
+In humans, only WW3 and WW4 of Nedd4-2 are required to reduce ENaC currents [@fotia02].
+Human WW2 does bind ENaC weakly, while WW1 does not seem to interact with any ENaC subunit.[Nedd4-2 does regulate many other proteins &mdash; it is possible that WW1 is required to regulate these other targets.]{.aside}
+Differential affinity among the WW domains is observed in other species as well [@kanelis1998; @snyder01].
+
+Once ENaC is bound, the HECT domain begins ubiquitinating N-terminal lysines on the channel [@staub97].
+Although lysines in each subunit are ubiquitinated, the &gamma; subunit lysines are required for ubiquitination of &alpha; and &beta;.
+HECT domains are capable of serial ubiquitin addition, building long chains of ubiquitin by connecting the C-terminus of the new ubiquitin to the N-terminus or a lysine on the growing chain [@kim2009].
+Different chains determine the ultimate fate of the tagged protein; Nedd4-2 preferentially produces chains of ubiquitin connected by lysine 63 (K63 chains) [@maspero11].
+K63 chains most often send substrates somewhere other than the proteasome for degradation or recycling.[For a review of the roles different ubiquitin chains play, I recommend Komander and Rape [@komander2012].]{.aside}
+In the specific case of ENaC, some groups have reported lysosomal degradation, while others report a combination of proteasomal and lysosomal targeting [@staub97; @malik2001; @wiemuth07].
+
+### SGK {#sec-intro_sgk}
+
 
 
 

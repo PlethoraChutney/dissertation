@@ -70,6 +70,7 @@ format:
           \newunicodechar{→}{\textfallback{→}}
           \newunicodechar{₂}{\textfallback{₂}}
           \newunicodechar{⁻}{\textfallback{⁻}}
+          \newunicodechar{ă}{\textfallback{ă}}
 
           \usepackage{ucharclasses}
           \setTransitionsForGreek{\begingroup\symbolfont}{\endgroup}
