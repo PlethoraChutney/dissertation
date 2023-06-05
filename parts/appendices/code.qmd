@@ -1,3 +1,7 @@
+---
+execute:
+  freeze: auto
+---
 # Code and Computation
 
 ## Appia
@@ -62,6 +66,136 @@ The Appia Web interface would now be available at example.ohsu.edu:8080/traces. 
  3. Run `appia utils --database-setup` and provide the information set up during Appia Web installation.
 
 Now when a user finishes a chromatography experiment, they first export it to whatever format Appia expects (typically the default text format) and run (assuming the files end in `.txt`) `appia process *.txt -d` to upload the data to the web interface. The files will automatically be organized and stored on the local computer as well. This command can be wrapped in a script to avoid the need for users to interact with the command line.
+
+### Peak fitting with Gaussian Mixture Models
+
+One useful form of analysis that Appia cannot perform on its own, but that can be performed with Appia's data output, is a Gaussian Mixture Model (GMM).
+In GMMs, we (perhaps obviously) treat our signal as a mixture of pure gaussian processes.
+This is especially useful when analyzing chromatography of species with known retention times.
+For instance, suppose that we know that a Fab binds a target, which shifts the target's retention time from 10 minutes to 9.8 minutes.
+The Fab's retention time is well outside this region, perhaps at 24 minutes, and so we can ignore unbound Fab.
+If we mix these proteins and look at the signal around 10 minutes, we might observe a peak like @fig-example-data.
+We want to know what proportion of the target has shifted to the 9.8 minute retention time, since that will tell us how much has bound.
+However, it's impossible to tell this by looking at the data, or even by using manufacturer-written peak integrating algorithms.
+However, since we know the retention times of each component, we can model the mixture ourselves.
+I'll work this example in R, but it could just as easily be done in python, Matlab, or whatever modeling software the reader prefers.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-example-data
+#| fig-cap: Example data of a mixture between a protein and a Fab.
+
+library(tidyverse)
+
+example_trace <- tibble(
+        rt = -100:200/100 + 9,
+        signal = dnorm(rt, mean = 10, sd = 0.1) + 0.3 * dnorm(rt, mean = 9.8, sd = 0.2),
+        noise = rnorm(301, sd = 0.05)
+    ) |>
+    mutate(signal = signal + noise)
+
+data_plot <- example_trace |>
+    ggplot(aes(rt, signal)) +
+    theme_minimal() +
+    theme(
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank()
+    ) +
+    geom_line(color = 'grey') +
+    labs(
+        x = 'Retention Time (min)',
+        y = 'Absorbance'
+    )
+
+data_plot
+```
+
+Gaussian curves have two components: the mean and the standard deviation.
+In a chromatography context, the mean is the retention time and the standard deviation the monodispersity of the peak (i.e., its width).
+We also need to model the amount of the component, which we can model with a simple scalar for each component.
+Performing a non-linear least squares fit to the data should give us these parameters
+
+```{r}
+# ub for unbound, b for bound
+ub_rt <- 10
+b_rt <- 9.8
+
+# nls needs initial starting values,
+# which we can eyeball.
+# In this case it looks like our
+# peak is mostly the unbound part
+guesses <- list(
+    'ub_amount' = 0.8, # real: 1.0
+    'b_amount' = 0.4, # real: 0.3
+    'ub_sd' = 0.15, # real: 0.1
+    'b_sd' = 0.3 # real: 0.2
+)
+
+results <- nls(
+    # This is the mixture model
+    formula = 
+        signal
+        ~ ub_amount * dnorm(
+            rt, mean = ub_rt, sd = ub_sd
+        )
+        + b_amount * dnorm(
+            rt, mean = b_rt, sd = b_sd
+        ),
+    data = example_trace,
+    start = guesses
+)
+```
+
+The `results` variable now contains the fitted values for each component.
+To see how well the data have been fit, we can plot each component separately, or their sum, as in @fig-fitted-gauss.
+
+```{r}
+#| label: fig-fitted-gauss
+#| fig-cap: Fitted values plotted atop data. Bound and unbound are green and blue respectively, with the additive model in black.
+# helper function to extract values
+get_val <- function(val_name) {
+    coef(results)[[val_name]]
+}
+# function generator for the gaussians
+plot_gauss <- function(scale, mean, sd) {
+    \(x) scale * dnorm(x, mean = mean, sd = sd)
+}
+fit_unbound <- plot_gauss(
+            get_val('ub_amount'),
+            ub_rt, get_val('ub_sd')
+        )
+fit_bound <- plot_gauss(
+            get_val('b_amount'),
+            b_rt, get_val('b_sd')
+        )
+
+data_plot + 
+    geom_function(
+        fun = fit_unbound,
+        color = 'blue',
+        linetype = 'dotted',
+        n = 1000,
+        linewidth = 1
+    ) +
+    geom_function(
+        fun = fit_bound,
+        color = 'forestgreen',
+        linetype = 'dotted',
+        n = 1000,
+        linewidth = 1
+    ) +
+    geom_function(
+        fun = \(x) fit_unbound(x) + fit_bound(x),
+        color = 'black',
+        n = 1000
+    )
+```
+
+We see the data fit well &mdash; we now have a model for the components of our experiment.
+To assess, for instance, the amount of protein in each peak, we could from here use the well-known equations for the area of a gaussian to find the peak area for each population, or just take their height as a heuristic.
+If this simple sum of gaussians model does not fit, you could consider adding a constant (steady baseline&nbsp;&ne;&nbsp;0) or linear function (linearly changing baseline, fitting slope and intercept) to the fit formula.
 
 ### Writing a new processor
 

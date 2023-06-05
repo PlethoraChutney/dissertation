@@ -217,8 +217,14 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../parts/results/activating-conditions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">ECD Stability Under Activating Conditions</span></span></a>
+  <a href="../../parts/results/results_transmembrane-domain.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Transmembrane Domain Remains Elusive</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../parts/results/results_activating-conditions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">ECD Stability Under Activating Conditions</span></span></a>
   </div>
 </li>
       </ul>
@@ -278,7 +284,8 @@ div.csl-indent {
   <ul class="collapse">
   <li><a href="#structure" id="toc-structure" class="nav-link" data-scroll-target="#structure"><span class="header-section-number">D.1.1</span> Structure</a></li>
   <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation"><span class="header-section-number">D.1.2</span> Installation</a></li>
-  <li><a href="#writing-a-new-processor" id="toc-writing-a-new-processor" class="nav-link" data-scroll-target="#writing-a-new-processor"><span class="header-section-number">D.1.3</span> Writing a new processor</a></li>
+  <li><a href="#peak-fitting-with-gaussian-mixture-models" id="toc-peak-fitting-with-gaussian-mixture-models" class="nav-link" data-scroll-target="#peak-fitting-with-gaussian-mixture-models"><span class="header-section-number">D.1.3</span> Peak fitting with Gaussian Mixture Models</a></li>
+  <li><a href="#writing-a-new-processor" id="toc-writing-a-new-processor" class="nav-link" data-scroll-target="#writing-a-new-processor"><span class="header-section-number">D.1.4</span> Writing a new processor</a></li>
   </ul></li>
   <li><a href="#model-building-tools" id="toc-model-building-tools" class="nav-link" data-scroll-target="#model-building-tools"><span class="header-section-number">D.2</span> Model-building tools</a></li>
   </ul>
@@ -348,8 +355,102 @@ div.csl-indent {
 </ol>
 <p>Now when a user finishes a chromatography experiment, they first export it to whatever format Appia expects (typically the default text format) and run (assuming the files end in <code>.txt</code>) <code>appia process *.txt -d</code> to upload the data to the web interface. The files will automatically be organized and stored on the local computer as well. This command can be wrapped in a script to avoid the need for users to interact with the command line.</p>
 </section>
-<section id="writing-a-new-processor" class="level3 page-columns page-full" data-number="D.1.3">
-<h3 data-number="D.1.3" class="anchored" data-anchor-id="writing-a-new-processor"><span class="header-section-number">D.1.3</span> Writing a new processor</h3>
+<section id="peak-fitting-with-gaussian-mixture-models" class="level3" data-number="D.1.3">
+<h3 data-number="D.1.3" class="anchored" data-anchor-id="peak-fitting-with-gaussian-mixture-models"><span class="header-section-number">D.1.3</span> Peak fitting with Gaussian Mixture Models</h3>
+<p>One useful form of analysis that Appia cannot perform on its own, but that can be performed with Appia’s data output, is a Gaussian Mixture Model (GMM). In GMMs, we (perhaps obviously) treat our signal as a mixture of pure gaussian processes. This is especially useful when analyzing chromatography of species with known retention times. For instance, suppose that we know that a Fab binds a target, which shifts the target’s retention time from 10 minutes to 9.8 minutes. The Fab’s retention time is well outside this region, perhaps at 24 minutes, and so we can ignore unbound Fab. If we mix these proteins and look at the signal around 10 minutes, we might observe a peak like <a href="#fig-example-data">Figure&nbsp;<span>D.4</span></a>. We want to know what proportion of the target has shifted to the 9.8 minute retention time, since that will tell us how much has bound. However, it’s impossible to tell this by looking at the data, or even by using manufacturer-written peak integrating algorithms. However, since we know the retention times of each component, we can model the mixture ourselves. I’ll work this example in R, but it could just as easily be done in python, Matlab, or whatever modeling software the reader prefers.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-example-data" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><a href="code_files/figure-html/fig-example-data-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Example data of a mixture between a protein and a Fab."><img src="code_files/figure-html/fig-example-data-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figcaption class="figure-caption">Figure&nbsp;D.4: Example data of a mixture between a protein and a Fab.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Gaussian curves have two components: the mean and the standard deviation. In a chromatography context, the mean is the retention time and the standard deviation the monodispersity of the peak (i.e., its width). We also need to model the amount of the component, which we can model with a simple scalar for each component. Performing a non-linear least squares fit to the data should give us these parameters</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ub for unbound, b for bound</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>ub_rt <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>b_rt <span class="ot">&lt;-</span> <span class="fl">9.8</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># nls needs initial starting values,</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># which we can eyeball.</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># In this case it looks like our</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># peak is mostly the unbound part</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>guesses <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'ub_amount'</span> <span class="ot">=</span> <span class="fl">0.8</span>, <span class="co"># real: 1.0</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">'b_amount'</span> <span class="ot">=</span> <span class="fl">0.4</span>, <span class="co"># real: 0.3</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">'ub_sd'</span> <span class="ot">=</span> <span class="fl">0.15</span>, <span class="co"># real: 0.1</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">'b_sd'</span> <span class="ot">=</span> <span class="fl">0.3</span> <span class="co"># real: 0.2</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> <span class="fu">nls</span>(</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># This is the mixture model</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">formula =</span> </span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        signal</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        <span class="sc">~</span> ub_amount <span class="sc">*</span> <span class="fu">dnorm</span>(</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>            rt, <span class="at">mean =</span> ub_rt, <span class="at">sd =</span> ub_sd</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>        <span class="sc">+</span> b_amount <span class="sc">*</span> <span class="fu">dnorm</span>(</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>            rt, <span class="at">mean =</span> b_rt, <span class="at">sd =</span> b_sd</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> example_trace,</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">start =</span> guesses</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The <code>results</code> variable now contains the fitted values for each component. To see how well the data have been fit, we can plot each component separately, or their sum, as in <a href="#fig-fitted-gauss">Figure&nbsp;<span>D.5</span></a>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># helper function to extract values</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>get_val <span class="ot">&lt;-</span> <span class="cf">function</span>(val_name) {</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">coef</span>(results)[[val_name]]</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># function generator for the gaussians</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>plot_gauss <span class="ot">&lt;-</span> <span class="cf">function</span>(scale, mean, sd) {</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    \(x) scale <span class="sc">*</span> <span class="fu">dnorm</span>(x, <span class="at">mean =</span> mean, <span class="at">sd =</span> sd)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>fit_unbound <span class="ot">&lt;-</span> <span class="fu">plot_gauss</span>(</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>            <span class="fu">get_val</span>(<span class="st">'ub_amount'</span>),</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>            ub_rt, <span class="fu">get_val</span>(<span class="st">'ub_sd'</span>)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>fit_bound <span class="ot">&lt;-</span> <span class="fu">plot_gauss</span>(</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>            <span class="fu">get_val</span>(<span class="st">'b_amount'</span>),</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>            b_rt, <span class="fu">get_val</span>(<span class="st">'b_sd'</span>)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>data_plot <span class="sc">+</span> </span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_function</span>(</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>        <span class="at">fun =</span> fit_unbound,</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>        <span class="at">color =</span> <span class="st">'blue'</span>,</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>        <span class="at">linetype =</span> <span class="st">'dotted'</span>,</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>        <span class="at">n =</span> <span class="dv">1000</span>,</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>        <span class="at">linewidth =</span> <span class="dv">1</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_function</span>(</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>        <span class="at">fun =</span> fit_bound,</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>        <span class="at">color =</span> <span class="st">'forestgreen'</span>,</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>        <span class="at">linetype =</span> <span class="st">'dotted'</span>,</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>        <span class="at">n =</span> <span class="dv">1000</span>,</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>        <span class="at">linewidth =</span> <span class="dv">1</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_function</span>(</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>        <span class="at">fun =</span> \(x) <span class="fu">fit_unbound</span>(x) <span class="sc">+</span> <span class="fu">fit_bound</span>(x),</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>        <span class="at">color =</span> <span class="st">'black'</span>,</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>        <span class="at">n =</span> <span class="dv">1000</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-fitted-gauss" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><a href="code_files/figure-html/fig-fitted-gauss-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Fitted values plotted atop data. Bound and unbound are green and blue respectively, with the additive model in black."><img src="code_files/figure-html/fig-fitted-gauss-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figcaption class="figure-caption">Figure&nbsp;D.5: Fitted values plotted atop data. Bound and unbound are green and blue respectively, with the additive model in black.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>We see the data fit well — we now have a model for the components of our experiment. To assess, for instance, the amount of protein in each peak, we could from here use the well-known equations for the area of a gaussian to find the peak area for each population, or just take their height as a heuristic. If this simple sum of gaussians model does not fit, you could consider adding a constant (steady baseline&nbsp;≠&nbsp;0) or linear function (linearly changing baseline, fitting slope and intercept) to the fit formula.</p>
+</section>
+<section id="writing-a-new-processor" class="level3 page-columns page-full" data-number="D.1.4">
+<h3 data-number="D.1.4" class="anchored" data-anchor-id="writing-a-new-processor"><span class="header-section-number">D.1.4</span> Writing a new processor</h3>
 <p><em>This section is intended for the advanced reader who wishes to add support for a chromatography instrument to Appia.</em></p>
 <p>Processors are each a class which inherits from either <code>HplcProcessor</code> or <code>FplcProcessor</code> (for analytic or preparative data, respectively). At the time of writing, Appia supports the following data formats:</p>
 <ul>
@@ -360,15 +461,15 @@ div.csl-indent {
 <li>Cytiva/GE <code>.csv</code> files</li>
 </ul>
 <p>Your processor can perform any necessary setup in <code>__init__()</code>, but it must eventually run</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">super</span>().<span class="fu">__init__</span>(</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    filename,</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    manufacturer <span class="op">=</span> {appropriate_string},</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">**</span>kwargs</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">super</span>().<span class="fu">__init__</span>(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    filename,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    manufacturer <span class="op">=</span> {appropriate_string},</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">**</span>kwargs</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>When Appia processes files, for each file, it creates an instance of every <code>Processor</code> child. These <code>Processors</code> all decide whether they can process a file using their <code>claim_file()</code> method, which you must implement. This method should accept a filename and return <code>True</code> if the processor thinks that is a type of file it can process and <code>False</code> otherwise. For instance, here is <code>WatersProcessor.claim_file()</code>:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="at">@classmethod</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> claim_file(cls, filename) <span class="op">-&gt;</span> <span class="bu">bool</span>:</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> filename[<span class="op">-</span><span class="dv">4</span>:].lower() <span class="op">==</span> <span class="st">'.arw'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="at">@classmethod</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> claim_file(cls, filename) <span class="op">-&gt;</span> <span class="bu">bool</span>:</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> filename[<span class="op">-</span><span class="dv">4</span>:].lower() <span class="op">==</span> <span class="st">'.arw'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>It simply checks whether the file ends in <code>.arw</code>. Depending on the data format for the new manufacturer, the method may require more complex checks, or you may have to add more specificity to other <code>claim_file()</code> methods.</p>
 <p>If your processor claims the file, it will <em>automatically</em> run two methods: <code>prepare_sample()</code> and <code>process_file()</code>. The distinction between these is arbitrary, as they are both always run in sequence. It is intended that <code>prepare_sample()</code> collects metadata about the sample (method name, flow rate, sample set name, etc.) and <code>process_file()</code> creates the actual data frame. The data frame <em>must be in the long format</em>, should be stored in your processor’s <code>df</code> attribute, and should have exactly the following column names:</p>
 <ul>
@@ -390,11 +491,11 @@ div.csl-indent {
 <div class="no-row-height column-margin column-container"><div class="">
 <div id="fig-ca-bilder" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="figures/code/ca-bilder.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="An image from ca_bilder.py highlighting the movement of the finger and thumb between the resting and desensitized states of ASIC1."><img src="figures/code/ca-bilder.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Figure&nbsp;D.4: An image from <code>ca_bilder.py</code> highlighting the movement of the finger and thumb between the resting and desensitized states of ASIC1.</figcaption>
+<p><a href="figures/code/ca-bilder.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="An image from ca_bilder.py highlighting the movement of the finger and thumb between the resting and desensitized states of ASIC1."><img src="figures/code/ca-bilder.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Figure&nbsp;D.6: An image from <code>ca_bilder.py</code> highlighting the movement of the finger and thumb between the resting and desensitized states of ASIC1.</figcaption>
 </figure>
 </div>
-</div></div><p><code>ca_bilder.py</code> creates a <code>.bild</code> file visualizing Cα shifts between two given models. Cylinders are drawn between each pair of Cα atoms, colored by the distance. The colors are scaled per-model, with the darkest color corresponding to the greatest shift. The models must be aligned before they are run through the script. If the models are multi-chain, cylinders will be drawn between the same chain ID. If the models are of two different proteins, you must provide a FASTA alignment and indicate which chain belongs to which sequence. These visualizations can be useful to highlight when certain domains move while others stay still, such as ASIC1’s gating cycle (<a href="#fig-ca-bilder">Figure&nbsp;<span>D.4</span></a>).</p>
+</div></div><p><code>ca_bilder.py</code> creates a <code>.bild</code> file visualizing Cα shifts between two given models. Cylinders are drawn between each pair of Cα atoms, colored by the distance. The colors are scaled per-model, with the darkest color corresponding to the greatest shift. The models must be aligned before they are run through the script. If the models are multi-chain, cylinders will be drawn between the same chain ID. If the models are of two different proteins, you must provide a FASTA alignment and indicate which chain belongs to which sequence. These visualizations can be useful to highlight when certain domains move while others stay still, such as ASIC1’s gating cycle (<a href="#fig-ca-bilder">Figure&nbsp;<span>D.6</span></a>).</p>
 <p><code>check_for_glyc.py</code> searches a PDB model for the sequence NXS/T, the canonical N-linked glycosylation sequence. All asparagines matching this requirement are added to a ChimeraX command HTML file. Opening this file with ChimeraX creates a list of clickable asparagine names. Clicking these links orients the camera on the appropriate residue and removes the link from the list, creating a checklist of sorts. If the model and map are both open, this is a convenient way to step through all potential glycosylation sites in a model and assess whether they are indeed glycosylated. The user may then add sugars via the normal commands.</p>
 <p><code>model_map.py</code>, <code>orientation_plotter.py</code>, <code>phenix-table-reader.py</code>, and the three R scripts all read information from PHENIX or 3DFSC output and produce more aesthetically appealing plots. <code>phenix-table-reader.py</code> is a convenient way to automatically update a Table 1 (for instance, <a href="mat-meth.html#tbl-model-building">Table&nbsp;<span>A.1</span></a>) during the model building process. Output from the other scripts can be seen in <a href="validation.html"><span>Appendix&nbsp;C</span></a>.</p>
 <p><code>mutator.py</code> checks the sequence of a model against a FASTA sequence and alerts the user to any mismatches. It also creates a ChimeraX command file which can be run to mutate the model to match the FASTA file. Any known deviations can be passed to the script as a <code>.txt</code> file with one mutation per line in a ChimeraX-like format. For instance, if chain A has a C→K mutation at position 260, the <code>.txt</code> file should have a line reading <code>/A:C260K</code>.</p>
@@ -770,7 +871,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","loop":true,"descPosition":"bottom"});</script>
 
 
 

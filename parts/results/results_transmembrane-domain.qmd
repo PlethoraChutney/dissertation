@@ -1,0 +1,15 @@
+# The Transmembrane Domain Remains Elusive
+
+## Digitonin disrupts the TMD
+
+In an attempt to probe the molecular motions required to open the channel, I solved the structure of CKO/DEG channels.
+These channels contain two mutations expected to open the channel: &beta;S520K, which holds the channel in an open state regardless of proteolytic cleavage state; and &alpha;T240W, which reduces the affinity of the channel for the &alpha; inhibitory peptide[@snyder2000; @kashlan2010].
+In all six of our models, the TMs are arranged in a roughly triangular fashion around a central helix (Supplemental @fig-tm-overview A).
+This central helix is either &beta; or &gamma; TM2.
+I thus name the two conformations &beta;-in or &gamma;-in, respectively.
+Only channels with the DEG mutations occupy the &gamma;-in conformation --- human CKO, mouse uncleaved, and mouse trypsin all occupy the &beta;-in conformation.
+Inclusion of PIP~2~, known to open the channel, in the CKO/DEG monofab map does not change the TMD conformation[@pochynyuk2007].
+Unfortunately, &alpha;TM2 and &gamma;TM1 are only visible in the &beta;-in conformation.
+Additionally, the great distance between pore-forming TM2 helices observed in our maps runs counter to existing knowledge of ENaC's pore[@schild1997].
+Given this surprising state and the low quality of the maps' TMDs, I limit technical discussion of the TMD and hope that future studies will better resolve this critical channel domain.
+I do also note that although our cryoEM maps support the presence of the &alpha;T240W mutation, I observe no significant rearrangement of the nearby residues (Supplemental @fig-t240w).
