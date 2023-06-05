@@ -1,15 +1,51 @@
 # The Transmembrane Domain Remains Elusive
 
+One of the long-standing goals of our lab is to solve the structure of the ENaC TMD.
+Such a structure would provide valuable insight into the source of ENaC's spectacular selectivity for sodium over potassium.
+It would also inform our view on the similarities and differences between ENaC and ASIC, such as whether ENaC also has an HG-motif, whether ENaC's gating mechanism follows that of ASIC, and what conformational changes cause sodium self-inhibition.
+
+Unfortunately, that goal will stand a while longer.
+None of my maps produce TMD density with resolutions better than 6&nbsp;&Aring;, and few of them even reach that threshold.
+Additionally, no map has density for all six transmembrane helices (TMs).
+Finally, and most damning, the arrangement of the TMs we do see is not consistent with what is known about their arrangement around the pore.
+We must conclude that the TMD of my maps is significantly disrupted, and analysis of these results will not bear fruit.
+I reproduce them in the first section of this chapter in case they are ever of interest.
+Perhaps of more value will be the following sections in which I cover experiments that produced no valuable results so that future researchers do not retread the same ground.
+
 ## Digitonin disrupts the TMD
 
-In an attempt to probe the molecular motions required to open the channel, I solved the structure of CKO/DEG channels.
-These channels contain two mutations expected to open the channel: &beta;S520K, which holds the channel in an open state regardless of proteolytic cleavage state; and &alpha;T240W, which reduces the affinity of the channel for the &alpha; inhibitory peptide[@snyder2000; @kashlan2010].
-In all six of our models, the TMs are arranged in a roughly triangular fashion around a central helix (Supplemental @fig-tm-overview A).
-This central helix is either &beta; or &gamma; TM2.
-I thus name the two conformations &beta;-in or &gamma;-in, respectively.
-Only channels with the DEG mutations occupy the &gamma;-in conformation --- human CKO, mouse uncleaved, and mouse trypsin all occupy the &beta;-in conformation.
-Inclusion of PIP~2~, known to open the channel, in the CKO/DEG monofab map does not change the TMD conformation[@pochynyuk2007].
+Our previous structural work was focused on wild-type-like channels, with undefined gating states [@noreng20].
+I wondered if channels with a defined open state might provide a more consistent, and therefore higher resolution, TMD.
+To this end, I created mutant channels (CKO/DEG) which contained two mutations expected to increase channel P~O~.
+The first, &beta;S520K, holds the channel open regardless of proteolytic cleavage state [@snyder2000].
+The second, &alpha;T240W, which reduces the affinity of the channel for the &alpha; inhibitory peptide [@kashlan2010].
+I solved maps of the CKO/DEG channels with and without C8 PIP~2~, a ligand known to open ENaC without proteolysis [@pochynyuk2007].
+
+![The ENaC transmembrane domain adopts two conformations. TMDs of all six ENaC models separated by TM conformation, viewed from the intracellular side. Models are in the same position and at the same scale in each image, so positions are directly comparable. A grated circle is added in the same position to aid comparison between panels.](figures/TM-overview/tm-overview.png){#fig-tm-overview}
+
+In all six of our models, the visible TMs are arranged in a roughly triangular fashion around a central helix (@fig-tm-overview A).
+In CKO/DEG channels this helix is &gamma; TM2.
+In all other models, the central helix is &beta; TM2.
+I thus name the two conformations &gamma;-in or &beta;-in, respectively.
+I observe no change in the TMD open addition of PIP~2~.
 Unfortunately, &alpha;TM2 and &gamma;TM1 are only visible in the &beta;-in conformation.
-Additionally, the great distance between pore-forming TM2 helices observed in our maps runs counter to existing knowledge of ENaC's pore[@schild1997].
+The arrangement of and great distance between pore-forming TM2 helices observed in our maps (@fig-tm-slices) also runs counter to existing knowledge of ENaC's pore [@schild1997].
 Given this surprising state and the low quality of the maps' TMDs, I limit technical discussion of the TMD and hope that future studies will better resolve this critical channel domain.
-I do also note that although our cryoEM maps support the presence of the &alpha;T240W mutation, I observe no significant rearrangement of the nearby residues (Supplemental @fig-t240w).
+I do also note that although our cryoEM maps support the presence of the &alpha;T240W mutation, I observe no significant rearrangement of the nearby residues (@fig-t240w).
+
+![Slices through the ENaC TMD reveal a non-physiological arrangement. Slices of the models with the best TMD density for both of &beta;-in and &gamma;-in (mouse trypsin and CKO/DEG difab, respectively) are displayed at four Z coordinates. The C&alpha; of the residue closest to each Z coordinate is plotted in the horizontal XY plane and assigned a symbol to aid viewing. TM1 residues are circles; TM2 residues are squares. &beta;-in residues have black borders, while &gamma;-in residues have grey borders. Arrows connect the &beta;-in residue to its cognate &gamma;-in residue. If all three TM2 helices are modeled, they are connected by a triangle to represent the size of the pore at that Z slice.](figures/tm-slices/tm-slices.png){#fig-tm-slices}
+
+![The &alpha;T240W mutation does not modify ECD conformation. **A**: Stereo view of the GRIP domain near &alpha;T240. Red: CKO, blue: CKO/DEG monofab. **B** and **C**: CryoEM map potential surrounding &alpha;240 in CKO and CKO/DEG monofab, respectively.](figures/t240w-mutation/t240w.png){#fig-t240w}
+
+I believe the TMD is misfolded as a result of solubilization with digitonin.
+Digitonin solubilizes membranes by chelating cholesterol [@sudji2015].
+ENaC preferentially exists in lipid rafts, which high in cholesterol [@hill07].
+Additionally, the helices in the low-resolution TMD region of truncated ENaC solved in DDM do have the expected TM2-inward layout [@noreng18].
+Of course, all of the TMD maps to date are very low-resolution.
+Although I am confident in my TM assignments, it is possible that the wrong TM identity has been assigned to some of the densities.
+Hopefully future, higher-resolution maps of the TMD will settle the matter.
+
+<!-- Move this to the end of content so the margins are right in citations -->
+:::{.content-hidden unless-format="pdf"}
+\newgeometry{left=1in, right=1in}
+:::

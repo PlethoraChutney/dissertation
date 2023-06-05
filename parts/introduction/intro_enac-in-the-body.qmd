@@ -1,4 +1,4 @@
-# ENaC Biology
+# ENaC At The Organism Scale
 
 ENaC is a highly-specific triheteromeric sodium channel expressed throughout the human body.
 The channel comprises one copy each of the &alpha;, &beta;, and &gamma; subunits.
