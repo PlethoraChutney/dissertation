@@ -212,10 +212,3 @@ In the specific case of ENaC, some groups have reported lysosomal degradation, w
 
 ### SGK {#sec-intro_sgk}
 
-
-
-
-<!-- Move this to the end of content so the margins are right in citations -->
-:::{.content-hidden unless-format="pdf"}
-\newgeometry{left=1in, right=1in}
-:::
