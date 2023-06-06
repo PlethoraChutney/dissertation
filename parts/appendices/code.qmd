@@ -280,7 +280,7 @@ If the model and map are both open, this is a convenient way to step through all
 The user may then add sugars via the normal commands.
 
 `model_map.py`, `orientation_plotter.py`, `phenix-table-reader.py`, and the three R scripts all read information from PHENIX or 3DFSC output and produce more aesthetically appealing plots.
-`phenix-table-reader.py` is a convenient way to automatically update a Table 1 (for instance, @tbl-model-building) during the model building process.
+`phenix-table-reader.py` is a convenient way to automatically update a Table 1 (for instance, @tbl-model-building-refinement) during the model building process.
 Output from the other scripts can be seen in @sec-validation.
 
 `mutator.py` checks the sequence of a model against a FASTA sequence and alerts the user to any mismatches.

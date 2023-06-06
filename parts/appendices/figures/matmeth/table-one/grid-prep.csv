@@ -1,0 +1,7 @@
+﻿Parameter,Digitonin,Nanodisc,Difab,Monofab,Uncleaved,Trypsin
+ENaC (&mu;M),19.8,2,21.3,24,9.6,9.6
+Salt,NaCl,KCl,KCl,KCl,KCl,KCl
+Acid Shock,Yes,No,Yes,No,No,No
+Fabs,α and β,,α and β,α,α,α
+Grid Type,2/1 200,2/2 200 + 2 nm carbon,2/1 200,2/1 200,2/2 200,2/1 200
+FOM (&mu;M),2,10,10,2,100,2

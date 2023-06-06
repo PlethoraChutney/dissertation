@@ -81,6 +81,10 @@ format:
 
           \usepackage{ucharclasses}
           \setTransitionsForGreek{\begingroup\symbolfont}{\endgroup}
+
+          \usepackage{lscape}
+          \newcommand{\blandscape}{\begin{landscape}}
+          \newcommand{\elandscape}{\end{landscape}}
   docx:
     reference-doc: dissertation-reference.docx
     filters:

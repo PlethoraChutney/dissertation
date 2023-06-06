@@ -3,7 +3,7 @@ Below are the image processing workflows for each map.
 The human CKO digitonin map workflow includes more detail for the initial steps &mdash; these steps are the same for each map, and so are elided in the others.
 In each case, maps are contoured to 0.5.
 Additionally, particle and movie numbers are rounded for ease of comparison.
-See @tbl-model-building for precise numbers.
+See @tbl-data-collection for precise numbers.
 
 
 ![Human CKO processing pipeline. The TMD volumes are gaussian filtered to reduce noise.](figures/processing-overviews/hum-pko/human-cko.png){#fig-cko-final}

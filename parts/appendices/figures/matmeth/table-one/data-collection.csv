@@ -1,0 +1,10 @@
+﻿Parameter,Digitonin,Nanodisc,Difab,Monofab,Uncleaved,Trypsin
+Facility,PNCC,S2C2,S2C2,PNCC,Janelia Farm,Janelia Farm
+No. Movies,"13,689","9,882","5,126","5,832","11,334","6,960"
+Frames,50,65,50,50,65,65
+Pixel Size (&Aring;/pix),0.8015,0.86,0.86,0.83,0.844,0.788
+No. particles,"612,591","237,730","257,341","373,495","499,081","264,228"
+ECD resolution (&Aring;),2.34,3.06,2.94,,,3.03
+Whole protein resolution (&Aring;),2.89,,3.26,3.04,3.24,3.3
+ECD sharpening factor,-56.6,-77.1,-88.9,,,-66.7
+Whole protein sharpening factor,-66,,-110.4,-104.4,-96.4,-67.4
