@@ -300,6 +300,9 @@ Once a dish had been exposed to the trypsin solution, the dish was replaced with
 
 
 \blandscape{}
+
+## Tables
+
 ```{r}
 #| echo: false
 #| warning: false
