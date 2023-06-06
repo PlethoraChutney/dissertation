@@ -178,7 +178,7 @@ div.csl-indent {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../parts/results.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Results</span></a>
+ <span class="menu-text">Results and Discussion</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -406,17 +406,10 @@ div.csl-indent {
 <section id="cryoem-grid-preparation" class="level2" data-number="A.5">
 <h2 data-number="A.5" class="anchored" data-anchor-id="cryoem-grid-preparation"><span class="header-section-number">A.5</span> cryoEM Grid Preparation</h2>
 <p>Grid preparation different slightly for each dataset, but followed the same general procedure (<a href="#tbl-model-building">Table&nbsp;<span>A.1</span></a>). Purified GFP-cleaved ENaC was concentrated for grid preparation just before blotting and freezing. All grids were glow discharged at 15 mA for 60 seconds on a Pelco easiGlow before blotting. Grids were frozen using a Vitrobot Mark III (Thermo Fisher). Vitrobot parameters were set as follows: blot time 2, wait time 0, drain time 0, blot force 1, humidity 100%, temperature 12 °C. “Double-blotted” grids had a protein droplet loaded, manually blotted with torn Whatman filter paper, and a fresh droplet loaded onto the grid before Vitrobot blotting (with Vitrobot filter paper rings) and freezing. This double-blotting process typically took approximately five seconds from first drop to plunge-freeze. In all cases, each protein droplet was 3 μL.</p>
-<div id="fig-fab-compare" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><a href="figures/matmeth/fabs/fabs.png" class="lightbox" title="Fab binding induces only minor changes in the extracellular domain of ENaC. A: Human CKO/DEG map. A low-pass filtered map is outlined to show pseudosymmetry-breaking glycosylation sites (arrows). B: the α subunit, C: the β subunit. Human CKO nanodisc model is colored by subunit, the human CKO/DEG ENaC is white, and human CKO/DEG Fabs are grey." data-gallery="quarto-lightbox-gallery-1"><img src="figures/matmeth/fabs/fabs.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Figure&nbsp;A.1: Fab binding induces only minor changes in the extracellular domain of ENaC. A: Human CKO/DEG map. A low-pass filtered map is outlined to show pseudosymmetry-breaking glycosylation sites (arrows). B: the α subunit, C: the β subunit. Human CKO nanodisc model is colored by subunit, the human CKO/DEG ENaC is white, and human CKO/DEG Fabs are grey.</figcaption>
-</figure>
-</div>
-<p>Most datasets were collected with at least one of our two pseudosymmetry-breaking Fabs, developed previously<span class="citation" data-cites="noreng18"><sup><a href="../references.html#ref-noreng18" role="doc-biblioref">2</a></sup></span>. I have switched from using both Fabs to only using one, because the β-binding Fab is more flexible than the α-binding Fab, and this flexibility reduces overall alignment property. Additionally, one of the two human CKO datasets was first incorporated into nanodiscs and solved without any Fabs. As expected based on our previous studies of electrophysiology of the Fab-bound channels, our ECD models with and without Fab are largely indistinguishable (<a href="#fig-fab-compare">Figure&nbsp;<span>A.1</span></a> B,C)<span class="citation" data-cites="noreng20"><sup><a href="../references.html#ref-noreng20" role="doc-biblioref">3</a></sup></span>. Neither fab significantly distorts the surrounding ECD environment when bound. The α-binding Fab induces a slight shift in a region near the β-ball, while the β-binding Fab induces no detectable change at all.</p>
 </section>
 <section id="cryoem-data-collection" class="level2" data-number="A.6">
 <h2 data-number="A.6" class="anchored" data-anchor-id="cryoem-data-collection"><span class="header-section-number">A.6</span> cryoEM Data Collection</h2>
-<p>Datasets were collected using SerialEM by microscopy core staff at the facilities used (<a href="#tbl-model-building">Table&nbsp;<span>A.1</span></a>)<span class="citation" data-cites="mastronarde2003"><sup><a href="../references.html#ref-mastronarde2003" role="doc-biblioref">4</a></sup></span>. In all cases, multi-shot multi-hole regimes were used to maximize the number of movies recorded. Number of shots per hole and maximum beam shift were a function of ice quality and grid type, but typically a 3x3 pattern of holes was imaged 2–4 times per hole.</p>
+<p>Datasets were collected using SerialEM by microscopy core staff at the facilities used (<a href="#tbl-model-building">Table&nbsp;<span>A.1</span></a>)<span class="citation" data-cites="mastronarde2003"><sup><a href="../references.html#ref-mastronarde2003" role="doc-biblioref">2</a></sup></span>. In all cases, multi-shot multi-hole regimes were used to maximize the number of movies recorded. Number of shots per hole and maximum beam shift were a function of ice quality and grid type, but typically a 3x3 pattern of holes was imaged 2–4 times per hole.</p>
 </section>
 <section id="cryoem-image-processing" class="level2" data-number="A.7">
 <h2 data-number="A.7" class="anchored" data-anchor-id="cryoem-image-processing"><span class="header-section-number">A.7</span> cryoEM Image Processing</h2>
@@ -424,17 +417,17 @@ div.csl-indent {
 <p>The template picked particles were repeatedly 3D classified using heterogeneous refinement in cryoSPARC, providing one “good” class and a number of “junk” classes (typically noisy or bad <em>ab initio</em> models of the blob picked particles) until all particles produced reasonable ENaC classes. The final particle set was never 2D classified, since I find that 2D classification reduces the frequency of rare particle views. From this point, processing proceeded <em>ad hoc</em> to produce the final maps (Image Processing).</p>
 <div id="fig-pixel-size-calibration" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="figures/matmeth/ecd-pix-size/pixel-size.png" class="lightbox" title="S2C2 pixel sizes seem miscalibrated. A: Scaling the nominal pixel size for human CKO/DEG dramatically increases the correlation with human CKO digitonin. B: Correlation coefficients for all maps. Maps were aligned prior to taking correlation coefficients. Abbreviated as follows: hCKO: human CKO; hCD-MF: human CKO/DEG monofab; mTrypsin: trypsin-cleaved mouse; hCKO/DEG: human CKO/DEG difab; hCKO-ND: human CKO nanodisc; mUncleaved: mouse uncleaved; mJanelia2: a second uncleaved mouse dataset collected at Janelia, but not presented here." data-gallery="quarto-lightbox-gallery-2"><img src="figures/matmeth/ecd-pix-size/pixel-size.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Figure&nbsp;A.2: S<sup>2</sup>C<sup>2</sup> pixel sizes seem miscalibrated. <strong>A</strong>: Scaling the nominal pixel size for human CKO/DEG dramatically increases the correlation with human CKO digitonin. <strong>B</strong>: Correlation coefficients for all maps. Maps were aligned prior to taking correlation coefficients. Abbreviated as follows: hCKO: human CKO; hCD-MF: human CKO/DEG monofab; mTrypsin: trypsin-cleaved mouse; hCKO/DEG: human CKO/DEG difab; hCKO-ND: human CKO nanodisc; mUncleaved: mouse uncleaved; mJanelia2: a second uncleaved mouse dataset collected at Janelia, but not presented here.</figcaption>
+<p><a href="figures/matmeth/ecd-pix-size/pixel-size.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="S2C2 pixel sizes seem miscalibrated. A: Scaling the nominal pixel size for human CKO/DEG dramatically increases the correlation with human CKO digitonin. B: Correlation coefficients for all maps. Maps were aligned prior to taking correlation coefficients. Abbreviated as follows: hCKO: human CKO; hCD-MF: human CKO/DEG monofab; mTrypsin: trypsin-cleaved mouse; hCKO/DEG: human CKO/DEG difab; hCKO-ND: human CKO nanodisc; mUncleaved: mouse uncleaved; mJanelia2: a second uncleaved mouse dataset collected at Janelia, but not presented here."><img src="figures/matmeth/ecd-pix-size/pixel-size.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Figure&nbsp;A.1: S<sup>2</sup>C<sup>2</sup> pixel sizes seem miscalibrated. <strong>A</strong>: Scaling the nominal pixel size for human CKO/DEG dramatically increases the correlation with human CKO digitonin. <strong>B</strong>: Correlation coefficients for all maps. Maps were aligned prior to taking correlation coefficients. Abbreviated as follows: hCKO: human CKO; hCD-MF: human CKO/DEG monofab; mTrypsin: trypsin-cleaved mouse; hCKO/DEG: human CKO/DEG difab; hCKO-ND: human CKO nanodisc; mUncleaved: mouse uncleaved; mJanelia2: a second uncleaved mouse dataset collected at Janelia, but not presented here.</figcaption>
 </figure>
 </div>
-<p>During image processing, I began to suspect that the pixel sizes provided by S<sup>2</sup>C<sup>2</sup> are likely miscalibrated. First, other users reported pixel size calibration issues with S<sup>2</sup>C<sup>2</sup> microscopes around the time these datasets were collected (Patrick Mitchell, S<sup>2</sup>C<sup>2</sup> Director of Operations, personal communication). Second, scaling the CKO/DEG difab pixel size from the nominally-correct 0.43 to 0.414 (a change of approximately 3.6%) changes the map correlation value from 0.72 to 0.93 (<a href="#fig-pixel-size-calibration">Figure&nbsp;<span>A.2</span></a> A). Finally, a comparison of the correlation between seven recently-collected ENaC maps shows that S<sup>2</sup>C<sup>2</sup> is an outlier, with unscaled maps generated from data collected at PNCC and Janelia Farm correlating better with themselves and each other than with those collected at S<sup>2</sup>C<sup>2</sup> regardless of construct (<a href="#fig-pixel-size-calibration">Figure&nbsp;<span>A.2</span></a> B). I therefore decided to scale both S<sup>2</sup>C<sup>2</sup> maps to correlate best with the same condition and construct recorded at PNCC after processing was complete. I present the models built into the scaled maps in this work.</p>
+<p>During image processing, I began to suspect that the pixel sizes provided by S<sup>2</sup>C<sup>2</sup> are likely miscalibrated. First, other users reported pixel size calibration issues with S<sup>2</sup>C<sup>2</sup> microscopes around the time these datasets were collected (Patrick Mitchell, S<sup>2</sup>C<sup>2</sup> Director of Operations, personal communication). Second, scaling the CKO/DEG difab pixel size from the nominally-correct 0.43 to 0.414 (a change of approximately 3.6%) changes the map correlation value from 0.72 to 0.93 (<a href="#fig-pixel-size-calibration">Figure&nbsp;<span>A.1</span></a> A). Finally, a comparison of the correlation between seven recently-collected ENaC maps shows that S<sup>2</sup>C<sup>2</sup> is an outlier, with unscaled maps generated from data collected at PNCC and Janelia Farm correlating better with themselves and each other than with those collected at S<sup>2</sup>C<sup>2</sup> regardless of construct (<a href="#fig-pixel-size-calibration">Figure&nbsp;<span>A.1</span></a> B). I therefore decided to scale both S<sup>2</sup>C<sup>2</sup> maps to correlate best with the same condition and construct recorded at PNCC after processing was complete. I present the models built into the scaled maps in this work.</p>
 </section>
 <section id="model-building" class="level2" data-number="A.8">
 <h2 data-number="A.8" class="anchored" data-anchor-id="model-building"><span class="header-section-number">A.8</span> Model Building</h2>
-<p>The starting model for mouse ENaC was generated using a local installation of AlphaFold<span class="citation" data-cites="jumper2021"><sup><a href="../references.html#ref-jumper2021" role="doc-biblioref">5</a></sup></span>. The amino acid sequences for mENaC α (Uniprot ID Q61180), β (Uniprot ID Q9WU38), and γ (Uniprot ID Q9WU39) were joined using 10xGS linkers between α and β, and β and γ. This meta-sequence was then entered as the AlphaFold target. The linkers and large, unstructured, low-confidence loops were removed from the model before proceeding.</p>
-<p>Before docking into experimental maps, starting models had Fabs and waters deleted to ease early model building steps. Initial models were rigid-body fitted into the experimental maps. Any loops in poor or missing regions of the map were deleted. The whole models were simulated with distance restraints using ISOLDE and ChimeraX<span class="citation" data-cites="croll2018 pettersen2021"><sup><a href="../references.html#ref-croll2018" role="doc-biblioref">6</a>,<a href="../references.html#ref-pettersen2021" role="doc-biblioref">7</a></sup></span>. Once models were roughly fit into the potential, strained distance restraints were released. Once the backbone appeared to fit reasonably well into the map, all distance restraints were released. Simulating one chain at a time, a pass over every residue in ENaC was performed, focusing on Ramachandran values and rotamers. Once all chains had been optimized in this manner, glycans were added using Coot’s carbohydrate module<span class="citation" data-cites="emsley2010"><sup><a href="../references.html#ref-emsley2010" role="doc-biblioref">8</a></sup></span>. Fabs were rigid-body fitted and simulated similarly to the initial models once these steps were complete.</p>
-<p>Models were refined using Phenix real-space refinement<span class="citation" data-cites="liebschner2019"><sup><a href="../references.html#ref-liebschner2019" role="doc-biblioref">9</a></sup></span>. In some cases, the TMD map was used as-is for refinement. In other cases, the ECD and TMD map were combined using Phenix’s “Combine Focused Maps” job and the resulting map was used for refinement. In these cases, the lowest GSFSC resolution was provided to Phenix. Parameters were left as default, except rotamers were only refined when they had both poor map quality <em>and</em> were outliers (rather than <em>or</em>). I changed this setting because rotamer and clash statistics were significantly worse if it was left as the default. Model quality was assessed using MolProbity within Phenix, Q-scores calculated in ChimeraX, and 3DFSC as implemented in cryoSPARC (<a href="#tbl-model-building">Table&nbsp;<span>A.1</span></a> and <a href="validation.html"><span>Appendix&nbsp;C</span></a>)<span class="citation" data-cites="williams2018 pintilie2020 aiyer2021"><sup><a href="../references.html#ref-williams2018" role="doc-biblioref">10</a>–<a href="../references.html#ref-aiyer2021" role="doc-biblioref">12</a></sup></span>.</p>
+<p>The starting model for mouse ENaC was generated using a local installation of AlphaFold<span class="citation" data-cites="jumper2021"><sup><a href="../references.html#ref-jumper2021" role="doc-biblioref">3</a></sup></span>. The amino acid sequences for mENaC α (Uniprot ID Q61180), β (Uniprot ID Q9WU38), and γ (Uniprot ID Q9WU39) were joined using 10xGS linkers between α and β, and β and γ. This meta-sequence was then entered as the AlphaFold target. The linkers and large, unstructured, low-confidence loops were removed from the model before proceeding.</p>
+<p>Before docking into experimental maps, starting models had Fabs and waters deleted to ease early model building steps. Initial models were rigid-body fitted into the experimental maps. Any loops in poor or missing regions of the map were deleted. The whole models were simulated with distance restraints using ISOLDE and ChimeraX<span class="citation" data-cites="croll2018 pettersen2021"><sup><a href="../references.html#ref-croll2018" role="doc-biblioref">4</a>,<a href="../references.html#ref-pettersen2021" role="doc-biblioref">5</a></sup></span>. Once models were roughly fit into the potential, strained distance restraints were released. Once the backbone appeared to fit reasonably well into the map, all distance restraints were released. Simulating one chain at a time, a pass over every residue in ENaC was performed, focusing on Ramachandran values and rotamers. Once all chains had been optimized in this manner, glycans were added using Coot’s carbohydrate module<span class="citation" data-cites="emsley2010"><sup><a href="../references.html#ref-emsley2010" role="doc-biblioref">6</a></sup></span>. Fabs were rigid-body fitted and simulated similarly to the initial models once these steps were complete.</p>
+<p>Models were refined using Phenix real-space refinement<span class="citation" data-cites="liebschner2019"><sup><a href="../references.html#ref-liebschner2019" role="doc-biblioref">7</a></sup></span>. In some cases, the TMD map was used as-is for refinement. In other cases, the ECD and TMD map were combined using Phenix’s “Combine Focused Maps” job and the resulting map was used for refinement. In these cases, the lowest GSFSC resolution was provided to Phenix. Parameters were left as default, except rotamers were only refined when they had both poor map quality <em>and</em> were outliers (rather than <em>or</em>). I changed this setting because rotamer and clash statistics were significantly worse if it was left as the default. Model quality was assessed using MolProbity within Phenix, Q-scores calculated in ChimeraX, and 3DFSC as implemented in cryoSPARC (<a href="#tbl-model-building">Table&nbsp;<span>A.1</span></a> and <a href="validation.html"><span>Appendix&nbsp;C</span></a>)<span class="citation" data-cites="williams2018 pintilie2020 aiyer2021"><sup><a href="../references.html#ref-williams2018" role="doc-biblioref">8</a>–<a href="../references.html#ref-aiyer2021" role="doc-biblioref">10</a></sup></span>.</p>
 </section>
 <section id="constructs" class="level2" data-number="A.9">
 <h2 data-number="A.9" class="anchored" data-anchor-id="constructs"><span class="header-section-number">A.9</span> Constructs</h2>
@@ -444,23 +437,23 @@ div.csl-indent {
 <div class="cell-output-display">
 <div id="tbl-model-building" class="anchored">
 
-<div id="ekqcspcoed" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ekqcspcoed table {
+<div id="qymtvjzehs" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#qymtvjzehs table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ekqcspcoed thead, #ekqcspcoed tbody, #ekqcspcoed tfoot, #ekqcspcoed tr, #ekqcspcoed td, #ekqcspcoed th {
+#qymtvjzehs thead, #qymtvjzehs tbody, #qymtvjzehs tfoot, #qymtvjzehs tr, #qymtvjzehs td, #qymtvjzehs th {
   border-style: none;
 }
 
-#ekqcspcoed p {
+#qymtvjzehs p {
   margin: 0;
   padding: 0;
 }
 
-#ekqcspcoed .gt_table {
+#qymtvjzehs .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -486,12 +479,12 @@ div.csl-indent {
   border-left-color: #D3D3D3;
 }
 
-#ekqcspcoed .gt_caption {
+#qymtvjzehs .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ekqcspcoed .gt_title {
+#qymtvjzehs .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -503,7 +496,7 @@ div.csl-indent {
   border-bottom-width: 0;
 }
 
-#ekqcspcoed .gt_subtitle {
+#qymtvjzehs .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -515,7 +508,7 @@ div.csl-indent {
   border-top-width: 0;
 }
 
-#ekqcspcoed .gt_heading {
+#qymtvjzehs .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -527,13 +520,13 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#ekqcspcoed .gt_bottom_border {
+#qymtvjzehs .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ekqcspcoed .gt_col_headings {
+#qymtvjzehs .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -548,7 +541,7 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#ekqcspcoed .gt_col_heading {
+#qymtvjzehs .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -568,7 +561,7 @@ div.csl-indent {
   overflow-x: hidden;
 }
 
-#ekqcspcoed .gt_column_spanner_outer {
+#qymtvjzehs .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -580,15 +573,15 @@ div.csl-indent {
   padding-right: 4px;
 }
 
-#ekqcspcoed .gt_column_spanner_outer:first-child {
+#qymtvjzehs .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ekqcspcoed .gt_column_spanner_outer:last-child {
+#qymtvjzehs .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ekqcspcoed .gt_column_spanner {
+#qymtvjzehs .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -600,11 +593,11 @@ div.csl-indent {
   width: 100%;
 }
 
-#ekqcspcoed .gt_spanner_row {
+#qymtvjzehs .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ekqcspcoed .gt_group_heading {
+#qymtvjzehs .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -630,7 +623,7 @@ div.csl-indent {
   text-align: left;
 }
 
-#ekqcspcoed .gt_empty_group_heading {
+#qymtvjzehs .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -645,15 +638,15 @@ div.csl-indent {
   vertical-align: middle;
 }
 
-#ekqcspcoed .gt_from_md > :first-child {
+#qymtvjzehs .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ekqcspcoed .gt_from_md > :last-child {
+#qymtvjzehs .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ekqcspcoed .gt_row {
+#qymtvjzehs .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -672,7 +665,7 @@ div.csl-indent {
   overflow-x: hidden;
 }
 
-#ekqcspcoed .gt_stub {
+#qymtvjzehs .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -685,7 +678,7 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#ekqcspcoed .gt_stub_row_group {
+#qymtvjzehs .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -699,15 +692,15 @@ div.csl-indent {
   vertical-align: top;
 }
 
-#ekqcspcoed .gt_row_group_first td {
+#qymtvjzehs .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ekqcspcoed .gt_row_group_first th {
+#qymtvjzehs .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ekqcspcoed .gt_summary_row {
+#qymtvjzehs .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -717,16 +710,16 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#ekqcspcoed .gt_first_summary_row {
+#qymtvjzehs .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ekqcspcoed .gt_first_summary_row.thick {
+#qymtvjzehs .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ekqcspcoed .gt_last_summary_row {
+#qymtvjzehs .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -736,7 +729,7 @@ div.csl-indent {
   border-bottom-color: #D3D3D3;
 }
 
-#ekqcspcoed .gt_grand_summary_row {
+#qymtvjzehs .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -746,7 +739,7 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#ekqcspcoed .gt_first_grand_summary_row {
+#qymtvjzehs .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -756,7 +749,7 @@ div.csl-indent {
   border-top-color: #D3D3D3;
 }
 
-#ekqcspcoed .gt_last_grand_summary_row_top {
+#qymtvjzehs .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -766,11 +759,11 @@ div.csl-indent {
   border-bottom-color: #D3D3D3;
 }
 
-#ekqcspcoed .gt_striped {
+#qymtvjzehs .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ekqcspcoed .gt_table_body {
+#qymtvjzehs .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -779,7 +772,7 @@ div.csl-indent {
   border-bottom-color: #D3D3D3;
 }
 
-#ekqcspcoed .gt_footnotes {
+#qymtvjzehs .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -793,7 +786,7 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#ekqcspcoed .gt_footnote {
+#qymtvjzehs .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -802,7 +795,7 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#ekqcspcoed .gt_sourcenotes {
+#qymtvjzehs .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -816,7 +809,7 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#ekqcspcoed .gt_sourcenote {
+#qymtvjzehs .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -824,63 +817,63 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#ekqcspcoed .gt_left {
+#qymtvjzehs .gt_left {
   text-align: left;
 }
 
-#ekqcspcoed .gt_center {
+#qymtvjzehs .gt_center {
   text-align: center;
 }
 
-#ekqcspcoed .gt_right {
+#qymtvjzehs .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ekqcspcoed .gt_font_normal {
+#qymtvjzehs .gt_font_normal {
   font-weight: normal;
 }
 
-#ekqcspcoed .gt_font_bold {
+#qymtvjzehs .gt_font_bold {
   font-weight: bold;
 }
 
-#ekqcspcoed .gt_font_italic {
+#qymtvjzehs .gt_font_italic {
   font-style: italic;
 }
 
-#ekqcspcoed .gt_super {
+#qymtvjzehs .gt_super {
   font-size: 65%;
 }
 
-#ekqcspcoed .gt_footnote_marks {
+#qymtvjzehs .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ekqcspcoed .gt_asterisk {
+#qymtvjzehs .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ekqcspcoed .gt_indent_1 {
+#qymtvjzehs .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ekqcspcoed .gt_indent_2 {
+#qymtvjzehs .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ekqcspcoed .gt_indent_3 {
+#qymtvjzehs .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ekqcspcoed .gt_indent_4 {
+#qymtvjzehs .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ekqcspcoed .gt_indent_5 {
+#qymtvjzehs .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -1239,14 +1232,14 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<p>The four constructs I present here can broadly be split into those I expect to be open (CKO/DEG and mouse trypsin) and those I expect to be closed (CKO, mouse) (<a href="#tbl-model-building">Table&nbsp;<span>A.1</span></a>). All human channels in this work have mutant furin sites (αR178A R204A and γR138A). Additionally, all human channels are “cysteine knock-out” (CKO) mutants, with the following mutations: αC63A, βC30A, and γC33A C41A. Some (but not all) cysteines in the ENaC TMD are known to be palmitoylated<span class="citation" data-cites="mukherjee14 mueller10 mueller12"><sup><a href="../references.html#ref-mukherjee14" role="doc-biblioref">13</a>–<a href="../references.html#ref-mueller12" role="doc-biblioref">15</a></sup></span>. CKO channels express at approximately eight times the yield of wild-type-like channels, with similar electrophysiological traits (<a href="#fig-ephys">Figure&nbsp;<span>A.3</span></a>). Mouse channels presented in this work have no mutations from the consensus gene. I expect mouse and CKO channels to be closed.</p>
+<p>The four constructs I present here can broadly be split into those I expect to be open (CKO/DEG and mouse trypsin) and those I expect to be closed (CKO, mouse) (<a href="#tbl-model-building">Table&nbsp;<span>A.1</span></a>). All human channels in this work have mutant furin sites (αR178A R204A and γR138A). Additionally, all human channels are “cysteine knock-out” (CKO) mutants, with the following mutations: αC63A, βC30A, and γC33A C41A. Some (but not all) cysteines in the ENaC TMD are known to be palmitoylated<span class="citation" data-cites="mukherjee14 mueller10 mueller12"><sup><a href="../references.html#ref-mukherjee14" role="doc-biblioref">11</a>–<a href="../references.html#ref-mueller12" role="doc-biblioref">13</a></sup></span>. CKO channels express at approximately eight times the yield of wild-type-like channels, with similar electrophysiological traits (<a href="#fig-ephys">Figure&nbsp;<span>A.2</span></a>). Mouse channels presented in this work have no mutations from the consensus gene. I expect mouse and CKO channels to be closed.</p>
 <div id="fig-ephys" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="figures/matmeth/ephys/491-mean-iv.png" class="lightbox" title="I/V curves for human CKO and CKO/DEG channels. Values are normalized per-cell to the inward current at -80 mV before trypsin treatment. Cells were treated with trypsin for five minutes before being re-recorded. Each point is the average of three cells. Error bars represent +/- one standard deviation." data-gallery="quarto-lightbox-gallery-3"><img src="figures/matmeth/ephys/491-mean-iv.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Figure&nbsp;A.3: I/V curves for human CKO and CKO/DEG channels. Values are normalized per-cell to the inward current at -80 mV before trypsin treatment. Cells were treated with trypsin for five minutes before being re-recorded. Each point is the average of three cells. Error bars represent +/- one standard deviation.</figcaption>
+<p><a href="figures/matmeth/ephys/491-mean-iv.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="I/V curves for human CKO and CKO/DEG channels. Values are normalized per-cell to the inward current at -80 mV before trypsin treatment. Cells were treated with trypsin for five minutes before being re-recorded. Each point is the average of three cells. Error bars represent +/- one standard deviation."><img src="figures/matmeth/ephys/491-mean-iv.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Figure&nbsp;A.2: I/V curves for human CKO and CKO/DEG channels. Values are normalized per-cell to the inward current at -80 mV before trypsin treatment. Cells were treated with trypsin for five minutes before being re-recorded. Each point is the average of three cells. Error bars represent +/- one standard deviation.</figcaption>
 </figure>
 </div>
-<p>DEG channels have two mutations: βS520K and αT240W. The former mutation at what has been named the “DEG site” holds the channel in an open state regardless of proteolytic cleavage state<span class="citation" data-cites="snyder2000"><sup><a href="../references.html#ref-snyder2000" role="doc-biblioref">16</a></sup></span>. The DEG site sits in the TMD just above the predicted amiloride-binding site. The latter mutation in α lies in the GRIP domain and also increases the P<sub>O</sub> of uncleaved ENaC<span class="citation" data-cites="kashlan2010"><sup><a href="../references.html#ref-kashlan2010" role="doc-biblioref">17</a></sup></span>.</p>
+<p>DEG channels have two mutations: βS520K and αT240W. The former mutation at what has been named the “DEG site” holds the channel in an open state regardless of proteolytic cleavage state<span class="citation" data-cites="snyder2000"><sup><a href="../references.html#ref-snyder2000" role="doc-biblioref">14</a></sup></span>. The DEG site sits in the TMD just above the predicted amiloride-binding site. The latter mutation in α lies in the GRIP domain and also increases the P<sub>O</sub> of uncleaved ENaC<span class="citation" data-cites="kashlan2010"><sup><a href="../references.html#ref-kashlan2010" role="doc-biblioref">15</a></sup></span>.</p>
 </section>
 <section id="whole-cell-patch-clamp" class="level2" data-number="A.10">
 <h2 data-number="A.10" class="anchored" data-anchor-id="whole-cell-patch-clamp"><span class="header-section-number">A.10</span> Whole cell patch clamp</h2>
@@ -1272,53 +1265,47 @@ div.csl-indent {
 <div id="ref-kawate06" class="csl-entry" role="listitem">
 <div class="csl-left-margin">1. </div><div class="csl-right-inline">Kawate, T., and Gouaux, E. (2006/04/01/). Fluorescence-<span>Detection Size-Exclusion Chromatography</span> for <span>Precrystallization Screening</span> of <span>Integral Membrane Proteins</span>. Structure <em>14</em>, 673–681. <a href="https://doi.org/10.1016/j.str.2006.01.013">10.1016/j.str.2006.01.013</a>.</div>
 </div>
-<div id="ref-noreng18" class="csl-entry" role="listitem">
-<div class="csl-left-margin">2. </div><div class="csl-right-inline">Noreng, S., Bharadwaj, A., Posert, R., Yoshioka, C., and Baconguis, I. (2018). Structure of the human epithelial sodium channel by cryo-electron microscopy. eLife <em>7</em>, e39340. <a href="https://doi.org/10.7554/eLife.39340">10.7554/eLife.39340</a>.</div>
-</div>
-<div id="ref-noreng20" class="csl-entry" role="listitem">
-<div class="csl-left-margin">3. </div><div class="csl-right-inline">Noreng, S., Posert, R., Bharadwaj, A., Houser, A., and Baconguis, I. (2020). Molecular principles of assembly, activation, and inhibition in epithelial sodium channel. eLife <em>9</em>, e59038. <a href="https://doi.org/10.7554/eLife.59038">10.7554/eLife.59038</a>.</div>
-</div>
 <div id="ref-mastronarde2003" class="csl-entry" role="listitem">
-<div class="csl-left-margin">4. </div><div class="csl-right-inline">Mastronarde, D.N. (2003). <span>SerialEM</span>: <span>A Program</span> for <span>Automated Tilt Series Acquisition</span> on <span>Tecnai Microscopes Using Prediction</span> of <span>Specimen Position</span>. Microscopy and Microanalysis <em>9</em>, 1182–1183. <a href="https://doi.org/10.1017/S1431927603445911">10.1017/S1431927603445911</a>.</div>
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">Mastronarde, D.N. (2003). <span>SerialEM</span>: <span>A Program</span> for <span>Automated Tilt Series Acquisition</span> on <span>Tecnai Microscopes Using Prediction</span> of <span>Specimen Position</span>. Microscopy and Microanalysis <em>9</em>, 1182–1183. <a href="https://doi.org/10.1017/S1431927603445911">10.1017/S1431927603445911</a>.</div>
 </div>
 <div id="ref-jumper2021" class="csl-entry" role="listitem">
-<div class="csl-left-margin">5. </div><div class="csl-right-inline">Jumper, J., Evans, R., Pritzel, A., Green, T., Figurnov, M., Ronneberger, O., Tunyasuvunakool, K., Bates, R., Žídek, A., Potapenko, A., et al. (2021). Highly accurate protein structure prediction with <span>AlphaFold</span>. Nature <em>596</em>, 583–589. <a href="https://doi.org/10.1038/s41586-021-03819-2">10.1038/s41586-021-03819-2</a>.</div>
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">Jumper, J., Evans, R., Pritzel, A., Green, T., Figurnov, M., Ronneberger, O., Tunyasuvunakool, K., Bates, R., Žídek, A., Potapenko, A., et al. (2021). Highly accurate protein structure prediction with <span>AlphaFold</span>. Nature <em>596</em>, 583–589. <a href="https://doi.org/10.1038/s41586-021-03819-2">10.1038/s41586-021-03819-2</a>.</div>
 </div>
 <div id="ref-croll2018" class="csl-entry" role="listitem">
-<div class="csl-left-margin">6. </div><div class="csl-right-inline">Croll, T. (2018). <a href="https://doi.org/10.1107/S2059798318002425"><span>ISOLDE</span>: A physically realistic environment for model building into low-resolution electron-density maps</a>. Acta Crystallographica Section D <em>74</em>, 519–530.</div>
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">Croll, T. (2018). <a href="https://doi.org/10.1107/S2059798318002425"><span>ISOLDE</span>: A physically realistic environment for model building into low-resolution electron-density maps</a>. Acta Crystallographica Section D <em>74</em>, 519–530.</div>
 </div>
 <div id="ref-pettersen2021" class="csl-entry" role="listitem">
-<div class="csl-left-margin">7. </div><div class="csl-right-inline">Pettersen, E.F., Goddard, T.D., Huang, C.C., Meng, E.C., Couch, G.S., Croll, T.I., Morris, J.H., and Ferrin, T.E. (2021). <span>UCSF ChimeraX</span>: <span>Structure</span> visualization for researchers, educators, and developers. Protein Sci <em>30</em>, 70–82. <a href="https://doi.org/10.1002/pro.3943">10.1002/pro.3943</a>.</div>
+<div class="csl-left-margin">5. </div><div class="csl-right-inline">Pettersen, E.F., Goddard, T.D., Huang, C.C., Meng, E.C., Couch, G.S., Croll, T.I., Morris, J.H., and Ferrin, T.E. (2021). <span>UCSF ChimeraX</span>: <span>Structure</span> visualization for researchers, educators, and developers. Protein Sci <em>30</em>, 70–82. <a href="https://doi.org/10.1002/pro.3943">10.1002/pro.3943</a>.</div>
 </div>
 <div id="ref-emsley2010" class="csl-entry" role="listitem">
-<div class="csl-left-margin">8. </div><div class="csl-right-inline">Emsley, P., Lohkamp, B., Scott, W.G., and Cowtan, K. (2010). <a href="https://doi.org/10.1107/S0907444910007493">Features and development of <span>Coot</span></a>. Acta Crystallographica Section D <em>66</em>, 486–501.</div>
+<div class="csl-left-margin">6. </div><div class="csl-right-inline">Emsley, P., Lohkamp, B., Scott, W.G., and Cowtan, K. (2010). <a href="https://doi.org/10.1107/S0907444910007493">Features and development of <span>Coot</span></a>. Acta Crystallographica Section D <em>66</em>, 486–501.</div>
 </div>
 <div id="ref-liebschner2019" class="csl-entry" role="listitem">
-<div class="csl-left-margin">9. </div><div class="csl-right-inline">Liebschner, D., Afonine, P.V., Baker, M.L., Bunkoczi, G., Chen, V.B., Croll, T.I., Hintze, B., Hung, L.-W., Jain, S., McCoy, A.J., et al. (2019). <a href="https://doi.org/10.1107/S2059798319011471">Macromolecular structure determination using <span class="nocase">X-rays</span>, neutrons and electrons: Recent developments in <span>Phenix</span></a>. Acta Crystallographica Section D <em>75</em>, 861–877.</div>
+<div class="csl-left-margin">7. </div><div class="csl-right-inline">Liebschner, D., Afonine, P.V., Baker, M.L., Bunkoczi, G., Chen, V.B., Croll, T.I., Hintze, B., Hung, L.-W., Jain, S., McCoy, A.J., et al. (2019). <a href="https://doi.org/10.1107/S2059798319011471">Macromolecular structure determination using <span class="nocase">X-rays</span>, neutrons and electrons: Recent developments in <span>Phenix</span></a>. Acta Crystallographica Section D <em>75</em>, 861–877.</div>
 </div>
 <div id="ref-williams2018" class="csl-entry" role="listitem">
-<div class="csl-left-margin">10. </div><div class="csl-right-inline">Williams, C.J., Headd, J.J., Moriarty, N.W., Prisant, M.G., Videau, L.L., Deis, L.N., Verma, V., Keedy, D.A., Hintze, B.J., Chen, V.B., et al. (2018). <span>MolProbity</span>: <span>More</span> and better reference data for improved all-atom structure validation. Protein Science <em>27</em>, 293–315. <a href="https://doi.org/10.1002/pro.3330">10.1002/pro.3330</a>.</div>
+<div class="csl-left-margin">8. </div><div class="csl-right-inline">Williams, C.J., Headd, J.J., Moriarty, N.W., Prisant, M.G., Videau, L.L., Deis, L.N., Verma, V., Keedy, D.A., Hintze, B.J., Chen, V.B., et al. (2018). <span>MolProbity</span>: <span>More</span> and better reference data for improved all-atom structure validation. Protein Science <em>27</em>, 293–315. <a href="https://doi.org/10.1002/pro.3330">10.1002/pro.3330</a>.</div>
 </div>
 <div id="ref-pintilie2020" class="csl-entry" role="listitem">
-<div class="csl-left-margin">11. </div><div class="csl-right-inline">Pintilie, G., Zhang, K., Su, Z., Li, S., Schmid, M.F., and Chiu, W. (2020). Measurement of atom resolvability in cryo-<span>EM</span> maps with <span class="nocase">Q-scores</span>. Nature Methods <em>17</em>, 328–334. <a href="https://doi.org/10.1038/s41592-020-0731-1">10.1038/s41592-020-0731-1</a>.</div>
+<div class="csl-left-margin">9. </div><div class="csl-right-inline">Pintilie, G., Zhang, K., Su, Z., Li, S., Schmid, M.F., and Chiu, W. (2020). Measurement of atom resolvability in cryo-<span>EM</span> maps with <span class="nocase">Q-scores</span>. Nature Methods <em>17</em>, 328–334. <a href="https://doi.org/10.1038/s41592-020-0731-1">10.1038/s41592-020-0731-1</a>.</div>
 </div>
 <div id="ref-aiyer2021" class="csl-entry" role="listitem">
-<div class="csl-left-margin">12. </div><div class="csl-right-inline">Aiyer, S., Zhang, C., Baldwin, P.R., and Lyumkis, D. (2021). Evaluating <span>Local</span> and <span>Directional Resolution</span> of <span class="nocase">Cryo-EMCryo-electron</span> microscopy (<span>Cryo-EM</span>) <span>Density Maps</span>. In <span class="nocase">cryoEM</span>: <span>Methods</span> and <span>Protocols</span>, T. Gonen and B. L. Nannenga, eds. (<span>Springer US</span>), pp. 161–187. <a href="https://doi.org/10.1007/978-1-0716-0966-8_8">10.1007/978-1-0716-0966-8_8</a>.</div>
+<div class="csl-left-margin">10. </div><div class="csl-right-inline">Aiyer, S., Zhang, C., Baldwin, P.R., and Lyumkis, D. (2021). Evaluating <span>Local</span> and <span>Directional Resolution</span> of <span class="nocase">Cryo-EMCryo-electron</span> microscopy (<span>Cryo-EM</span>) <span>Density Maps</span>. In <span class="nocase">cryoEM</span>: <span>Methods</span> and <span>Protocols</span>, T. Gonen and B. L. Nannenga, eds. (<span>Springer US</span>), pp. 161–187. <a href="https://doi.org/10.1007/978-1-0716-0966-8_8">10.1007/978-1-0716-0966-8_8</a>.</div>
 </div>
 <div id="ref-mukherjee14" class="csl-entry" role="listitem">
-<div class="csl-left-margin">13. </div><div class="csl-right-inline">Mukherjee, A., Mueller, G.M., Kinlough, C.L., Sheng, N., Wang, Z., Mustafa, S.A., Kashlan, O.B., Kleyman, T.R., and Hughey, R.P. (2014/05/16/). Cysteine <span>Palmitoylation</span> of the γ <span>Subunit Has</span> a <span>Dominant Role</span> in <span>Modulating Activity</span> of the <span>Epithelial Sodium Channel</span>*. J. Biol. Chem. <em>289</em>, 14351–14359. <a href="https://doi.org/10.1074/jbc.M113.526020">10.1074/jbc.M113.526020</a>.</div>
+<div class="csl-left-margin">11. </div><div class="csl-right-inline">Mukherjee, A., Mueller, G.M., Kinlough, C.L., Sheng, N., Wang, Z., Mustafa, S.A., Kashlan, O.B., Kleyman, T.R., and Hughey, R.P. (2014/05/16/). Cysteine <span>Palmitoylation</span> of the γ <span>Subunit Has</span> a <span>Dominant Role</span> in <span>Modulating Activity</span> of the <span>Epithelial Sodium Channel</span>*. J. Biol. Chem. <em>289</em>, 14351–14359. <a href="https://doi.org/10.1074/jbc.M113.526020">10.1074/jbc.M113.526020</a>.</div>
 </div>
 <div id="ref-mueller10" class="csl-entry" role="listitem">
-<div class="csl-left-margin">14. </div><div class="csl-right-inline">Mueller, G.M., Maarouf, A.B., Kinlough, C.L., Sheng, N., Kashlan, O.B., Okumura, S., Luthy, S., Kleyman, T.R., and Hughey, R.P. (2010). Cys <span>Palmitoylation</span> of the <span>Beta Subunit Modulates Gating</span> of the <span>Epithelial Sodium Channel</span>. J. Biol. Chem. <em>285</em>, 30453–30462.</div>
+<div class="csl-left-margin">12. </div><div class="csl-right-inline">Mueller, G.M., Maarouf, A.B., Kinlough, C.L., Sheng, N., Kashlan, O.B., Okumura, S., Luthy, S., Kleyman, T.R., and Hughey, R.P. (2010). Cys <span>Palmitoylation</span> of the <span>Beta Subunit Modulates Gating</span> of the <span>Epithelial Sodium Channel</span>. J. Biol. Chem. <em>285</em>, 30453–30462. <a href="https://doi.org/10.1074/jbc.M110.151845">10.1074/jbc.M110.151845</a>.</div>
 </div>
 <div id="ref-mueller12" class="csl-entry" role="listitem">
-<div class="csl-left-margin">15. </div><div class="csl-right-inline">Mueller, G.M., Yan, W., Copelovitch, L., Jarman, S., Wang, Z., Kinlough, C.L., Tolino, M.A., Hughey, R.P., Kleyman, T.R., and Rubenstein, R.C. (2012). Multiple residues in the distal <span>C</span> terminus of the α-subunit have roles in modulating human epithelial sodium channel activity. American Journal of Physiology-Renal Physiology <em>303</em>, F220–F228. <a href="https://doi.org/10.1152/ajprenal.00493.2011">10.1152/ajprenal.00493.2011</a>.</div>
+<div class="csl-left-margin">13. </div><div class="csl-right-inline">Mueller, G.M., Yan, W., Copelovitch, L., Jarman, S., Wang, Z., Kinlough, C.L., Tolino, M.A., Hughey, R.P., Kleyman, T.R., and Rubenstein, R.C. (2012). Multiple residues in the distal <span>C</span> terminus of the α-subunit have roles in modulating human epithelial sodium channel activity. American Journal of Physiology-Renal Physiology <em>303</em>, F220–F228. <a href="https://doi.org/10.1152/ajprenal.00493.2011">10.1152/ajprenal.00493.2011</a>.</div>
 </div>
 <div id="ref-snyder2000" class="csl-entry" role="listitem">
-<div class="csl-left-margin">16. </div><div class="csl-right-inline">Snyder, P.M., Bucher, D.B., and Olson, D.R. (2000). Gating <span>Induces</span> a <span>Conformational Change</span> in the <span>Outer Vestibule</span> of <span>Enac</span>. Journal of General Physiology <em>116</em>, 781–790. <a href="https://doi.org/10.1085/jgp.116.6.781">10.1085/jgp.116.6.781</a>.</div>
+<div class="csl-left-margin">14. </div><div class="csl-right-inline">Snyder, P.M., Bucher, D.B., and Olson, D.R. (2000). Gating <span>Induces</span> a <span>Conformational Change</span> in the <span>Outer Vestibule</span> of <span>Enac</span>. Journal of General Physiology <em>116</em>, 781–790. <a href="https://doi.org/10.1085/jgp.116.6.781">10.1085/jgp.116.6.781</a>.</div>
 </div>
 <div id="ref-kashlan2010" class="csl-entry" role="listitem">
-<div class="csl-left-margin">17. </div><div class="csl-right-inline">Kashlan, O.B., Boyd, C.R., Argyropoulos, C., Okumura, S., Hughey, R.P., Grabe, M., and Kleyman, T.R. (2010). Allosteric inhibition of the epithelial <span>Na</span>+ channel through peptide binding at peripheral finger and thumb domains. J Biol Chem <em>285</em>, 35216–35223. <a href="https://doi.org/10.1074/jbc.M110.167064">10.1074/jbc.M110.167064</a>.</div>
+<div class="csl-left-margin">15. </div><div class="csl-right-inline">Kashlan, O.B., Boyd, C.R., Argyropoulos, C., Okumura, S., Hughey, R.P., Grabe, M., and Kleyman, T.R. (2010). Allosteric inhibition of the epithelial <span>Na</span>+ channel through peptide binding at peripheral finger and thumb domains. J Biol Chem <em>285</em>, 35216–35223. <a href="https://doi.org/10.1074/jbc.M110.167064">10.1074/jbc.M110.167064</a>.</div>
 </div>
 </div>
 </section>
@@ -1685,7 +1672,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","openEffect":"zoom","loop":true,"selector":".lightbox","closeEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","loop":true,"descPosition":"bottom"});</script>
 
 
 

@@ -192,15 +192,6 @@ Vitrobot parameters were set as follows: blot time 2, wait time 0, drain time 0,
 This double-blotting process typically took approximately five seconds from first drop to plunge-freeze.
 In all cases, each protein droplet was 3 &mu;L.
 
-![Fab binding induces only minor changes in the extracellular domain of ENaC. A: Human CKO/DEG map. A low-pass filtered map is outlined to show pseudosymmetry-breaking glycosylation sites (arrows). B: the α subunit, C: the β subunit. Human CKO nanodisc model is colored by subunit, the human CKO/DEG ENaC is white, and human CKO/DEG Fabs are grey.](figures/matmeth/fabs/fabs.png){#fig-fab-compare}
-
-Most datasets were collected with at least one of our two pseudosymmetry-breaking Fabs, developed previously[@noreng18].
-I have switched from using both Fabs to only using one, because the &beta;-binding Fab is more flexible than the &alpha;-binding Fab, and this flexibility reduces overall alignment property.
-Additionally, one of the two human CKO datasets was first incorporated into nanodiscs and solved without any Fabs.
-As expected based on our previous studies of electrophysiology of the Fab-bound channels, our ECD models with and without Fab are largely indistinguishable (@fig-fab-compare B,C)[@noreng20].
-Neither fab significantly distorts the surrounding ECD environment when bound.
-The &alpha;-binding Fab induces a slight shift in a region near the &beta;-ball, while the &beta;-binding Fab induces no detectable change at all.
-
 ## cryoEM Data Collection
 Datasets were collected using SerialEM by microscopy core staff at the facilities used (@tbl-model-building)[@mastronarde2003].
 In all cases, multi-shot multi-hole regimes were used to maximize the number of movies recorded.

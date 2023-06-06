@@ -1,3 +1,7 @@
+---
+execute: 
+  freeze: auto
+---
 # The Transmembrane Domain Remains Elusive
 
 One of the long-standing goals of our lab is to solve the structure of the ENaC TMD.
@@ -12,7 +16,7 @@ We must conclude that the TMD of my maps is significantly disrupted, and analysi
 I reproduce them in the first section of this chapter in case they are ever of interest.
 Perhaps of more value will be the following sections in which I cover experiments that produced no valuable results so that future researchers do not retread the same ground.
 
-## Digitonin disrupts the TMD
+## The TMD is misfolded
 
 Our previous structural work was focused on wild-type-like channels, with undefined gating states [@noreng20].
 I wondered if channels with a defined open state might provide a more consistent, and therefore higher resolution, TMD.
@@ -37,13 +41,144 @@ I do also note that although our cryoEM maps support the presence of the &alpha;
 
 ![The &alpha;T240W mutation does not modify ECD conformation. **A**: Stereo view of the GRIP domain near &alpha;T240. Red: CKO, blue: CKO/DEG monofab. **B** and **C**: CryoEM map potential surrounding &alpha;240 in CKO and CKO/DEG monofab, respectively.](figures/t240w-mutation/t240w.png){#fig-t240w}
 
+## Functional Assays
+
+I will cover my work on developing functional assays here, since they would be most useful in assessing the quality of purified ENaC's TMD.
+For the most part, I worked on two functional assays: the scintillation proximity assay (SPA) and the flux assay.
+Much of the work I present on SPA was performed alongside Alex Houser and especially James Cahill.
+
+### The scintillation proximity assay does not show promise for ENaC/DEG family members
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| column: margin
+#| label: fig-spa-example
+#| fig-cap: An example of SPA, in this case of CKO/DEG nanodiscs. Note that although the background counts have been subtracted, the relationship between ligand and counts is still linear.
+library(tidyverse)
+
+data <- read_csv('figures/spa/Exp144_processed-data.csv')
+
+data %>% 
+  mutate(timepoint = case_when(
+    Time == min(Time) ~ 'Early',
+    Time == max(Time) ~ 'Late',
+    TRUE ~ 'Other'
+  )) %>% 
+  filter(
+    mean > 0,
+    Type == 'Specific',
+    timepoint == 'Early'
+  ) %>% 
+  ggplot(aes(x = Benz, y = mean)) +
+  theme_minimal(base_size = 24) +
+  scale_x_log10(
+    breaks = c(1e-10, 1e-9, 1e-8, 1e-7, 1e-6, 1e-5, 1e-4),
+    labels = scales::trans_format("log10", scales::math_format(10^.x))
+  ) +
+  scale_y_log10(
+    breaks = c(1, 10, 100, 1000),
+    labels = scales::trans_format("log10", scales::math_format(10^.x))
+  ) +
+  annotation_logticks(sides = 'bl') +
+  theme(panel.grid.minor = element_blank()) +
+  geom_errorbar(aes(ymin = lower, ymax = upper), width = 0.05) +
+  geom_point() +
+  labs(
+    x = '3H Benzamil (M)',
+    y = 'Specific Counts'
+  )
+
+```
+
+In a SPA assay, the protein of interest is bound to beads which contain a scintillant.
+Radiolabeled ligand is then added to the mixture.
+If the ligand binds the protein, it is close enough to the beads that the &beta;-particles can interact with the scintillant, emitting light.
+These counts can be taken as a measurement of binding affinity.
+Some argue that measuring affinity for a pore-binding ligand is a proxy for measuring proper folding of the pore [@quick2007].
+
+I won't cover in detail all the forms of SPA I attempted; none of the various optimizations or tweaks made any real difference in detectable ligand binding (@fig-spa-example).
+Our main issue was non-specific binding.
+We could never measure the non-specific binding in its entirety, and so any signal that may potentially have been present was swamped out in noise.
+Changing from detergent sample to nanodiscs did not improve signal.
+Neither did changing from standard SPA beads to smaller, higher SNR nanoSPA beads.
+
+One possible explanation of this is that none of our ENaC has a properly-folded TMD and therefore cannot bind amiloride or its derivatives.
+Indeed, that is what our maps seem to suggest.
+However, experiments performed with human ASIC show the same result: ever-increasing linear "specific" counts no matter the conditions (James Cahill, personal communication).
+However, this same ASIC protein has properly-folded TMs as assessed by cryoEM maps.
+These problems are not seen when other labs use the same reagents on different targets.
+Typically, when SPA doesn't work, there are zero specific counts rather than some linearly-increasing unaccounted-for background.
+It may, then, be that SPA with tritiated amiloride derivatives does not work with, or is significantly more difficult for, members of the ENaC/DEG family.
+
+### A sodium flux assay shows promise
+
+After abandoning SPA I went in search of a new, more direct means of assessing ENaC function.
+I had previously used a K^+^ flux assay when working on GIRK and decided to try adapting it to Na^+^ flux.
+For an example of this assay, see Figure 1C of Whorton and McKinnon [@whorton2013].
+
+![A cartoon of a sodium flux assay. Red, yellow, and green circles are K^+^, Na^+^, and H^+^ respectively. White, green, and beige hyperbolae are sodium channels, CCCP, and Na^+^ ionophores respectively. **Left**: Vesicles with (top) or without (bottom) sodium channels are equilibrated in a buffer containing ACMA. Both are fluorescent because no pH gradient exists. **Middle**: CCCP is added to both mixtures. This quenches fluorescence in the ion channel vesicles by establishing a pH gradient. **Right**: Na^+^ ionophore is added to both mixtures. This measures the maximum fluorescence quenching possible in the prep.](figures/flux-cartoon/flux-cartoon.png){#fig-flux-cartoon}
+
+In the canonical K^+^ flux assay, the protein of interest is incorporated into small unilamellar vesicles with potassium buffer inside and sodium outside (@fig-flux-cartoon).
+Thus, in vesicles with functional sodium-selective ion channels, potassium flows out of the vesicle, establishing an electrochemical gradient.
+The fluorescent dye ACMA is added to these vesicles.
+Then, the proton ionophore CCCP is added.
+In vesicles with functional ion channels, protons pass into the vesicles, down their gradient.
+This establishes a pH gradient, which quenches ACMA.
+Thus, reduced fluorescence at the CCCP stage indicates functional ion channels (@fig-flux-example).
+Finally, valinomycin (a K^+^ ionophore) is added to measure the minimum fluorescence.
+
+![A model example of flux data. ACMA fluorescence relative to the steady-state equilibrated value is plotted on Y, time on X. After the addition of each reagent the vesicles are allowed to equilibrate before addition of the next. In this example, it is clear the blue vesicles have functional ion channels since their fluorescence decreased with the addition of CCCP, while the grey vesicles are intact but do not have ion channels, since their fluorescence decreased with the addition of Na^+^ ionophore but not CCCP.](figures/flux-cartoon/flux-example.png){#fig-flux-example}
+
+To adapt this protocol to Na^+^, all that was required is swapping to internal sodium and external potassium, and a sodium-specific ionophore to replace valinomycin.
+Luckily, several such ionophores are commercially available.
+None of them have quite the selectivity or flux of valinomycin, but they are less important than the CCCP anyway.
+I selected Sodium Ionophore IV, or 2,3:11,12-Didecalino-16-crown-5 [@suzuki1996].
+This assay was, in the end, reliably able to produce readings of empty vesicles (@fig-flux-empty), but ENaC never passed any ions with the addition of CCCP (@fig-flux-enac).
+Moreover, addition of ENaC in any amount seemed to disrupt the empty vesicles.
+It is likely, then, that the ENaC is not properly folded, or that the addition of concentrated digitonin disrupts the vesicles on its own.
+A good next step in the development of this assay would be a positive control with ASIC or some other sodium channel.
+
+![The Na^+^ flux assay reliably measures flux through empty vesicles composed of a variety of lipid mixes. Lipid mixes (colors) were tested for the ability to form vesicles as measured by the flux assay. Three different methods of forming vesicles were tested (facets).](figures/flux-data/Exp163-combined.png){#fig-flux-empty}
+
+![The flux assay was performed with two lipid mixes (columns) and two vesicle formation methods (rows). In addition to the buffer control (grey), three ENaC:lipid ratios were tested: no ENaC, 1:600, and 1:200 (increasing color saturation). None of these show a decrease in fluorescence with addition of CCCP, indicating that there was no Na^+^ flux in any mixture.](figures/flux-data/Exp164-combined.png){#fig-flux-enac}
+
+## What can be salvaged?
+
+I've tried a great list of experiments to improve the quality of our TMD, none of which really worked.
+Here's what of my work can be carried forward into future studies.
+
+### Future studies should avoid digitonin
+
 I believe the TMD is misfolded as a result of solubilization with digitonin.
 Digitonin solubilizes membranes by chelating cholesterol [@sudji2015].
-ENaC preferentially exists in lipid rafts, which high in cholesterol [@hill07].
+ENaC preferentially exists in lipid rafts [@hill07].
+ENaC is activated by cholesterol-mediated PIP~2~ interactions [@zhai19].
 Additionally, the helices in the low-resolution TMD region of truncated ENaC solved in DDM do have the expected TM2-inward layout [@noreng18].
 Of course, all of the TMD maps to date are very low-resolution.
 Although I am confident in my TM assignments, it is possible that the wrong TM identity has been assigned to some of the densities.
 Hopefully future, higher-resolution maps of the TMD will settle the matter.
+
+### Cysteine knock-out mutations should be abandoned
+
+The CKO mutations do increase ENaC yield, but their theoretical underpinning is not sound at all.[Recall that CKO channels have the following mutations in addition to protease site knockouts: &alpha;C63A, &beta;C30A, and &gamma;C33,41A]{.aside}
+Channels with either one of &gamma;C33A and/or &gamma;C41A exhibit reduced current compared with wild type despite no change in surface expression [@mukherjee14].
+Reduction in the double mutant currents is a result both of decreased P~O~ and increased sodium self inhibition.
+&gamma;C33 and C41 border the HG motif &mdash; any disruption here might have serious consequences on the physiological relevance of a resolved TMD structure.
+Beyond the concerning question of whether the mutant channels would then recapitulate physiological ENaC gating processes, they clearly act in opposition to the goal of creating channels biased to the open state in CKO/DEG.
+
+Conversely, if the goal is to disrupt palmitoylated sites (which, nominally, it was not), why are &alpha;C63 and &beta;C30 knocked out when they are known not to be palmitoylated in the cell [@mueller10]?
+Or, if the goal is to knock out *all* potential palmitoylation sites, why are the majority left un-mutated?
+Fundamentally, the CKO mutations are logically inconsistent and should either be abandoned or consolidated behind a single theory of action.
+
+### Acid shock
+
+I briefly tried "acid shocking" ENaC during the purification.
+My thinking was that poorly folded ENaC would be the first to aggregate under stressful conditions, leaving behind higher quality material.
+Similar treatments could have been high temperature or salt concentrations &mdash; there was nothing theoretically special about pH aside from the fact that ENaC and channels like it are sensitive to pH.
+I did not notice a difference in total yield (beyond the losses expected from salt exchange alone), leading me to believe that the procedure did not have any real effect on ENaC, regardless of its folding state.
+Additionally, maps made with acid-shocked material (CKO digitonin and CKO/DEG difab) are not of substantially higher quality than the other, un-shocked maps.
 
 <!-- Move this to the end of content so the margins are right in citations -->
 :::{.content-hidden unless-format="pdf"}
