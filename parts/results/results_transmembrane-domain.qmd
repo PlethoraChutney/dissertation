@@ -140,7 +140,11 @@ Moreover, addition of ENaC in any amount seemed to disrupt the empty vesicles.
 It is likely, then, that the ENaC is not properly folded, or that the addition of concentrated digitonin disrupts the vesicles on its own.
 A good next step in the development of this assay would be a positive control with ASIC or some other sodium channel.
 
+<!-- TODO: reorder the reagent highlights for both of these -->
+
 ![The Na^+^ flux assay reliably measures flux through empty vesicles composed of a variety of lipid mixes. Lipid mixes (colors) were tested for the ability to form vesicles as measured by the flux assay. Three different methods of forming vesicles were tested (facets).](figures/flux-data/Exp163-combined.png){#fig-flux-empty}
+
+<!-- TODO: keep only the two-day dialysis -->
 
 ![The flux assay was performed with two lipid mixes (columns) and two vesicle formation methods (rows). In addition to the buffer control (grey), three ENaC:lipid ratios were tested: no ENaC, 1:600, and 1:200 (increasing color saturation). None of these show a decrease in fluorescence with addition of CCCP, indicating that there was no Na^+^ flux in any mixture.](figures/flux-data/Exp164-combined.png){#fig-flux-enac}
 
