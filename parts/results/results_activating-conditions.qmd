@@ -7,23 +7,27 @@ Finally, I highlight the extensive surface glycosylation I am able to resolve in
 
 ## ECD conformation is unchanged by trypsin cleavage
 
+![In this section I show that cleavage of mouse ENaC with trypsin does not induce any detectable rearrangement of the ECD](figures/trypsin-western/cleavage-cartoon.png){#fig-trypsin-cartoon}
+
 ENaC can reliably be opened by trypsin treatment[@caldwell2004].
 Additionally, the inhibitory peptide is easily resolved in all of my ECD maps.
-I wondered whether treatment with trypsin would result in movement of the finger and thumb domains as the model of ASIC-like gating movements predicts.[Recall that when protons bind ASIC's acidic pocket, the finger and thumb move approximately 8&nbsp;&Aring; closer together [@yoder2018].]{.aside}
-It's important to note here that I had significant help from Arpita Bharadwaj, who purified and did initial characterization of the mouse material for these grids.
+I wondered whether treatment with trypsin would result in movement of the finger and thumb domains as the model of ASIC-like gating movements predicts (@fig-trypsin-cartoon).[Recall that when protons bind ASIC's acidic pocket, the finger and thumb move approximately 8&nbsp;&Aring; closer together [@yoder2018].]{.aside}
+It's important to note here that I had significant help from Arpita Bharadwaj, who performed the purification and initial characterization of the mouse material for these grids.
 Both uncleaved and trypsin-treated mouse ENaC were of similar map quality (3.24 and 3.30 &Aring; respectively with whole-protein masks).
 
-<!-- TODO: split up this figure? -->
+![Purified ENaC is cleaved by trypsin. **A**: Western blot for &alpha; (left) and &gamma; (right) ENaC. Purified mouse protein was treated with trypsin and aprotinin as indicated. Bands corresponding to full-length subunits are marked with an asterisk. **B**: Silver stain of material with and without trypsin treatment.](figures/trypsin-western/western-and-silver.png){#fig-cleavage-biochemistry}
 
-Biochemical analyses show that trypsin treatment cleaves both the &alpha; and &gamma; subunits (@fig-trypsin-treatment A, B).
-Additionally, trypsin treatment of *X. laevis* oocytes expressing mouse ENaC~&alpha;&beta;&gamma;~ show the expected increase in amiloride sensitive current (@fig-trypsin-treatment C).
-However, aside from the disappearance of the inhibitory peptide, the ECD is otherwise superimposable (RMSD 0.440&nbsp;&Aring;; @fig-trypsin-treatment D, E).
+![Trypsin treatment increases amiloride-sensitive currents in oocytes. **Left**: representative amiloride-sensitive current before (cyan) and after (orange) trypsin treatment. Only Na^+^ current is shown. **Right**: Average currents for all eight oocytes measured. All currents are scaled to pre-trypsin Na^+^ current to account for differential cell size and expression. Error bars represent 95% confidence interval. Values for individual oocytes are plotted as lines.](figures/trypsin-western/oocytes.png){#fig-cleavage-oocytes}
+
+![cryoEM maps of mouse ENaC &gamma; (left) and &alpha; (right) subunit GRIP domains without (yellow) and with (purple) trypsin treatment. The inhibitory peptide is colored in each map.](figures/trypsin-western/maps-only.png){#fig-cleavage-maps}
+
+Biochemical analyses show that trypsin treatment cleaves both the &alpha; and &gamma; subunits (@fig-cleavage-biochemistry).
+Additionally, trypsin treatment of *X. laevis* oocytes expressing mouse ENaC~&alpha;&beta;&gamma;~ show the expected increase in amiloride sensitive current (@fig-cleavage-oocytes).
+However, aside from the disappearance of the inhibitory peptide, the ECD is otherwise superimposable (RMSD 0.440&nbsp;&Aring;; @fig-cleavage-maps).
 The finger and thumb do not shift even a fraction of what the ASIC-like model would predict.
 Based on the observed cryoEM map density, only the &gamma; subunit GRIP domain is released from the channel despite the fact that biochemical characterization indicates both are digested by trypsin.
 I also note that the entire GRIP domain, not just the inhibitory peptide, has reduced map density in the trypsin-treated sample.
 This suggests that the entire grip domain might be released from the subunit, but of course it's equally possible that release of the inhibitory peptide results in increased GRIP flexibility, which blurs out the map.
-
-![Trypsin cleavage does not rearrange the ECD. **A**: Western blot of &alpha;ENaC and &gamma;ENaC. Samples were treated with trypsin (10&nbsp;&mu;g/mL for 5 minutes) and aprotinin (10 mg/mL) as indicated. Bands corresponding to expected uncleaved &alpha;ENaC and &gamma;ENaC are marked with an asterisk. **B**: Silver-stained SDS-PAGE gel of mouse ENaC treated with trypsin indicates cleavage of all subunits. **C**: Electrophysiological recordings of mouse ENaC expressed in *X. laevis* oocytes. **D** and **E**: cryoEM maps of the &gamma; and &alpha; subunits, respectively. The inhibitory peptide is colored in each panel, corresponding to the uncleaved (yellow, top) or cleaved (purple, bottom) map. A cartoon representation of the ECD is presented in the center to orient the reader, with the inhibitory peptide displayed as spheres.](figures/trypsin-western/trypsin-western.png){#fig-trypsin-treatment}
 
 These results are incompatible with a large-scale movement of the ECD upon trypsin digestion.
 The existence of some &gamma; GRIP density indicates that the trypsin-treated map is an ensemble of particles which have and have not released the &gamma; GRIP domain.
