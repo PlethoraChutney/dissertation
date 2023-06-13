@@ -2,7 +2,7 @@
 execute: 
   freeze: auto
 ---
-# The Transmembrane Domain Remains Elusive
+# The Transmembrane Domain Remains Elusive {#sec-chapter-tmd}
 
 One of the long-standing goals of our lab is to solve the structure of the ENaC TMD.
 Such a structure would provide valuable insight into the source of ENaC's spectacular selectivity for sodium over potassium.
@@ -183,8 +183,3 @@ My thinking was that poorly folded ENaC would be the first to aggregate under st
 Similar treatments could have been high temperature or salt concentrations &mdash; there was nothing theoretically special about pH aside from the fact that ENaC and channels like it are sensitive to pH.
 I did not notice a difference in total yield (beyond the losses expected from salt exchange alone), leading me to believe that the procedure did not have any real effect on ENaC, regardless of its folding state.
 Additionally, maps made with acid-shocked material (CKO digitonin and CKO/DEG difab) are not of substantially higher quality than the other, un-shocked maps.
-
-<!-- Move this to the end of content so the margins are right in citations -->
-:::{.content-hidden unless-format="pdf"}
-\newgeometry{left=1in, right=1in}
-:::

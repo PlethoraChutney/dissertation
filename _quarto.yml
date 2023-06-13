@@ -15,8 +15,8 @@ book:
        - parts/introduction/intro_enac-in-the-body.qmd
     - part: parts/results.qmd
       chapters:
-        - parts/results/results_activating-conditions.qmd
         - parts/results/results_transmembrane-domain.qmd
+        - parts/results/results_activating-conditions.qmd
     - parts/references.qmd
   appendices: 
     - parts/appendices/mat-meth.qmd

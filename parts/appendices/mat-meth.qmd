@@ -255,11 +255,9 @@ The four constructs I present here can broadly be split into those I expect to b
 All human channels in this work have mutant furin sites (&alpha;R178A R204A and &gamma;R138A).
 Additionally, all human channels are "cysteine knock-out" (CKO) mutants, with the following mutations: &alpha;C63A, &beta;C30A, and &gamma;C33A C41A.
 Some (but not all) cysteines in the ENaC TMD are known to be palmitoylated[@mukherjee14; @mueller10; @mueller12].
-CKO channels express at approximately eight times the yield of wild-type-like channels, with similar electrophysiological traits (@fig-ephys).
+CKO channels express at approximately eight times the yield of wild-type-like channels, with similar electrophysiological traits.
 Mouse channels presented in this work have no mutations from the consensus gene.
 I expect mouse and CKO channels to be closed.
-
-![I/V curves for human CKO and CKO/DEG channels. Values are normalized per-cell to the inward current at -80 mV before trypsin treatment. Cells were treated with trypsin for five minutes before being re-recorded. Each point is the average of three cells. Error bars represent +/- one standard deviation.](figures/matmeth/ephys/491-mean-iv.png){#fig-ephys}
 
 DEG channels have two mutations: &beta;S520K and &alpha;T240W.
 The former mutation at what has been named the "DEG site" holds the channel in an open state regardless of proteolytic cleavage state[@snyder2000].
