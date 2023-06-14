@@ -3,10 +3,13 @@
 ENaC is a highly-specific triheteromeric sodium channel expressed throughout the human body.
 The channel comprises one copy each of the &alpha;, &beta;, and &gamma; subunits.
 ENaC is thought to be activated by proteolytic removal of a portion of its extracellular domain, and is potently inhibited by a small molecule called amiloride and its derivatives.
-<!-- TODO: ENaC mechanism crossref --> delves more deeply into the suspected molecular mechanism of ENaC and the source of its selectivity.
+<!-- TODO: ENaC mechanism crossref --> delves more deeply into the suspected molecular mechanism of ENaC gating and the source of its selectivity.
 However, I will begin with a background in the physiological functions of the channel, especially as it relates to human health.
+
 I focus on the systems for which we best understand ENaC's role, the lung and kidney, before moving on to other systems which provide important information about ENaC but have a smaller body of research.
 I will finish the chapter with an overview of the molecular mechanisms of ENaC regulation.
+While this chapter may seem unnecessarily detailed for our purposes, I believe it is important to understand both ENaC's role in several human diseases, as well as the degree to which mouse models fail to recapitulate those diseases.
+This understanding is important when considering the limitations inherent to functional work performed in mouse tissue or on mouse proteins.
 
 ## ENaC in the body {#sec-intro_enac-in-body}
 ### ENaC in the kidney {#sec-intro_liddle}
@@ -32,6 +35,12 @@ Study of ENaC surface dwell time is complicated by a reserve pool maintained by 
 ENaC lacking the PY motif cannot be pulled back in from the membrane, thus increasing sodium permeability by increasing *N* rather than the conductivity or P~O~ of the channels [@schild1995; @abriel1999; @lu2007].[The &alpha; subunit does have a PY motif, but no Liddle syndrome mutation of the &alpha; PY has been described. This is discussed further in @sec-intro_nedd42-enac.]{.aside}
 The remaining minority of described Liddle syndrome mutations (including the sole ENaC~&alpha;~ mutation) which do not affect PY-motif binding instead directly augment channel P~O~ [@tetti2018].
 Liddle syndrome is typically treated with small molecules that block ENaC (amiloride or triamterene) and a low-salt diet.
+
+Mouse models of Liddle syndrome complicate the situation somewhat.
+Mice with homozygous mutant Liddle &beta;ENaC fed a normal salt diet do not develop the characteristic high blood pressure, low potassium, and acidosis as humans do [@pradervand1999].
+Instead, these phenotypes only develop with a high-salt diet.
+Moreover, these mice are still able to retrieve ENaC from the cell surface in the colon (unlike human Liddle patients) [@bertog2008].
+It is thus not clear that the mouse model of Liddle syndrome is fully applicable to the human disease.
 
 Loss-of-function mutations also cause severe phenotypes.
 Type 1 pseudohypoaldosteronism (PHA1) was first described in a severely dehydrated infant who did not respond to aldosterone treatment [@cheek1958].
@@ -65,7 +74,7 @@ Double-mutant mice which overexpress &beta;ENaC and CFTR have normal Cl^-^ secre
 Additionally, Liddle syndrome patients have increased sodium absorption throughout their body but neither they nor Liddle syndrome mice develop lung disease [@mall2010].
 Human patients with *reduced* &beta;ENaC function develop CF-like phenotypes of lung infection and elevated sweat chloride, but PHA1 patients produce excessive airway liquid without infection [@sheridan2005; @kerem1999].
 There are many hypothesis as to how these contradictions may be resolved, reviewed well by Collawn and colleagues, but more work on the subject is desperately needed [@collawn2012].
-One important point is that the mouse model does not recapitulate human disease well.
+One important point is that, as with Liddle syndrome, the mouse CF model does not recapitulate human disease well.
 Indeed, mice with CFTR mutations which are pathogenic in humans do not develop lung disease at all [@grubb1999].
 
 ### ENaC in the tongue
@@ -94,7 +103,7 @@ Homomeric &alpha; channels may instead carry the amiloride-sensitive salt taste.
 Perhaps more importantly, salt taste in humans is insensitive to amiloride [@desor1989].
 Additionally, humans express &delta;ENaC (a fourth subunit which is a pseudogene in rats and mice) in the taste bud, rather than &alpha;ENaC [@stahler2008].
 
-The mouse model of taste, much like that of cystic fibrosis, seems to be a poor facsimile of the process in humans.
+The mouse model of taste, much like that of cystic fibrosis and Liddle syndrome, seems to be a poor facsimile of the process in humans.
 Despite this fact, salty taste illustrates an important unanswered question regarding ENaC: what is the full compliment of physiologically-relevant functional ENaC channels?
 As covered in <!-- TODO: reference stoichiometry section -->, the two canonical channels comprise one each of the &beta;, &gamma;, and either &alpha; or &delta; subunits.
 However, the combination of &alpha;ENaC knock-out mice and ENaC expression patterns makes it apparent that channels with only a single ENaC subunit, while rare, are physiologically relevant.
@@ -135,17 +144,20 @@ Fortunately, the patterns observed in the kidney largely hold in other tissues.
 
 ### Aldosterone
 
-When the kidney is not receiving enough salt, it initiates a cascade to increase activity of ENaC via the hormone aldosterone.[For a review of the Renin-Angiotensin-Aldosterone System (RAAS) consider Weir and Dzau [@wiesner07]. For a review more focused on aldosterone alone, Stockand's is quite thorough and readable [@stockand2002].]{.aside}
-Aldosterone is therefore the main hormonal control over sodium homeostasis.
+Aldosterone is the primary mineralocorticoid hormone and the main mechanism by which the body regulates its sodium levels.
+When the kidney is not receiving enough salt, it initiates a cascade to (among many other effects) increase activity of ENaC via the hormone aldosterone.[For a review of the Renin-Angiotensin-Aldosterone System consider Weir and Dzau [@weir1999]. For a review more focused on aldosterone alone, Stockand's is quite thorough and readable [@stockand2002].]{.aside}
+ENaC is also regulated by other hormonal signals, including vasopressin and insulin, but a review of those mechanisms is outside the scope of this work.
+For the interested reader, Garty and Palmer's review of the complete picture of ENaC regulation is quite thorough if a bit old [@garty97].
+
 Aldosterone response is divided into two phases, aptly named the early and late phases.
 Aldosterone increases ENaC P~O~ in part via increased activity of serum and glucocorticoid-regulated kinase (SGK, @sec-intro_sgk) [@kemendy1992; @naray-fejes-toth2000].
-SGK both directly regulates ENaC P~O~ and the ability of Nedd4-2 to mark ENaC for degradation [@kellenberger98; @chen1999].
+SGK both directly regulates ENaC P~O~ and the ability of Nedd4-2 (@sec-intro_nedd42) to mark ENaC for degradation [@kellenberger98; @chen1999].
 Aldosterone also stimulates phosphatidylinositol 3-kinase (PI3K), which increases ENaC P~O~ [@paunescu2000].
 <!-- TODO: refer to PI3K section -->
 
 Aldosterone's late phase increase of sodium permeability is mediated both by direct increase of ENaC gene expression and movement of ENaC from an internal pool to the apical membrane [@asher1996; @frindt09; @weisz2000; @loffing2000].
-In some studies, aldosterone increases transcription of the &beta;- and &gamma;- (but not &alpha;-) ENaC genes [@asher1996; @may1997; @stockand2000; @escoubet1997].
-In others, increases in &alpha;ENaC transcription are also (or exclusively) observed [@masilamani1999; @dagenais2001; @loffing2000; @mick2001; @dijkink1999].
+In some studies, aldosterone increases transcription of the &beta;- and &gamma;- (but not &alpha;-) ENaC genes [@asher1996; @may1997; @stockand2000; @escoubet1997; @bertog2008].
+In others, increases in &alpha;ENaC transcription are also (or exclusively) observed [@masilamani1999; @dagenais2001; @loffing2000; @mick2001; @dijkink1999; @loffing2001].
 The effect of aldosterone does seem to be consistent within tissue types: most studies demonstrating an increase in &alpha;ENaC transcription are performed in the kidney, while aldosterone increases &beta; and &gamma; transcription in the colon.
 ENaC transcription in the lung is less dependent on circulating aldosterone levels than other tissues [@renard1995].
 
@@ -205,10 +217,30 @@ Differential affinity among the WW domains is observed in other species as well 
 
 Once ENaC is bound, the HECT domain begins ubiquitinating N-terminal lysines on the channel [@staub97].
 Although lysines in each subunit are ubiquitinated, the &gamma; subunit lysines are required for ubiquitination of &alpha; and &beta;.
-HECT domains are capable of serial ubiquitin addition, building long chains of ubiquitin by connecting the C-terminus of the new ubiquitin to the N-terminus or a lysine on the growing chain [@kim2009].
+Ubiquitination of ENaC by Nedd4-2 is opposed by constitutive deubiquitination by several deubiquitinating enzymes (DUBs) [@butterworth2007; @fakitsas2007; @ruffieux-daidié08].
+Interestingly, DUBs increase the relative amount of cleaved ENaC at the cell surface.
+It is not known whether this effect is a direct result of DUB binding and action, or a simple follow-on effect of longer surface dwell time due to reduced recycling.
+
+HECT domains are capable of serial ubiquitin addition, in which the C-terminus of ubiquitin is connected to the N-terminus or one of several lysines on the nascent chain [@kim2009].
 Different chains determine the ultimate fate of the tagged protein; Nedd4-2 preferentially produces chains of ubiquitin connected by lysine 63 (K63 chains) [@maspero11].
 K63 chains most often send substrates somewhere other than the proteasome for degradation or recycling.[For a review of the roles different ubiquitin chains play, I recommend Komander and Rape [@komander2012].]{.aside}
 In the specific case of ENaC, some groups have reported lysosomal degradation, while others report a combination of proteasomal and lysosomal targeting [@staub97; @malik2001; @wiemuth07].
+Regardless of ubiquitinated ENaC's ultimate destination, it is clear that the interplay of Nedd4-2 and ENaC is critical to the overall sodium permeability of the cell.
 
-### SGK {#sec-intro_sgk}
+### PI3K and SGK {#sec-intro_sgk}
+
+Serum- and glucocorticoid-induced kinase (SGK) is a serine/threonine kinase expressed in several tissues including heart, brain, lung, and kidney [@waldegger1997].
+Transcription of SGK is directly induced by a multitude of signals, including aldosterone [@naray-fejes-toth1999; @naray-fejes-toth2000; @chen1999].
+Mice lacking SGK present a salt-wasting phenotype and high serum aldosterone, similar to the symptoms seen in PHA1 patients (@sec-intro_liddle) [@wulff2002].
+SGK increases ENaC surface expression and currents by disrupting the Nedd4-2/ENaC interaction by phosphorylating Nedd4-2 [@debonneville2001; @loffing2001; @snyder2004].[Interestingly, SGK has an internal PY motif which is critical for Nedd4-2 binding [@snyder2002]. It's not known whether this PY motif, 14-3-3 bridging, or both are necessary for Nedd4-2 ubiquitination of SGK.]{.aside}
+SGK is itself, in turn, ubiquitinated by Nedd4-2 [@zhou2005].
+This establishes a tight negative feedback loop which imparts a sharper temporal dependence of SGK expression on aldosterone.
+SGK also directly interacts with and phosphorylates &alpha;ENaC[@diakov2004; @thomas2011].
+This association increases ENaC activity, explaining the observation that SGK also increases currents from channels lacking the C-terminal PY motif [@delarosa1999].
+
+Phosphorylated Nedd4-2 is bound and inhibited by 14-3-3, which is a protein that binds other phosphorylated regulatory proteins [@muslin1996; @ichimura2005].
+Humans express seven isoforms of 14-3-3; at least the &beta;, &epsilon;, and &eta; isoforms are known to dimerize and regulate Nedd4-2 [@liang2008; @pohl2021].[Pohl and colleagues demonstrate that all seven isoforms are able to bind at least one of the two 14-3-3 binding sites in Nedd4-2, but this does not necessarily translate to inhibition of Nedd4-2 function [@pohl2021].]{.aside}
+14-3-3 binds with a high affinity to Nedd4-2 phosphorylated at serines 342 and 448.
+14-3-3 binding reduces the solvent accessibility of and rearranges WW domains 3 and 4 (essential for ENaC binding) and the catalytic cysteine [@pohl2021; @joshi2022].
+It is likely, then, that 14-3-3 regulates Nedd4-2 both by blocking its catalytic activity and preventing its binding to ENaC.
 

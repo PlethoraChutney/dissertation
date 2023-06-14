@@ -118,7 +118,9 @@ I note that all ENaC maps produced to date also show a consistent tilt of the mi
 I propose therefore that this tilt may in part be caused by the presence of the micelle-proximal glycans, which are only missing from &gamma;ENaC (@fig-micelle-glyc C).
 Their presence in the nanodisc map may indicate that they perform a similar role in a native cell membrane context.
 
-## A misfolded TMD may uncouple ECD motions
+## How does this change our understanding of the ECD?
+
+### A misfolded TMD may uncouple ECD motions
 
 Regardless of the treatment applied, I cannot measure any change in the ECD.
 This stability stands in stark contrast to the highly dynamic ECD of the gating model widely assumed in the field and based on that of ASIC1[@kashlan11; @yoder2018].
@@ -153,9 +155,8 @@ ENaC does not seem amenable to the standard means of membrane protein purificati
 It is possible that finding a more-stable homolog would improve the quality of the TMD, as our mouse maps have significantly better TMD density than our human maps.
 It is also worth considering the fact that ENaC's TMD may require some as-yet unknown binding partner to organize a stable pore.
 
-## The acidic pocket's uncertain role in sodium self-inhibition
+### The acidic pocket's uncertain role in sodium self-inhibition
 
-I also present here the first structures of ENaC in low-Na^+^ buffers.
 Previous reports suggested that rearrangement of an acidic pocket in the &alpha; finger plays a key role in SSI[@kashlan2015].
 It is therefore highly surprising that this pocket does not change upon release of Na^+^.
 However, there are species differences in ENaC SSI, and the functional work describing this acidic pocket was all performed on mouse ENaC, while our high- and low-Na^+^ models are both of human ENaC[@collier2009; @kashlan2015; @maarouf2009].
@@ -167,9 +168,9 @@ This would effectively trap the channel in a closed state, rather than some thir
 Without observing the complete gating cycle of ENaC and the concomitant conformational changes it is impossible to make any firm conclusions about the precise mechanism of SSI.
 I therefore hope that our models will serve as a useful guide in future studies on this acidic pocket, as well as a search for other potential sources of SSI.
 
-## Glycans may further differentiate ENaC subunits
+### Glycans may further differentiate ENaC subunits
 
-I also present the first structural study of ENaC's extensive glycosylation.
+These maps represent the first structural study of ENaC's extensive glycosylation.
 I must emphasize that these models all arise from particles which have only high-mannose glycosylation.
 However, glycosylation is required for ENaC function and trypsin digestion and our channels have the expected electrophysiological properties and respond to trypsin treatment in the expression system (@fig-ephys)[@kashlan2018].
 I are therefore confident that the high-mannose glycans are sufficient for mechanistic inference.
