@@ -1,4 +1,4 @@
-# ENaC At The Organism Scale
+# ENaC Physiology and Regulation
 
 ENaC is a highly-specific triheteromeric sodium channel expressed throughout the human body.
 The channel comprises one copy each of the &alpha;, &beta;, and &gamma; subunits.
@@ -139,6 +139,9 @@ These results indicate that ENaC is one of the players in this process.
 ![Simplified model of ENaC regulation in a principal cell of the distal nephron in the kidney.](figures/kidney-cartoon/kidney-cartoon.png){#fig-intro_kidney-reg}
 
 It should come as no surprise that expression of ENaC is under tight control, given the number of important processes ENaC is implicated in.
+In this section I provide a general, by no means exhastive review of proteins known to regulate ENaC.
+The exact molecular mechanisms by which ENaC P~O~ is modulated are covered in
+<!-- TODO: reference regulation chapter. -->
 This overview of ENaC regulation is necessarily brief and focuses on regulation in the kidney (@fig-intro_kidney-reg), since that system is best understood.
 Fortunately, the patterns observed in the kidney largely hold in other tissues.
 
@@ -151,9 +154,8 @@ For the interested reader, Garty and Palmer's review of the complete picture of 
 
 Aldosterone response is divided into two phases, aptly named the early and late phases.
 Aldosterone increases ENaC P~O~ in part via increased activity of serum and glucocorticoid-regulated kinase (SGK, @sec-intro_sgk) [@kemendy1992; @naray-fejes-toth2000].
-SGK both directly regulates ENaC P~O~ and the ability of Nedd4-2 (@sec-intro_nedd42) to mark ENaC for degradation [@kellenberger98; @chen1999].
-Aldosterone also stimulates phosphatidylinositol 3-kinase (PI3K), which increases ENaC P~O~ [@paunescu2000].
-<!-- TODO: refer to PI3K section -->
+SGK's effect has mainly been attributed to inhibition of Nedd4-2 (@sec-intro_nedd42), while some labs also report a direct increase in ENaC P~O~ [@kellenberger98; @chen1999].
+Aldosterone also stimulates phosphatidylinositol 3-kinase (PI3K), which increases ENaC P~O~ by increasing its affinity for cholesterol [@paunescu2000].
 
 Aldosterone's late phase increase of sodium permeability is mediated both by direct increase of ENaC gene expression and movement of ENaC from an internal pool to the apical membrane [@asher1996; @frindt09; @weisz2000; @loffing2000].
 In some studies, aldosterone increases transcription of the &beta;- and &gamma;- (but not &alpha;-) ENaC genes [@asher1996; @may1997; @stockand2000; @escoubet1997; @bertog2008].
@@ -227,15 +229,15 @@ K63 chains most often send substrates somewhere other than the proteasome for de
 In the specific case of ENaC, some groups have reported lysosomal degradation, while others report a combination of proteasomal and lysosomal targeting [@staub97; @malik2001; @wiemuth07].
 Regardless of ubiquitinated ENaC's ultimate destination, it is clear that the interplay of Nedd4-2 and ENaC is critical to the overall sodium permeability of the cell.
 
-### PI3K and SGK {#sec-intro_sgk}
+### SGK {#sec-intro_sgk}
 
 Serum- and glucocorticoid-induced kinase (SGK) is a serine/threonine kinase expressed in several tissues including heart, brain, lung, and kidney [@waldegger1997].
 Transcription of SGK is directly induced by a multitude of signals, including aldosterone [@naray-fejes-toth1999; @naray-fejes-toth2000; @chen1999].
-Mice lacking SGK present a salt-wasting phenotype and high serum aldosterone, similar to the symptoms seen in PHA1 patients (@sec-intro_liddle) [@wulff2002].
+Mice lacking SGK present a salt-wasting phenotype and high serum aldosterone, similar to the symptoms seen in PHA1 patients (@sec-intro_liddle) [@wulff02].
 SGK increases ENaC surface expression and currents by disrupting the Nedd4-2/ENaC interaction by phosphorylating Nedd4-2 [@debonneville2001; @loffing2001; @snyder2004].[Interestingly, SGK has an internal PY motif which is critical for Nedd4-2 binding [@snyder2002]. It's not known whether this PY motif, 14-3-3 bridging, or both are necessary for Nedd4-2 ubiquitination of SGK.]{.aside}
-SGK is itself, in turn, ubiquitinated by Nedd4-2 [@zhou2005].
+SGK is itself, in turn, ubiquitinated by Nedd4-2 [@zhou05].
 This establishes a tight negative feedback loop which imparts a sharper temporal dependence of SGK expression on aldosterone.
-SGK also directly interacts with and phosphorylates &alpha;ENaC[@diakov2004; @thomas2011].
+SGK also directly interacts with and phosphorylates &alpha;ENaC[@diakov2004; @thomas11].
 This association increases ENaC activity, explaining the observation that SGK also increases currents from channels lacking the C-terminal PY motif [@delarosa1999].
 
 Phosphorylated Nedd4-2 is bound and inhibited by 14-3-3, which is a protein that binds other phosphorylated regulatory proteins [@muslin1996; @ichimura2005].
@@ -244,3 +246,13 @@ Humans express seven isoforms of 14-3-3; at least the &beta;, &epsilon;, and &et
 14-3-3 binding reduces the solvent accessibility of and rearranges WW domains 3 and 4 (essential for ENaC binding) and the catalytic cysteine [@pohl2021; @joshi2022].
 It is likely, then, that 14-3-3 regulates Nedd4-2 both by blocking its catalytic activity and preventing its binding to ENaC.
 
+## Conclusion
+
+ENaC is a tightly-regulated ion channel implicated in a vast array of biological functions, from blood pressure control to the pleasurable taste of salty food.
+I have provided here a brief overview of the tissues in which ENaC expression is responsive to aldosterone (the body's main salt regulatory hormone) as well as the proteins involved on coordinating its expression.
+I hope I have also highlighted the great amount we do not know about the channel.
+ENaC's function and regulation in the kidney is well-studied, but the trends observed in that tissue do not translate well to the lung (in which Liddle syndrome patients do not develop disease) or tongue (in which no heterotrimeric channels seem to exist).
+Additionally, the transcriptional and translational responses to aldosterone differ in different tissues.
+
+Regardless, a deeper understanding of ENaC is necessary for a deeper understanding of the disorders and diseases covered in this chapter.
+To that end, I next present some background on what we know about ENaC currents and what we can infer about its molecular mechanism of gating based on related channels.

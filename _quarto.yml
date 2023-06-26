@@ -13,6 +13,7 @@ book:
     - part: parts/introduction.qmd
       chapters:
        - parts/introduction/intro_enac-in-the-body.qmd
+       - parts/introduction/intro_enac-as-a-channel.qmd
     - part: parts/results.qmd
       chapters:
         - parts/results/results_transmembrane-domain.qmd
@@ -65,19 +66,23 @@ format:
       - text: |
           \usepackage{fontspec}
           \usepackage{newunicodechar}
-          \newfontfamily\symbolfont{Fira Sans}
+          \newfontfamily\expandedfont{Fira Sans}
+          \newfontfamily\symbolfont{STIX Two Math}
           \setmainfont{Charter}
           \setsansfont{Montserrat}
           \setmonofont{JetBrains Mono NL}
 
-          \DeclareTextFontCommand{\textfallback}{\symbolfont}
+          \DeclareTextFontCommand{\textfallback}{\expandedfont}
+          \DeclareTextFontCommand{\symbolfallback}{\symbolfont}
           \newunicodechar{→}{\textfallback{→}}
           \newunicodechar{₂}{\textfallback{₂}}
           \newunicodechar{⁻}{\textfallback{⁻}}
           \newunicodechar{ă}{\textfallback{ă}}
           \newunicodechar{≠}{\textfallback{≠}}
+          \newunicodechar{≅}{\symbolfont{≅}}
           % naughty naughty but who cares, just don't use a non-breaking hyphen
           \newunicodechar{‑}{\textfallback{-}}
+          \newunicodechar{ }{ }
 
           \usepackage{ucharclasses}
           \setTransitionsForGreek{\begingroup\symbolfont}{\endgroup}
