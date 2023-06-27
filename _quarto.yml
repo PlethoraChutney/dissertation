@@ -69,7 +69,7 @@ format:
           \newfontfamily\expandedfont{Fira Sans}
           \newfontfamily\symbolfont{STIX Two Math}
           \setmainfont{Charter}
-          \setsansfont{Montserrat}
+          \setsansfont{Futura}
           \setmonofont{JetBrains Mono NL}
 
           \DeclareTextFontCommand{\textfallback}{\expandedfont}
@@ -79,13 +79,13 @@ format:
           \newunicodechar{⁻}{\textfallback{⁻}}
           \newunicodechar{ă}{\textfallback{ă}}
           \newunicodechar{≠}{\textfallback{≠}}
-          \newunicodechar{≅}{\symbolfont{≅}}
+          \newunicodechar{≅}{\symbolfallback{≅}}
           % naughty naughty but who cares, just don't use a non-breaking hyphen
           \newunicodechar{‑}{\textfallback{-}}
           \newunicodechar{ }{ }
 
           \usepackage{ucharclasses}
-          \setTransitionsForGreek{\begingroup\symbolfont}{\endgroup}
+          \setTransitionsForGreek{\begingroup\expandedfont}{\endgroup}
 
           \usepackage{lscape}
           \newcommand{\blandscape}{\begin{landscape}}

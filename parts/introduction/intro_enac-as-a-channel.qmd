@@ -1,6 +1,7 @@
 # ENaC Gating and Currents
 
-In this chapter I begin with an overview of proteins that directly act upon ENaC to modify its P~O~ &mdash; proteases, kinases, and small molecules.
+<!-- TODO: I actually think we should go currents -> structure and reg together -->
+In this chapter I begin with an overview of proteins that directly act upon ENaC to modify its P~O~ --- proteases, kinases, and small molecules.
 I next indulge in a brief evolutionary detour to provide some context in the form of closely-related channels.
 Finally, I discuss characteristic traits of ENaC currents and the hypothesized molecular mechanism by which the channel opens.
 
@@ -36,9 +37,11 @@ However, when mice are fed a low-sodium diet, the appearance of cleaved ENaC and
 It is thus not obvious that the direct cleavage/current relationship observed *in vitro* is true *in vivo*.
 What's more, while proteolytic cleavage may be the main pathway by which ENaC is opened, ENaC is also sensitive to other signals.
 
-### The membrane
+### The membrane {#sec-intro-membrane}
 
-Like many membrane proteins, ENaC is sensitive to lipid composition, especially phospholipids.
+#### Phospholipids {#sec-intro-phospholipids}
+
+Like many ion channels, ENaC is modulated by phospholipids.
 For instance, ENaC is known to segregate into lipid rafts [@hill02; @hill07].[Lipid rafts are proposed regions of the cell membrane enriched in cholesterol and sphingolipids. While there is clearly some kind of spatial-compositional heterogeneity in cell membranes, the existence of lipid rafts in particular is still an open question [@shaw2006; @hill07].]{.aside}
 Cholesterol alone does not activate the channel, but it does facilitate the interaction between phosphatidylinositol and binding sites in the &beta; and &gamma; subunits [@archer2020; @zhai19].
 This interaction is absolutely required for ENaC opening.
@@ -46,6 +49,28 @@ This interaction is absolutely required for ENaC opening.
 Treatment of inside-out patches with phosphatidylinositol bisphosphate (PIP~2~) increases ENaC P~O~ within seconds, and P~O~ is reduced again upon PIP~2~ removal, ruling out the possibility of PIP~2~-induced proteolytic cleavage [@ma2002; @pochynyuk2006].
 Similarly, no change in channel number is observed in these experiments PIP~2~.
 A similar dependence of ENaC current on PIP~2~ levels is observed in mouse trachea [@kunzelmann2005].
-Note that more PIP~2~ than is necessary does not result in greater ENaC currents &mdash; that is, a lack of PIP~2~ reduces ENaC currents but PIP~2~ does not itself potentiate them. [@markadieu2004].
+Note that more PIP~2~ than is necessary does not result in greater ENaC currents --- that is, a lack of PIP~2~ reduces ENaC currents but PIP~2~ does not itself potentiate them [@markadieu2004].
 
-The same study found that phosphatidylinositol triphosphate (PIP~3~) does augment ENaC currents.
+Unlike PIP~2~, phosphatidylinositol triphosphate (PIP~3~) does augment ENaC currents both directly and via a signaling cascade.
+In its immediate effect, PIP~3~ binds &gamma;ENaC just after the second transmembrane domain to rapidly open the channel [@markadieu2004; @tong2004b; @pochynyuk2005].[Interestingly, mutation of negatively-charged residues in the &gamma;ENaC PIP~3~ binding site increases ENaC currents both with *and* without PIP~3~ [@pochynyuk2005].]{.aside}
+PIP~3~ also increases the number of channels at the cell surface in a longer cascade mediated by SGK (@sec-intro_sgk) [@paunescu2000].
+In fact, aldosterone's effect on SGK is mediated by PI3K and PIP~3~ [@tong2004a].
+
+ENaC's dependence on phosphatidylinositols presents a problem.
+PIPs are rare enough in the membrane that, if the lipids and channel were both freely diffusing, the expected P~O~ of ENaC would be far lower than what is observed [@ingolfsson2014; @bao2014].
+MARCKS is a lipid-binding protein which sequesters PIP~2~ and PIP~3~ into regions of high local concentration [@wang2002].
+MARCKS also binds ENaC, potentially anchoring the channel in a region of the membrane with a high enough local concentration PIPs for the proper channel P~O~ [@alli2012].[MARCKS is itself subject to regulation by a wide range of signals, which in turn affect ENaC currents. For instance, ENaC currents depend on Ca^2+^ in an effect mediated by calmodulin and then MARCKS [@alli2015]. In an amusing symmetry, MARCKS is itself regulated by proteolysis [@montgomery2017].]{.aside}
+
+#### Palmitoylation
+
+Palmitoylation is a reversible process in which hydrophobic chains are attached to cysteine residues, anchoring them in the membrane.
+Multiple cysteines in &beta;- and &gamma;ENaC are palmitoylated (but none in &alpha;ENaC), with varying effects [@mueller10; @mueller12; @mukherjee14].
+
+Blocking palmitoylation of two cysteines in &beta;ENaC (in mouse: C43 and C557) significantly reduces ENaC currents [@mueller10].
+This effect is not mediated by differences in trafficking or cleavage but by changes in channel P~O~, specifically increased SSI.
+C43 is suggestively close to the HG motif; it may be that membrane anchoring of this cysteine aids in proper folding of the re-entrant loop and therefore the pore.
+This conjecture is supported by the observation in the same study that C557A mutants have significantly increased unitary conductance.
+
+&gamma;ENaC also has two palmitoylated cysteines, C33 and C41, which straddle that subunit's HG motif [@mukherjee14].
+Again, C&rarr;A mutation of these cysteines increase SSI without affecting surface exposure or channel cleavage.
+Surprisingly, addition of a &beta; palmitoylation mutant to a mutant &gamma; background does not further reduce currents --- put another way, the &gamma; mutations are dominant.

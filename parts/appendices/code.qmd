@@ -195,7 +195,7 @@ data_plot +
 
 We see the data fit well &mdash; we now have a model for the components of our experiment.
 To assess, for instance, the amount of protein in each peak, we could from here use the well-known equations for the area of a gaussian to find the peak area for each population, or just take their height as a heuristic.
-If this simple sum of gaussians model does not fit, you could consider adding a constant (steady baseline&nbsp;&ne;&nbsp;0) or linear function (linearly changing baseline, fitting slope and intercept) to the fit formula.
+If this simple sum of gaussians model does not fit, you could consider adding a constant (for a constant non-zero baseline) or parameters for a linear function (for a linearly changing baseline) to the fit formula.
 
 ### Writing a new processor
 

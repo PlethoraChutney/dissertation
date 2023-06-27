@@ -155,7 +155,8 @@ For the interested reader, Garty and Palmer's review of the complete picture of 
 Aldosterone response is divided into two phases, aptly named the early and late phases.
 Aldosterone increases ENaC P~O~ in part via increased activity of serum and glucocorticoid-regulated kinase (SGK, @sec-intro_sgk) [@kemendy1992; @naray-fejes-toth2000].
 SGK's effect has mainly been attributed to inhibition of Nedd4-2 (@sec-intro_nedd42), while some labs also report a direct increase in ENaC P~O~ [@kellenberger98; @chen1999].
-Aldosterone also stimulates phosphatidylinositol 3-kinase (PI3K), which increases ENaC P~O~ by increasing its affinity for cholesterol [@paunescu2000].
+Aldosterone also stimulates phosphatidylinositol 3-kinase (PI3K) and K-Ras, which physically couples ENaC and PI3K [@paunescu2000; @staruschenko2005].
+Phospholipids have both short- and long-term effects on ENaC currents and are discussed further in @sec-intro-phospholipids.
 
 Aldosterone's late phase increase of sodium permeability is mediated both by direct increase of ENaC gene expression and movement of ENaC from an internal pool to the apical membrane [@asher1996; @frindt09; @weisz2000; @loffing2000].
 In some studies, aldosterone increases transcription of the &beta;- and &gamma;- (but not &alpha;-) ENaC genes [@asher1996; @may1997; @stockand2000; @escoubet1997; @bertog2008].
@@ -229,7 +230,7 @@ K63 chains most often send substrates somewhere other than the proteasome for de
 In the specific case of ENaC, some groups have reported lysosomal degradation, while others report a combination of proteasomal and lysosomal targeting [@staub97; @malik2001; @wiemuth07].
 Regardless of ubiquitinated ENaC's ultimate destination, it is clear that the interplay of Nedd4-2 and ENaC is critical to the overall sodium permeability of the cell.
 
-### SGK {#sec-intro_sgk}
+### SGK and 14-3-3 {#sec-intro_sgk}
 
 Serum- and glucocorticoid-induced kinase (SGK) is a serine/threonine kinase expressed in several tissues including heart, brain, lung, and kidney [@waldegger1997].
 Transcription of SGK is directly induced by a multitude of signals, including aldosterone [@naray-fejes-toth1999; @naray-fejes-toth2000; @chen1999].
