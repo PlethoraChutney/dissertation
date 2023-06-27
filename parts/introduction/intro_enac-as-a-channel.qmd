@@ -36,6 +36,16 @@ However, when mice are fed a low-sodium diet, the appearance of cleaved ENaC and
 It is thus not obvious that the direct cleavage/current relationship observed *in vitro* is true *in vivo*.
 What's more, while proteolytic cleavage may be the main pathway by which ENaC is opened, ENaC is also sensitive to other signals.
 
-## Membrane
+### The membrane
 
-Membrane composition has a large effect on ENaC gating.
+Like many membrane proteins, ENaC is sensitive to lipid composition, especially phospholipids.
+For instance, ENaC is known to segregate into lipid rafts [@hill02; @hill07].[Lipid rafts are proposed regions of the cell membrane enriched in cholesterol and sphingolipids. While there is clearly some kind of spatial-compositional heterogeneity in cell membranes, the existence of lipid rafts in particular is still an open question [@shaw2006; @hill07].]{.aside}
+Cholesterol alone does not activate the channel, but it does facilitate the interaction between phosphatidylinositol and binding sites in the &beta; and &gamma; subunits [@archer2020; @zhai19].
+This interaction is absolutely required for ENaC opening.
+
+Treatment of inside-out patches with phosphatidylinositol bisphosphate (PIP~2~) increases ENaC P~O~ within seconds, and P~O~ is reduced again upon PIP~2~ removal, ruling out the possibility of PIP~2~-induced proteolytic cleavage [@ma2002; @pochynyuk2006].
+Similarly, no change in channel number is observed in these experiments PIP~2~.
+A similar dependence of ENaC current on PIP~2~ levels is observed in mouse trachea [@kunzelmann2005].
+Note that more PIP~2~ than is necessary does not result in greater ENaC currents &mdash; that is, a lack of PIP~2~ reduces ENaC currents but PIP~2~ does not itself potentiate them. [@markadieu2004].
+
+The same study found that phosphatidylinositol triphosphate (PIP~3~) does augment ENaC currents.
