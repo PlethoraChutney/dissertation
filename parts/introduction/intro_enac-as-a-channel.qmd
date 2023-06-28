@@ -17,12 +17,12 @@ I recommend Yoder and colleagues' excellent overview of ASIC's gating mechanism 
 
 ![Cartoon representation of an ENaC subunit. Each domain is labeled, and important functions are noted next to the labels.](figures/domain-cartoon/enac-overview.png){#fig-intro_domain-cartoon}
 
-Each subunit has short intracellular N- and C-terminal tails, two transmembrane helices (TM1 and TM2), and a relatively large extracellular domain (ECD), which is further subdivided into domains named for their vague resemblance of a left hand grasping a ball (@fig-intro_domain-cartoon).
+Each subunit has short intracellular N- and C-terminal tails, two transmembrane helices (TM1 and TM2, which together form the transmembrane domain, TMD), and a relatively large extracellular domain (ECD), which is further subdivided into domains named for their vague resemblance of a left hand grasping a ball (@fig-intro_domain-cartoon).
 All told, the &alpha;, &beta;, and &gamma; subunits are 75, 72, and 74&nbsp;kDa respectively.
 Uncleaved channels typically run a bit higher (between 75 and 90&nbsp;kDa) on SDS-PAGE due to SDS binding and extensive glycosylation.
 <!-- TODO: crossref glyc section -->
 
-### The palm, &beta;-ball, and knuckle
+### Scaffolding &mdash; the palm, &beta;-ball, and knuckle
 The palm (yellow) comprises a twisted &beta;-sheet of seven &beta;-strands (&beta;1, 3, 6, and 9&ndash;12).
 The &beta;-ball forms (as one might expect) a tightly-twisted ball of four &beta;-strands: &beta;2, 4, 5, and 7.
 The knuckle, comprising only a single &alpha;-helix (&alpha;6) is connected to the extracellular end of the palm.
@@ -42,9 +42,38 @@ In ASIC, the knuckle is largely uninvolved in gating and is considered a rather 
 In contrast, ENaC's knuckle is an important source of heterogeneity between the three subunits.
 The carboxyl terminus of &alpha;6 differs between the three subunits, and its interface with the adjacent subunit's finger domain may contribute to the enforcement of a clockwise subunit arrangement [@noreng20].
 
+### Gating &mdash; the finger, thumb, and GRIP
+
+The finger, thumb, and gating relief of inhibition by proteolysis (GRIP) domains form the essential regulatory machinery of the channel.[When we were publishing the first structure of ENaC, we struggled to find a good backronym for GRIP. My suggestion of Good, Really Important Part was rejected.]{.aside}
+The finger domain (blue) comprises three alpha helices (&alpha;1&ndash;3).
+The thumb domain (green) comprises two large helices, &alpha;4 and 5.
+
+The &alpha;- and &gamma;GRIP domains (cyan) are, as the name painstakingly makes clear, expected to be cleaved during channel gating (see @sec-intro_proteolysis).
+The &beta;GRIP is not cleaved during canonical channel opening and is, interestingly, the GRIP for which we have the best structural information.
+We can model a sheet of two anti-parallel pairs of &beta;-strands in &beta;GRIP.
+The GRIP domain shrouds the interface between the finger and thumb, forming extensive contacts between the two.
+
+In ASIC, protonation of an acidic pocket formed by the &beta;-ball, finger, and thumb of a single subunit causes collapse of the thumb toward the finger.
+This pulls the palm (and therefore the TMD) away from the symmetry axis, opening the channel.
+In ENaC, no such acidic residues exist.
+Instead, an aromatic pocket is formed by the finger, thumb, and GRIP domains.
+Based on this similar architecture and a slew of cross linking studies, it is thought that the GRIP domain forms a wedge between the finger and thumb, preventing their collapse [@kashlan2011; @kashlan2012; @balchak2018].
+
+<!-- TODO: an image here would be nice -->
+Indeed, the Kleyman laboratory has identified short segments of the GRIP domain (eight and eleven amino acids in &alpha; and &gamma;ENaC, respectively) which, when flowed over open channels, close them [@carattino2008; @kashlan2010; @passero2010].[The &alpha; peptide is LPHPLQRL, and RFSHRIPLLIF that of the &gamma; subunit.]{.aside}
+These peptides are part of the P1 strand and pack tightly against &alpha;2 of the finger domain.
+We have hypothesized that cleavage and subsequent removal of the P3 strand releases P1 and, therefore, decouples the finger and thumb [@noreng20].
+From here, we propose that the gating mechanism is more-or-less that of ASIC: the finger and thumb collapse, and their movement pulls the palm and TMD away from the pore axis.
+
+Of course, it is unlikely that the ENaC gating states will look *exactly* like those found in ASIC.
+For one, ASIC is symmetric.
+Not only is EnaC not symmetric, but its open state is all-but-guaranteed to be quite asymmetric since &beta;ENaC is not cleaved.
+Another important note is that the currents of ENaC and ASIC are quite different, as discussed in .
+<!-- TODO: reference gating section -->
+
 ## Direct regulation of ENaC
 
-### Proteases
+### Proteases {#sec-intro_proteolysis}
 
 Proteolytic activation of ENaC was discovered shortly after the channel itself.
 Overnight treatment of *Xenopus laevis* bladder with aprotinin (a serine protease inhibitor) dramatically reduced ENaC currents; the same effect was observed in an *X. laevis* cell line [@orce1980; @vallet1997].
