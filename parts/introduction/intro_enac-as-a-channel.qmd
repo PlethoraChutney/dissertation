@@ -1,9 +1,46 @@
-# ENaC Gating and Currents
+# ENaC Currents, Structure, and Gating
 
 <!-- TODO: I actually think we should go currents -> structure and reg together -->
 In this chapter I begin with an overview of proteins that directly act upon ENaC to modify its P~O~ --- proteases, kinases, and small molecules.
 I next indulge in a brief evolutionary detour to provide some context in the form of closely-related channels.
 Finally, I discuss characteristic traits of ENaC currents and the hypothesized molecular mechanism by which the channel opens.
+
+## ENaC Structure
+
+ENaC is a heterotrimeric protein comprising one copy each of &alpha;ENaC, &beta;ENaC, and &gamma;ENaC arranged clockwise when viewed from the extracellular side.
+Each subunit is approximately 30% identical to the others, and all three share a topology common to the entire ENaC/DEG family.[This is only marginally higher than the approximately 25% identity they each have with related channel ASIC1.]{.aside}
+In this section I will provide an overview of previous findings from our lab [@noreng18; @noreng20].
+
+I will also make extensive analogy to a closely-related channel, the acid-sensing ion channel (ASIC).
+ASIC is another member of the ENaC/DEG family which is activated by protons.
+I recommend Yoder and colleagues' excellent overview of ASIC's gating mechanism to interested readers [@yoder2018].
+
+![Cartoon representation of an ENaC subunit. Each domain is labeled, and important functions are noted next to the labels.](figures/domain-cartoon/enac-overview.png){#fig-intro_domain-cartoon}
+
+Each subunit has short intracellular N- and C-terminal tails, two transmembrane helices (TM1 and TM2), and a relatively large extracellular domain (ECD), which is further subdivided into domains named for their vague resemblance of a left hand grasping a ball (@fig-intro_domain-cartoon).
+All told, the &alpha;, &beta;, and &gamma; subunits are 75, 72, and 74&nbsp;kDa respectively.
+Uncleaved channels typically run a bit higher (between 75 and 90&nbsp;kDa) on SDS-PAGE due to SDS binding and extensive glycosylation.
+<!-- TODO: crossref glyc section -->
+
+### The palm, &beta;-ball, and knuckle
+The palm (yellow) comprises a twisted &beta;-sheet of seven &beta;-strands (&beta;1, 3, 6, and 9&ndash;12).
+The &beta;-ball forms (as one might expect) a tightly-twisted ball of four &beta;-strands: &beta;2, 4, 5, and 7.
+The knuckle, comprising only a single &alpha;-helix (&alpha;6) is connected to the extracellular end of the palm.
+
+Although the palm does lie along the pseudo-threefold symmetry axis, the ion permeation pathway of ASIC suggests that it is probably not involved in passing Na^+^ currents [@baconguis2012].
+The palm instead forms the structural scaffold of each subunit, connecting the finger and knuckle at the extracellular edge of the domain to the thumb at the membrane-adjacent end.
+About a third of each subunit's buried surface area (1,667 out of 4,662&nbsp;&Aring;^2^ for &alpha;ENaC) is in the palm, despite it containing only about a fifth of the modeled residues.
+Given this outsize role in establishing channel topology, it is no surprise that the palm likely plays a pivotal role in channel gating.
+
+When ASIC opens, the palm pivots around the &beta;-ball (orange), moving inward by approximately 4&nbsp;&Aring; [@baconguis2014].
+This movement is coupled to the TMD, opening the pore.
+The same overall mechanism is expected in ENaC and has support from cross-linking studies [@zhang2023].
+The &alpha; and &beta; palm domains and the &alpha; knuckle also host glycosylation sites (discussed further in ) which are required for mechanosensitive gating.
+<!-- TODO: reference glyc -->
+
+In ASIC, the knuckle is largely uninvolved in gating and is considered a rather inert part of the palm/knuckle scaffold.
+In contrast, ENaC's knuckle is an important source of heterogeneity between the three subunits.
+The carboxyl terminus of &alpha;6 differs between the three subunits, and its interface with the adjacent subunit's finger domain may contribute to the enforcement of a clockwise subunit arrangement [@noreng20].
 
 ## Direct regulation of ENaC
 
