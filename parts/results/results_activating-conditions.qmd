@@ -153,7 +153,20 @@ I suspect that the ENaC ECD requires a fully-assembled six-TM pore region to res
 A TMD/ECD decoupling would also explain the lack of ECD shift with the introduction of the DEG mutation, which has been shown to hold the channel in an open state, and for which I see dramatic TMD restructuring but no change in the ECD[@snyder2000].
 ENaC does not seem amenable to the standard means of membrane protein purification.
 It is possible that finding a more-stable homolog would improve the quality of the TMD, as our mouse maps have significantly better TMD density than our human maps.
-It is also worth considering the fact that ENaC's TMD may require some as-yet unknown binding partner to organize a stable pore.
+
+### A role for the &beta;9-&alpha;4 linker in gating
+
+In *Malacoceros fuliginosus* FaNaC, a histidine in the &beta;9-&alpha;4 linker forms contacts with both TMs [@valeriakalienkova2023].
+This interaction blocks channel opening until ligand is bound.
+In ENaC, the equivalent residue is a tyrosine, as it is in *Helix aspersa* FaNaC, while in ASIC it is a tryptophan [@lingueglia1995].
+It is possible that any bulky or aromatic residue plays a similar ECD-lock role in this &beta;-turn.
+In my models, only the &beta;-subunit tyrosine is close enough to hydrogen bond with the TMs as I have modeled them, but this could be an artifact of the disordered TMD, or the interaction may be mediated by lipids.
+
+I also note that the proline directly preceding this tyrosine in both the &beta; and &gamma; loops (&alpha; does not have a proline in this loop) is in the *cis* conformation.
+This is true in both human and mouse ENaC, in all treatment conditions.
+Our previous models missed this conformer, likely because of significantly poorer resolution.
+ASIC's tryptophan in this position is also preceded by a *cis*-proline [@yoder2018].
+In light of the important role this loop plays in FaNaC gating, and the conserved *cis*-Pro/aromatic pair in ASIC and ENaC, further investigation of this loop may prove fruitful.
 
 ### The acidic pocket's uncertain role in sodium self-inhibition
 
