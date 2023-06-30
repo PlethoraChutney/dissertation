@@ -1,14 +1,14 @@
 # ENaC Physiology and Regulation
 
-ENaC is a highly-specific triheteromeric sodium channel expressed throughout the human body.
-The channel comprises one copy each of the &alpha;, &beta;, and &gamma; subunits.
+As a guide to the importance of ENaC for human health, I will begin with a background in the physiological functions of the channel.
+@sec-intro_as-a-channel provides a deeper investigation of ENaC's structure/function relationships.
+As a brief orientation, ENaC is a highly-specific triheteromeric sodium channel expressed throughout the human body.
+The channel comprises one copy each of three paralogs: &alpha;-, &beta;-, and &gamma;ENaC.
 ENaC is thought to be activated by proteolytic removal of a portion of its extracellular domain, and is potently inhibited by a small molecule called amiloride and its derivatives.
-<!-- TODO: ENaC mechanism crossref --> delves more deeply into the suspected molecular mechanism of ENaC gating and the source of its selectivity.
-However, I will begin with a background in the physiological functions of the channel, especially as it relates to human health.
 
-I focus on the systems for which we best understand ENaC's role, the lung and kidney, before moving on to other systems which provide important information about ENaC but have a smaller body of research.
-I will finish the chapter with an overview of the molecular mechanisms of ENaC regulation.
-While this chapter may seem unnecessarily detailed for our purposes, I believe it is important to understand both ENaC's role in several human diseases, as well as the degree to which mouse models fail to recapitulate those diseases.
+I focus here on the systems for which we best understand ENaC's role, the lung and kidney, before moving on to other systems which provide important information about ENaC but have a smaller body of research.
+I will finish the chapter with an overview of the molecular mechanisms of ENaC regulation at the expression level.
+While this chapter may seem unnecessarily detailed for our purposes, I believe it is important to understand both ENaC's role in several human diseases, the degree to which mouse models fail to recapitulate those diseases, and the shortcomings of viewing the channel only from the vantage of the kidney.
 This understanding is important when considering the limitations inherent to functional work performed in mouse tissue or on mouse proteins.
 
 ## ENaC in the body {#sec-intro_enac-in-body}
@@ -111,7 +111,7 @@ I note here that we cannot say these channels are homomeric &alpha;ENaC channels
 They may be assemblies of ENaC with other ENaC/DEG family members or as-yet unknown other proteins.
 Regardless of the ultimate identity of the amiloride-sensitive salt taste receptor, the patterns observed in taste are difficult to explain if the only physiologically relevant ENaC is the &alpha;/&delta;&beta;&gamma; triheteromer, which makes it an interesting and valuable system for further study.
 
-### ENaC in blood vessels
+### ENaC in blood vessels {#sec-intro_blood-vessels}
 
 Myogenic vasoconstriction is an important component of blood pressure regulation in which the diameter of a blood vessel decreases in response to increased blood pressure.
 This response is essential for maintaining proper blood flow.
