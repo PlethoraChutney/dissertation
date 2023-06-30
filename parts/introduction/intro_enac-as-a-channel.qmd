@@ -1,6 +1,5 @@
 # ENaC Currents, Structure, and Gating {#sec-intro_as-a-channel}
 
-<!-- TODO: I actually think we should go currents -> structure and reg together -->
 In this chapter I begin with an overview of proteins that directly act upon ENaC to modify its P~O~ --- proteases, kinases, and small molecules.
 I next indulge in a brief evolutionary detour to provide some context in the form of closely-related channels.
 Finally, I discuss characteristic traits of ENaC currents and the hypothesized molecular mechanism by which the channel opens.
@@ -152,7 +151,7 @@ ASIC also depends on glycans for proper channel function &mdash; deletion of gly
 To my knowledge, investigation of ENaC glycosylation has thus far been limited to knock-out of all predicted glycosylation sites in a single subunit or the entire channel.
 A study of single-glycan knock-outs, as has been performed in ASIC, would be invaluable in determining the specific contribution of glycosylation of each ECD domain.
 
-## Direct regulation of ENaC
+## Direct regulation of ENaC {#sec-intro_direct-reg}
 
 ### Proteases {#sec-intro_proteolysis}
 
@@ -238,3 +237,18 @@ Multiple domains may participate in LSS sensation.
 Genetic deletion of the GRIP domain slows response to LSS, although this may be an artifact of differences in finger/thumb coupling rather than a true measure of the GRIP domain's participation in gating [@shi2012].
 Work on human and rat ENaC demonstrated a strong dependence of LSS currents on glycosylation of the &alpha;ENaC palm and knuckle; in another study, no such deletion of any single subunit's glycans has no effect on LSS currents [@knoepp2020; @kashlan2018].
 The former study makes a compelling argument that the glycans influence LSS by interacting with the extracellular matrix &mdash; a difference in oocyte preparation may therefore explain this discrepancy.
+
+## Conclusion
+
+I've demonstrated that although we can make some assumptions about how changes in the ENaC ECD are coupled to pore opening, much of the channel's gating mechanism remains unknown.
+For instance: which glycans are involved in which aspects of channel gating?
+How does sodium inhibit the channel, and where does it bind?
+Does ENaC contain a GAS belt and a lateral fenestration like ASIC?
+
+Moreover, the existence of several, semi-overlapping means of modulating channel P~O~ indicates that there may be multiple, physiologically-relevant means of opening ENaC that cells use to fine-tune their Na^+^ permeability.
+At a more basic level, structures of ENaC's TMD, pore, and selectivity filter would contribute to our understanding of the important ENaC/DEG family more broadly.
+It is with this in mind that I set out on the goals of this project: to solve the structure of the ENaC TMD, and to solve high-resolution structures of the channel in various salts.
+
+Although I did not succeed in solving a structure of the TMD, high-resolution structures of the channel in cleaved and uncleaved states inform us that ECD/TMD coupling is important for ECD conformational changes (@sec-chapter-tmd).
+My work on the latter goal has revealed a number of new glycans which seem to form contacts among the subunits and with the membrane/micelle (@sec-results_ecd).
+Additionally, the acidic pocket may not be involved in SSI, and the ECD does not undergo appreciable conformational change between Na^+^ and K^+^ buffers.

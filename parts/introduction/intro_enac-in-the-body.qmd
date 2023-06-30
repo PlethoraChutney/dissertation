@@ -98,14 +98,14 @@ However, recent work has significantly complicated the role of &alpha;&beta;&gam
 Investigation of ENaC expression patterns in mouse taste buds show that no taste bud cell expresses both the &alpha; and &beta; subunits[@lossow2020].
 This result is further complicated by the fact that amiloride-sensitive salt perception depends on the mouse line, and the line used in the expression pattern study has a low amiloride sensitivity [@shigemura2008].
 Thus the possibility remains that salt taste in mice is mediated by &alpha;&beta;&gamma;ENaC and is simply harder to detect with this experimental setup.
-However, as discussed further in section <!-- TODO: reference stoichiometry section -->, &alpha;ENaC is sufficient to form small (100 times smaller than &alpha;&beta;&gamma;) currents when expressed alone in oocytes [@canessa1994].
+However, &alpha;ENaC is sufficient to form small (100 times smaller than &alpha;&beta;&gamma;) currents when expressed alone in oocytes [@canessa1994].
 Homomeric &alpha; channels may instead carry the amiloride-sensitive salt taste.
 Perhaps more importantly, salt taste in humans is insensitive to amiloride [@desor1989].
 Additionally, humans express &delta;ENaC (a fourth subunit which is a pseudogene in rats and mice) in the taste bud, rather than &alpha;ENaC [@stahler2008].
 
 The mouse model of taste, much like that of cystic fibrosis and Liddle syndrome, seems to be a poor facsimile of the process in humans.
 Despite this fact, salty taste illustrates an important unanswered question regarding ENaC: what is the full compliment of physiologically-relevant functional ENaC channels?
-As covered in <!-- TODO: reference stoichiometry section -->, the two canonical channels comprise one each of the &beta;, &gamma;, and either &alpha; or &delta; subunits.
+Canonical ENaCs are composed of one each of the &beta;, &gamma;, and either &alpha; or &delta; subunits.
 However, the combination of &alpha;ENaC knock-out mice and ENaC expression patterns makes it apparent that channels with only a single ENaC subunit, while rare, are physiologically relevant.
 I note here that we cannot say these channels are homomeric &alpha;ENaC channels.
 They may be assemblies of ENaC with other ENaC/DEG family members or as-yet unknown other proteins.
@@ -139,9 +139,8 @@ These results indicate that ENaC is one of the players in this process.
 ![Simplified model of ENaC regulation in a principal cell of the distal nephron in the kidney.](figures/kidney-cartoon/kidney-cartoon.png){#fig-intro_kidney-reg}
 
 It should come as no surprise that expression of ENaC is under tight control, given the number of important processes ENaC is implicated in.
-In this section I provide a general, by no means exhastive review of proteins known to regulate ENaC.
-The exact molecular mechanisms by which ENaC P~O~ is modulated are covered in
-<!-- TODO: reference regulation chapter. -->
+In this section I provide a general, by no means exhaustive review of proteins known to regulate ENaC.
+The exact molecular mechanisms by which ENaC P~O~ is modulated are covered in @sec-intro_direct-reg.
 This overview of ENaC regulation is necessarily brief and focuses on regulation in the kidney (@fig-intro_kidney-reg), since that system is best understood.
 Fortunately, the patterns observed in the kidney largely hold in other tissues.
 

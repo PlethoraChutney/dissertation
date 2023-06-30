@@ -1,4 +1,4 @@
-# ECD Stability Under Activating Conditions
+# ECD Stability Under Activating Conditions {#sec-results_ecd}
 
 Despite the fact that the TMD remains elusive, my hope was that investigating conditions thought to open the channel I might observe large-scale ECD rearrangements like those observed in ASIC.
 In this chapter I cover my efforts on that front, starting with a map of mouse ENaC solved pre- and post-trypsin treatment.
@@ -131,11 +131,7 @@ It is therefore possible that while the &alpha; GRIP domain is cleaved, it is no
 Based on biochemical data, I speculate that the &alpha; GRIP domain is also cleaved by trypsin, but the GRIP domain is still clearly visible in our cryoEM maps.
 In any case, a lack of any observable channel rearrangement upon removal of the &gamma; inhibitory peptide (a state in which ENaC's P~O~ approaches 0.9) must lead us to a deeper consideration of ENaC gating[@bruns07].
 
-<!-- TODO: crossref to ENaC gating intro -->
-Although the best-studied mechanism of ENaC opening is GRIP proteolysis, multiple studies have found other stimuli which open the channel.
-The channel opens in response to laminar shear stress even with intact inhibitory peptides[@shi2012; @kashlan2018; @knoepp2020].
-Phosphatidylinositol directly interacts with and opens the channel[@ma2002; @pochynyuk2007; @pochynyuk2006; @archer2020].
-This process is mirrored by a rapid decrease in ENaC P~O~ upon PKC activation, perhaps via allosteric modulation of phosphatidylinositol interactions[@ling1989].
+Although the best-studied mechanism of ENaC opening is GRIP proteolysis, multiple studies have found other stimuli which open the channel, including laminar shear stress and phospholipids (see @sec-intro_direct-reg for more detail).
 ENaC P~O~ is also sensitive to changes in both intracellular and extracellular pH[@chalfant1999].
 It is thus possible that the cell possesses multiple mechanisms with which it can open ENaC, and uses some combination to tune Na^+^ permeability.
 
