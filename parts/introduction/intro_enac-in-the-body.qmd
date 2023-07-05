@@ -156,6 +156,7 @@ Aldosterone increases ENaC P~O~ in part via increased activity of serum and gluc
 SGK's effect has mainly been attributed to inhibition of Nedd4-2 (@sec-intro_nedd42), while some labs also report a direct increase in ENaC P~O~ [@kellenberger98; @chen1999].
 Aldosterone also stimulates phosphatidylinositol 3-kinase (PI3K) and K-Ras, which physically couples ENaC and PI3K [@paunescu2000; @staruschenko2005].
 Phospholipids have both short- and long-term effects on ENaC currents and are discussed further in @sec-intro-phospholipids.
+The majority of aldosterone's effect in the early phase is due to increased P~O~ of existing channels, rather than delivery of new channels to the cell surface [@frindt2015].
 
 Aldosterone's late phase increase of sodium permeability is mediated both by direct increase of ENaC gene expression and movement of ENaC from an internal pool to the apical membrane [@asher1996; @frindt09; @weisz2000; @loffing2000].
 In some studies, aldosterone increases transcription of the &beta;- and &gamma;- (but not &alpha;-) ENaC genes [@asher1996; @may1997; @stockand2000; @escoubet1997; @bertog2008].

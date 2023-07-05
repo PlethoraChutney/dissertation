@@ -32,7 +32,7 @@ This suggests that the entire grip domain might be released from the subunit, bu
 These results are incompatible with a large-scale movement of the ECD upon trypsin digestion.
 The existence of some &gamma; GRIP density indicates that the trypsin-treated map is an ensemble of particles which have and have not released the &gamma; GRIP domain.
 However, I do not observe any blurring of the &gamma; thumb, which would be expected in a map comprising particles with significantly shifted conformations.
-I must therefore conclude that the removal of the &gamma; inhibitory domain is not sufficient, on its own, to induce such changes.
+I must therefore conclude that the removal of the &gamma; inhibitory peptide is not sufficient, on its own, to induce such changes.
 Additionally, I note that these maps are the first indication that trypsin processing of the &alpha; subunit does not release its GRIP domain.
 This is surprising but perhaps not wholly unexpected; the &gamma; subunit is known to be essential for activation by trypsin but the same has not yet been shown for &alpha;ENaC[@diakov2008].
 
@@ -57,9 +57,9 @@ The reduced quality for this map region upon trypsin treatment may represent inc
 
 ## Sodium self-inhibition does not rearrange the ECD
 
-<!-- TODO: should probably move this to the intro -->
-Uncleaved ENaC has a high P~O~ at low external Na^+^ concentrations and a low P~O~ at high external Na^+^; this attribute is called sodium self-inhibition (SSI)[@sheng06].
-High extracellular K^+^ does not prime inhibition in wild-type channels and SSI is rapidly attenuated upon exposure to low (i.e., &lt;10&nbsp;mM) Na^+^[@maarouf2009; @kashlan2015].
+I next investigated differences in ECD conformation among protein purified in external K^+^ instead of Na^+^.
+High extracellular K^+^ does not prime inhibition in wild-type channels and SSI is rapidly attenuated upon exposure to low (i.e., &lt;10&nbsp;mM) Na^+^ [@maarouf2009; @kashlan2015].
+Protein purified in K^+^ buffer with nominally zero Na^+^ should therefore be completely uninhibited.
 The linker connecting &beta;6 and &beta;7 is important for SSI, and I have previously reported evidence of a putative bound Na^+^ ion in this region[@kashlan2015; @noreng20].
 Moreover, cross-linking of several pairs of amino acids in the ECD affects SSI magnitude, implying that some rearrangement is required for SSI[@kashlan2015; @zhang2023].
 Given this body of research, I solved structures of ENaC in high (200&nbsp;mM) and low (nominal 0&nbsp;mM&nbsp;Na^+^, 200&nbsp;mM&nbsp;K^+^) sodium.
