@@ -2,7 +2,7 @@
 
 In this chapter I begin with an overview of ENaC electrophysiology.
 From there, I move into a discussion of current knowledge about ENaC's structure/function relationships.
-Finally, I provide a brief overview of proteins which directly modify ENaC's electrophysiological properties (rather than expression levels, which are covered in @sec-intro_enac-in-body).
+Finally, I provide a brief overview of proteins which directly modify ENaC's electrophysiological properties (rather than expression levels, which are covered in @sec-regulation).
 
 ## ENaC Electrophysiology
 
@@ -18,7 +18,7 @@ The precise number depends on the study, since potassium currents through ENaC a
 ENaC does not pass appreciable H^+^ currents until the extracellular solution reaches a pH of 5 or lower [@palmer1984].
 
 Ions enter the channel through a fenestration just outside the membrane and travel down a pore formed by the second transmembrane helices of all three subunits [@kellenberger1999a; @li2003].
-As discussed further in @sec-intro_conduction-tmd, ENaC's selectivity filter is composed of a triplet residues in a domain-swapping loop between adjacent transmembrane helices.
+As discussed further in @sec-intro_conduction-tmd, ENaC's selectivity filter is composed of a triplet of residues in a domain-swapping loop between adjacent transmembrane helices.
 Based on structures of related channels, this domain swap is expected to occur approximately halfway through the membrane [@baconguis2014].
 The third residue of the &alpha; loop (a serine) plays an outsize role in determining channel selectivity [@kellenberger2001].
 
@@ -44,24 +44,23 @@ Proteolytic cleavage of the extracellular domain of the channel pushes the chann
 Conversely, intracellular acidification and Ca^2+^ both reduce channel P~O~ [@palmer1987; @chalfant1999].
 Unlike the related channel ASIC, ENaC does not sense extracellular pH.
 
-As they do not have a ligand *per se*, ENaC channels do not desensitize in the traditional sense.
+As they do not have a ligand *per se*, ENaCs do not desensitize in the traditional sense.
 Steady-state macroscopic currents are, however, lower than peak currents [@fuchs77].
-This reduction in sodium current on the scale of seconds is called sodium self inhibition (SSI) and is an important characteristic of ENaC electrophysiology.[SSI is not to be confused with the term "sodium feedback inhibition", which refers to reduction in ENaC at the cell surface via the action of Nedd4-2 and other regulatory partners.]{.aside}
+This reduction in sodium current on the scale of seconds is called sodium self-inhibition (SSI) and is an important characteristic of ENaC electrophysiology.[SSI is not to be confused with the term "sodium feedback inhibition", which refers to reduction in ENaC at the cell surface via the action of Nedd4-2 and other regulatory partners.]{.aside}
 
-SSI reduces ENaC currents as a direct result of extracellular Na^+^ concentrations, not as a result of the currents themselves [@chraibi2002].
-Lower temperatures reduces the magnitude of SSI, resulting in greater ENaC currents [@chraibi2002; @askwith2001].
+SSI reduces ENaC currents as a direct result of extracellular Na^+^ concentrations, not the currents themselves [@chraibi2002].
+Lower temperatures reduce the magnitude of SSI, resulting in greater steady-state ENaC currents [@chraibi2002; @askwith2001].
 These findings, together with earlier kinetic work, suggest a gating model involving a single open and single closed state [@palmer1986; @eaton1990].
 
 As discussed in @sec-intro_proteolysis, ENaC is activated by proteolytic removal of a portion of its extracellular domain called the GRIP domain.
 This increase in current is a result of SSI relief [@chraibi2002; @sheng06].
-It is reasonable to expect, then, that the Na^+^-binding site is composed at least in part by the GRIP domain.
+It is reasonable to expect, then, that the sodium-binding site is composed at least in part by the GRIP domain.
 Indeed, an acidic pocket fits this description and binds as-yet-unidentified ions [@kashlan2015; @noreng20].
 SSI is also the mechanism by which extracellular pH regulates ENaC [@collier2009].
 More basic extracellular solutions result in greater SSI magnitude and therefore lower steady-state currents.
 
-Surprisingly, despite its effect on magnitude, pH does not have an effect on Na^+^ K~i~.
+Surprisingly, despite its effect on SSI magnitude, pH does not influence Na^+^ K~i~.
 If solvent-exposed acidic residues do participate in sodium-binding for SSI, one would expect their protonation to reduce the affinity for sodium.
-A reduction in affinity should thereby reduce Na^+^ K~i~.
 Additionally, the effect of pH on SSI magnitude seems to be species-dependent, further complicating the role of the acidic pocket.
 
 ## ENaC Structure {#sec-intro_structure}
@@ -72,14 +71,14 @@ ENaC is a heterotrimeric protein comprising one copy each of &alpha;ENaC, &beta;
 Each subunit is approximately 30% identical to the others, and all three share a topology common to the entire ENaC/DEG family.[This is only marginally higher than the approximately 25% identity they each have with related channel ASIC1.]{.aside}
 In this section, I will cover structure/function relationships for the two main sections of ENaC: the extracellular and transmembrane domains (ECD and TMD, respectively).
 
-I will also make extensive analogy to a closely-related channel, the acid-sensing ion channel (ASIC).
+I will also make extensive analogy to a closely related channel, the acid-sensing ion channel (ASIC).
 Throughout this document, when I refer to ASIC, I specifically mean ASIC1 unless I specify a different paralog.
 ASIC is another member of the ENaC/DEG family which is activated by protons.
 I recommend Yoder and colleagues' excellent overview of ASIC's gating mechanism to interested readers [@yoder2018].
 
 The first structures of a third ENaC/DEG family member, FMRFamide-gated sodium channel 1 (FaNaC 1; hereafter FaNaC), were published during the production of this document [@valeriakalienkova2023].
 This is exciting for two reasons.
-First, FaNaC is much more closely related to ENaC than ASIC is [@aguilar-camacho2023].
+First, FaNaC is much more closely related to ENaC than is ASIC [@aguilar-camacho2023].
 Second, FaNaC shares its overall architecture with ENaC and ASIC, aside from divergence at the ligand-recognition region of the distal finger.
 These similarities further support a shared overall gating mechanism among the ENaC/DEG family.
 
@@ -93,31 +92,31 @@ Thus, the canonical ENaC channel is the &alpha;&beta;&gamma; heterotrimer.
 As discussed in @sec-intro_enac-in-body, it is not clear that this canonical channel is the only one expressed in the body.
 No tissue assayed thus far expresses all three subunits in equal amounts (in some cases, one or more subunits are not expressed at all).
 Aldosterone rarely induces expression of all three channels equally.
-More strikingly, the regulatory protein SPLUNC1 binds to &beta;ENaC in the lumen and induces internalization of &alpha;- and &gamma;- (but **not** &beta;-) ENaC [@kim18].
-It is not clear how a small (26&nbsp;kDa), secreted protein could separate &beta;ENaC from the &alpha; and &gamma; subunits alone.
+More strikingly, the regulatory protein SPLUNC1 binds to &beta;ENaC in the lumen and induces internalization of &alpha;- and &gamma;- (but *not* &beta;-) ENaC [@kim18].
+It is not clear how a small (26&nbsp;kDa), secreted protein could separate &beta;ENaC from the &alpha; and &gamma; subunits on its own.
 Indeed, the same study indicates that &beta;ENaC becomes less mobile upon SPLUNC1 binding, suggesting coupling to other, larger proteins.
-A deeper investigation of the various chaperones and processes involved in ENaC assembly and dissociation would be interesting, but is outside the scope of this work.
+A deeper investigation of the various chaperones and processes involved in ENaC assembly and dissociation would be interesting but is outside the scope of this work.
 For our purposes, ENaC is the &alpha;&beta;&gamma; heterotrimer.
 
 ### Functional Domains
 
 ![Cartoon representation of an ENaC subunit. Each domain is labeled, and important functions are noted next to the labels.](figures/domain-cartoon/enac-overview.png){#fig-intro_domain-cartoon}
 
-Each subunit has short intracellular N- and C-terminal tails, two transmembrane helices (TM1 and TM2, which together form the transmembrane domain, TMD), and a relatively large extracellular domain (ECD), which is further subdivided into domains named for their vague resemblance of a left hand grasping a ball (@fig-intro_domain-cartoon).
+Each subunit has short intracellular N- and C-terminal tails, two transmembrane helices (TM1 and TM2, which together form the transmembrane domain, TMD), and a relatively large extracellular domain (ECD), which is further subdivided into domains named for their vague resemblance to a left hand grasping a ball (@fig-intro_domain-cartoon).
 All told, the &alpha;, &beta;, and &gamma; subunits are 75, 72, and 74&nbsp;kDa respectively.
 Uncleaved channels typically run a bit higher (between 90 and 120&nbsp;kDa) on SDS-PAGE due to SDS binding and extensive glycosylation (@sec-intro_glycosylation).
 
 #### Scaffolding &mdash; the palm, &beta;-ball, and knuckle
 The palm (yellow) comprises a twisted &beta;-sheet of seven &beta;-strands (&beta;1, 3, 6, and 9&ndash;12).
-The &beta;-ball forms (as one might expect) a tightly-twisted ball of four &beta;-strands: &beta;2, 4, 5, and 7.
+The &beta;-ball forms (as one might expect) a tightly twisted ball of four &beta;-strands: &beta;2, 4, 5, and 7.
 The knuckle, comprising only a single &alpha;-helix (&alpha;6) is connected to the extracellular end of the palm.
 
 Although the palm does lie along the pseudo-threefold symmetry axis, the ion permeation pathway of ASIC suggests that it is probably not involved in passing Na^+^ currents [@baconguis2012].
 The palm instead forms the structural scaffold of each subunit, connecting the finger and knuckle at the extracellular edge of the domain to the thumb at the membrane-adjacent end.
 About a third of each subunit's buried surface area (1,667 out of 4,662&nbsp;&Aring;^2^ for &alpha;ENaC) is in the palm, despite it containing only about a fifth of the modeled residues.
-Given this outsize role in establishing channel topology, it is no surprise that the palm likely plays a pivotal role in channel gating.
+Given this outsize role in establishing channel topology, it is no surprise that the palm is highly conserved among the ENaC/DEG family and plays a pivotal role in channel gating.
 
-When ASIC opens, the palm pivots around the &beta;-ball (orange), moving inward by approximately 4&nbsp;&Aring; [@baconguis2014].
+When ASIC opens, the palm pivots around the &beta;-ball (orange) and moves inward by approximately 4&nbsp;&Aring; [@baconguis2014].
 This movement is coupled to the TMD, opening the pore.
 The same overall mechanism is expected in ENaC and has support from cross-linking studies [@zhang2023].
 The &alpha; and &beta; palm domains and the &alpha; knuckle also host glycosylation sites which are required for mechanosensitive gating (@sec-intro_mechano).
@@ -129,10 +128,10 @@ The carboxyl terminus of &alpha;6 differs between the three subunits, and its in
 #### Gating &mdash; the finger, thumb, and GRIP {#sec-intro_structure-gating}
 
 The finger, thumb, and gating relief of inhibition by proteolysis (GRIP) domains form the essential regulatory machinery of the channel.[When we were publishing the first structure of ENaC, we struggled to find a good backronym for GRIP. My suggestion of Good, Really Important Part was rejected.]{.aside}
-The finger domain (blue) comprises three alpha helices (&alpha;1&ndash;3).
+The finger domain (blue) comprises three &alpha;-helices (&alpha;1&ndash;3).
 The thumb domain (green) comprises two large helices, &alpha;4 and 5.
 
-The &alpha;- and &gamma;GRIP domains (cyan) are, as the name painstakingly makes clear, expected to be proteolytically removed in order to open the channel (see @sec-intro_proteolysis).
+The &alpha;- and &gamma;GRIP domains (cyan) are, as the name painstakingly makes clear, expected to block channel opening until they are proteolytically excised (see @sec-intro_proteolysis).
 The &beta;GRIP is not cleaved during canonical channel opening and is, perhaps relatedly, the GRIP for which we have the best structural information.
 We can model a sheet of two anti-parallel pairs of &beta;-strands in &beta;GRIP.
 The GRIP domain shrouds the interface between the finger and thumb, forming extensive contacts between the two.
@@ -147,10 +146,10 @@ Based on this similar architecture and a slew of cross linking studies, it is th
 
 Indeed, the Kleyman laboratory has identified short segments of the GRIP domain (eight and eleven amino acids in &alpha; and &gamma;ENaC, respectively) which, when flowed over open channels, close them (@fig-intro_inhib-peptide) [@carattino2008; @kashlan2010; @passero2010].[The &alpha; peptide is LPHPLQRL, and RFSHRIPLLIF that of the &gamma; subunit.]{.aside}
 These peptides are part of the P1 strand of the GRIP domain and pack tightly against the remaining GRIP domain, &alpha;2 of the finger domain, and the upper edge of the thumb.
-We have hypothesized that cleavage and subsequent removal of the P3 strand releases P1 and, therefore, decouples the finger and thumb [@noreng20].
-From here, we and others have proposed that the gating mechanism is more-or-less that of ASIC: the finger and thumb collapse, and their movement pulls the palm and TMD away from the pore axis.
 
-<!-- TODO: FaNaC image would be nice -->
+We have hypothesized that cleavage and subsequent removal of the P3 strand releases P1 and, therefore, decouples the finger and thumb [@noreng20].
+From here, we and others have assumed that the gating mechanism is more-or-less that of ASIC: the finger and thumb collapse, and their movement pulls the palm and TMD away from the pore axis.
+
 The new results from FaNaC call this assumption into question [@valeriakalienkova2023].
 The finger and thumb do *not* collapse in FaNaC.
 Rather, they move in a concerted action up and away from the membrane, toward the &alpha;6 helix of the adjacent knuckle domain.
@@ -161,32 +160,28 @@ ENaC's GRIP domain interacts instead with the thumb and finger.
 Since the FaNaC pocket is on "the other side" of the finger, it would not be entirely surprising if the movement of the finger in the two channels is different.
 
 A histidine in the &beta;9-&alpha;4 loop of FaNaC (which connects the palm and thumb) points down between TM1 and TM2.
-Mutation of this histidine to serine results in constitutively-active channels, implying that the energy gained by ligand binding is used to overcome the interaction of this histidine with the TMs.
-Alignments place bulky residues in this position for both ASIC and ENaC (tryptophan and tyrosine, respectively).
+Mutation of this histidine to serine results in constitutively active channels, implying that the energy gained by ligand binding is used to overcome the interaction of this histidine with the TMs.
+ASIC and ENaC both have bulky residues (tryptophan and tyrosine, respectively) in this position.
 
 #### Conduction &mdash; what we expect for the TMD {#sec-intro_conduction-tmd}
 
-As yet, no map  of ENaC has reliable density for the transmembrane domain.
+No map  of ENaC has reliable density for the transmembrane domain.
 Nevertheless, we can infer a great deal from electrophysiological studies of ENaC and maps of other members of the ENaC/DEG family, mostly the well-studied ASIC.
 
 ASIC's gating cycle comprises three states: resting, open, and desensitized.
 The pore of the first solved structure of ASIC was asymmetric, but this truncated crystallization construct did not conduct sodium currents [@jasti07].
-Subsequent structures of ASIC show symmetric pores in all three states.
+Subsequent structures of ASIC show symmetric pores throughout its gating cycle.
 
 In the resting state of ASIC, negative charges clustered in the acidic pocket (formed by the finger, thumb, and &beta;-ball) hold the finger and thumb apart.
-The separation of the thumb from the finger pushes the palm inward, holding the lateral gate closed.
+The separation of the thumb from the finger pushes the palm inward, holding the channel in a position which obstructs its lateral gate.
 
 ![The fenestration in ASIC. Membrane is for illustration purposes only and is not based on actual structural data. PDB: 4NTW.](figures/asic-fenestration/asic-fenestration.png){#fig-intro_asic-fenestration}
 
 When ASIC encounters low extracellular pH, the residues in the acidic pocket are protonated.
 This relieves electrostatic repulsion and allows the finger/thumb interface to collapse, pulling the palm and TMD inward and opening a lateral fenestration just above the membrane (@fig-intro_asic-fenestration) [@baconguis2014].
-Mutating a residue just above the second transmembrane helix in &beta;ENaC holds this fenestration open constitutively [@snyder2000].
-This &beta;S520K is known as the DEG mutation, named after the *C. elegans* channel from which the mutation is derived.
 
-In the open state, the ions pass from the extracellular fenestration down a negatively-charged pore through the GAS belt, and into the intracellular fenestration.
-The GAS belt selects for Na^+^ over other cations by a "sieving mechanism", physically preventing the passage of ions with hydrated radii too large for the filter.
-It is worth noting here that ENaC's significantly higher Na^+^ selectivity and lower unitary currents suggest that, unlike ASIC, Na^+^ ions are dehydrated before passing through ENaC [@palmer82].
-We thus expect that ENaC's selectivity filter will be significantly narrower than that of ASIC [@mahler2012].
+Mutating a residue just above the second transmembrane helix in &beta;ENaC holds the channel open, likely by holding open a similar fenestration [@snyder2000].
+This &beta;S520K is known as the DEG mutation, named after the *C. elegans* channel from which the mutation is derived.
 
 ![A cartoon of ENaC's selectivity filter. **Left**: a top-down view of the domain swap loop. **Right**: a schematic illustration of &alpha;TM2 breaking and completing &beta;TM2. The concept of a domain swap is supported by structures of other ENaC/DEG channels and studies of ENaC mutants.](figures/pore-cartoon/pore-cartoon.png){#fig-intro_enac-pore-cartoon}
 
@@ -195,11 +190,16 @@ This domain swap forms a triangular arrangement of short Gly-Ala-Ser loops, call
 The GAS belt forms ASIC's selectivity filter [@carattino2012].
 The homologous residues in the &alpha;-, &beta;-, and &gamma;ENaC (GSS, GGS, and SCS respectively, @fig-intro_enac-pore-cartoon) play a significant role in that channel's selectivity, implying the same pore structure and domain swap [@kellenberger1999; @kellenberger1999a; @snyder1999; @sheng2000; @li2003].
 
+In the open state, the ions pass from the extracellular fenestration down a negatively-charged pore through the GAS belt, and into the intracellular fenestration.
+The GAS belt selects for Na^+^ over other cations by a "sieving mechanism", physically preventing the passage of ions with hydrated radii too large for the filter.
+It is worth noting here that ENaC's significantly higher Na^+^ selectivity and lower unitary currents suggest that, unlike ASIC, Na^+^ ions are dehydrated before passing through ENaC [@palmer82].
+We thus expect that ENaC's selectivity filter will be significantly narrower than that of ASIC [@mahler2012].
+
 ![The HG motif in ASIC. The re-entrant loop is highlighted in blue, and the highly-conserved histidine is represented with sticks. PDB: 6VTL.](figures/hg-motif/hg-motif.png){#fig-intro_hg-motif}
 
 The conical region below the GAS belt and between TMs was believed to be filled with unstructured lipids.
-However, a recent structure of ASIC revealed that the N-terminus briefly re-enters the membrane to buttress the GAS belt (@fig-intro_hg-motif) [@yoder20].
-The re-entrant loop also houses the highly-conserved N-terminal two-residue His-Gly pair (the HG motif).
+However, a recent structure of ASIC revealed that the N-terminus re-enters the membrane to buttress the GAS belt (@fig-intro_hg-motif) [@yoder20].
+The re-entrant loop also houses the highly conserved N-terminal two-residue His-Gly pair (the HG motif).
 The HG motif is critically important in gating and selectivity of ENaC, and likely plays a similar role in other ENaC/DEG family members [@chang1996; @grunder1997; @grunder1999].
 The HG motif supports the GAS belt through several hydrogen bonds and hydrophobic interactions with adjacent TM2s, stabilizing this otherwise-fragile structure.
 
@@ -208,7 +208,7 @@ In desensitized ASICs, the &beta;11-&beta;12 linker in the palm domain is flippe
 This decouples the still-collapsed finger and thumb domains from the lower palm and TMD, allowing the fenestration to close.
 In essence, the desensitized channels have an open ECD but a closed TMD.
 As ENaCs do not desensitize, the role of this linker is likely different.
-However, the sequence is highly conserved between ASIC and ENaCs, and an L&rarr;Q mutation results in a significant increase in current [@chen2013].[There is a conspicuous A&rarr;D/E mutation between ASIC and ENaC, but this acidic residue does not form any obvious associations in models solved thus far.]{.aside}
+However, the linker sequence is highly conserved between ASIC and ENaCs, and an L&rarr;Q mutation results in a significant increase in current [@chen2013].[There is a conspicuous A&rarr;D/E mutation between ASIC and ENaC, but this acidic residue does not form any obvious associations in models solved thus far.]{.aside}
 
 ### Glycosylation {#sec-intro_glycosylation}
 
@@ -221,7 +221,7 @@ The same dependence of expression on glycosylation is seen in ASIC [@kadurin2008
 ENaC glycosylation has functional implications beyond surface expression.
 Glycan maturation and proteolytic processing appear to happen in a concerted fashion, but they are not interdependent [@hughey04].
 SSI is significantly reduced in ENaCs without glycans on any of the three subunits [@kashlan2018].
-ASIC also depends on glycans for proper channel function &mdash; deletion of glycans changes current magnitude or proton affinity [@kadurin2008].
+ASIC also depends on glycans for proper channel function &mdash; deletion of specific glycans changes current magnitude or proton affinity [@kadurin2008].
 
 To my knowledge, investigation of ENaC glycosylation has thus far been limited to knock-out of all predicted glycosylation sites in a single subunit or the entire channel.
 A study of single-glycan knock-outs, as has been performed in ASIC, would be invaluable in determining the specific contribution of glycosylation of each ECD domain.
@@ -274,8 +274,8 @@ This interaction is absolutely required for ENaC opening.
 
 Treatment of inside-out patches with phosphatidylinositol bisphosphate (PIP~2~) increases ENaC P~O~ within seconds, and P~O~ is reduced again upon PIP~2~ removal, ruling out the possibility of PIP~2~-induced proteolytic cleavage [@ma2002; @pochynyuk2006].
 Similarly, no change in channel number is observed in these experiments PIP~2~.
-A similar dependence of ENaC current on PIP~2~ levels is observed in mouse trachea [@kunzelmann2005].
-Note that more PIP~2~ than is necessary does not result in greater ENaC currents --- that is, a lack of PIP~2~ reduces ENaC currents but PIP~2~ does not itself potentiate them [@markadieu2004].
+A correlation between ENaC currents and PIP~2~ levels is also observed in mouse trachea [@kunzelmann2005].
+Note that PIP~2~ only augments ENaC currents up to a point than is necessary does not result in greater ENaC currents &mdash; that is, a lack of PIP~2~ reduces ENaC currents but PIP~2~ does not itself potentiate them [@markadieu2004].
 
 Unlike PIP~2~, phosphatidylinositol triphosphate (PIP~3~) does augment ENaC currents both directly and via a signaling cascade.
 In its immediate effect, PIP~3~ binds &gamma;ENaC just after the second transmembrane domain to rapidly open the channel [@markadieu2004; @tong2004b; @pochynyuk2005].[Interestingly, mutation of negatively-charged residues in the &gamma;ENaC PIP~3~ binding site increases ENaC currents both with *and* without PIP~3~ [@pochynyuk2005].]{.aside}
@@ -290,12 +290,11 @@ MARCKS also binds ENaC, potentially anchoring the channel in a region of the mem
 #### Palmitoylation
 
 Palmitoylation is a reversible process in which hydrophobic chains are attached to cysteine residues, anchoring them in the membrane.
-Multiple cysteines in &beta;- and &gamma;ENaC are palmitoylated (but none in &alpha;ENaC), with varying effects [@mueller10; @mueller12; @mukherjee14].
+Multiple cysteines in &beta;- and &gamma;ENaC (but none in &alpha;ENaC) are palmitoylated, with varying effects [@mueller10; @mueller12; @mukherjee14].
 
 Blocking palmitoylation of two cysteines in &beta;ENaC (in mouse: C43 and C557) significantly reduces ENaC currents [@mueller10].
 This effect is not mediated by differences in trafficking or cleavage but by changes in channel P~O~, specifically increased SSI.
 C43 is suggestively close to the HG motif; it may be that membrane anchoring of this cysteine aids in proper folding of the re-entrant loop and therefore the pore.
-This conjecture is supported by the observation in the same study that C557A mutants have significantly increased unitary conductance.
 
 &gamma;ENaC also has two palmitoylated cysteines, C33 and C41, which straddle that subunit's HG motif [@mukherjee14].
 Again, C&rarr;A mutation of these cysteines increase SSI without affecting surface exposure or channel cleavage.
@@ -303,16 +302,17 @@ Surprisingly, addition of a &beta; palmitoylation mutant to a mutant &gamma; bac
 
 ### Mechanosensation {#sec-intro_mechano}
 
-Whether ENaC is mechanosensitive or not has long been a point of contention, but decades of careful research indicate that laminar sheer stress (LSS) opens the channel regardless of proteolytic state.
-Bath perfusion of *X. laevis* oocytes or CHO cells expressing ENaC produces amiloride-sensitive Na^+^ currents [@satlin2001; @karpushev2010].
-Single channel recordings indicate that LSS currents result from increased P~O~ [@althaus2007].
+Whether or not ENaC directly senses membrane stretch has long been a point of contention, but decades of careful research indicate that laminar sheer stress (LSS) opens the channel regardless of proteolytic state.
+Bath perfusion of *X. laevis* oocytes or CHO cells expressing ENaC produces amiloride-sensitive Na^+^ currents without changing their cleavage state [@satlin2001; @karpushev2010].
+
+Single channel recordings indicate that LSS currents result from directly increased P~O~ [@althaus2007].
 Although LSS can open uncleaved channels, pre-treatment of human ENaC with trypsin significantly primed LSS response [@althaus2007; @fronius2010].[The same study reported an opposite effect &mdash; inhibition of LSS currents by trypsin treatment &mdash; for *X. laevis* ENaC [@althaus2007].]{.aside}
 Over the course of minutes, ENaC becomes less sensitive to repeated stimulation with LSS [@carattino2004].
 Mutant ENaCs with truncated C-termini did not show this response, indicating that it may be mediated by Nedd4-2 (@sec-intro_nedd42-enac).
 
 Multiple domains may participate in LSS sensation.
 Genetic deletion of the GRIP domain slows response to LSS, although this may be an artifact of differences in finger/thumb coupling rather than a true measure of the GRIP domain's participation in gating [@shi2012].
-Work on human and rat ENaC demonstrated a strong dependence of LSS currents on glycosylation of the &alpha;ENaC palm and knuckle; in another study, no such deletion of any single subunit's glycans has no effect on LSS currents [@knoepp2020; @kashlan2018].
+Work on human and rat ENaC demonstrated a strong dependence of LSS currents on glycosylation of the &alpha;ENaC palm and knuckle; in another study, deletion of any single subunit's glycans has no effect on LSS currents [@knoepp2020; @kashlan2018].
 The former study makes a compelling argument that the glycans influence LSS by interacting with the extracellular matrix &mdash; a difference in oocyte preparation may therefore explain this discrepancy.
 
 ## Conclusion
@@ -322,6 +322,6 @@ For instance: which glycans are involved in which aspects of channel gating?
 How does sodium inhibit the channel, and where does it bind?
 Does ENaC contain a GAS belt and a lateral fenestration like ASIC?
 
-Moreover, the existence of several, semi-overlapping means of modulating channel P~O~ indicates that there may be multiple, physiologically-relevant means of opening ENaC that cells use to fine-tune their Na^+^ permeability.
+Moreover, the existence of several, semi-overlapping means of modulating channel P~O~ indicates that there may be multiple, physiologically relevant means of opening ENaC that cells use to fine-tune their Na^+^ permeability.
 At a more basic level, structures of ENaC's TMD, pore, and selectivity filter would contribute to our understanding of the important ENaC/DEG family more broadly.
 It is with this in mind that I set out on the goals of this project: to solve the structure of the ENaC TMD, and to solve high-resolution structures of the channel in various salts.
