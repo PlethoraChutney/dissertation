@@ -104,12 +104,13 @@ We could never measure the non-specific binding in its entirety, and so any sign
 Changing from detergent sample to nanodiscs did not improve signal.
 Neither did changing from standard SPA beads to smaller, higher SNR nanoSPA beads.
 
-One possible explanation of this is that none of our ENaC has a properly-folded TMD and therefore cannot bind amiloride or its derivatives.
+One possible explanation of this is that none of our ENaC has a properly folded TMD and therefore cannot bind amiloride or its derivatives.
 Indeed, that is what our maps seem to suggest.
 However, experiments performed with human ASIC show the same result: ever-increasing linear "specific" counts no matter the conditions (James Cahill, personal communication).
-However, this same ASIC protein has properly-folded TMs as assessed by cryoEM maps.
+However, this same ASIC protein has properly folded TMs as assessed by cryoEM maps.
+
 These problems are not seen when other labs use the same reagents on different targets.
-Typically, when SPA doesn't work, there are zero specific counts rather than some linearly-increasing unaccounted-for background.
+Typically, when SPA doesn't work, there are zero specific counts rather than some linearly increasing unaccounted-for background.
 It may, then, be that SPA with tritiated amiloride derivatives does not work with, or is significantly more difficult for, members of the ENaC/DEG family.
 
 ### A sodium flux assay shows promise
@@ -131,10 +132,11 @@ Finally, valinomycin (a K^+^ ionophore) is added to measure the minimum fluoresc
 
 ![A model example of flux data. ACMA fluorescence relative to the steady-state equilibrated value is plotted on Y, time on X. After the addition of each reagent the vesicles are allowed to equilibrate before addition of the next. In this example, it is clear the blue vesicles have functional ion channels since their fluorescence decreased with the addition of CCCP, while the grey vesicles are intact but do not have ion channels, since their fluorescence decreased with the addition of Na^+^ ionophore but not CCCP.](figures/flux-cartoon/flux-example.png){#fig-flux-example}
 
-To adapt this protocol to Na^+^, all that was required is swapping to internal sodium and external potassium, and a sodium-specific ionophore to replace valinomycin.
+To adapt this protocol to Na^+^ required swapping to internal sodium and external potassium and a sodium-specific ionophore to replace valinomycin.
 Luckily, several such ionophores are commercially available.
 None of them have quite the selectivity or flux of valinomycin, but they are less important than the CCCP anyway.
 I selected Sodium Ionophore IV, or 2,3:11,12-Didecalino-16-crown-5 [@suzuki1996].
+
 This assay was, in the end, reliably able to produce readings of empty vesicles (@fig-flux-empty), but ENaC never passed any ions with the addition of CCCP (@fig-flux-enac).
 Moreover, addition of ENaC in any amount seemed to disrupt the empty vesicles.
 It is likely, then, that the ENaC is not properly folded, or that the addition of concentrated digitonin disrupts the vesicles on its own.
@@ -157,9 +159,9 @@ Here's what of my work can be carried forward into future studies.
 
 I believe the TMD is misfolded as a result of solubilization with digitonin.
 Digitonin solubilizes membranes by chelating cholesterol [@sudji2015].
-ENaC preferentially exists in lipid rafts [@hill07].
-ENaC is activated by cholesterol-mediated PIP~2~ interactions [@zhai19].
-Additionally, the helices in the low-resolution TMD region of truncated ENaC solved in DDM do have the expected TM2-inward layout [@noreng18].
+ENaC is activated by cholesterol-mediated PIP~2~ interactions and is found in cholesterol-rich lipid rafts [@hill07; @zhai19].
+Additionally, the helices in the low-resolution TMD region of truncated ENaC, which was never exposed to digitonin, do have the expected pore-lining TM2 architecture [@noreng18].
+
 Of course, all of the TMD maps to date are very low-resolution.
 Although I am confident in my TM assignments, it is possible that the wrong TM identity has been assigned to some of the densities.
 Hopefully future, higher-resolution maps of the TMD will settle the matter.
@@ -167,9 +169,8 @@ Hopefully future, higher-resolution maps of the TMD will settle the matter.
 ### Cysteine knock-out mutations should be abandoned
 
 The CKO mutations do increase ENaC yield, but their theoretical underpinning is not sound at all.[Recall that CKO channels have the following mutations in addition to protease site knockouts: &alpha;C63A, &beta;C30A, and &gamma;C33,41A]{.aside}
-Channels with either one of &gamma;C33A and/or &gamma;C41A exhibit reduced current compared with wild type despite no change in surface expression [@mukherjee14].
-Reduction in the double mutant currents is a result both of decreased P~O~ and increased sodium self inhibition.
-&gamma;C33 and C41 border the HG motif &mdash; any disruption here might have serious consequences on the physiological relevance of a resolved TMD structure.
+Channels with either one of &gamma;C33A and/or &gamma;C41A exhibit reduced P~O~ and increased SSI compared with wild type despite no change in surface expression [@mukherjee14].
+More worryingly, &gamma;C33 and C41 border the HG motif &mdash; any disruption here might have serious consequences on the physiological relevance of a resolved TMD structure.
 Beyond the concerning question of whether the mutant channels would then recapitulate physiological ENaC gating processes, they clearly act in opposition to the goal of creating channels biased to the open state in CKO/DEG.
 
 Conversely, if the goal is to disrupt palmitoylated sites (which, nominally, it was not), why are &alpha;C63 and &beta;C30 knocked out when they are known not to be palmitoylated in the cell [@mueller10]?
@@ -181,5 +182,6 @@ Fundamentally, the CKO mutations are logically inconsistent and should either be
 I briefly tried "acid shocking" ENaC during the purification.
 My thinking was that poorly folded ENaC would be the first to aggregate under stressful conditions, leaving behind higher quality material.
 Similar treatments could have been high temperature or salt concentrations &mdash; there was nothing theoretically special about pH aside from the fact that ENaC and channels like it are sensitive to pH.
+
 I did not notice a difference in total yield (beyond the losses expected from salt exchange alone), leading me to believe that the procedure did not have any real effect on ENaC, regardless of its folding state.
 Additionally, maps made with acid-shocked material (CKO digitonin and CKO/DEG difab) are not of substantially higher quality than the other, un-shocked maps.
