@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.340">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>ENaC isn’t ASIC - 5&nbsp; Conclusion</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../parts/references.html" rel="next">
+<link href="../../parts/conclusion.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating nav-fixed slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../figures/other/domain-cartoon_ECD.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">ENaC isn’t ASIC</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools ms-auto">
+    <div class="dropdown">
+      <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download"><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools ms-auto-item" href="../../posert-dissertation.pdf">
+              <i class="bi bi-bi-file-pdf pe-1"></i>
+            Download PDF
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools ms-auto-item" href="../../posert-dissertation.docx">
+              <i class="bi bi-bi-file-word pe-1"></i>
+            Download Docx
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../parts/conclusion.html">Conclusion</a></li><li class="breadcrumb-item"><a href="../../parts/conclusion/conclusion-doc.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Conclusion</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Frontmatter</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../parts/introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../parts/introduction/intro_enac-in-the-body.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">ENaC Physiology and Regulation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../parts/introduction/intro_enac-as-a-channel.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">ENaC Currents, Structure, and Gating</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../parts/results.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Results and Discussion</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../parts/results/results_transmembrane-domain.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The Transmembrane Domain Remains Elusive</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../parts/results/results_activating-conditions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">ECD Stability Under Activating Conditions</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../parts/conclusion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conclusion</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../parts/conclusion/conclusion-doc.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Conclusion</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../parts/references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../parts/appendices/mat-meth.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Materials and Methods</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../parts/appendices/processing-flow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Image Processing</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../parts/appendices/validation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Map Validation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../parts/appendices/code.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Code and Computation</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#context" id="toc-context" class="nav-link active" data-scroll-target="#context"><span class="header-section-number">5.1</span> Context</a></li>
+  <li><a href="#contrition-and-contemplation" id="toc-contrition-and-contemplation" class="nav-link" data-scroll-target="#contrition-and-contemplation"><span class="header-section-number">5.2</span> Contrition and Contemplation</a>
+  <ul class="collapse">
+  <li><a href="#what-is-actually-happening-with-cleavage-and-self-inhibition" id="toc-what-is-actually-happening-with-cleavage-and-self-inhibition" class="nav-link" data-scroll-target="#what-is-actually-happening-with-cleavage-and-self-inhibition"><span class="header-section-number">5.2.1</span> What is actually happening with cleavage and self-inhibition?</a></li>
+  <li><a href="#a-new-approach-is-needed-for-the-transmembrane-domain" id="toc-a-new-approach-is-needed-for-the-transmembrane-domain" class="nav-link" data-scroll-target="#a-new-approach-is-needed-for-the-transmembrane-domain"><span class="header-section-number">5.2.2</span> A new approach is needed for the transmembrane domain</a></li>
+  <li><a href="#electrophysiology" id="toc-electrophysiology" class="nav-link" data-scroll-target="#electrophysiology"><span class="header-section-number">5.2.3</span> Electrophysiology</a></li>
+  </ul></li>
+  <li><a href="#the-real-conclusion" id="toc-the-real-conclusion" class="nav-link" data-scroll-target="#the-real-conclusion"><span class="header-section-number">5.3</span> The real conclusion</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Conclusion</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="context" class="level2 page-columns page-full" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="context"><span class="header-section-number">5.1</span> Context</h2>
+<p>ENaC is an essential regulator of sodium permeability in many tissues. It plays an important role in a number of biological processes and diseases, including hypertension and cystic fibrosis. Despite its importance, little is known about the exact molecular mechanism by which the channel opens and closes.</p>
+<p>Unlike ENaC, a great deal of structure/function information is available for the close relative ASIC. It is understandable, then, that the field has long assumed the mechanisms of these two channels are similar. In the “ASIC-like” model, the GRIP domain forms a wedge holds the finger and thumb apart. Proteolytic release of this wedge allows the finger and thumb to collapse. This collapse is transmitted through the palm to open a fenestration near the membrane, allowing ions to pour through the pore. Mutations in the ENaC palm have large effects on current in a pattern similar to that of ASIC<span class="citation" data-cites="chen2013 yoder2018 zhang2022"><sup><a href="../references.html#ref-chen2013" role="doc-biblioref">1</a>–<a href="../references.html#ref-zhang2022" role="doc-biblioref">3</a></sup></span>.</p>
+<div class="page-columns page-full"><p>Proponents of this model (including our own lab) wave away differences between ASIC and ENaC currents. The most obvious is ASIC’s desensitization. ASIC closes less than a second after opening<span class="citation" data-cites="hesselager2004"><sup><a href="../references.html#ref-hesselager2004" role="doc-biblioref">4</a></sup></span>. Contrast this with ENaC, which does not desensitize at all — an open channel will remain open essentially indefinitely<span class="citation" data-cites="chraibi2002"><sup><a href="../references.html#ref-chraibi2002" role="doc-biblioref">5</a></sup></span>.</p><div class="no-row-height column-margin column-container"><span class="">ASIC’s desensitization kinetics are so fast Nate Yoder, in the Gouaux lab, couldn’t capture any open channels even with a hand-built plunge/ligand un-caging system.</span></div></div>
+<p>Desensitization in ASIC is in large part mediated by the four-residue β11-β12 linker<span class="citation" data-cites="yoder2018"><sup><a href="../references.html#ref-yoder2018" role="doc-biblioref">2</a></sup></span>. This β-turn is quite well-conserved among ENaCs and ASIC1, with the important leucine and asparagine residues absolutely conserved, and its conformation in all models solved so far aligns well with ASIC’s open state<span class="citation" data-cites="noreng18"><sup><a href="../references.html#ref-noreng18" role="doc-biblioref">6</a></sup></span>. There is one notable difference between the ASIC and ENaC linkers: an alanine is replaced with an acidic residue in all ENaC subunits and species. In currently-available structures this acidic residue does not form hydrogen bonds with other residues, but it may in the open conformation.</p>
+<p>ENaC currents do diminish over time in the presence of high external sodium in a process called sodium self-inhibition (SSI). SSI is independent from Na<sup>+</sup> currents and is relieved by proteolytic cleavage<span class="citation" data-cites="chraibi2002 sheng06"><sup><a href="../references.html#ref-chraibi2002" role="doc-biblioref">5</a>,<a href="../references.html#ref-sheng06" role="doc-biblioref">7</a></sup></span>. SSI seems to large-scale rearrangement of the ECD, unlike ASIC desensitization<span class="citation" data-cites="zhang2023"><sup><a href="../references.html#ref-zhang2023" role="doc-biblioref">8</a></sup></span>. Mutagenesis and cross-linking studies suggest that an acidic pocket comprising the finger, and β-ball bind Na<sup>+</sup> to close the channel<span class="citation" data-cites="kashlan2015 bize07 maarouf2009"><sup><a href="../references.html#ref-kashlan2015" role="doc-biblioref">9</a>–<a href="../references.html#ref-maarouf2009" role="doc-biblioref">11</a></sup></span>.</p>
+<p>The precise relationship between ENaC and ASIC’s gating is, if anything, less clear as a result of the work presented in this document. With the highest resolution yet, detect a clear lack of movement when large-scale rearrangements are expected. In the remaining space afforded to me, I will remind the reader what we’ve learned and wonder what it might mean for the field moving forward.</p>
+</section>
+<section id="contrition-and-contemplation" class="level2 page-columns page-full" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="contrition-and-contemplation"><span class="header-section-number">5.2</span> Contrition and Contemplation</h2>
+<section id="what-is-actually-happening-with-cleavage-and-self-inhibition" class="level3 page-columns page-full" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="what-is-actually-happening-with-cleavage-and-self-inhibition"><span class="header-section-number">5.2.1</span> What is actually happening with cleavage and self-inhibition?</h3>
+<p>Two things are true: when I remove the inhibitory peptide from the ECD, I see no large-scale rearrangement of the finger or thumb; and the transmembrane domain of this protein is almost certainly in some non-physiological state. The former finding runs contrary to years of cross linking, mutagenesis, and electrophysiology experiments; the latter should give us pause in throwing out the existing model.</p>
+<p>Could it be, then, that ENaC’s ECD requires some kind of tension from or coupling to the membrane via the TMD? It’s hard for me to come up with a model in which the finger and thumb do move closer together in a physiological environment, but do <em>not</em> move together without tension from the membrane, but it is the simplest means by which we might resolve this conflict. It is also possible that gating involves a related, but different motion, as seen in FaNaC<span class="citation" data-cites="valeriakalienkova2023"><sup><a href="../references.html#ref-valeriakalienkova2023" role="doc-biblioref">12</a></sup></span>.</p>
+<p>Of course, this is all speculation. ASIC’s ECD and TMD are loosely coupled — proton binding and pore opening are related for less than a second. What could we do to probe the relationship between the finger, thumb, GRIP, and pore?</p>
+<div class="page-columns page-full"><p>There exist a great number of ECD mutations known to modify ENaC’s P<sub>O</sub> regardless of open state. Some of these (e.g., the Liddle syndrome mutant αC479R) are in regions of the ECD for which our maps are consistently quite high-quality<span class="citation" data-cites="salih17"><sup><a href="../references.html#ref-salih17" role="doc-biblioref">14</a></sup></span>. ECD-only maps of these mutations would provide valuable insight into the gating mechanism even without a visible TMD.</p><div class="no-row-height column-margin column-container"><span class="">Out of consideration for my audience, I have covered only a fraction of these. The interested reader, or my unlucky successor, might check Kleyman and Eaton for more detail<span class="citation" data-cites="kleyman2020"><sup><a href="../references.html#ref-kleyman2020" role="doc-biblioref">13</a></sup></span>.</span></div></div>
+<p>A better understanding of SSI would further augment our knowledge of protease-mediated channel opening. SSI is unique to ENaC, and so we have little to rely on for mechanistic insight. My finding that ions bind the acidic pocket in Na<sup>+</sup> and K<sup>+</sup> buffers is surprising, as is the lack of any significant rearrangement of the ECD. Cross linking studies indicate that ECD conformational shifts are required for SSI<span class="citation" data-cites="zhang2023"><sup><a href="../references.html#ref-zhang2023" role="doc-biblioref">8</a></sup></span>. This leaves us in the same situation as with proteolytic cleavage: is some kind of mis-folding preventing the expected rearrangements, or do they simply not occur?</p>
+<p>A number of SSI-abrogating or -augmenting mutations have been described in the literature. At this point, solving ECD structures with resolutions better than 3&nbsp;Å is routine. Systematic investigation of map densities in channels with and without these mutations could identify promising SSI ion-binding sites which may, in turn, inform further mechanistic studies.</p>
+<p>Native material is another obvious answer. Production of a map of high enough quality to analyze gating mechanisms necessitates (at the time of writing) that the material is purified. This brings us to the question of why the transmembrane domain is hard to see in the first place.</p>
+</section>
+<section id="a-new-approach-is-needed-for-the-transmembrane-domain" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="a-new-approach-is-needed-for-the-transmembrane-domain"><span class="header-section-number">5.2.2</span> A new approach is needed for the transmembrane domain</h3>
+<p>A single model of the TMD would go a long way toward providing a believable model of ENaC’s gating cycle. As discussed in <a href="../results/results_transmembrane-domain.html"><span>Chapter&nbsp;3</span></a>, I believe that solubilization with digitonin presents a significant obstacle to TMD resolution. FaNaC purified in n-dodecyl-β-D-maltoside (DDM) and exchanged into GDN and then 3:1 POPC:POPG nanodiscs yields a high-resolution TMD<span class="citation" data-cites="valeriakalienkova2023"><sup><a href="../references.html#ref-valeriakalienkova2023" role="doc-biblioref">12</a></sup></span>. Our first maps of ENaC, also purified in DDM, provided the best TMD until the present work with mouse ENaC<span class="citation" data-cites="noreng18"><sup><a href="../references.html#ref-noreng18" role="doc-biblioref">6</a></sup></span>.</p>
+<p>However, the nanodiscs presented in this work have the worst TMD map of any presented. Moreover, my experience has demonstrated that ENaC is particularly difficult to get into nanodiscs in the first place when purified with DDM or digitonin. We know that the TMD is properly folded in the expression system, since it is the same system in which we perform electrophysiology. Purification with styrene-maleic acid may yield the first TMD map, as it yielded the first map of the re-entrant loop in ASIC<span class="citation" data-cites="yoder20"><sup><a href="../references.html#ref-yoder20" role="doc-biblioref">15</a></sup></span>. Alternately, spiking in required lipids (especially PIPs) during solubilization may stabilize the TMD enough to get it into nanodiscs.</p>
+<p>I do not think these minor changes alone will be sufficient. Rather, I believe future work should pursue homologues in parallel to efforts toward improved purification. In what I find difficult to believe is a coincidence, the authors of the FaNaC study published a phylogenetic analysis the year before they published their structure of one of the more distantly-related FaNaC genes<span class="citation" data-cites="dandamudi2022"><sup><a href="../references.html#ref-dandamudi2022" role="doc-biblioref">16</a></sup></span>. ENaCs exist as far back as jawless fishes; there is a wealth of genes to pick from<span class="citation" data-cites="wichmann2020"><sup><a href="../references.html#ref-wichmann2020" role="doc-biblioref">17</a></sup></span>.</p>
+<p>Despite their low macroscopic currents in exogenous expression systems, homomeric channels certainly seem to exist in the body (see <a href="../introduction/intro_enac-in-the-body.html#sec-intro_enac-in-body"><span>Section&nbsp;1.1</span></a>, especially the tongue and blood vessels). A homomeric channel does away with the difficulties of using Fabs without introducing the concomitant difficulties of subunit assignment. Their small currents mean that the number of properly-folded channels may be even smaller than for αβγ channels, but it’s probably worth checking.</p>
+</section>
+<section id="electrophysiology" class="level3" data-number="5.2.3">
+<h3 data-number="5.2.3" class="anchored" data-anchor-id="electrophysiology"><span class="header-section-number">5.2.3</span> Electrophysiology</h3>
+<p>Not everyone likes structure — that’s okay, there’s something here for you too. I have identified a number of glycans which, based on their visibility in my maps, may serve a structural role. We also know, as covered in <a href="../introduction/intro_enac-as-a-channel.html#sec-intro_mechano"><span>Section&nbsp;2.3.3</span></a>, that glycans are necessary for sensation of laminar shear stress. Electrophysiological studies of ENaCs with single asparagine mutations have not been performed by any lab, to my knowledge. Using my maps as a guide, it may be fruitful to investigate the sensitivity of ENaCs lacking the most-visible (and, therefore, most stable) glycans to LSS.</p>
+<p>Additionally, the FaNaC paper raises an interesting question: is the bulky residue in the β9-α4 linker necessary for proper gating? Conservation of the surrounding residues and an adjacent <em>cis</em>-proline would suggest so. An investigation of this loop is interesting whether the channels can gate or not — the best kind of experiment.</p>
+</section>
+</section>
+<section id="the-real-conclusion" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="the-real-conclusion"><span class="header-section-number">5.3</span> The real conclusion</h2>
+<p>Well, after six years of work, I’m left with more questions than I had at the start. For decades, the ENaC field has been moving away from the gating model of “ASIC with an internal ligand”. I hope that this work is eventually a small piece of our understanding of this deceptively complicated channel.</p>
+<!-- Move this to the end of content so the margins are right in citations -->
+
+
+<div id="refs" class="references csl-bib-body" role="list" style="display: none">
+<div id="ref-chen2013" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">Chen, J., Kleyman, T.R., and Sheng, S. (2013). Gain-of-function variant of the human epithelial sodium channel. American Journal of Physiology-Renal Physiology <em>304</em>, F207–F213. <a href="https://doi.org/10.1152/ajprenal.00563.2012">10.1152/ajprenal.00563.2012</a>.</div>
+</div>
+<div id="ref-yoder2018" class="csl-entry" role="listitem">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">Yoder, N., Yoshioka, C., and Gouaux, E. (2018). Gating mechanisms of acid-sensing ion channels. Nature <em>555</em>, 397–401. <a href="https://doi.org/10.1038/nature25782">10.1038/nature25782</a>.</div>
+</div>
+<div id="ref-zhang2022" class="csl-entry" role="listitem">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">Zhang, L., Wang, X., Chen, J., Kleyman, T.R., and Sheng, S. (2022). Accessibility of <span>ENaC</span> extracellular domain central core residues. Journal of Biological Chemistry <em>298</em>. <a href="https://doi.org/10.1016/j.jbc.2022.101860">10.1016/j.jbc.2022.101860</a>.</div>
+</div>
+<div id="ref-hesselager2004" class="csl-entry" role="listitem">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">Hesselager, M., Timmermann, D.B., and Ahring, P.K. (2004). <span class="nocase">pH Dependency</span> and <span>Desensitization Kinetics</span> of <span>Heterologously Expressed Combinations</span> of <span class="nocase">Acid-sensing Ion Channel Subunits</span>*. Journal of Biological Chemistry <em>279</em>, 11006–11015. <a href="https://doi.org/10.1074/jbc.M313507200">10.1074/jbc.M313507200</a>.</div>
+</div>
+<div id="ref-chraibi2002" class="csl-entry" role="listitem">
+<div class="csl-left-margin">5. </div><div class="csl-right-inline">Chraïbi, A., and Horisberger, J.-D. (2002). Na <span>Self Inhibition</span> of <span>Human Epithelial Na Channel</span> : <span>Temperature Dependence</span> and <span>Effect</span> of <span>Extracellular Proteases</span>. Journal of General Physiology <em>120</em>, 133–145. <a href="https://doi.org/10.1085/jgp.20028612">10.1085/jgp.20028612</a>.</div>
+</div>
+<div id="ref-noreng18" class="csl-entry" role="listitem">
+<div class="csl-left-margin">6. </div><div class="csl-right-inline">Noreng, S., Bharadwaj, A., Posert, R., Yoshioka, C., and Baconguis, I. (2018). Structure of the human epithelial sodium channel by cryo-electron microscopy. eLife <em>7</em>, e39340. <a href="https://doi.org/10.7554/eLife.39340">10.7554/eLife.39340</a>.</div>
+</div>
+<div id="ref-sheng06" class="csl-entry" role="listitem">
+<div class="csl-left-margin">7. </div><div class="csl-right-inline">Sheng, S., Carattino, M.D., Bruns, J.B., Hughey, R.P., and Kleyman, T.R. (2006). Furin cleavage activates the epithelial <span>Na</span>+ channel by relieving <span>Na</span>+ self-inhibition. American Journal of Physiology-Renal Physiology <em>290</em>, F1488–F1496. <a href="https://doi.org/10.1152/ajprenal.00439.2005">10.1152/ajprenal.00439.2005</a>.</div>
+</div>
+<div id="ref-zhang2023" class="csl-entry" role="listitem">
+<div class="csl-left-margin">8. </div><div class="csl-right-inline">Zhang, L., Wang, X., Chen, J., Sheng, S., and Kleyman, T.R. (2023). Extracellular intersubunit interactions modulate epithelial <span>Na</span>+ channel gating. Journal of Biological Chemistry <em>299</em>, 102914. <a href="https://doi.org/10.1016/j.jbc.2023.102914">10.1016/j.jbc.2023.102914</a>.</div>
+</div>
+<div id="ref-kashlan2015" class="csl-entry" role="listitem">
+<div class="csl-left-margin">9. </div><div class="csl-right-inline">Kashlan, O.B., Blobner, B.M., Zuzek, Z., Tolino, M., and Kleyman, T.R. (2015). Na+ <span>Inhibits</span> the <span>Epithelial Na</span>+ <span>Channel</span> by <span>Binding</span> to a <span>Site</span> in an <span>Extracellular Acidic Cleft</span> *. Journal of Biological Chemistry <em>290</em>, 568–576. <a href="https://doi.org/10.1074/jbc.M114.606152">10.1074/jbc.M114.606152</a>.</div>
+</div>
+<div id="ref-bize07" class="csl-entry" role="listitem">
+<div class="csl-left-margin">10. </div><div class="csl-right-inline">Bize, V., and Horisberger, J.-D. (2007). Sodium self-inhibition of human epithelial sodium channel: Selectivity and affinity of the extracellular sodium sensing site. American Journal of Physiology-Renal Physiology <em>293</em>, F1137–F1146. <a href="https://doi.org/10.1152/ajprenal.00100.2007">10.1152/ajprenal.00100.2007</a>.</div>
+</div>
+<div id="ref-maarouf2009" class="csl-entry" role="listitem">
+<div class="csl-left-margin">11. </div><div class="csl-right-inline">Maarouf, A.B., Sheng, N., Chen, J., Winarski, K.L., Okumura, S., Carattino, M.D., Boyd, C.R., Kleyman, T.R., and Sheng, S. (2009). Novel <span>Determinants</span> of <span>Epithelial Sodium Channel Gating</span> within <span>Extracellular Thumb Domains</span> *. Journal of Biological Chemistry <em>284</em>, 7756–7765. <a href="https://doi.org/10.1074/jbc.M807060200">10.1074/jbc.M807060200</a>.</div>
+</div>
+<div id="ref-valeriakalienkova2023" class="csl-entry" role="listitem">
+<div class="csl-left-margin">12. </div><div class="csl-right-inline">Valeria Kalienkova, Mowgli Dandamudi, Cristina Paulino, and Timothy Lynagh (2023). Structural basis for excitatory neuropeptide signaling. bioRxiv, 2023.04.29.538817. <a href="https://doi.org/10.1101/2023.04.29.538817">10.1101/2023.04.29.538817</a>.</div>
+</div>
+<div id="ref-kleyman2020" class="csl-entry" role="listitem">
+<div class="csl-left-margin">13. </div><div class="csl-right-inline">Kleyman, T.R., and Eaton, D.C. (2020). Regulating <span>ENaC</span>’s gate. American Journal of Physiology-Cell Physiology <em>318</em>, C150–C162. <a href="https://doi.org/10.1152/ajpcell.00418.2019">10.1152/ajpcell.00418.2019</a>.</div>
+</div>
+<div id="ref-salih17" class="csl-entry" role="listitem">
+<div class="csl-left-margin">14. </div><div class="csl-right-inline">Salih, M., Gautschi, I., van Bemmelen, M.X., Di Benedetto, M., Brooks, A.S., Lugtenberg, D., Schild, L., and Hoorn, E.J. (2017). A <span>Missense Mutation</span> in the <span>Extracellular Domain</span> of <span class="nocase">αENaC Causes Liddle Syndrome</span>. J. Am. Soc. Nephrol. <em>28</em>, 3291–3299. <a href="https://doi.org/10.1681/ASN.2016111163">10.1681/ASN.2016111163</a>.</div>
+</div>
+<div id="ref-yoder20" class="csl-entry" role="listitem">
+<div class="csl-left-margin">15. </div><div class="csl-right-inline">Yoder, N., and Gouaux, E. (2020). The <span>His-Gly</span> motif of acid-sensing ion channels resides in a reentrant <span>“loop”</span> implicated in gating and ion selectivity. eLife <em>9</em>, e56527. <a href="https://doi.org/10.7554/eLife.56527">10.7554/eLife.56527</a>.</div>
+</div>
+<div id="ref-dandamudi2022" class="csl-entry" role="listitem">
+<div class="csl-left-margin">16. </div><div class="csl-right-inline">Dandamudi, M., Hausen, H., and Lynagh, T. (2022). Comparative analysis defines a broader <span class="nocase">FMRFamide-gated</span> sodium channel family and determinants of neuropeptide sensitivity. Journal of Biological Chemistry <em>298</em>. <a href="https://doi.org/10.1016/j.jbc.2022.102086">10.1016/j.jbc.2022.102086</a>.</div>
+</div>
+<div id="ref-wichmann2020" class="csl-entry" role="listitem">
+<div class="csl-left-margin">17. </div><div class="csl-right-inline">Wichmann, L., and Althaus, M. (2020). Evolution of epithelial sodium channels: Current concepts and hypotheses. American Journal of Physiology-Regulatory, Integrative and Comparative Physiology <em>319</em>, R387–R400. <a href="https://doi.org/10.1152/ajpregu.00144.2020">10.1152/ajpregu.00144.2020</a>.</div>
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../parts/conclusion.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Conclusion</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../parts/references.html" class="pagination-link">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

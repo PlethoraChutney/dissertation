@@ -1,0 +1,110 @@
+# Conclusion
+
+## Context
+ENaC is an essential regulator of sodium permeability in many tissues.
+It plays an important role in a number of biological processes and diseases, including hypertension and cystic fibrosis.
+Despite its importance, little is known about the exact molecular mechanism by which the channel opens and closes.
+
+Unlike ENaC, a great deal of structure/function information is available for the close relative ASIC.
+It is understandable, then, that the field has long assumed the mechanisms of these two channels are similar.
+In the "ASIC-like" model, the GRIP domain forms a wedge holds the finger and thumb apart.
+Proteolytic release of this wedge allows the finger and thumb to collapse.
+This collapse is transmitted through the palm to open a fenestration near the membrane, allowing ions to pour through the pore.
+Mutations in the ENaC palm have large effects on current in a pattern similar to that of ASIC [@chen2013; @yoder2018; @zhang2022].
+
+Proponents of this model (including our own lab) wave away differences between ASIC and ENaC currents.
+The most obvious is ASIC's desensitization.
+ASIC closes less than a second after opening [@hesselager2004].[ASIC's desensitization kinetics are so fast Nate Yoder, in the Gouaux lab, couldn't capture any open channels even with a hand-built plunge/ligand un-caging system.]{.aside}
+Contrast this with ENaC, which does not desensitize at all &mdash; an open channel will remain open essentially indefinitely [@chraibi2002].
+
+Desensitization in ASIC is in large part mediated by the four-residue &beta;11-&beta;12 linker [@yoder2018].
+This &beta;-turn is quite well-conserved among ENaCs and ASIC1, with the important leucine and asparagine residues absolutely conserved, and its conformation in all models solved so far aligns well with ASIC's open state [@noreng18].
+There is one notable difference between the ASIC and ENaC linkers: an alanine is replaced with an acidic residue in all ENaC subunits and species.
+In currently-available structures this acidic residue does not form hydrogen bonds with other residues, but it may in the open conformation.
+
+ENaC currents do diminish over time in the presence of high external sodium in a process called sodium self-inhibition (SSI).
+SSI is independent from Na^+^ currents and is relieved by proteolytic cleavage [@chraibi2002; @sheng06].
+SSI seems to large-scale rearrangement of the ECD, unlike ASIC desensitization [@zhang2023].
+Mutagenesis and cross-linking studies suggest that an acidic pocket comprising the finger, and &beta;-ball bind Na^+^ to close the channel [@kashlan2015; @bize07; @maarouf2009].
+
+The precise relationship between ENaC and ASIC's gating is, if anything, less clear as a result of the work presented in this document.
+With the highest resolution yet, detect a clear lack of movement when large-scale rearrangements are expected.
+In the remaining space afforded to me, I will remind the reader what we've learned and wonder what it might mean for the field moving forward.
+
+## Contrition and Contemplation
+
+### What is actually happening with cleavage and self-inhibition?
+
+Two things are true: when I remove the inhibitory peptide from the ECD, I see no large-scale rearrangement of the finger or thumb; and the transmembrane domain of this protein is almost certainly in some non-physiological state.
+The former finding runs contrary to years of cross linking, mutagenesis, and electrophysiology experiments; the latter should give us pause in throwing out the existing model.
+
+Could it be, then, that ENaC's ECD requires some kind of tension from or coupling to the membrane via the TMD?
+It's hard for me to come up with a model in which the finger and thumb do move closer together in a physiological environment, but do *not* move together without tension from the membrane, but it is the simplest means by which we might resolve this conflict.
+It is also possible that gating involves a related, but different motion, as seen in FaNaC [@valeriakalienkova2023].
+
+Of course, this is all speculation.
+ASIC's ECD and TMD are loosely coupled &mdash; proton binding and pore opening are related for less than a second.
+What could we do to probe the relationship between the finger, thumb, GRIP, and pore?
+
+There exist a great number of ECD mutations known to modify ENaC's P~O~ regardless of open state.[Out of consideration for my audience, I have covered only a fraction of these. The interested reader, or my unlucky successor, might check Kleyman and Eaton for more detail [@kleyman2020].]{.aside}
+Some of these (e.g., the Liddle syndrome mutant &alpha;C479R) are in regions of the ECD for which our maps are consistently quite high-quality [@salih17].
+ECD-only maps of these mutations would provide valuable insight into the gating mechanism even without a visible TMD.
+
+A better understanding of SSI would further augment our knowledge of protease-mediated channel opening.
+SSI is unique to ENaC, and so we have little to rely on for mechanistic insight.
+My finding that ions bind the acidic pocket in Na^+^ and K^+^ buffers is surprising, as is the lack of any significant rearrangement of the ECD.
+Cross linking studies indicate that ECD conformational shifts are required for SSI [@zhang2023].
+This leaves us in the same situation as with proteolytic cleavage: is some kind of mis-folding preventing the expected rearrangements, or do they simply not occur?
+
+A number of SSI-abrogating or -augmenting mutations have been described in the literature.
+At this point, solving ECD structures with resolutions better than 3&nbsp;&Aring; is routine.
+Systematic investigation of map densities in channels with and without these mutations could identify promising SSI ion-binding sites which may, in turn, inform further mechanistic studies.
+
+Native material is another obvious answer.
+Production of a map of high enough quality to analyze gating mechanisms necessitates (at the time of writing) that the material is purified.
+This brings us to the question of why the transmembrane domain is hard to see in the first place.
+
+### A new approach is needed for the transmembrane domain
+
+A single model of the TMD would go a long way toward providing a believable model of ENaC's gating cycle.
+As discussed in @sec-chapter-tmd, I believe that solubilization with digitonin presents a significant obstacle to TMD resolution.
+FaNaC purified in n-dodecyl-&beta;-D-maltoside (DDM) and exchanged into GDN and then 3:1 POPC:POPG nanodiscs yields a high-resolution TMD [@valeriakalienkova2023].
+Our first maps of ENaC, also purified in DDM, provided the best TMD until the present work with mouse ENaC [@noreng18].
+
+However, the nanodiscs presented in this work have the worst TMD map of any presented.
+Moreover, my experience has demonstrated that ENaC is particularly difficult to get into nanodiscs in the first place when purified with DDM or digitonin.
+We know that the TMD is properly folded in the expression system, since it is the same system in which we perform electrophysiology.
+Purification with styrene-maleic acid may yield the first TMD map, as it yielded the first map of the re-entrant loop in ASIC [@yoder20].
+Alternately, spiking in required lipids (especially PIPs) during solubilization may stabilize the TMD enough to get it into nanodiscs.
+
+I do not think these minor changes alone will be sufficient.
+Rather, I believe future work should pursue homologues in parallel to efforts toward improved purification.
+In what I find difficult to believe is a coincidence, the authors of the FaNaC study published a phylogenetic analysis the year before they published their structure of one of the more distantly-related FaNaC genes [@dandamudi2022].
+ENaCs exist as far back as jawless fishes; there is a wealth of genes to pick from [@wichmann2020].
+
+Despite their low macroscopic currents in exogenous expression systems, homomeric channels certainly seem to exist in the body (see @sec-intro_enac-in-body, especially the tongue and blood vessels).
+A homomeric channel does away with the difficulties of using Fabs without introducing the concomitant difficulties of subunit assignment.
+Their small currents mean that the number of properly-folded channels may be even smaller than for &alpha;&beta;&gamma; channels, but it's probably worth checking.
+
+### Electrophysiology
+
+Not everyone likes structure &mdash; that's okay, there's something here for you too.
+I have identified a number of glycans which, based on their visibility in my maps, may serve a structural role.
+We also know, as covered in @sec-intro_mechano, that glycans are necessary for sensation of laminar shear stress.
+Electrophysiological studies of ENaCs with single asparagine mutations have not been performed by any lab, to my knowledge.
+Using my maps as a guide, it may be fruitful to investigate the sensitivity of ENaCs lacking the most-visible (and, therefore, most stable) glycans to LSS.
+
+Additionally, the FaNaC paper raises an interesting question: is the bulky residue in the &beta;9-&alpha;4 linker necessary for proper gating?
+Conservation of the surrounding residues and an adjacent *cis*-proline would suggest so.
+An investigation of this loop is interesting whether the channels can gate or not &mdash; the best kind of experiment.
+
+## The real conclusion
+
+Well, after six years of work, I'm left with more questions than I had at the start.
+For decades, the ENaC field has been moving away from the gating model of "ASIC with an internal ligand".
+I hope that this work is eventually a small piece of our understanding of this deceptively complicated channel.
+
+<!-- Move this to the end of content so the margins are right in citations -->
+:::{.content-hidden unless-format="pdf"}
+\newgeometry{left=1in, right=1in}
+:::

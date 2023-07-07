@@ -18,6 +18,9 @@ book:
       chapters:
         - parts/results/results_transmembrane-domain.qmd
         - parts/results/results_activating-conditions.qmd
+    - part: parts/conclusion.qmd
+      chapters: 
+        - parts/conclusion/conclusion-doc.qmd
     - parts/references.qmd
   appendices: 
     - parts/appendices/mat-meth.qmd

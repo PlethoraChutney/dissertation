@@ -200,8 +200,3 @@ This alternate rigidification is interesting in the light of sodium self-inhibit
 As yet, there is not a clear explanation for how mutating &alpha;H255 and &gamma;H233 (occupying the same structural position in their respective subunits) might have opposite effects on SSI (augmenting and eliminating it, respectively)[@sheng2004].
 Considering a rigid macro-domain comprising the uncleavable &beta; subunit, &gamma; palm, and &alpha; thumb (connected via glycans) and a flexible macro-domain comprising the &alpha; palm and finger and &gamma; thumb, I see that &gamma;H233 belongs to the former, while &alpha;H255 belongs to the latter.
 Of course, more functional study is required to firmly establish this link, but I note that the SSI of channels lacking N-linked glycosylation sites is significantly reduced compared to WT[@kashlan2018].
-
-<!-- Move this to the end of content so the margins are right in citations -->
-:::{.content-hidden unless-format="pdf"}
-\newgeometry{left=1in, right=1in}
-:::

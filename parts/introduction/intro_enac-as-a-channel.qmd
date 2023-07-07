@@ -180,6 +180,9 @@ The separation of the thumb from the finger pushes the palm inward, holding the 
 
 When ASIC encounters low extracellular pH, the residues in the acidic pocket are protonated.
 This relieves electrostatic repulsion and allows the finger/thumb interface to collapse, pulling the palm and TMD inward and opening a lateral fenestration just above the membrane (@fig-intro_asic-fenestration) [@baconguis2014].
+Mutating a residue just above the second transmembrane helix in &beta;ENaC holds this fenestration open constitutively [@snyder2000].
+This &beta;S520K is known as the DEG mutation, named after the *C. elegans* channel from which the mutation is derived.
+
 In the open state, the ions pass from the extracellular fenestration down a negatively-charged pore through the GAS belt, and into the intracellular fenestration.
 The GAS belt selects for Na^+^ over other cations by a "sieving mechanism", physically preventing the passage of ions with hydrated radii too large for the filter.
 It is worth noting here that ENaC's significantly higher Na^+^ selectivity and lower unitary currents suggest that, unlike ASIC, Na^+^ ions are dehydrated before passing through ENaC [@palmer82].
@@ -204,7 +207,8 @@ Unlike ENaC, ASIC desensitizes.
 In desensitized ASICs, the &beta;11-&beta;12 linker in the palm domain is flipped toward the channel center [@baconguis2012].
 This decouples the still-collapsed finger and thumb domains from the lower palm and TMD, allowing the fenestration to close.
 In essence, the desensitized channels have an open ECD but a closed TMD.
-As ENaCs do not desensitize, it remains to be seen whether the &beta;11-&beta;-12 linker plays a role in gating.
+As ENaCs do not desensitize, the role of this linker is likely different.
+However, the sequence is highly conserved between ASIC and ENaCs, and an L&rarr;Q mutation results in a significant increase in current [@chen2013].[There is a conspicuous A&rarr;D/E mutation between ASIC and ENaC, but this acidic residue does not form any obvious associations in models solved thus far.]{.aside}
 
 ### Glycosylation {#sec-intro_glycosylation}
 
@@ -321,7 +325,3 @@ Does ENaC contain a GAS belt and a lateral fenestration like ASIC?
 Moreover, the existence of several, semi-overlapping means of modulating channel P~O~ indicates that there may be multiple, physiologically-relevant means of opening ENaC that cells use to fine-tune their Na^+^ permeability.
 At a more basic level, structures of ENaC's TMD, pore, and selectivity filter would contribute to our understanding of the important ENaC/DEG family more broadly.
 It is with this in mind that I set out on the goals of this project: to solve the structure of the ENaC TMD, and to solve high-resolution structures of the channel in various salts.
-
-Although I did not succeed in solving a structure of the TMD, high-resolution structures of the channel in cleaved and uncleaved states inform us that ECD/TMD coupling is important for ECD conformational changes (@sec-chapter-tmd).
-My work on the latter goal has revealed a number of new glycans which seem to form contacts among the subunits and with the membrane/micelle (@sec-results_ecd).
-Additionally, the acidic pocket may not be involved in SSI, and the ECD does not undergo appreciable conformational change between Na^+^ and K^+^ buffers.
