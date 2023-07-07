@@ -1,5 +1,6 @@
 project:
   type: book
+  post-render: ./replace_title_page.sh
 
 book:
   title: ENaC isn't ASIC

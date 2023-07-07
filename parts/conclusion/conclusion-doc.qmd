@@ -98,10 +98,12 @@ Additionally, the FaNaC paper raises an interesting question: is the bulky resid
 Conservation of the surrounding residues and an adjacent *cis*-proline would suggest so.
 An investigation of this loop is interesting whether the channels can gate or not &mdash; the best kind of experiment.
 
-## The real conclusion
+## Conclusion
 
-Well, after six years of work, I'm left with more questions than I had at the start.
+After six years of work, I'm left with more questions than I had at the start.
 For decades, the ENaC field has been moving away from the gating model of "ASIC with an internal ligand".
+Rather, ENaC P~O~ is fine-tuned by a variety of internal and external signals.
+I believe that my findings here are consistent with that premise.
 I hope that this work is eventually a small piece of our understanding of this deceptively complicated channel.
 
 <!-- Move this to the end of content so the margins are right in citations -->
