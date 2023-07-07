@@ -20,7 +20,7 @@ Contrast this with ENaC, which does not desensitize at all &mdash; an open chann
 Desensitization in ASIC is in large part mediated by the four-residue &beta;11-&beta;12 linker [@yoder2018].
 This &beta;-turn is quite well-conserved among ENaCs and ASIC1, with the important leucine and asparagine residues absolutely conserved, and its conformation in all models solved so far aligns well with ASIC's open state [@noreng18].
 There is one notable difference between the ASIC and ENaC linkers: an alanine is replaced with an acidic residue in all ENaC subunits and species.
-In currently-available structures this acidic residue does not form hydrogen bonds with other residues, but it may in the open conformation.
+In currently-available structures this acidic residue does not form hydrogen bonds with other residues, but it may do so in the open conformation.
 
 ENaC currents do diminish over time in the presence of high external sodium in a process called sodium self-inhibition (SSI).
 SSI is independent from Na^+^ currents and is relieved by proteolytic cleavage [@chraibi2002; @sheng06].
@@ -79,20 +79,20 @@ Alternately, spiking in required lipids (especially PIPs) during solubilization 
 
 I do not think these minor changes alone will be sufficient.
 Rather, I believe future work should pursue homologues in parallel to efforts toward improved purification.
-In what I find difficult to believe is a coincidence, the authors of the FaNaC study published a phylogenetic analysis the year before they published their structure of one of the more distantly-related FaNaC genes [@dandamudi2022].
-ENaCs exist as far back as jawless fishes; there is a wealth of genes to pick from [@wichmann2020].
+In what I find difficult to believe is a coincidence, the authors of the FaNaC study published a phylogenetic analysis the year before they published their structure of one of the more distantly related FaNaC genes [@dandamudi2022].
+ENaCs exist as far back as jawless fishes; there is a wealth of orthologs to pick from [@wichmann2020].
 
 Despite their low macroscopic currents in exogenous expression systems, homomeric channels certainly seem to exist in the body (see @sec-intro_enac-in-body, especially the tongue and blood vessels).
 A homomeric channel does away with the difficulties of using Fabs without introducing the concomitant difficulties of subunit assignment.
-Their small currents mean that the number of properly-folded channels may be even smaller than for &alpha;&beta;&gamma; channels, but it's probably worth checking.
+Their small currents mean that the number of properly folded channels may be even smaller than for &alpha;&beta;&gamma; channels, but it's probably worth checking.
 
 ### Electrophysiology
 
 Not everyone likes structure &mdash; that's okay, there's something here for you too.
-I have identified a number of glycans which, based on their visibility in my maps, may serve a structural role.
+I have identified several glycans which, based on their extended visibility in my maps, may serve a structural role.
 We also know, as covered in @sec-intro_mechano, that glycans are necessary for sensation of laminar shear stress.
 Electrophysiological studies of ENaCs with single asparagine mutations have not been performed by any lab, to my knowledge.
-Using my maps as a guide, it may be fruitful to investigate the sensitivity of ENaCs lacking the most-visible (and, therefore, most stable) glycans to LSS.
+Using my maps as a guide, it may be fruitful to investigate the sensitivity of ENaCs lacking the most visible (and, therefore, most stable) glycans to LSS.
 
 Additionally, the FaNaC paper raises an interesting question: is the bulky residue in the &beta;9-&alpha;4 linker necessary for proper gating?
 Conservation of the surrounding residues and an adjacent *cis*-proline would suggest so.
