@@ -2,8 +2,8 @@
 
 Despite the fact that the TMD remains elusive, my hope was that investigating conditions thought to open the channel I might observe large-scale ECD rearrangements like those observed in ASIC.
 In this chapter I cover my efforts on that front, starting with a map of mouse ENaC solved pre- and post-trypsin treatment.
-Next, I investigate a putative sodium self inhibition site that had been described previously in the literature (including by our own lab) in the presence of Na^+^ and K^+^.
-Finally, I highlight the extensive surface glycosylation I am able to resolve in all of my ECD maps.
+Next, I investigate a putative sodium self-inhibition site that had been described previously in the literature (including by our own lab) in the presence of Na^+^ and K^+^.
+Finally, I highlight the extensive newly-resolvable surface glycosylation present in all of my ECD maps.
 
 ## ECD conformation is unchanged by trypsin cleavage
 
@@ -25,7 +25,9 @@ Biochemical analyses show that trypsin treatment cleaves both the &alpha; and &g
 Additionally, trypsin treatment of *X. laevis* oocytes expressing mouse &alpha;&beta;&gamma;ENaC show the expected increase in amiloride sensitive current (@fig-cleavage-oocytes).
 However, aside from the disappearance of the inhibitory peptide, the ECD is otherwise superimposable (RMSD 0.440&nbsp;&Aring;; @fig-cleavage-maps).
 The finger and thumb do not shift even a fraction of what the ASIC-like model would predict.
-Based on the observed cryoEM map density, only the &gamma; subunit GRIP domain is released from the channel despite the fact that biochemical characterization indicates both are digested by trypsin.
+
+Based on the observed cryoEM map density, only the &gamma; subunit GRIP domain is released from the channel.
+However, biochemical characterization indicates both are digested by trypsin.
 I also note that the entire GRIP domain, not just the inhibitory peptide, has reduced map density in the trypsin-treated sample.
 This suggests that the entire grip domain might be released from the subunit, but of course it's equally possible that release of the inhibitory peptide results in increased GRIP flexibility, which blurs out the map.
 
@@ -52,6 +54,7 @@ Given the poor quality of &gamma;Y431 (the equivalent position to human Y425) in
 The equivalent residue in &alpha; is also a tyrosine (&alpha;Y447 and 474 in human and mouse respectively), but the inhibitory peptide curves away from the channel center, removing the interactions with the backbone and aromatic oxygen atoms and allowing a more favored rotamer (@fig-tyr-rotamer C and D).
 The same position in &beta;, N417, only forms a hydrogen bond with the finger domain (N225).
 The lack of any interactions between &beta;N417 and the &beta;ENaC GRIP domain, which is not cleaved to open the channel, is further suggestive of this residue's role in proteolytic gating.
+
 I note also that the map quality worsens for the nearby &gamma;M438, mutation of which alters channel gating[@maarouf2009].
 The reduced quality for this map region upon trypsin treatment may represent increased flexibility, perhaps indicating that conformational strain in the upper thumb is released along with the inhibitory peptide.
 
@@ -60,7 +63,8 @@ The reduced quality for this map region upon trypsin treatment may represent inc
 I next investigated differences in ECD conformation among protein purified in external K^+^ instead of Na^+^.
 High extracellular K^+^ does not prime inhibition in wild-type channels and SSI is rapidly attenuated upon exposure to low (i.e., &lt;10&nbsp;mM) Na^+^ [@maarouf2009; @kashlan2015].
 Protein purified in K^+^ buffer with nominally zero Na^+^ should therefore be completely uninhibited.
-The linker connecting &beta;6 and &beta;7 is important for SSI, and I have previously reported evidence of a putative bound Na^+^ ion in this region[@kashlan2015; @noreng20].
+
+The linker connecting &beta;6 and &beta;7 is important for SSI, and our lab has previously reported evidence of a putative bound Na^+^ ion in this region[@kashlan2015; @noreng20].
 Moreover, cross-linking of several pairs of amino acids in the ECD affects SSI magnitude, implying that some rearrangement is required for SSI[@kashlan2015; @zhang2023].
 Given this body of research, I solved structures of ENaC in high (200&nbsp;mM) and low (nominal 0&nbsp;mM&nbsp;Na^+^, 200&nbsp;mM&nbsp;K^+^) sodium.
 I expected the high-Na^+^ model to show rearrangements throughout the ECD, as would be required to transfer Na^+^-binding state to the pore.
@@ -87,9 +91,10 @@ The lack of any significant structural difference in the acidic pocket in the pr
 
 ## Glycans make important contacts among subunits and with the membrane
 
-Glycosylation of ENaC at conserved asparagine sites is essential for sodium self inhibition, trypsin activation, and mechanosensitivity[@kashlan2018; @knoepp2020].
+Glycosylation of ENaC at conserved asparagine sites is essential for sodium self-inhibition, trypsin activation, and mechanosensitivity[@kashlan2018; @knoepp2020].
 The high-quality maps obtained in this study enable modeling of significantly more and longer glycans than in previous work.
-I find a total of 19 distinct glycosylation sites, with at most 9 sugars I am able to build into a single glycan.
+I find a total of 19 distinct glycosylation sites, with up to nine modellable sugars in a single glycan.
+
 For the most part, the sugars are identical in all six models and make no protein or glycan interactions.
 These sugars likely play a role in other regulatory roles, such as channel trafficking and maturation or interaction with the extracellular matrix[@kashlan2018; @hughey04; @knoepp2020].
 However, two classes of glycan are particularly interesting: the micelle-proximal and the intersubunit glycans.
@@ -100,6 +105,7 @@ The intersubunit glycans stretch from one subunit to another (@fig-intersub-glyc
 I am able to model long chains for these glycans, with some maps supporting up to nine monosaccharides.
 Due to the flexibility of these long chains, the terminal side is quite blurred out in the cryoEM maps, and so I cannot be confident about the exact orientation or identity of the constituent sugars.
 Nonetheless, the maps are of sufficient quality to at least suggest sugar-mediated interactions between subunits, and the first sugars are of sufficient resolution to assign the asparagine residues to which they are coupled.
+
 Treatment with PNGase F induces a size shift in the purified protein, confirming that the protein is glycosylated (@fig-intersub-glyc B).
 I built typical high-mannose glycans (Man~5~GlcNAc~2~) into the models as expected for GnTI^-^ and Sf9 cells to assess these interactions at a low resolution[@reeves2002; @shi2007].
 One glycan reaches from &beta;N260 to the &alpha; subunit (@fig-intersub-glyc C), potentially hydrogen bonding with &alpha;D235 and &alpha;K459.
@@ -114,6 +120,7 @@ The micelle-proximal glycans are anchored to h&alpha;N397 and h&beta;N364 and th
 The &alpha; site is conserved in mammalian ENaCs, while the &beta; site is conserved in all surveyed organisms except lungfish.
 These glycans extend away from the ECD body and turn down toward the micelle or lipids and are clear in all ENaC maps solved to date.
 The &gamma; subunit does not have an equivalent asparagine residue, and so does not have a micelle-proximal glycan.
+
 I note that all ENaC maps produced to date also show a consistent tilt of the micelle or nanodisc such that the &gamma; subunit is closer to the surface of the micelle than are the &alpha; or &beta; subunits; this tilt does not appear to be an artifact of in-plane rotation (@fig-micelle-glyc B).
 I propose therefore that this tilt may in part be caused by the presence of the micelle-proximal glycans, which are only missing from &gamma;ENaC (@fig-micelle-glyc C).
 Their presence in the nanodisc map may indicate that they perform a similar role in a native cell membrane context.
@@ -126,35 +133,38 @@ Regardless of the treatment applied, I cannot measure any change in the ECD.
 This stability stands in stark contrast to the highly dynamic ECD of the gating model widely assumed in the field and based on that of ASIC1[@kashlan11; @yoder2018].
 I observe trypsin cleavage of both the &alpha; and &gamma; GRIP domains, but only reduced cryoEM map density for the &gamma; domain.
 The maps are otherwise perfectly superimposable, with unchanged ECDs and TMDs.
-Removal of only the &gamma; GRIP domain is surprising but not entirely unexpected &mdash; channels lacking the &gamma; subunit or specific lysine residues in the &gamma; ECD are not activated by trypsin[@diakov2008].
+Loss of density for only the &gamma; GRIP domain is surprising but not entirely unexpected &mdash; channels lacking the &gamma; subunit or specific lysine residues in the &gamma; ECD are not activated by trypsin[@diakov2008].
 It is therefore possible that while the &alpha; GRIP domain is cleaved, it is not directly involved in trypsin-mediated channel activation.
 Based on biochemical data, I speculate that the &alpha; GRIP domain is also cleaved by trypsin, but the GRIP domain is still clearly visible in our cryoEM maps.
 In any case, a lack of any observable channel rearrangement upon removal of the &gamma; inhibitory peptide (a state in which ENaC's P~O~ approaches 0.9) must lead us to a deeper consideration of ENaC gating[@bruns07].
 
 Although the best-studied mechanism of ENaC opening is GRIP proteolysis, multiple studies have found other stimuli which open the channel, including laminar shear stress and phospholipids (see @sec-intro_direct-reg for more detail).
 ENaC P~O~ is also sensitive to changes in both intracellular and extracellular pH[@chalfant1999].
-It is thus possible that the cell possesses multiple mechanisms with which it can open ENaC, and uses some combination to tune Na^+^ permeability.
+It is thus possible that the cell possesses multiple mechanisms with which it can open ENaC and uses them in combination to tune Na^+^ permeability.
 
 The possibility of a more complex pathway to open ENaC is supported by *in vivo* studies as well.
 The proportion of cleaved &gamma;ENaC from mice lacking SGK1 is significantly smaller than that of WT mice, but cells from these kidneys have indistinguishable amiloride-sensitive current[@fejestoth08].
 Similarly, ENaC missing the canonical furin cleavage site in the &gamma; subunit is not cleaved when expressed in *X. laevis* oocytes, but currents do not differ between the mutant channels and WT[@harris2008].
+
 Indeed, in different tissues and in different studies the cleavage of either &alpha;- or &gamma;ENaC seems to be of greater importance, hinting at an environmental effect on the relationship between GRIP cleavage and channel P~O~[@hughey2004; @bruns07; @caldwell2005].
 Based on this prior research and the maps I present here, I suspect that ENaC gating is not as simple as the proposed mechanism in which a single, coordinated protein maturation step moves the channel from a low- to high-P~O~ state [@hughey03].
-However, I do not feel comfortable making firm conclusions about ENaC gating due to the unresolved question of the TMD.
+However, I cannot make firm conclusions about ENaC gating due to the unresolved question of the TMD.
 
 As discussed in @sec-chapter-tmd, the TMDs of all six models are disturbed and likely do not represent a physiological conformation.
 It is possible that the ECD requires some kind of feedback from the TMD, and that this coupling has been lost during purification and grid preparation.
+
 Mutations in linkers between the TMD and ECD of other channels have dramatic effects on ECD function; for instance, the *lurcher* mutation in the GluR1 ECD/TMD linker dramatically increases ECD affinity for glutamate[@taverna2000].
 I suspect that the ENaC ECD requires a fully-assembled six-TM pore region to respond to GRIP domain excision, but such a conclusion would require deeper investigation.
 A TMD/ECD decoupling would also explain the lack of ECD shift with the introduction of the DEG mutation, which has been shown to hold the channel in an open state, and for which I see dramatic TMD restructuring but no change in the ECD[@snyder2000].
+
 ENaC does not seem amenable to the standard means of membrane protein purification.
-It is possible that finding a more-stable homolog would improve the quality of the TMD, as our mouse maps have significantly better TMD density than our human maps.
+It is possible that finding a more-stable ortholog would improve the quality of the TMD, as our mouse maps have significantly better TMD density than our human maps.
 
 ### A role for the &beta;9-&alpha;4 linker in gating
 
 In *Malacoceros fuliginosus* FaNaC, a histidine in the &beta;9-&alpha;4 linker forms contacts with both TMs [@valeriakalienkova2023].
 This interaction blocks channel opening until ligand is bound.
-In ENaC, the equivalent residue is a tyrosine, as it is in *Helix aspersa* FaNaC, while in ASIC it is a tryptophan [@lingueglia1995].
+In ENaC and *Helix aspersa* FaNaC the equivalent residue is a tyrosine, while in ASIC it is a tryptophan [@lingueglia1995].
 It is possible that any bulky or aromatic residue plays a similar ECD-lock role in this &beta;-turn.
 In my models, only the &beta;-subunit tyrosine is close enough to hydrogen bond with the TMs as I have modeled them, but this could be an artifact of the disordered TMD, or the interaction may be mediated by lipids.
 
@@ -169,9 +179,11 @@ In light of the important role this loop plays in FaNaC gating, and the conserve
 Previous reports suggested that rearrangement of an acidic pocket in the &alpha; finger plays a key role in SSI[@kashlan2015].
 It is therefore highly surprising that this pocket does not change upon release of Na^+^.
 However, there are species differences in ENaC SSI, and the functional work describing this acidic pocket was all performed on mouse ENaC, while our high- and low-Na^+^ models are both of human ENaC[@collier2009; @kashlan2015; @maarouf2009].
+
 In human (but not rat) ENaC, pH titration changes the magnitude of SSI but, crucially, not the K~i~ of Na^+^; a surprising result if surface-accessible acidic residues form the SSI Na^+^-binding site.
 Moreover, ENaC cleavage essentially abrogates SSI, and residues in the upper finger which interact with the GRIP domain are implicated in SSI[@sheng06; @bize07; @maarouf2009].
 Despite this relationship, I also see no conformational shift of the acidic pocket upon trypsin treatment.
+
 It may therefore be that the acidic pocket simply has a higher affinity for Na^+^ than K^+^ and therefore presents a higher barrier to ECD conformational shift when bound to Na^+^.
 This would effectively trap the channel in a closed state, rather than some third sodium self-inhibited state.
 Without observing the complete gating cycle of ENaC and the concomitant conformational changes it is impossible to make any firm conclusions about the precise mechanism of SSI.
@@ -182,13 +194,15 @@ I therefore hope that our models will serve as a useful guide in future studies 
 These maps represent the first structural study of ENaC's extensive glycosylation.
 I must emphasize that these models all arise from particles which have only high-mannose glycosylation.
 However, glycosylation is required for ENaC function and trypsin digestion and our channels have the expected electrophysiological properties and respond to trypsin treatment in the expression system (@fig-ephys)[@kashlan2018].
-I are therefore confident that the high-mannose glycans are sufficient for mechanistic inference.
+I am therefore confident that the high-mannose glycans are sufficient for mechanistic inference.
 
 ![I/V curves for human CKO and CKO/DEG channels. Values are normalized per-cell to the inward current at -80 mV before trypsin treatment. Cells were treated with trypsin for five minutes before being re-recorded. Each point is the average of three cells. Error bars represent +/- one standard deviation.](figures/ephys/491-mean-iv.png){#fig-ephys}
 
 Two distinct classes of glycan make observable interactions in our models: membrane-proximal and intersubunit glycans.
 I propose that the membrane-proximal glycans may help establish the micelle/nanodisc tilt observed in all ENaC maps to date, and that this tilt may have as-yet unknown functional implications.
-I do not believe that these glycans alone are sufficient to define ENaC's orientation in the membrane, and note that in addition to missing a membrane-proximal glycan, &gamma;ENaC has two fewer residues between the palm and TM1 than do the &alpha; or &beta; subunits[@noreng18].
+
+I am not suggesting that these glycans alone are sufficient to define ENaC's orientation in the membrane
+For example, in addition to missing a membrane-proximal glycan &gamma;ENaC has two fewer residues between the palm and TM1 than do the &alpha; or &beta; subunits[@noreng18].
 
 The &beta; intersubunit glycan interacts with the top of the &alpha; thumb, which may serve to rigidify it.
 Indeed, knock-out of &beta; glycans protects the &alpha; subunit from trypsin digestion[@kashlan2018].
