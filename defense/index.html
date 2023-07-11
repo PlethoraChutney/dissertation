@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Posert Defense</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="talk-theme/reveal.js/dist/reveal.css">
+		<link rel="stylesheet" href="talk-theme/posert.css" id="theme">
+		<link rel="stylesheet" href="talk-theme/presentation.css">
+        <link rel="stylesheet" href="this-presentation.css">
+	</head>
+  <body>
+<div class="reveal">
+<div class="slides">
+
+<section data-auto-animate="">
+    <h2>Hello world</h2>
+</section>
+
+<section data-background-color="black" data-hide-slide-number="true" data-auto-animate="">
+    <div class="fit-one r-stretch">
+        <img src="images/chips-me.jpg" alt="">
+    </div>
+</section>
+<section data-background-color="black" data-hide-slide-number="true" data-auto-animate="">
+    <div class="fit-two r-stretch">
+        <img src="images/chips-me.jpg" alt="">
+        <img src="images/chips-casey.jpg" alt="">
+    </div>
+</section>
+<section data-background-color="black" data-hide-slide-number="true" data-auto-animate="">
+    <div class="fit-three r-stretch">
+        <img src="images/chips-me.jpg" alt="">
+        <img src="images/chips-casey.jpg" alt="">
+        <img src="images/chips-nooch.jpg" alt="">
+    </div>
+</section>
+
+<section data-auto-animate="" data-background-image="images/chips.jpg" data-hide-slide-number="true">
+    <div class="r-stretch fit-one">
+        <h2 
+            data-id="we-love-salt" 
+            style="color: black; margin-bottom: 300px;" 
+            class="r-fit-text"
+        >
+            We love salt?
+        </h2>
+    </div>
+    <p class="citation">Photo by Mustafa Bashari on Unsplash</p>
+</section>
+
+<section data-auto-animate="" data-background-image="images/ocean.jpg" data-hide-slide-number="true">
+    <div class="r-stretch fit-one">
+        <h2 
+            data-id="we-love-salt" 
+            style="color: black; margin-bottom: 300px;" 
+            class="r-fit-text"
+        >
+            We love salt?
+        </h2>
+    </div>
+    <p class="citation" style="color: white;">Photo by Ant Rozetsky on Unsplash</p>
+</section>
+
+<section data-auto-animate="">
+    <h2 
+        data-id="we-love-salt" 
+        style="color: black";
+    >
+        We love salt?
+    </h2>
+    <div class="fit-one r-stretch">
+        <img src="images/fake-salt.jpg" alt="" class="bordered">
+    </div>
+    <p class="citation">Edward Centrella at Your Brain on Sci</p>
+</section>
+
+<section data-auto-animate="">
+    <h2>Our taste of salt</h2>
+    <div class="v-flex" style="align-items: flex-start; width: 75%; margin: auto;">
+        <div class="h-flex" style="gap: 3rem;">
+            <img src="images/chips-small.png" alt="" style="width: 250px; border: 1px solid black;">
+            <p>We can discriminate amounts of salt</p>
+        </div>
+        <div class="h-flex" style="gap: 3rem;">
+            <img src="images/salt-compare.png" alt="" style="width: 250px; border: 1px solid black;">
+            <p>We can discriminate between sodium and potassium</p>
+        </div>
+    </div>
+    <p>And we do it all near-instantly!</p>
+</section>
+
+<section data-background-video="blender/human-hair/human-hair.mp4" data-autoplay data-hide-slide-number="true">
+</section>
+
+</div>
+</div>
+
+
+    <script src="talk-theme/reveal.js/dist/reveal.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/tokyo-night-dark.min.css">
+    <script src="talk-theme/reveal.js/plugin/highlight/highlight.js"></script>
+    <script src="talk-theme/reveal.js/plugin/math/math.js"></script>
+    <script src="talk-theme/reveal.js/plugin/zoom/zoom.js"></script>
+    <script>
+
+        Reveal.initialize({
+            center: true,
+            hash: true,
+            controls: false,
+            transitionSpeed: 'fast',
+            slideNumber: false,
+            width: 1920,
+            height: 1080,
+            plugins: [RevealHighlight],
+            autoAnimateStyles: [
+                'opacity',
+                'color',
+                'background-color',
+                'padding',
+                'font-size',
+                'line-height',
+                'letter-spacing',
+                'border-width',
+                'border-color',
+                'border-radius',
+                'outline',
+                'outline-offset'
+            ]
+        });
+
+        // fill in ENaC spans
+
+        document.querySelectorAll('span.alpha').forEach(s => {
+            s.classList.add('greek-letter')
+            s.innerHTML = '&alpha;';
+        });
+        document.querySelectorAll('span.beta').forEach(s => {
+            s.classList.add('greek-letter')
+            s.innerHTML = '&beta;';
+        });
+        document.querySelectorAll('span.gamma').forEach(s => {
+            s.classList.add('greek-letter')
+            s.innerHTML = '&gamma;';
+        });
+        document.querySelectorAll('span.cko').forEach(s => {
+            s.innerHTML = 'CKO';
+        })
+        document.querySelectorAll('span.ckodeg').forEach(s => {
+            s.innerHTML = 'CKO/DEG';
+        })
+        document.querySelectorAll('span.asic').forEach(s => {
+            s.innerHTML = 'ASIC';
+        })
+        document.querySelectorAll('span.trypsin').forEach(s => {
+            s.innerHTML = 'trypsinized mouse'
+        })
+        document.querySelectorAll('span.mouse').forEach(s => {
+            s.innerHTML = 'mouse uncleaved'
+        })
+
+
+        // play movies
+
+        Reveal.on('fragmentshown', event => {
+            // switch (event.fragment.id) {
+            //     case 'play-zoom':
+            //         zoomMovie.play();
+            //         break;
+            //     case 'play_ecd-turn':
+            //         ecdMovie.play();
+            //         break;
+            //     case 'play-gamma-kink':
+            //         gkink.play();
+            //         break;
+            //     case 'alpha-palm':
+            //         apalm.play();
+            //         break;
+            // }
+        })
+
+        Reveal.on('fragmenthidden', event => {
+            // switch (event.fragment.id) {
+            //     case 'play-zoom':
+            //         zoomMovie.pause();
+            //         zoomMovie.currentTime = 0;
+            //         break;
+            //     case 'play_ecd-turn':
+            //         ecdMovie.pause();
+            //         ecdMovie.currentTime = 0;
+            //         break;
+            //     case 'play-gamma-kink':
+            //         gkink.pause();
+            //         gkink.currentTime = 0;
+            //         break;
+            //     case 'alpha-palm':
+            //         apalm.pause();
+            //         apalm.currentTime = 0;
+            //         break;
+            // }
+        })
+
+        // slide number hiding from https://stackoverflow.com/questions/31146251/hide-slide-number-on-title-page
+
+        Reveal.addEventListener('slidechanged', (event) => {
+            const isSnOn = (event.currentSlide.dataset.hideSlideNumber !== 'true' ? 'c/t' : false);
+            Reveal.configure({ slideNumber: isSnOn, progress: isSnOn });
+        });
+
+
+    </script>
+  </body>
+</html>

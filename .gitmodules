@@ -1,0 +1,3 @@
+[submodule "defense/talk-theme"]
+	path = defense/talk-theme
+	url = git@github.com:PlethoraChutney/talk-theme.git

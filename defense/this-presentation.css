@@ -1,0 +1,211 @@
+/* Futura */
+
+@font-face {
+    font-family: 'Satoshi-Light';
+    src: 
+        local('Satoshi-Light'),
+        url('fonts/Satoshi-Light.woff') format('woff');
+        font-weight: 300;
+        font-display: swap;
+        font-style: normal;
+  }
+  
+  
+  @font-face {
+    font-family: 'Satoshi-LightItalic';
+    src: 
+        local('Satoshi-LightItalic'),
+        url('fonts/Satoshi-LightItalic.woff') format('woff');
+        font-weight: 300;
+        font-display: swap;
+        font-style: normal;
+  }
+  
+  
+  @font-face {
+    font-family: 'Satoshi-Regular';
+    src:
+        local('Satoshi-Regular'),
+        url('fonts/Satoshi-Regular.woff') format('woff');
+        font-weight: 300;
+        font-display: swap;
+        font-style: normal;
+  }
+  
+  
+  @font-face {
+    font-family: 'Satoshi-Italic';
+    src: 
+        local('Satoshi-Italic'),
+        url('fonts/Satoshi-Italic.woff') format('woff');
+        font-weight: 300;
+        font-display: swap;
+        font-style: normal;
+  }
+  
+  
+  @font-face {
+    font-family: 'Satoshi-Medium';
+    src: 
+        local('Satoshi-Medium'),
+        url('fonts/Satoshi-Medium.woff') format('woff');
+        font-weight: 300;
+        font-display: swap;
+        font-style: normal;
+  }
+  
+  
+  @font-face {
+    font-family: 'Satoshi-MediumItalic';
+    src: 
+        local('Satoshi-MediumItalic'),
+        url('fonts/Satoshi-MediumItalic.woff') format('woff');
+        font-weight: 300;
+        font-display: swap;
+        font-style: normal;
+  }
+  
+  
+  @font-face {
+    font-family: 'Satoshi-Bold';
+    src: 
+        local('Satoshi-Bold'),
+        url('fonts/Satoshi-Bold.woff') format('woff');
+        font-weight: 300;
+        font-display: swap;
+        font-style: normal;
+  }
+  
+  
+  @font-face {
+    font-family: 'Satoshi-BoldItalic';
+    src:
+        local('Satoshi-BoldItalic'),
+        url('fonts/Satoshi-BoldItalic.woff') format('woff');
+        font-weight: 300;
+        font-display: swap;
+        font-style: normal;
+  }
+  
+  
+  @font-face {
+    font-family: 'Satoshi-Black';
+    src: 
+        local('Satoshi-Black'),
+        url('fonts/Satoshi-Black.woff') format('woff');
+        font-weight: 300;
+        font-display: swap;
+        font-style: normal;
+  }
+  
+  
+  @font-face {
+    font-family: 'Satoshi-BlackItalic';
+    src: 
+        local('Satoshi-BlackItalic'),
+        url('fonts/Satoshi-BlackItalic.woff') format('woff');
+        font-weight: 300;
+        font-display: swap;
+        font-style: normal;
+  }
+
+div.noise-holder {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+div.hundred-holder {
+    grid-template-columns: repeat(25, 1fr);
+}
+
+div.frame-holder {
+    grid-template-columns: repeat(15, 1fr);
+}
+
+div.noise-holder > img {
+    margin: 0;
+}
+
+span.asic {
+    border-radius: 5px;
+    background-color: white;
+    padding: 0 0.25em;
+}
+
+/* ENaC Stuff */
+
+:root {
+    --enac-alpha-color: #5650C7;
+    --enac-beta-color: #D9414B;
+    --enac-gamma-color: #D94AD2;
+    --enac-cko-color: #FFCF13;
+    --enac-ckodeg-color: #FF7A6E;
+    --enac-mouse-color: #82A1E1;
+    --enac-tryp-color: #965386;
+    --r-heading-font: "Satoshi-Black",  sans-serif;
+    --r-main-font-size: 28pt;
+    --r-heading1-size: 5em;
+    --r-heading2-size: 3em;
+    --r-heading3-size: 2em;
+    --r-heading4-size: 1em;
+}
+
+span.alpha,
+span.beta,
+span.gamma,
+span.cko,
+span.ckodeg,
+span.mouse,
+span.tryp {
+    border-radius: 5px;
+    color: white;
+    padding: 0 0.25em;
+}
+
+span.gamma {
+    padding-bottom: 0.25em;
+}
+
+span.greek-letter {
+    font-family: "GFS Didot", serif;
+    line-height: 1;
+}
+
+span.alpha {
+    background-color: var(--enac-alpha-color);
+}
+span.beta {
+    background-color: var(--enac-beta-color);
+}
+span.gamma {
+    background-color: var(--enac-gamma-color);
+}
+
+.bordered.alpha, .bordered.beta, .bordered.gamma {
+    border-width: 5px;
+}
+.bordered.alpha {
+    border-color: var(--enac-alpha-color);
+}
+.bordered.beta {
+    border-color: var(--enac-beta-color);
+}
+.bordered.gamma {
+    border-color: var(--enac-gamma-color);
+}
+
+span.cko{
+    background-color: var(--enac-cko-color);
+    color: black;
+    /* padding: 0.25em; */
+}
+span.ckodeg {
+    background-color: var(--enac-mouse-color);
+    /* padding: 0.25em; */
+}
+span.mouse {
+    background-color: var(--enac-mouse-color);
+}
+span.tryp {
+    background-color: var(--enac-tryp-color);
+}
