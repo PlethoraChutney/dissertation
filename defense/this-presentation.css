@@ -115,7 +115,9 @@ div.noise-holder {
 }
 
 div.hundred-holder {
-    grid-template-columns: repeat(25, 1fr);
+    grid-template-columns: repeat(25, 50px);
+    width: max-content;
+    margin: auto;
 }
 
 div.frame-holder {
@@ -208,4 +210,15 @@ span.mouse {
 }
 span.tryp {
     background-color: var(--enac-tryp-color);
+}
+
+/* text animation */
+
+@keyframes sine-wiggle {
+    0% {transform: translate(0px, 50px);}
+    50% {transform: translate(0px, -50px);}
+    100% {transform: translate(0px, 50px);}
+}
+.wiggle-char {
+    animation: sine-wiggle ease-in-out 1s infinite;
 }

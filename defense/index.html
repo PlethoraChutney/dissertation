@@ -23,18 +23,18 @@
 
 <section data-background-color="black" data-hide-slide-number="true" data-auto-animate="">
     <div class="fit-one r-stretch">
-        <img src="images/chips-me.jpg" alt="">
+        <img src="images/rich-fries.jpeg" alt="">
     </div>
 </section>
 <section data-background-color="black" data-hide-slide-number="true" data-auto-animate="">
     <div class="fit-two r-stretch">
-        <img src="images/chips-me.jpg" alt="">
+        <img src="images/rich-fries.jpeg" alt="">
         <img src="images/chips-casey.jpg" alt="">
     </div>
 </section>
 <section data-background-color="black" data-hide-slide-number="true" data-auto-animate="">
     <div class="fit-three r-stretch">
-        <img src="images/chips-me.jpg" alt="">
+        <img src="images/rich-fries.jpeg" alt="">
         <img src="images/chips-casey.jpg" alt="">
         <img src="images/chips-nooch.jpg" alt="">
     </div>
@@ -109,22 +109,19 @@
     <p>And we do it all near-instantly!</p>
 </section>
 
-<section
-    data-auto-animate=""
-    data-background-video="blender/lipid-bilayer/lipid-bilayer.mp4"
-    data-hide-slide-number="true"
-    data-background-video-loop="true"
->
-</section>
-<section data-auto-animate="">
-    <h2>Animation of ENaC in membrane here</h2>
+<section data-auto-animate="" data-background-color="white">
+    <div class="fit-one r-stretch r-stack">
+        <video src="blender/lipid-bilayer/bilayer-alone.mp4" data-autoplay></video>
+        <video src="blender/lipid-bilayer/bilayer-pan.mp4" id="bilayer-pan-video" class="fragment"></video>
+        <video src="blender/lipid-bilayer/bilayer-enac.mp4" id = "bilayer-enac-video" class="fragment" loop></video>
+    </div>
 </section>
 
 <section data-auto-animate="">
     <h2>I have a confession</h2>
     <p class="fragment">I don't actually know much about taste...</p>
     <div class="fit-one r-stretch r-stack">
-        <img src="../parts/introduction/figures/kidney-cartoon/kidney-cartoon.png" alt="" class="bordered fragment">
+        <img src="../parts/introduction/images/kidney-cartoon/kidney-cartoon.png" alt="" class="bordered fragment">
         <img src="images/kidney-cartoon-opacity.png" alt="" class="bordered fragment">
         <img src="images/kidney-cartoon-opacity-2.png" alt="" class="bordered fragment">
     </div>
@@ -133,8 +130,8 @@
 <section data-auto-animate="">
     <h1 style="margin-bottom: 3rem;">My big questions</h1>
     <ol>
-        <li class="fragment fade-left">How does ENaC filter so specifically for sodium over potassium?</li>
         <li class="fragment fade-left">How exactly does the channel open and close?</li>
+        <li class="fragment fade-left">How does ENaC filter so specifically for sodium over potassium?</li>
     </ol>
 </section>
 
@@ -143,7 +140,7 @@
         <h1
             style="position: absolute; left: 0; bottom: 0; text-align: left; color: black; font-size: 6rem;"
         >
-            What<br/>we know<br/>about ENaC currents
+            How<br/>does ENaC<br/>open and close?
         </h1>
     </div>
 </section>
@@ -151,8 +148,10 @@
 <!-- TODO: need residue movie here -->
 <section data-auto-animate="" data-hide-slide-number="true" data-background-color="#D2D2D2">
     <div class="r-stretch fit-one r-stack">
-        <video id="overview-video" src="blender/overview/overview-atoms.mp4"></video>
-        <span class="fragment" id="play-overview"></span>
+        <video src="blender/overview/overview-atoms.mp4" id="overview-video"></video>
+        <span class="fragment" id="play-subunit-overview"></span>
+        <video src="blender/what-is-a-residue/single-residue.mp4" loop id="single-residue-video" class="fragment fade-in-then-out"></video>
+        <video src="blender/what-is-a-residue/residue-chain.mp4" id="residue-chain-video" class="fragment fade-in-then-out"></video>
         <video src="blender/overview/overview-cartoons.mp4" class="fragment" id="cartoon-overview"></video>
     </div>
 </section>
@@ -240,9 +239,220 @@
     </div>
 </section>
 
+<section data-auto-animate="">
+    <h2>OK well maybe the TMD moves without the ECD changing, somehow?</h2>
+</section>
+
+<section data-auto-animate="">
+    <div class="fit-one r-stretch">
+        <video src="images/ecd-turn-label.mp4" class="bordered" id="ecd-turn-video"></video>
+        <span class="fragment" id="ecd-turn"></span>
+    </div>
+</section>
+
 <section data-background-image="blender/how-do-we-look/how-do-we-look.png" data-hide-slide-number="true">
     <div class="fit-one" style="justify-content: flex-start;">
         <h1 style="text-align: left; color: #FFBF6E;">How<br/>do we<br/><i>look at</i><br/>proteins?</h1>
+    </div>
+</section>
+
+<!-- -------------------------------------------------------------------------------------------- -->
+<!-- ------                             2D class explainer                                 ------ -->
+<!-- -------------------------------------------------------------------------------------------- -->
+
+<section data-auto-animate="" data-background-color="white">
+    <p style="margin: 0; padding: 0;" data-id="noisy-header">Simplified model data</p>
+    <div class="fit-two r-stretch">
+        <img data-src="images/noisies/view_good-template.png" alt="" class="bordered" style="box-sizing: border-box; width: 500px;">
+        <img data-src="images/noisies/good-template-labeled.png" alt="">
+    </div>
+  
+</section>
+<section data-auto-animate="" data-background-color="white">
+    <p style="margin: 0; padding: 0;" data-id="noisy-header">Simplified model data</p>
+    <div>
+        <img style="width: 500px;" data-src="images/noisies/good-template-labeled.png" alt="">
+        <img style="width: 500px;" data-src="images/noisies/noise-0.png" alt="">
+    </div>
+</section>
+<section data-auto-animate="" data-background-color="white">
+    <p style="margin: 0; padding: 0;" data-id="noisy-header">Simplified model data</p>
+    <div>
+        <img data-src="images/noisies/good-template-labeled.png" alt="" style="height: 350px;">
+  
+        <div class="noise-holder" id="noise-10">
+            <script>
+                const noiseHolder = document.getElementById('noise-10');
+                for (i = 0; i < 10; i++) {
+                    let new_noise = document.createElement('img');
+                    new_noise.src = `images/noisies/noise-${i}.png`;
+                    noiseHolder.appendChild(new_noise);
+                }
+            </script>
+        </div>
+  
+        <img data-id="average-im" data-src="images/noisies/ten-av.png" alt="" class="fragment" style="height: 350px;" data-fragment-index="1">
+        <p class="caption fragment" style="margin-top: -20px; padding-top: 0;" data-id="av-counter" data-fragment-index="1">Average of ten noisy images</p>
+    </div>
+</section>
+<section data-auto-animate="" data-background-color="white">
+    <p style="margin: 0; padding: 0;" data-id="noisy-header">Simplified model data</p>
+    <div>
+        <img data-src="images/noisies/good-template-labeled.png" alt="" style="height: 350px; margin-bottom: 0;">
+  
+        <div class="noise-holder hundred-holder" id="noise-100">
+            <script>
+                let hundNoise = document.getElementById('noise-100');
+                for (i = 0; i < 100; i++) {
+                    let new_noise = document.createElement('img');
+                    new_noise.src = `images/noisies/noise-${i}.png`;
+                    new_noise.style = 'height: 50px';
+                    hundNoise.appendChild(new_noise);
+                }
+            </script>
+        </div>
+  
+        <img data-id="average-im" data-src="images/noisies/hund_av.png" alt="" style="height: 350px; margin-top: 0;">
+        <p class="caption" style="margin-top: -20px; padding-top: 0;" data-id="av-counter">Average of 100 noisy images</p>
+    </div>
+</section>
+
+<section data-auto-animate="" data-background-color="white">
+    <p style="margin: 0; padding: 0;" data-id="noisy-header">Simplified model data</p>
+    <img style="width: 480px;" data-src="images/noisies/good-template-labeled.png" alt="">
+    <img style="width: 480px;" data-src="images/noisies/hund_av.png" alt="">
+</section>
+
+<section data-auto-animate="" data-background-color="white">
+    <p style="margin: 0; padding: 0;" data-id="noisy-header">Simplified model data</p>
+    <div style="display: flex; flex-direction: row; justify-content: center;">
+        <div class="im-cap" style="width: 25%;">
+            <img data-src="images/noisies/good-template-labeled.png" alt="" style="width: 100%;">
+            <p>Ideal image (no noise)</p>
+        </div>
+        <div class="im-cap" style="width: 25%;">
+            <img data-src="images/noisies/noise-0.png" alt="" style="width: 100%;">
+            <p>Single noisy image</p>
+        </div>
+        <div class="im-cap" style="width: 25%;">
+            <img data-src="images/noisies/ten-av.png" alt="" style="width: 100%;">
+            <p>Average of ten images</p>
+        </div>
+        <div class="im-cap" style="width: 25%;">
+            <img data-src="images/noisies/hund_av.png" alt="" style="width: 100%;">
+            <p>Average of 100 images</p>
+        </div>
+    </div>
+</section>
+
+<!-- -------------------------------------------------------------------------------------------- -->
+<!-- ------                          motion blurring explainer                             ------ -->
+<!-- -------------------------------------------------------------------------------------------- -->
+
+<section data-auto-animate="">
+    <h1>
+        But<br/>
+        proteins<br/>
+        <span class="animate-wiggle">wiggle!</span>
+    </h1>
+</section>
+
+
+<section
+    data-background-video="images/me-waving-no-audio.mp4"
+    data-hide-slide-number="true"
+></section>
+
+<section>
+    <div class="noise-holder frame-holder" id="unaligned-holder">
+        <script>
+            let unalignedMe = document.getElementById('unaligned-holder');
+            for (i = 0; i < 180; i++) {
+                let new_noise = document.createElement('img');
+                new_noise.src = `images/motion-track/unstabilized/resized/frame_${String(i).padStart(3, '0')}.png`;
+                new_noise.style = 'aspect-ratio: 16/9;';
+                unalignedMe.appendChild(new_noise);
+            }
+        </script>
+    </div>
+</section>
+
+<section
+    data-background-image="images/motion-track/unstabilized/resized/averaged_image.png"
+    data-background-size="contain"
+    data-background-color="black"
+    data-hide-slide-number="true"
+></section>
+
+<section>
+    <div class="noise-holder frame-holder" id="face-holder">
+        <script>
+            let faceMe = document.getElementById('face-holder');
+            for (i = 0; i < 180; i++) {
+                let new_noise = document.createElement('img');
+                new_noise.src = `images/motion-track/face-stabilized/resized/frame_${String(i).padStart(3, '0')}.png`;
+                new_noise.style = 'aspect-ratio: 16/9;';
+                faceMe.appendChild(new_noise);
+            }
+        </script>
+    </div>
+</section>
+
+<section
+    data-background-image="images/motion-track/face-stabilized/resized/averaged_image.png"
+    data-background-size="contain"
+    data-background-color="black"
+    data-hide-slide-number="true"
+></section>
+
+<section>
+    <div class="noise-holder frame-holder" id="hand-holder">
+        <script>
+            let handMe = document.getElementById('hand-holder');
+            for (i = 0; i < 180; i++) {
+                let new_noise = document.createElement('img');
+                new_noise.src = `images/motion-track/hand-stabilized/resized/frame_${String(i).padStart(3, '0')}.png`;
+                new_noise.style = 'aspect-ratio: 16/9;';
+                handMe.appendChild(new_noise);
+            }
+        </script>
+    </div>
+</section>
+
+<section
+    data-background-image="images/motion-track/hand-stabilized/resized/averaged_image.png"
+    data-background-size="contain"
+    data-background-color="black"
+    data-hide-slide-number="true"
+></section>
+
+<section
+    data-background-color="white"
+>
+    <div class="fit-one r-stretch r-stack">
+        <img src="images/compare_ecd-ecd.png" alt="">
+        <img src="images/compare_ecd-both.png" alt="" class=" fragment fade-in">
+        <img src="images/compare_tmd-ecd.png" alt="" class=" fragment fade-in">
+        <img src="images/compare_all.png" alt="" class=" fragment fade-in">
+    </div>
+</section>
+
+<section data-auto-animate="">
+    <h2>The TMD is likely misfolded</h2>
+    <div class="fit-one r-stretch">
+        <img src="../parts/introduction/figures/hg-motif/hg-motif.png" alt="" class="bordered">
+    </div>
+</section>
+<section data-auto-animate="">
+    <h2>The TMD is likely misfolded</h2>
+    <div class="fit-one r-stretch">
+        <img src="../parts/introduction/figures/pore-cartoon/pore-cartoon.png" alt="" class="bordered">
+    </div>
+</section>
+<section data-auto-animate="">
+    <h2>The TMD is likely misfolded</h2>
+    <div class="fit-one r-stretch">
+        <img src="../parts/results/figures/TM-overview/tm-overview.png" alt="" class="bordered">
     </div>
 </section>
 
@@ -324,29 +534,79 @@
 
         const overviewMovie = document.querySelector('#overview-video');
         const cartoonOverview = document.querySelector('#cartoon-overview');
+        const bilayerPan = document.querySelector('#bilayer-pan-video');
+        const bilayerEnac = document.querySelector('#bilayer-enac-video');
+        const singleResidue = document.querySelector('#single-residue-video');
+        const residueChain = document.querySelector('#residue-chain-video');
+        const ecdTurnVideo = document.querySelector('#ecd-turn-video');
 
         Reveal.on('fragmentshown', event => {
             switch (event.fragment.id) {
-                case 'play-overview':
+                case 'play-subunit-overview':
+                    overviewMovie.currentTime = 0;
                     overviewMovie.play();
                     break;
                 case 'cartoon-overview':
                     cartoonOverview.currentTime = 0;
                     cartoonOverview.play();
+                    break;
+                case 'bilayer-pan-video':
+                    bilayerPan.currentTime = 0;
+                    bilayerPan.play();
+                    break;
+                case 'bilayer-enac-video':
+                    bilayerEnac.currentTime = 0;
+                    bilayerEnac.play();
+                    break;
+                case 'single-residue-video':
+                    singleResidue.currentTime = 0;
+                    singleResidue.play();
+                    break;
+                case 'residue-chain-video':
+                    residueChain.currentTime = 0;
+                    residueChain.play();
+                    break;
+                case 'ecd-turn':
+                    ecdTurnVideo.currentTime = 0;
+                    ecdTurnVideo.play();
+                    break;
             }
         })
 
         Reveal.on('fragmenthidden', event => {
             switch (event.fragment.id) {
-                case 'play-overview':
-                    overviewMovie.pause();
+                case 'play-subunit-overview':
                     overviewMovie.currentTime = 0;
+                    overviewMovie.pause();
                     break;
                 case 'cartoon-overview':
                     cartoonOverview.currentTime = 0;
                     cartoonOverview.pause();
-                
+                    break;
+                case 'bilayer-pan-video':
+                    bilayerPan.currentTime = 0;
+                    bilayerPan.pause();
+                    break;
+                case 'bilayer-enac-video':
+                    bilayerEnac.currentTime = 0;
+                    bilayerEnac.pause();
+                    break;
+                case 'single-residue-video':
+                    singleResidue.currentTime = 0;
+                    singleResidue.pause();
+                    break;
+                case 'residue-chain-video':
+                    residueChain.currentTime = 0;
+                    residueChain.pause();
+                    break;
+                case 'ecd-turn':
+                    ecdTurnVideo.currentTime = 0;
+                    ecdTurnVideo.pause();
             }
+        })
+
+        bilayerPan.addEventListener('ended', () => {
+            Reveal.nextFragment();
         })
 
         // slide number hiding from https://stackoverflow.com/questions/31146251/hide-slide-number-on-title-page
@@ -356,6 +616,24 @@
             Reveal.configure({ slideNumber: isSnOn, progress: isSnOn });
         });
 
+        function makeWiggleAnimated(selectedSpan) {
+            const delayAmount = 75; // in milliseconds
+            const stringToAnimate = selectedSpan.innerHTML;
+            selectedSpan.innerHTML = '';
+            var delayIndex = 0
+            for (char of stringToAnimate) {
+                let newSpan = document.createElement('span');
+                newSpan.innerText = char;
+                console.log(delayAmount * delayIndex);
+                newSpan.style.animationDelay = `${delayAmount * delayIndex}ms`;
+                newSpan.style.display = 'inline-block';
+                newSpan.classList.add('wiggle-char');
+                selectedSpan.appendChild(newSpan);
+                delayIndex += 1;
+            }
+        }
+
+        document.querySelectorAll('.animate-wiggle').forEach(makeWiggleAnimated);
 
     </script>
   </body>
