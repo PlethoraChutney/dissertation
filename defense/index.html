@@ -121,7 +121,7 @@
     <h2>I have a confession</h2>
     <p class="fragment">I don't actually know much about taste...</p>
     <div class="fit-one r-stretch r-stack">
-        <img src="../parts/introduction/images/kidney-cartoon/kidney-cartoon.png" alt="" class="bordered fragment">
+        <img src="../parts/introduction/figures/kidney-cartoon/kidney-cartoon.png" alt="" class="bordered fragment">
         <img src="images/kidney-cartoon-opacity.png" alt="" class="bordered fragment">
         <img src="images/kidney-cartoon-opacity-2.png" alt="" class="bordered fragment">
     </div>
@@ -145,13 +145,12 @@
     </div>
 </section>
 
-<!-- TODO: need residue movie here -->
 <section data-auto-animate="" data-hide-slide-number="true" data-background-color="#D2D2D2">
     <div class="r-stretch fit-one r-stack">
         <video src="blender/overview/overview-atoms.mp4" id="overview-video"></video>
         <span class="fragment" id="play-subunit-overview"></span>
-        <video src="blender/what-is-a-residue/single-residue.mp4" loop id="single-residue-video" class="fragment fade-in-then-out"></video>
-        <video src="blender/what-is-a-residue/residue-chain.mp4" id="residue-chain-video" class="fragment fade-in-then-out"></video>
+        <video src="blender/what-is-a-residue/single-residue.mp4" loop id="single-residue-video" class="fragment fade-in"></video>
+        <video src="blender/what-is-a-residue/residue-chain.mp4" id="residue-chain-video" class="fragment fade-in"></video>
         <video src="blender/overview/overview-cartoons.mp4" class="fragment" id="cartoon-overview"></video>
     </div>
 </section>
@@ -204,8 +203,8 @@
         </div>
         <div class="r-stack im-cap">
             <img src="images/oocytes/na-only.png" alt="" class="bordered">
-            <img src="images/oocytes/na-k.png" alt="" class="bordered fragment">
-            <img src="images/oocytes/na-k-li.png" alt="" class="bordered fragment">
+            <img src="images/oocytes/na-k.png" alt="" class="bordered fragment fade-in">
+            <img src="images/oocytes/na-k-li.png" alt="" class="bordered fragment fade-in">
         </div>
     </div>
 </section>
@@ -237,10 +236,25 @@
         <img src="images/cleavage/show-alpha.png" alt="" class="bordered fragment fade-in">
         <img src="images/cleavage/show-gamma.png" alt="" class="bordered fragment fade-in">
     </div>
+    <p class="fragment">The rest of the ECD moves less than an angstrom, on average.</p>
+    <p class="fragment">(That's basically nothing.)</p>
 </section>
 
 <section data-auto-animate="">
-    <h2>OK well maybe the TMD moves without the ECD changing, somehow?</h2>
+    <h2 class="r-fit-text">Maybe the TMD is<br>moving without<br>much change<br>in the ECD?</h2>
+</section>
+
+<section data-auto-animate="">
+    <h2>ASIC's TMD has a distinctive fold</h2>
+    <div class="fit-one r-stretch">
+        <img src="../parts/introduction/figures/hg-motif/hg-motif.png" alt="" class="bordered">
+    </div>
+</section>
+<section data-auto-animate="">
+    <h2>ENaC's TMD is probably similar</h2>
+    <div class="fit-one r-stretch">
+        <img src="../parts/introduction/figures/pore-cartoon/pore-cartoon.png" alt="" class="bordered">
+    </div>
 </section>
 
 <section data-auto-animate="">
@@ -255,12 +269,11 @@
         <h1 style="text-align: left; color: #FFBF6E;">How<br/>do we<br/><i>look at</i><br/>proteins?</h1>
     </div>
 </section>
-
 <!-- -------------------------------------------------------------------------------------------- -->
 <!-- ------                             2D class explainer                                 ------ -->
 <!-- -------------------------------------------------------------------------------------------- -->
 
-<section data-auto-animate="" data-background-color="white">
+<section data-auto-animate="" data-background-color="black">
     <p style="margin: 0; padding: 0;" data-id="noisy-header">Simplified model data</p>
     <div class="fit-two r-stretch">
         <img data-src="images/noisies/view_good-template.png" alt="" class="bordered" style="box-sizing: border-box; width: 500px;">
@@ -268,14 +281,14 @@
     </div>
   
 </section>
-<section data-auto-animate="" data-background-color="white">
+<section data-auto-animate="" data-background-color="black">
     <p style="margin: 0; padding: 0;" data-id="noisy-header">Simplified model data</p>
     <div>
         <img style="width: 500px;" data-src="images/noisies/good-template-labeled.png" alt="">
         <img style="width: 500px;" data-src="images/noisies/noise-0.png" alt="">
     </div>
 </section>
-<section data-auto-animate="" data-background-color="white">
+<section data-auto-animate="" data-background-color="black">
     <p style="margin: 0; padding: 0;" data-id="noisy-header">Simplified model data</p>
     <div>
         <img data-src="images/noisies/good-template-labeled.png" alt="" style="height: 350px;">
@@ -295,7 +308,7 @@
         <p class="caption fragment" style="margin-top: -20px; padding-top: 0;" data-id="av-counter" data-fragment-index="1">Average of ten noisy images</p>
     </div>
 </section>
-<section data-auto-animate="" data-background-color="white">
+<section data-auto-animate="" data-background-color="black">
     <p style="margin: 0; padding: 0;" data-id="noisy-header">Simplified model data</p>
     <div>
         <img data-src="images/noisies/good-template-labeled.png" alt="" style="height: 350px; margin-bottom: 0;">
@@ -317,13 +330,13 @@
     </div>
 </section>
 
-<section data-auto-animate="" data-background-color="white">
+<section data-auto-animate="" data-background-color="black">
     <p style="margin: 0; padding: 0;" data-id="noisy-header">Simplified model data</p>
     <img style="width: 480px;" data-src="images/noisies/good-template-labeled.png" alt="">
     <img style="width: 480px;" data-src="images/noisies/hund_av.png" alt="">
 </section>
 
-<section data-auto-animate="" data-background-color="white">
+<section data-auto-animate="" data-background-color="black">
     <p style="margin: 0; padding: 0;" data-id="noisy-header">Simplified model data</p>
     <div style="display: flex; flex-direction: row; justify-content: center;">
         <div class="im-cap" style="width: 25%;">
@@ -439,21 +452,76 @@
 
 <section data-auto-animate="">
     <h2>The TMD is likely misfolded</h2>
+    <div class="fit-one r-stretch r-stack">
+        <img src="images/tmd-misfolded/tmd-overview.png" alt="" class="bordered">
+        <img src="images/tmd-misfolded/side-only.png" alt="" class="bordered fragment">
+        <img src="images/tmd-misfolded/side-and-top.png" alt="" class="bordered fragment">
+    </div>
+</section>
+
+<section data-auto-animate="">
+    <h2>Bummer</h2>
+</section>
+<section data-auto-animate="">
+    <h2>Bummer</h2>
+    <p>Can we learn anything else from these maps?</p>
+</section>
+
+<section data-auto-animate="">
+    <h2>A conserved &beta;-turn in the palm</h2>
     <div class="fit-one r-stretch">
-        <img src="../parts/introduction/figures/hg-motif/hg-motif.png" alt="" class="bordered">
+        <img src="images/palm-turn/palm-turn-overview.png" alt="" class="bordered">
     </div>
 </section>
 <section data-auto-animate="">
-    <h2>The TMD is likely misfolded</h2>
-    <div class="fit-one r-stretch">
-        <img src="../parts/introduction/figures/pore-cartoon/pore-cartoon.png" alt="" class="bordered">
+    <h2>A conserved &beta;-turn in the palm</h2>
+    <div class="fit-two r-stretch">
+        <img src="images/palm-turn/beta-turn.png" alt="" class="bordered">
+        <img src="images/palm-turn/gamma-turn.png" alt="" class="bordered">
     </div>
 </section>
 <section data-auto-animate="">
-    <h2>The TMD is likely misfolded</h2>
-    <div class="fit-one r-stretch">
-        <img src="../parts/results/figures/TM-overview/tm-overview.png" alt="" class="bordered">
+    <h2>A conserved &beta;-turn in the palm</h2>
+    <div class="fit-two r-stretch">
+        <div class="im-cap">
+            <img src="images/palm-turn/beta-turn.png" alt="" class="bordered" style="height: 50%;">
+            <img src="images/palm-turn/gamma-turn.png" alt="" class="bordered" style="height: 50%;">
+        </div>
+        <img src="images/palm-turn/alpha-turn.png" alt="" class="bordered">
     </div>
+</section>
+
+<section data-auto-animate="" data-background-color="#b15465">
+    <h2>Sugars contact the membrane</h2>
+    <div class="fit-one r-stretch r-stack">
+        <video src="blender/micelle-tilt/micelle-tilt_overview.mp4" id="micelle-tilt_overview"></video>
+        <span class="fragment" id="play-micelle-overview"></span>
+        <video src="blender/micelle-tilt/sugar-1.mp4" class="fragment" id="sugar-1"></video>
+        <video src="blender/micelle-tilt/sugar-2.mp4" class="fragment" id="sugar-2"></video>
+    </div>
+</section>
+<section data-auto-animate="">
+    <h2>Sugars contact the membrane</h2>
+    <div class="fit-one r-stretch">
+        <img src="images/micelle-glycs/glyc-model.png" alt="" class="bordered">
+    </div>
+</section>
+<section data-auto-animate="">
+    <h2>Sugars contact the membrane</h2>
+    <div class="fit-two r-stretch">
+        <img src="images/micelle-glycs/glyc-model.png" alt="" class="bordered">
+        <img src="images/micelle-glycs/glyc-cartoon.png" alt="" class="bordered">
+    </div>
+</section>
+
+<section
+    data-auto-animate=""
+    data-background-image="images/jakob-owens-unsplash_desert.jpg"
+    data-hide-slide-number="true"
+>
+    <h2 style="color: #c09270;">Where to next?</h2>
+    <div class="r-stretch"></div>
+    <p class="citation">Jakob Owens on Unsplash</p>
 </section>
 
 </div>
@@ -539,6 +607,9 @@
         const singleResidue = document.querySelector('#single-residue-video');
         const residueChain = document.querySelector('#residue-chain-video');
         const ecdTurnVideo = document.querySelector('#ecd-turn-video');
+        const micelleOverviewVideo = document.querySelector('#micelle-tilt_overview');
+        const micelleSugarOne = document.querySelector('#sugar-1');
+        const micelleSugarTwo = document.querySelector('#sugar-2');
 
         Reveal.on('fragmentshown', event => {
             switch (event.fragment.id) {
@@ -569,6 +640,18 @@
                 case 'ecd-turn':
                     ecdTurnVideo.currentTime = 0;
                     ecdTurnVideo.play();
+                    break;
+                case 'play-micelle-overview':
+                    micelleOverviewVideo.currentTime = 0;
+                    micelleOverviewVideo.play();
+                    break;
+                case 'sugar-1':
+                    micelleSugarOne.currentTime = 0;
+                    micelleSugarOne.play();
+                    break;
+                case 'sugar-2':
+                    micelleSugarTwo.currentTime = 0;
+                    micelleSugarTwo.play();
                     break;
             }
         })
@@ -602,6 +685,23 @@
                 case 'ecd-turn':
                     ecdTurnVideo.currentTime = 0;
                     ecdTurnVideo.pause();
+                    break;
+                case 'play-micelle-overview':
+                    micelleOverviewVideo.currentTime = 0;
+                    micelleOverviewVideo.pause();
+                    break;
+                case 'sugar-1':
+                    micelleSugarOne.currentTime = 0;
+                    micelleSugarOne.pause();
+                    micelleOverviewVideo.currentTime = 0;
+                    micelleOverviewVideo.play();
+                    break;
+                case 'sugar-2':
+                    micelleSugarTwo.currentTime = 0;
+                    micelleSugarTwo.pause();
+                    micelleSugarOne.currentTime = 0;
+                    micelleSugarOne.play();
+                    break;
             }
         })
 
