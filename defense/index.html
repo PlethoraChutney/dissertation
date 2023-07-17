@@ -21,27 +21,26 @@
     data-auto-animate=""
     data-background-video="blender/cover/cover.mp4"
     data-background-size="contain"
-    data-background-color="black"
     data-background-video-loop="true"
 >
 </section>
 
-<section data-background-color="black" data-hide-slide-number="true" data-auto-animate="">
+<section data-hide-slide-number="true" data-auto-animate="">
     <div class="fit-one r-stretch">
-        <img src="images/rich-fries.jpeg" alt="">
+        <img class="bordered" src="images/rich-fries.jpeg" alt="">
     </div>
 </section>
-<section data-background-color="black" data-hide-slide-number="true" data-auto-animate="">
+<section data-hide-slide-number="true" data-auto-animate="">
     <div class="fit-two r-stretch">
-        <img src="images/rich-fries.jpeg" alt="">
-        <img src="images/chips-casey.jpg" alt="">
+        <img class="bordered" src="images/rich-fries.jpeg" alt="">
+        <img class="bordered" src="images/chips-casey.jpg" alt="">
     </div>
 </section>
-<section data-background-color="black" data-hide-slide-number="true" data-auto-animate="">
+<section data-hide-slide-number="true" data-auto-animate="">
     <div class="fit-three r-stretch">
-        <img src="images/rich-fries.jpeg" alt="">
-        <img src="images/chips-casey.jpg" alt="">
-        <img src="images/chips-nooch.jpg" alt="">
+        <img class="bordered" src="images/rich-fries.jpeg" alt="">
+        <img class="bordered" src="images/chips-casey.jpg" alt="">
+        <img class="bordered" src="images/chips-nooch.jpg" alt="">
     </div>
 </section>
 
@@ -62,10 +61,10 @@
     <div class="r-stretch fit-one">
         <h2 
             data-id="we-love-salt" 
-            style="color: black; margin-bottom: 300px;" 
+            style="color: #0f171b; margin-bottom: 300px;" 
             class="r-fit-text"
         >
-            We love salt?
+            Do we love salt?
         </h2>
     </div>
     <p class="citation" style="color: white;">Photo by Ant Rozetsky on Unsplash</p>
@@ -74,7 +73,7 @@
 <section data-auto-animate="" data-background-color="white">
     <h2 
         data-id="we-love-salt" 
-        style="color: black";
+        style="color: #023390";
     >
         Do we love salt?
     </h2>
@@ -86,13 +85,6 @@
 
 <section data-auto-animate="" data-background-image="images/ball-compare/ball-compare.png">
     <div class="r-stretch fit-one">
-        <h2
-            data-id="we-love-salt"
-            style="color: white";
-            class="r-fit-text"
-        >
-            How do we<br/>love salt?
-        </h2>
     </div>
     <p class="citation">Assuming coordination number of 6, from Mähler, J. & Persson, I. A Study of the Hydration of the Alkali Metal Ions in Aqueous Solution. Inorg. Chem. 51, 425–438 (2012).
     </p>
@@ -116,7 +108,7 @@
 
 <section data-auto-animate="" data-background-color="white">
     <div class="fit-one r-stretch r-stack">
-        <video src="blender/lipid-bilayer/bilayer-alone.mp4" data-autoplay></video>
+        <video src="blender/lipid-bilayer/bilayer-alone.mp4" data-autoplay loop></video>
         <video src="blender/lipid-bilayer/bilayer-pan.mp4" id="bilayer-pan-video" class="fragment"></video>
         <video src="blender/lipid-bilayer/bilayer-enac.mp4" id = "bilayer-enac-video" class="fragment" loop></video>
     </div>
@@ -151,6 +143,7 @@
 </section>
 
 <section data-auto-animate="" data-hide-slide-number="true" data-background-color="#cdcccd">
+    <h2>What is ENaC?</h2>
     <div class="r-stretch fit-one r-stack">
         <video src="blender/overview/overview-atoms.mp4" id="overview-video"></video>
         <span class="fragment" id="play-subunit-overview"></span>
@@ -161,7 +154,7 @@
 </section>
 
 <section data-auto-animate="">
-    <h2>The Epithelial Sodium Channel</h2>
+    <h2>ENaC Domains</h2>
     <div class="fit-one r-stretch r-stack">
         <img src="images/enac-overview/finals/enac-overview.png" alt="" class="bordered">
         <img src="images/enac-overview/finals/tmd.png" alt="" class="bordered fragment fade-in">
@@ -178,7 +171,7 @@
 </section>
 
 <section data-auto-animate="">
-    <h2>The Epithelial Sodium Channel</h2>
+    <h2>ENaC Domains</h2>
     <div class="fit-two r-stretch">
         <img src="images/enac-overview/finals/everything.png" alt="" class="bordered">
         <img src="images/enac-overview/finals/simple-cartoon.svg" alt="" class="bordered">
@@ -230,6 +223,22 @@
 </section>
 
 <section data-auto-animate="">
+    <div style="width: 66%; margin: auto;">
+        <h3 style="text-align: left; margin: 0.5rem 0;" class="fragment fade-left">Does trypsin cut ENaC?</h3>
+        <h3
+            style="text-align: left; border-top: 1px solid var(--r-heading-color); margin: 0.5rem 0;"
+            class="fragment fade-left"
+        >
+            Does cleavage move the finger and thumb?
+        </h3>
+        <h3
+            style="text-align: left; border-top: 1px solid var(--r-heading-color); margin: 0.5rem 0;"
+            class="fragment fade-left"
+        >Does cleavage open the pore?</h3>
+    </div>
+</section>
+
+<section data-auto-animate="">
     <h2>Trypsin cuts purified ENaC</h2>
     <div class="fit-one r-stack">
         <img src="images/trypsin-western/alpha-uncleave.png" alt="" class="bordered">
@@ -241,7 +250,7 @@
 </section>
 
 <section data-auto-animate="">
-    <h2>ECD is invariant with trypsin</h2>
+    <h2>Cleavage does <em>not</em> move the ECD</h2>
     <div class="fit-one r-stretch r-stack">
         <img src="images/cleavage/cartoon-only.png" alt="" class="bordered">
         <img src="images/cleavage/cartoon-model.png" alt="" class="bordered fragment fade-in">
@@ -464,6 +473,10 @@
 </section>
 
 <section data-auto-animate="">
+    <h1 style="max-width: 75%; margin: auto;">So what does ENaC's TMD look like?</h1>
+</section>
+
+<section data-auto-animate="">
     <h2>The TMD is likely misfolded</h2>
     <div class="fit-one r-stretch r-stack">
         <img src="images/tmd-misfolded/tmd-overview.png" alt="" class="bordered">
@@ -578,7 +591,7 @@
       <h2>Acknowledgements</h2>
         <div class="r-stretch" id="acknowledge">
         <div class="left">
-            <div class="fragment">
+            <div class="fragment fade-left">
                 <h3>Baconguis Lab</h3>
                 <p><span class="emph">Alex Houser</span> 👶</p>
                 <p><span class="emph">James Cahill</span> 👨‍⚕️</p>
@@ -587,7 +600,7 @@
                 <p>Sigrid Noreng 🏃</p>
             </div>
     
-            <div class="fragment">
+            <div class="fragment fade-left">
                 <h3>Gouaux Lab</h3>
                 <p><span class="emph">Johannes Elferich</span> 🏃</p>
                 <p><span class="emph">Zad Jalali-Yazdi</span> 🏃</p>
@@ -596,7 +609,7 @@
             </div>
         </div>
         <div class="center">
-            <div class="fragment">
+            <div class="fragment fade-left">
                 <h3>DAC</h3>
                 <p>Dave Farrens</p>
                 <p>Jonathan Pruneda</p>
@@ -604,7 +617,7 @@
                 <p>Steve Reichow</p>
             </div>
     
-            <div class="fragment">
+            <div class="fragment fade-left">
                 <h3>MMC / PNCC</h3>
                 <p>Claudia López</p>
                 <p>Craig Yoshioka</p>
@@ -613,14 +626,14 @@
             </div>
         </div>
         <div class="right">
-            <div class="fragment">
+            <div class="fragment fade-left">
                 <h3 class="emph">GRU Bargaining Team</h3>
                 <p>Sam Papadakis 🏃</p>
                 <p>Marc Meadows 🏃</p>
                 <p>Danielle Mathieson 🏃</p>
             </div>
     
-            <div class="fragment">
+            <div class="fragment fade-left">
                 <h3>💰 Funding 💰</h3>
                 <div class="funding-img">
                     <img data-src="images/nih-dark.svg" alt="">
