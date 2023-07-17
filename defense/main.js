@@ -73,6 +73,8 @@ const ecdTurnVideo = document.querySelector('#ecd-turn-video');
 const micelleOverviewVideo = document.querySelector('#micelle-tilt_overview');
 const micelleSugarOne = document.querySelector('#sugar-1');
 const micelleSugarTwo = document.querySelector('#sugar-2');
+const asicTransition = document.querySelector('#asic-transition');
+const asicZoom = document.querySelector('#asic-zoom');
 
 Reveal.on('fragmentshown', event => {
     switch (event.fragment.id) {
@@ -115,6 +117,14 @@ Reveal.on('fragmentshown', event => {
         case 'sugar-2':
             micelleSugarTwo.currentTime = 0;
             micelleSugarTwo.play();
+            break;
+        case 'asic-transition':
+            asicTransition.currentTime = 0;
+            asicTransition.play();
+            break;
+        case 'asic-zoom':
+            asicZoom.currentTime = 0;
+            asicZoom.play();
             break;
     }
 })
@@ -165,10 +175,24 @@ Reveal.on('fragmenthidden', event => {
             micelleSugarOne.currentTime = 0;
             micelleSugarOne.play();
             break;
+        case 'asic-transition':
+            asicTransition.currentTime = 0;
+            asicTransition.pause();
+            break;
+        case 'asic-zoom':
+            asicZoom.currentTime = 0;
+            asicZoom.pause();
+            asicTransition.currentTime = 0;
+            asicTransition.play();
+            break;
     }
 })
 
 bilayerPan.addEventListener('ended', () => {
+    Reveal.nextFragment();
+})
+
+asicTransition.addEventListener('ended', () => {
     Reveal.nextFragment();
 })
 

@@ -20,6 +20,8 @@
 <section
     data-auto-animate=""
     data-background-video="blender/cover/cover.mp4"
+    data-background-size="contain"
+    data-background-color="black"
     data-background-video-loop="true"
 >
 </section>
@@ -217,6 +219,14 @@
         <img src="images/enac-overview/finals/simple-cartoon.svg" alt="" class="bordered" style="height: 800px;">
     </div>
     <span class="fragment"></span>
+</section>
+
+<section data-auto-animate="" data-background-color="#a2dfdd">
+    <div class="fit-one r-stretch r-stack">
+        <video src="blender/asic-morph/overview.mp4" loop data-autoplay></video>
+        <video src="blender/asic-morph/transition.mp4" class="fragment" id="asic-transition"></video>
+        <video src="blender/asic-morph/zoom.mp4" loop class="fragment" id="asic-zoom"></video>
+    </div>
 </section>
 
 <section data-auto-animate="">
@@ -557,76 +567,88 @@
     </div>
 </section>
 
-<section
-  data-background-color="black"
-  data-background-image="images/bg-noise.png"
-  data-background-opacity="0.5"
-  data-hide-slide-number="true"
-  id="acknowledgements"
->
-  <h2>Acknowledgements</h2>
-    <div class="r-stretch" id="acknowledge">
-    <div class="left">
-        <div class="fragment">
-            <h3>Baconguis Lab</h3>
-            <p><span class="emph">Arpita Bharadwaj</span></p>
-            <p>Sigrid Noreng 🏃</p>
-            <p><span class="emph">Alex Houser</span> 👶</p>
-            <p>Kim Hartfield</p>
-            <p><span class="emph">James Cahill</span> 👨‍⚕️</p>
-        </div>
-
-        <div class="fragment">
-            <h3>Gouaux Lab</h3>
-            <p><span class="emph">Zad Jalali-Yazdi</span> 🏃</p>
-            <p>Vikas Navratna 🏃</p>
-            <p>Hongtao Zhu 🏃</p>
-            <p>Chang Sun</p>
-        </div>
-    </div>
-    <div class="center">
-        <div class="fragment">
-            <h3>DAC</h3>
-            <p>Dave Farrens</p>
-            <p>Jonathan Pruneda</p>
-            <p>Swetha Murthy</p>
-            <p class="emph">Steve Reichow</p>
-        </div>
-
-        <div class="fragment">
-            <h3>MMC / PNCC</h3>
-            <p class="emph">Claudia López</p>
-            <p class="emph">Craig Yoshioka</p>
-            <p><span class="emph">Theo Humphreys</span> 🏃</p>
-            <p>Steven Adamou</p>
-        </div>
-    </div>
-    <div class="right">
-        <div class="fragment">
-            <h3 class="emph">GRU Bargaining Team</h3>
-            <p>Sam Papadakis 🏃</p>
-            <p>Marc Meadows 🏃</p>
-            <p>Danielle Mathieson 🏃</p>
-        </div>
-        
-        <div class="fragment">
-            <h3>💰 Funding 💰</h3>
-            <div class="funding-img">
-                <img data-src="images/nih-dark.svg" alt="">
-                <div class="grants">
-                    <p>T32GM071338-13</p>
-                    <p>R01GM138862</p>
-                </div>
+<section>
+    <section
+      data-background-color="black"
+      data-background-image="images/bg-noise.png"
+      data-background-opacity="0.5"
+      data-hide-slide-number="true"
+      id="acknowledgements"
+    >
+      <h2>Acknowledgements</h2>
+        <div class="r-stretch" id="acknowledge">
+        <div class="left">
+            <div class="fragment">
+                <h3>Baconguis Lab</h3>
+                <p><span class="emph">Arpita Bharadwaj</span></p>
+                <p>Sigrid Noreng 🏃</p>
+                <p><span class="emph">Alex Houser</span> 👶</p>
+                <p>Kim Hartfield</p>
+                <p><span class="emph">James Cahill</span> 👨‍⚕️</p>
             </div>
-            <div class="funding-img">
-                <img data-src="images/aha-dark.svg" alt="">
-                <div class="grants">
-                    <p>19TPA34760754</p>
-                </div>
+    
+            <div class="fragment">
+                <h3>Gouaux Lab</h3>
+                <p><span class="emph">Johannes Elferich</span> 🏃</p>
+                <p><span class="emph">Zad Jalali-Yazdi</span> 🏃</p>
+                <p>Vikas Navratna 🏃</p>
+                <p>Chang Sun</p>
             </div>
         </div>
-    </div>
-    </div>
+        <div class="center">
+            <div class="fragment">
+                <h3>DAC</h3>
+                <p>Dave Farrens</p>
+                <p>Jonathan Pruneda</p>
+                <p>Swetha Murthy</p>
+                <p>Steve Reichow</p>
+            </div>
+    
+            <div class="fragment">
+                <h3>MMC / PNCC</h3>
+                <p class="emph">Claudia López</p>
+                <p class="emph">Craig Yoshioka</p>
+                <p><span class="emph">Theo Humphreys</span> 🏃</p>
+                <p>Steven Adamou</p>
+            </div>
+        </div>
+        <div class="right">
+            <div class="fragment">
+                <h3 class="emph">GRU Bargaining Team</h3>
+                <p>Sam Papadakis 🏃</p>
+                <p>Marc Meadows 🏃</p>
+                <p>Danielle Mathieson 🏃</p>
+            </div>
+    
+            <div class="fragment">
+                <h3>💰 Funding 💰</h3>
+                <div class="funding-img">
+                    <img data-src="images/nih-dark.svg" alt="">
+                    <div class="grants">
+                        <p>T32GM071338-13</p>
+                        <p>R01GM138862</p>
+                    </div>
+                </div>
+                <div class="funding-img">
+                    <img data-src="images/aha-dark.svg" alt="">
+                    <div class="grants">
+                        <p>19TPA34760754</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section
+        data-background-image="indulgence/lindsey.png"
+    >
+    </section>
+    <section
+        data-background-video="indulgence/friends.mp4"
+        data-background-video-loop="true"
+        data-hide-slide-number="true"
+    >
+    </section>
 </section>
 
 </div>
