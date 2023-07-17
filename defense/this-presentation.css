@@ -2,112 +2,112 @@
 
 @font-face {
     font-family: 'Satoshi-Light';
-    src: 
+    src:
         local('Satoshi-Light'),
         url('fonts/Satoshi-Light.woff') format('woff');
-        font-weight: 300;
-        font-display: swap;
-        font-style: normal;
-  }
-  
-  
-  @font-face {
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+@font-face {
     font-family: 'Satoshi-LightItalic';
-    src: 
+    src:
         local('Satoshi-LightItalic'),
         url('fonts/Satoshi-LightItalic.woff') format('woff');
-        font-weight: 300;
-        font-display: swap;
-        font-style: normal;
-  }
-  
-  
-  @font-face {
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+@font-face {
     font-family: 'Satoshi-Regular';
     src:
         local('Satoshi-Regular'),
         url('fonts/Satoshi-Regular.woff') format('woff');
-        font-weight: 300;
-        font-display: swap;
-        font-style: normal;
-  }
-  
-  
-  @font-face {
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+@font-face {
     font-family: 'Satoshi-Italic';
-    src: 
+    src:
         local('Satoshi-Italic'),
         url('fonts/Satoshi-Italic.woff') format('woff');
-        font-weight: 300;
-        font-display: swap;
-        font-style: normal;
-  }
-  
-  
-  @font-face {
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+@font-face {
     font-family: 'Satoshi-Medium';
-    src: 
+    src:
         local('Satoshi-Medium'),
         url('fonts/Satoshi-Medium.woff') format('woff');
-        font-weight: 300;
-        font-display: swap;
-        font-style: normal;
-  }
-  
-  
-  @font-face {
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+@font-face {
     font-family: 'Satoshi-MediumItalic';
-    src: 
+    src:
         local('Satoshi-MediumItalic'),
         url('fonts/Satoshi-MediumItalic.woff') format('woff');
-        font-weight: 300;
-        font-display: swap;
-        font-style: normal;
-  }
-  
-  
-  @font-face {
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+@font-face {
     font-family: 'Satoshi-Bold';
-    src: 
+    src:
         local('Satoshi-Bold'),
         url('fonts/Satoshi-Bold.woff') format('woff');
-        font-weight: 300;
-        font-display: swap;
-        font-style: normal;
-  }
-  
-  
-  @font-face {
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+@font-face {
     font-family: 'Satoshi-BoldItalic';
     src:
         local('Satoshi-BoldItalic'),
         url('fonts/Satoshi-BoldItalic.woff') format('woff');
-        font-weight: 300;
-        font-display: swap;
-        font-style: normal;
-  }
-  
-  
-  @font-face {
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+@font-face {
     font-family: 'Satoshi-Black';
-    src: 
+    src:
         local('Satoshi-Black'),
         url('fonts/Satoshi-Black.woff') format('woff');
-        font-weight: 300;
-        font-display: swap;
-        font-style: normal;
-  }
-  
-  
-  @font-face {
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+@font-face {
     font-family: 'Satoshi-BlackItalic';
-    src: 
+    src:
         local('Satoshi-BlackItalic'),
         url('fonts/Satoshi-BlackItalic.woff') format('woff');
-        font-weight: 300;
-        font-display: swap;
-        font-style: normal;
-  }
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+}
 
 div.noise-holder {
     display: grid;
@@ -124,7 +124,7 @@ div.frame-holder {
     grid-template-columns: repeat(15, 1fr);
 }
 
-div.noise-holder > img {
+div.noise-holder>img {
     margin: 0;
 }
 
@@ -144,7 +144,7 @@ span.asic {
     --enac-ckodeg-color: #FF7A6E;
     --enac-mouse-color: #82A1E1;
     --enac-tryp-color: #965386;
-    --r-heading-font: "Satoshi-Black",  sans-serif;
+    --r-heading-font: "Satoshi-Black", sans-serif;
     --r-main-font-size: 28pt;
     --r-heading1-size: 5em;
     --r-heading2-size: 3em;
@@ -176,38 +176,48 @@ span.greek-letter {
 span.alpha {
     background-color: var(--enac-alpha-color);
 }
+
 span.beta {
     background-color: var(--enac-beta-color);
 }
+
 span.gamma {
     background-color: var(--enac-gamma-color);
 }
 
-.bordered.alpha, .bordered.beta, .bordered.gamma {
+.bordered.alpha,
+.bordered.beta,
+.bordered.gamma {
     border-width: 5px;
 }
+
 .bordered.alpha {
     border-color: var(--enac-alpha-color);
 }
+
 .bordered.beta {
     border-color: var(--enac-beta-color);
 }
+
 .bordered.gamma {
     border-color: var(--enac-gamma-color);
 }
 
-span.cko{
+span.cko {
     background-color: var(--enac-cko-color);
     color: black;
     /* padding: 0.25em; */
 }
+
 span.ckodeg {
     background-color: var(--enac-mouse-color);
     /* padding: 0.25em; */
 }
+
 span.mouse {
     background-color: var(--enac-mouse-color);
 }
+
 span.tryp {
     background-color: var(--enac-tryp-color);
 }
@@ -215,10 +225,26 @@ span.tryp {
 /* text animation */
 
 @keyframes sine-wiggle {
-    0% {transform: translate(0px, 50px);}
-    50% {transform: translate(0px, -50px);}
-    100% {transform: translate(0px, 50px);}
+    0% {
+        transform: translate(0px, 50px);
+    }
+
+    50% {
+        transform: translate(0px, -50px);
+    }
+
+    100% {
+        transform: translate(0px, 50px);
+    }
 }
+
 .wiggle-char {
     animation: sine-wiggle ease-in-out 1s infinite;
+}
+
+/* Acknowledgements */
+
+section#acknowledgements .emph {
+    color: #B3E8C2;
+    border-color: #B3E8C2;
 }
