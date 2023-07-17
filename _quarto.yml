@@ -30,6 +30,10 @@ book:
     - parts/appendices/code.qmd
   navbar: 
     logo: figures/other/domain-cartoon_ECD.png
+    left:
+      - text: "Defense Slides"
+        href: "defense/"
+        icon: projector
   search:
     location: navbar
     type: overlay

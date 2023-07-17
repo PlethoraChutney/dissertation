@@ -58,37 +58,37 @@ Much of the work I present on SPA was performed alongside Alex Houser and especi
 #| fig-cap: An example of SPA, in this case of CKO/DEG nanodiscs. Note that although the background counts have been subtracted, the relationship between ligand and counts is still linear.
 library(tidyverse)
 
-data <- read_csv('figures/spa/Exp144_processed-data.csv')
+data <- read_csv("figures/spa/Exp144_processed-data.csv")
 
-data %>% 
-  mutate(timepoint = case_when(
-    Time == min(Time) ~ 'Early',
-    Time == max(Time) ~ 'Late',
-    TRUE ~ 'Other'
-  )) %>% 
-  filter(
-    mean > 0,
-    Type == 'Specific',
-    timepoint == 'Early'
-  ) %>% 
-  ggplot(aes(x = Benz, y = mean)) +
-  theme_minimal(base_size = 24) +
-  scale_x_log10(
-    breaks = c(1e-10, 1e-9, 1e-8, 1e-7, 1e-6, 1e-5, 1e-4),
-    labels = scales::trans_format("log10", scales::math_format(10^.x))
-  ) +
-  scale_y_log10(
-    breaks = c(1, 10, 100, 1000),
-    labels = scales::trans_format("log10", scales::math_format(10^.x))
-  ) +
-  annotation_logticks(sides = 'bl') +
-  theme(panel.grid.minor = element_blank()) +
-  geom_errorbar(aes(ymin = lower, ymax = upper), width = 0.05) +
-  geom_point() +
-  labs(
-    x = '3H Benzamil (M)',
-    y = 'Specific Counts'
-  )
+data %>%
+    mutate(timepoint = case_when(
+        Time == min(Time) ~ "Early",
+        Time == max(Time) ~ "Late",
+        TRUE ~ "Other"
+    )) %>%
+    filter(
+        mean > 0,
+        Type == "Specific",
+        timepoint == "Early"
+    ) %>%
+    ggplot(aes(x = Benz, y = mean)) +
+    theme_minimal(base_size = 24) +
+    scale_x_log10(
+        breaks = c(1e-10, 1e-9, 1e-8, 1e-7, 1e-6, 1e-5, 1e-4),
+        labels = scales::trans_format("log10", scales::math_format(10^.x))
+    ) +
+    scale_y_log10(
+        breaks = c(1, 10, 100, 1000),
+        labels = scales::trans_format("log10", scales::math_format(10^.x))
+    ) +
+    annotation_logticks(sides = "bl") +
+    theme(panel.grid.minor = element_blank()) +
+    geom_errorbar(aes(ymin = lower, ymax = upper), width = 0.05) +
+    geom_point() +
+    labs(
+        x = "3H Benzamil (M)",
+        y = "Specific Counts"
+    )
 
 ```
 
