@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 943 1770" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g id="Artboard1">
+        <g>
+            <path id="Palm" d="M391.155,1039.56C370.047,1039.55 352.932,1039.53 352.932,1039.47C352.932,993.047 272.545,943.438 237.021,907.914C201.497,872.39 25.184,751.888 25.184,564.288C25.184,376.687 93.653,312.482 175.373,348.353C257.092,384.224 134.475,502.905 257.766,609.458C381.058,716.012 400.043,745.607 368.862,827.472C337.68,909.338 450.057,1006.6 469.439,1023.83L469.439,1039.47C469.477,1039.51 453.417,1039.54 433.023,1039.55" style="fill:rgb(251,255,15);stroke:black;stroke-width:8.33px;"/>
+            <g id="TMD">
+                <path d="M411.816,1046.37C411.816,1033.93 401.715,1023.83 389.272,1023.83L344.184,1023.83C331.742,1023.83 321.64,1033.93 321.64,1046.37L321.64,1725.12C321.64,1737.56 331.742,1747.66 344.184,1747.66L389.272,1747.66C401.715,1747.66 411.816,1737.56 411.816,1725.12L411.816,1046.37Z" style="fill:rgb(227,129,239);stroke:black;stroke-width:8.33px;"/>
+                <path d="M501.993,1046.37C501.993,1033.93 491.891,1023.83 479.449,1023.83L434.36,1023.83C421.918,1023.83 411.816,1033.93 411.816,1046.37L411.816,1725.12C411.816,1737.56 421.918,1747.66 434.36,1747.66L479.449,1747.66C491.891,1747.66 501.993,1737.56 501.993,1725.12L501.993,1046.37Z" style="fill:rgb(227,129,239);stroke:black;stroke-width:8.33px;"/>
+            </g>
+            <circle id="Beta-ball" cx="335.34" cy="495.157" r="123.164" style="fill:rgb(255,169,32);stroke:black;stroke-width:8.33px;"/>
+            <path id="Thumb" d="M446.795,956.146C542.904,1004.41 611.612,921.96 703.983,723.767C796.354,525.574 827.125,410.466 748.927,352.098C670.729,293.73 596.833,432.042 556.136,462.971C515.438,493.9 396.762,580.906 402.574,738.444C408.386,895.981 350.686,907.88 446.795,956.146Z" style="fill:rgb(44,186,65);stroke:black;stroke-width:8.33px;"/>
+            <circle id="Knuckle" cx="148.782" cy="231.059" r="98.209" style="fill:rgb(231,95,138);stroke:black;stroke-width:8.33px;"/>
+            <path id="Finger" d="M375.528,357.674C469.94,392.953 462.636,426.426 514.527,426.426C566.419,426.426 609.401,360.431 613.562,318.386C617.722,276.341 592.974,253.152 616.026,207.233C639.078,161.315 694.019,161.297 710.303,113.467C726.587,65.636 725.431,38.962 699.148,22.254C672.864,5.546 605.753,31.205 587.523,65.708C569.292,100.211 595.841,140.837 551.099,163.922C506.358,187.007 296.294,162.335 247.312,294.858C177.87,482.734 247.416,309.802 375.528,357.674Z" style="fill:rgb(41,127,255);stroke:black;stroke-width:8.33px;"/>
+            <rect x="366.855" y="1269.55" width="85.858" height="232.389" style="fill:rgb(227,129,239);"/>
+            <g transform="matrix(6.12323e-17,-1,1,6.12323e-17,444.39,1481.64)">
+                <text x="0px" y="0px" style="font-family:'Montserrat-Regular', 'Montserrat';font-size:83.333px;">TMD</text>
+            </g>
+            <g>
+                <g transform="matrix(1,0,0,1,73.636,722.229)">
+                    <text x="0px" y="0px" style="font-family:'Montserrat-Regular', 'Montserrat';font-size:83.333px;">P</text>
+                </g>
+                <g transform="matrix(1,0,0,1,132.219,722.229)">
+                    <text x="0px" y="0px" style="font-family:'Montserrat-Regular', 'Montserrat';font-size:83.333px;">alm</text>
+                </g>
+            </g>
+            <g transform="matrix(0.5,-0.866025,0.866025,0.5,545.649,777.813)">
+                <text x="0px" y="0px" style="font-family:'Montserrat-Regular', 'Montserrat';font-size:83.333px;">Thumb</text>
+            </g>
+            <g transform="matrix(1,0,0,1,307.414,310.753)">
+                <text x="0px" y="0px" style="font-family:'Montserrat-Regular', 'Montserrat';font-size:83.333px;">Finger</text>
+            </g>
+            <g transform="matrix(3.87676,-2.31296e-16,2.31296e-16,3.87676,-2139.64,-2211.99)">
+                <g transform="matrix(1,0,0,1,631.85,692.781)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:21.496px;">β</text>
+                </g>
+                <g transform="matrix(1,0,0,1,619.037,714.277)">
+                    <text x="0px" y="0px" style="font-family:'Montserrat-Regular', 'Montserrat';font-size:21.496px;">ball</text>
+                </g>
+            </g>
+            <g>
+                <g transform="matrix(1,0,0,1,59.994,243.077)">
+                    <text x="0px" y="0px" style="font-family:'Montserrat-Regular', 'Montserrat';font-size:42.831px;">K</text>
+                </g>
+                <g transform="matrix(1,0,0,1,90.018,243.077)">
+                    <text x="0px" y="0px" style="font-family:'Montserrat-Regular', 'Montserrat';font-size:42.831px;">nuc</text>
+                </g>
+                <g transform="matrix(1,0,0,1,171.525,243.077)">
+                    <text x="0px" y="0px" style="font-family:'Montserrat-Regular', 'Montserrat';font-size:42.831px;">kle</text>
+                </g>
+            </g>
+        </g>
+        <rect x="0" y="0" width="943" height="1770" style="fill:white;fill-opacity:0.9;"/>
+        <g>
+            <path id="GRIP" d="M871.173,431.771C915.784,429.34 945.574,391.829 930.156,340.036C914.737,288.243 873.905,295.925 833.851,213.088C793.797,130.252 670.068,144.309 639.087,200.212C608.105,256.116 630.47,326.224 641.383,334.384C652.295,342.543 704.816,306.286 739.415,321.381C774.013,336.477 795.767,367.102 802.355,402.143C808.944,437.183 826.563,434.202 871.173,431.771Z" style="fill:rgb(112,223,234);stroke:black;stroke-width:8.33px;"/>
+            <g transform="matrix(0.794564,0.60718,-0.60718,0.794564,676.12,241.731)">
+                <text x="0px" y="0px" style="font-family:'Montserrat-Regular', 'Montserrat';font-size:83.333px;">GRIP</text>
+            </g>
+        </g>
+    </g>
+</svg>
