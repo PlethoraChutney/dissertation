@@ -114,41 +114,22 @@
     </div>
 </section>
 
-<section data-auto-animate="">
-    <h2>I have a confession</h2>
-    <p class="fragment">I don't actually know much about taste...</p>
-    <div class="fit-one r-stretch r-stack">
-        <img src="../parts/introduction/figures/kidney-cartoon/kidney-cartoon.png" alt="" class="bordered fragment">
-        <img src="images/kidney-cartoon-opacity.png" alt="" class="bordered fragment">
-        <img src="images/kidney-cartoon-opacity-2.png" alt="" class="bordered fragment">
-    </div>
-</section>
-
-<section data-auto-animate="">
-    <h1 style="margin-bottom: 3rem;">My big questions</h1>
-    <ol>
-        <li class="fragment fade-left">How exactly does the channel open and close?</li>
-        <li class="fragment fade-left">How does ENaC filter so specifically for sodium over potassium?</li>
-    </ol>
-</section>
-
-<section data-auto-animate="" data-background-color="white" data-background-image="blender/what-we-know/bg_what-we-know.png">
-    <div class="r-stretch">
-        <h1
-            style="position: absolute; left: 0; bottom: 0; text-align: left; color: black; font-size: 6rem;"
-        >
-            How<br/>does ENaC<br/>open and close?
-        </h1>
-    </div>
-</section>
-
 <section data-auto-animate="" data-hide-slide-number="true" data-background-color="#cdcccd">
     <h2>What is ENaC?</h2>
     <div class="r-stretch fit-one r-stack">
         <video src="blender/overview/overview-atoms.mp4" id="overview-video"></video>
         <span class="fragment" id="play-subunit-overview"></span>
-        <video src="blender/what-is-a-residue/single-residue.mp4" loop id="single-residue-video" class="fragment fade-in"></video>
-        <video src="blender/what-is-a-residue/residue-chain.mp4" id="residue-chain-video" class="fragment fade-in"></video>
+        <video
+            src="blender/what-is-a-residue/single-residue.mp4"
+            loop
+            id="single-residue-video"
+            class="fragment fade-in bordered drop-shadow"
+        ></video>
+        <video
+            src="blender/what-is-a-residue/residue-chain.mp4"
+            id="residue-chain-video"
+            class="fragment fade-in bordered drop-shadow"
+        ></video>
         <video src="blender/overview/overview-cartoons.mp4" class="fragment" id="cartoon-overview"></video>
     </div>
 </section>
@@ -157,17 +138,25 @@
     <h2>ENaC Domains</h2>
     <div class="fit-one r-stretch r-stack">
         <img src="images/enac-overview/finals/enac-overview.png" alt="" class="bordered">
-        <img src="images/enac-overview/finals/tmd.png" alt="" class="bordered fragment fade-in">
+        <img src="images/enac-overview/finals/everything.png" alt="" class="bordered fragment fade-in" data-fragment-index="1">
+        <img src="images/enac-overview/finals/tmd.png" alt="" class="bordered fragment fade-in" data-fragment-index="2">
         <img src="images/enac-overview/finals/palm.png" alt="" class="bordered fragment fade-in">
         <img src="images/enac-overview/finals/bball.png" alt="" class="bordered fragment fade-in">
         <img src="images/enac-overview/finals/knuckle.png" alt="" class="bordered fragment fade-in">
         <img src="images/enac-overview/finals/finger.png" alt="" class="bordered fragment fade-in">
-        <img src="images/enac-overview/finals/grip.png" alt="" class="bordered fragment fade-in">
         <img src="images/enac-overview/finals/thumb.png" alt="" class="bordered fragment fade-in">
+        <img src="images/enac-overview/finals/grip.png" alt="" class="bordered fragment fade-in">
         <img src="images/enac-overview/finals/gating.png" alt="" class="bordered fragment fade-in">
         <img src="images/enac-overview/finals/scaffold.png" alt="" class="bordered fragment fade-in">
         <img src="images/enac-overview/finals/everything.png" alt="" class="bordered fragment fade-in">
     </div>
+    <p
+        style="position: absolute; right: 0; top: 60vh; width: 10rem;"
+        class="fragment fade-in-then-out"
+        data-fragment-index="2"
+    >
+        Everything else is called the ECD
+    </p>
 </section>
 
 <section data-auto-animate="">
@@ -179,7 +168,7 @@
 </section>
 
 <section data-auto-animate="">
-    <h2>GRIP removal opens ENaC</h2>
+    <h2>Amiloride inhibits ENaC</h2>
     <div class="fit-two r-stretch">
         <img src="images/enac-overview/finals/simple-cartoon.svg" alt="" class="bordered">
         <img src="images/oocytes/pre-trypsin.svg" alt="" class="bordered">
@@ -192,6 +181,37 @@
         <img src="images/oocytes/post-trypsin.svg" alt="" class="bordered">
     </div>
 </section>
+
+<section data-auto-animate="" data-background-color="#a2dfdd">
+    <div class="fit-one r-stretch r-stack">
+        <video src="blender/asic-morph/overview.mp4" loop data-autoplay></video>
+        <video src="blender/asic-morph/transition.mp4" class="fragment" id="asic-transition"></video>
+        <video src="blender/asic-morph/zoom.mp4" loop class="fragment" id="asic-zoom"></video>
+    </div>
+</section>
+
+<section data-auto-animate="">
+    <h2 class="fragment semi-fade-out" data-fragment-index="1">So we kinda know what ENaC looks like</h2>
+    <h2 class="fragment" data-fragment-index="1">I want to figure out how it works</h2>
+    <ul style="margin-top: 2rem;" id="target-container">
+        <li class="fragment fade-left strike-me">
+            How is ENaC so specific for potassium over sodium?
+        </li>
+        <li class="fragment fade-left strike-me">
+            How exactly does ENaC interact with its regulatory partners?
+        </li>
+        <li class="fragment fade-left">
+            How does cleavage of the GRIP domain open the channel?
+        </li>
+    </ul>
+    <span class="fragment" id="highlight-the-target"></span>
+</section>
+<section data-auto-animate="">
+    <div style="width: 66%; margin: auto;">
+        <h3 style="text-align: left; margin: 0.5rem 0;" class="fragment fade-left">Does trypsin cut ENaC?</h3>
+    </div>
+</section>
+
 <section data-auto-animate="">
     <h2>GRIP removal opens ENaC</h2>
     <div class="fit-two r-stretch">
@@ -207,37 +227,6 @@
     </div>
 </section>
 
-<section data-auto-animate="" data-background-image="blender/inhib-peptide/alpha-labeled.png" data-hide-slide-number="true">
-    <div class="fit-one fragment fade-in-then-out" style="justify-content: flex-end;">
-        <img src="images/enac-overview/finals/simple-cartoon.svg" alt="" class="bordered" style="height: 800px;">
-    </div>
-    <span class="fragment"></span>
-</section>
-
-<section data-auto-animate="" data-background-color="#a2dfdd">
-    <div class="fit-one r-stretch r-stack">
-        <video src="blender/asic-morph/overview.mp4" loop data-autoplay></video>
-        <video src="blender/asic-morph/transition.mp4" class="fragment" id="asic-transition"></video>
-        <video src="blender/asic-morph/zoom.mp4" loop class="fragment" id="asic-zoom"></video>
-    </div>
-</section>
-
-<section data-auto-animate="">
-    <div style="width: 66%; margin: auto;">
-        <h3 style="text-align: left; margin: 0.5rem 0;" class="fragment fade-left">Does trypsin cut ENaC?</h3>
-        <h3
-            style="text-align: left; border-top: 1px solid var(--r-heading-color); margin: 0.5rem 0;"
-            class="fragment fade-left"
-        >
-            Does cleavage move the finger and thumb?
-        </h3>
-        <h3
-            style="text-align: left; border-top: 1px solid var(--r-heading-color); margin: 0.5rem 0;"
-            class="fragment fade-left"
-        >Does cleavage open the pore?</h3>
-    </div>
-</section>
-
 <section data-auto-animate="">
     <h2>Trypsin cuts purified ENaC</h2>
     <div class="fit-one r-stack">
@@ -247,6 +236,27 @@
         <img src="images/trypsin-western/alpha-gamma.png" alt="" class="bordered fragment fade-in">
         <img src="images/trypsin-western/silver-stain.png" alt="" class="bordered fragment fade-in">
     </div>
+</section>
+
+<section data-auto-animate="">
+    <div style="width: 66%; margin: auto;">
+        <h3 style="text-align: left; margin: 0.5rem 0;">Does trypsin cut ENaC? <span class="fragment">✔️</span></h3>
+        <h3
+            style="text-align: left; border-top: 1px solid var(--r-heading-color); margin: 0.5rem 0;"
+            class="fragment fade-left"
+        >
+            Does cleavage move the finger and thumb?
+        </h3>
+    </div>
+</section>
+
+<section data-auto-animate="" data-background-image="blender/inhib-peptide/gamma-inhib.png" data-hide-slide-number="true">
+    <div class="fit-one fragment" style="background-color: #FFFFFFEE; padding: 3rem 0;">
+        <video src="blender/cleavage-svg/cleavage.mp4" id="cleavage-cartoon-video" class="bordered" style="height: 80vh;"></video>
+        <span class="fragment" id="play-cleavage-cartoon"></span>
+    </div>
+</section>
+<section data-auto-animate="" data-background-image="blender/inhib-peptide/gamma-inhib.png" data-hide-slide-number="true">
 </section>
 
 <section data-auto-animate="">
@@ -263,7 +273,19 @@
 </section>
 
 <section data-auto-animate="">
-    <h2 class="r-fit-text">Maybe the TMD is<br>moving without<br>much change<br>in the ECD?</h2>
+    <div style="width: 66%; margin: auto;">
+        <h3 style="text-align: left; margin: 0.5rem 0;">Does trypsin cut ENaC? ✔️</h3>
+        <h3
+            style="text-align: left; border-top: 1px solid var(--r-heading-color); margin: 0.5rem 0;"
+            class="fragment fade-left"
+        >
+            Does cleavage move the finger and thumb? <span class="fragment">❌</span>
+        </h3>
+        <h3
+            style="text-align: left; border-top: 1px solid var(--r-heading-color); margin: 0.5rem 0;"
+            class="fragment fade-left"
+        >Does cleavage open the pore?</h3>
+    </div>
 </section>
 
 <section data-auto-animate="">
@@ -486,11 +508,35 @@
 </section>
 
 <section data-auto-animate="">
-    <h2>Bummer</h2>
+    <div style="width: 66%; margin: auto;">
+        <h3 style="text-align: left; margin: 0.5rem 0;">Does trypsin cut ENaC? ✔️</h3>
+        <h3
+            style="text-align: left; border-top: 1px solid var(--r-heading-color); margin: 0.5rem 0;"
+        >
+            Does cleavage move the finger and thumb? ❌
+        </h3>
+        <h3
+            style="text-align: left; border-top: 1px solid var(--r-heading-color); margin: 0.5rem 0;"
+        >
+            Does cleavage open the pore? <span class="fragment">🤷</span>
+        </h3>
+    </div>
 </section>
 <section data-auto-animate="">
-    <h2>Bummer</h2>
-    <p>Can we learn anything else from these maps?</p>
+    <div style="width: 66%; margin: auto;">
+        <h3 style="text-align: left; margin: 0.5rem 0;">Does trypsin cut ENaC? ✔️</h3>
+        <h3
+            style="text-align: left; border-top: 1px solid var(--r-heading-color); margin: 0.5rem 0;"
+        >
+            Does cleavage move the finger and thumb? ❌
+        </h3>
+        <h3
+            style="text-align: left; border-top: 1px solid var(--r-heading-color); margin: 0.5rem 0;"
+        >
+            Does cleavage open the pore? 🤷
+        </h3>
+    </div>
+    <p>Can we learn anything else?</p>
 </section>
 
 <section data-auto-animate="">

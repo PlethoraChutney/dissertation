@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 2000 1100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(4.28337,0,0,1.27378,-1320.65,-184.364)">
+        <rect id="Artboard1" x="308.321" y="144.738" width="466.922" height="863.573" style="fill:none;"/>
+        <g id="Artboard11" serif:id="Artboard1">
+            <g id="Thumb" transform="matrix(0.226112,0,0,0.772309,419.278,131.269)">
+                <g id="Thumb1" serif:id="Thumb" transform="matrix(1.0325,0,0,1.01652,-22.6083,-11.6995)">
+                    <path d="M534.974,612.846C581.106,636.013 614.086,596.436 658.424,501.303C702.762,406.171 717.532,350.919 679.997,322.902C642.462,294.886 606.992,361.276 587.457,376.121C567.922,390.967 510.958,432.73 513.747,508.348C516.537,583.966 488.841,589.678 534.974,612.846Z" style="fill:rgb(44,186,65);stroke:black;stroke-width:4px;"/>
+                </g>
+                <g transform="matrix(1.40208,-2.39088,2.42847,1.38038,-1992.23,1083.18)">
+                    <g transform="matrix(14.7281,0,0,14.7281,687.671,692.781)">
+                    </g>
+                    <text x="633.751px" y="692.781px" style="font-family:'Montserrat-Regular', 'Montserrat';font-size:14.728px;">Thumb</text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 2000 1100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(4.28337,0,0,1.27378,-1320.65,-184.364)">
+        <rect id="Artboard1" x="308.321" y="144.738" width="466.922" height="863.573" style="fill:none;"/>
+        <g id="Artboard11" serif:id="Artboard1">
+            <g id="GRIP" transform="matrix(0.226112,0,0,0.772309,419.278,131.269)">
+                <g id="GRIP1" serif:id="GRIP" transform="matrix(1.0325,0,0,1.01652,-21.9547,-17.585)">
+                    <path d="M738.042,366.935C759.455,365.768 773.755,347.763 766.354,322.902C758.953,298.042 739.354,301.729 720.128,261.968C700.902,222.206 641.512,228.953 626.641,255.787C611.769,282.621 622.505,316.273 627.743,320.189C632.981,324.106 658.191,306.702 674.798,313.948C691.405,321.194 701.847,335.894 705.01,352.714C708.172,369.533 716.629,368.102 738.042,366.935Z" style="fill:rgb(112,223,234);stroke:black;stroke-width:4px;"/>
+                </g>
+                <g transform="matrix(1.52661,1.14853,-1.16659,1.50298,505.205,-1490.56)">
+                    <g transform="matrix(21.4956,0,0,21.4956,674.012,692.781)">
+                    </g>
+                    <text x="619.929px" y="692.781px" style="font-family:'Montserrat-Regular', 'Montserrat';font-size:21.496px;">GRIP</text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

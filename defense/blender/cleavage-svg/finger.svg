@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 2000 1100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(4.28337,0,0,1.27378,-1320.65,-184.364)">
+        <rect id="Artboard1" x="308.321" y="144.738" width="466.922" height="863.573" style="fill:none;"/>
+        <g id="Artboard11" serif:id="Artboard1">
+            <g id="Finger" transform="matrix(0.226112,0,0,0.772309,419.278,131.269)">
+                <g id="Finger1" serif:id="Finger" transform="matrix(1.0325,0,0,1.01652,-24.8648,-15.9055)">
+                    <path d="M502.951,329.716C548.269,346.65 544.763,362.718 569.671,362.718C594.578,362.718 615.21,331.04 617.207,310.858C619.204,290.677 607.325,279.546 618.39,257.505C629.455,235.464 655.827,235.455 663.643,212.497C671.459,189.538 670.905,176.734 658.288,168.715C645.672,160.695 613.459,173.011 604.708,189.573C595.958,206.134 608.701,225.635 587.225,236.716C565.749,247.796 464.919,235.954 441.407,299.565C408.075,389.745 441.457,306.738 502.951,329.716Z" style="fill:rgb(41,127,255);stroke:black;stroke-width:4px;"/>
+                </g>
+                <g transform="matrix(1.92132,-1.12856e-16,1.14631e-16,1.89158,-732.218,-1014.09)">
+                    <g transform="matrix(21.4956,0,0,21.4956,691.119,692.781)">
+                    </g>
+                    <text x="620.871px" y="692.781px" style="font-family:'Montserrat-Regular', 'Montserrat';font-size:21.496px;">Finger</text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

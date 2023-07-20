@@ -63,6 +63,20 @@ function playUntil(movie, stopTime) {
     }, stopTime)
 }
 
+function toggleStrikethroughs(addOrRemove) {
+    Object.values(highlightContainer.children).forEach(el => {
+        if (el.classList.contains('strike-me')) {
+            if (addOrRemove === 'add') {
+                el.classList.toggle('strikethrough');
+            } else {
+                el.classList.remove('strikethrough');
+            }
+        }
+    });
+}
+
+const highlightContainer = document.querySelector('#target-container');
+
 const overviewMovie = document.querySelector('#overview-video');
 const cartoonOverview = document.querySelector('#cartoon-overview');
 const bilayerPan = document.querySelector('#bilayer-pan-video');
@@ -75,6 +89,7 @@ const micelleSugarOne = document.querySelector('#sugar-1');
 const micelleSugarTwo = document.querySelector('#sugar-2');
 const asicTransition = document.querySelector('#asic-transition');
 const asicZoom = document.querySelector('#asic-zoom');
+const cleavageCartoon = document.querySelector('#cleavage-cartoon-video');
 
 Reveal.on('fragmentshown', event => {
     switch (event.fragment.id) {
@@ -125,6 +140,13 @@ Reveal.on('fragmentshown', event => {
         case 'asic-zoom':
             asicZoom.currentTime = 0;
             asicZoom.play();
+            break;
+        case 'highlight-the-target':
+            toggleStrikethroughs('add');
+            break;
+        case 'play-cleavage-cartoon':
+            cleavageCartoon.currentTime = 0;
+            cleavageCartoon.play();
             break;
     }
 })
@@ -185,6 +207,13 @@ Reveal.on('fragmenthidden', event => {
             asicTransition.currentTime = 0;
             asicTransition.play();
             break;
+        case 'highlight-the-target':
+            toggleStrikethroughs('remove');
+            break;
+        case 'play-cleavage-cartoon':
+            cleavageCartoon.currentTime = 0;
+            cleavageCartoon.pause();
+            break;
     }
 })
 
@@ -211,7 +240,6 @@ function makeWiggleAnimated(selectedSpan) {
     for (char of stringToAnimate) {
         let newSpan = document.createElement('span');
         newSpan.innerText = char;
-        console.log(delayAmount * delayIndex);
         newSpan.style.animationDelay = `${delayAmount * delayIndex}ms`;
         newSpan.style.display = 'inline-block';
         newSpan.classList.add('wiggle-char');
