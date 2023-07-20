@@ -230,6 +230,111 @@
     </div>
 </section>
 
+<section data-auto-animate="">
+    <h2>Unfortunately, it's not that simple</h2>
+</section>
+
+<!-- -------------------------------------------------------------------------------------------- -->
+<!-- ------                             2D class explainer                                 ------ -->
+<!-- -------------------------------------------------------------------------------------------- -->
+
+<section data-auto-animate="" data-background-color="black">
+    <p style="margin: 0; padding: 0;" data-id="noisy-header">Simplified model data</p>
+    <img data-src="images/noisies/good-template.png" alt="" width="500px;">
+  
+</section>
+<section data-auto-animate="" data-background-color="black">
+    <p style="margin: 0; padding: 0;" data-id="noisy-header">Simplified model data</p>
+    <div>
+        <img style="width: 500px;" data-src="images/noisies/good-template.png" alt="" width="500px;">
+        <img style="width: 500px;" data-src="images/noisies/noise-0.png" alt="">
+    </div>
+</section>
+<section data-auto-animate="" data-background-color="black">
+    <p style="margin: 0; padding: 0;" data-id="noisy-header">Simplified model data</p>
+    <div>
+        <img data-src="images/noisies/good-template.png" alt="" style="height: 350px;">
+  
+        <div class="noise-holder" id="noise-10">
+            <script>
+                const noiseHolder = document.getElementById('noise-10');
+                for (i = 0; i < 10; i++) {
+                    let new_noise = document.createElement('img');
+                    new_noise.src = `images/noisies/noise-${i}.png`;
+                    noiseHolder.appendChild(new_noise);
+                }
+            </script>
+        </div>
+  
+        <img data-id="average-im" data-src="images/noisies/ten-av.png" alt="" class="fragment" style="height: 350px;" data-fragment-index="1">
+        <p class="caption fragment" style="margin-top: -20px; padding-top: 0;" data-id="av-counter" data-fragment-index="1">Average of ten noisy images</p>
+    </div>
+</section>
+<section data-auto-animate="" data-background-color="black">
+    <p style="margin: 0; padding: 0;" data-id="noisy-header">Simplified model data</p>
+    <div>
+        <img data-src="images/noisies/good-template.png" alt="" style="height: 350px; margin-bottom: 0;">
+  
+        <div class="noise-holder hundred-holder" id="noise-100">
+            <script>
+                let hundNoise = document.getElementById('noise-100');
+                for (i = 0; i < 100; i++) {
+                    let new_noise = document.createElement('img');
+                    new_noise.src = `images/noisies/noise-${i}.png`;
+                    new_noise.style = 'height: 50px';
+                    hundNoise.appendChild(new_noise);
+                }
+            </script>
+        </div>
+  
+        <img data-id="average-im" data-src="images/noisies/hund_av.png" alt="" style="height: 350px; margin-top: 0;">
+        <p class="caption" style="margin-top: -20px; padding-top: 0;" data-id="av-counter">Average of 100 noisy images</p>
+    </div>
+</section>
+
+<section data-auto-animate="" data-background-color="black">
+    <p style="margin: 0; padding: 0;" data-id="noisy-header">Simplified model data</p>
+    <img style="width: 480px;" data-src="images/noisies/good-template.png" alt="">
+    <img style="width: 480px;" data-src="images/noisies/hund_av.png" alt="">
+</section>
+
+<section data-auto-animate="" data-background-color="black">
+    <p style="margin: 0; padding: 0;" data-id="noisy-header">Simplified model data</p>
+    <div style="display: flex; flex-direction: row; justify-content: center;">
+        <div class="im-cap" style="width: 25%;">
+            <img data-src="images/noisies/good-template.png" alt="" style="width: 100%;">
+            <p>Ideal image (no noise)</p>
+        </div>
+        <div class="im-cap" style="width: 25%;">
+            <img data-src="images/noisies/noise-0.png" alt="" style="width: 100%;">
+            <p>Single noisy image</p>
+        </div>
+        <div class="im-cap" style="width: 25%;">
+            <img data-src="images/noisies/ten-av.png" alt="" style="width: 100%;">
+            <p>Average of ten images</p>
+        </div>
+        <div class="im-cap" style="width: 25%;">
+            <img data-src="images/noisies/hund_av.png" alt="" style="width: 100%;">
+            <p>Average of 100 images</p>
+        </div>
+    </div>
+</section>
+
+<section data-auto-animate="">
+    <h2>Phew!</h2>
+    <h2>We've finally got a map!</h2>
+    <p class="fragment">Now we can use the <span class="emph">map</span> to make a <span class="emph">model</span></p>
+</section>
+<section data-auto-animate="">
+    <h2>Phew!</h2>
+    <h2>We've finally got a map!</h2>
+    <p>Now we can use the <span class="emph">map</span> to make a <span class="emph">model</span></p>
+    <div class="fit-one r-stretch r-stack">
+        <img src="images/solid-map.png" alt="" class="bordered">
+        <img src="images/mesh-map_model.png" alt="" class="bordered fragment fade-in">
+    </div>
+</section>
+
 <section data-auto-animate="" data-hide-slide-number="true" data-background-color="#cdcccd">
     <div class="r-stretch fit-one r-stack">
         <video src="blender/overview/overview-atoms.mp4" id="overview-video"></video>
@@ -420,94 +525,6 @@
     <div class="fit-one r-stretch">
         <video src="images/ecd-turn-label.mp4" class="bordered" id="ecd-turn-video"></video>
         <span class="fragment" id="ecd-turn"></span>
-    </div>
-</section>
-<!-- -------------------------------------------------------------------------------------------- -->
-<!-- ------                             2D class explainer                                 ------ -->
-<!-- -------------------------------------------------------------------------------------------- -->
-
-<section data-auto-animate="" data-background-color="black">
-    <p style="margin: 0; padding: 0;" data-id="noisy-header">Simplified model data</p>
-    <div class="fit-two r-stretch">
-        <img data-src="images/noisies/view_good-template.png" alt="" class="bordered" style="box-sizing: border-box; width: 500px;">
-        <img data-src="images/noisies/good-template-labeled.png" alt="">
-    </div>
-  
-</section>
-<section data-auto-animate="" data-background-color="black">
-    <p style="margin: 0; padding: 0;" data-id="noisy-header">Simplified model data</p>
-    <div>
-        <img style="width: 500px;" data-src="images/noisies/good-template-labeled.png" alt="">
-        <img style="width: 500px;" data-src="images/noisies/noise-0.png" alt="">
-    </div>
-</section>
-<section data-auto-animate="" data-background-color="black">
-    <p style="margin: 0; padding: 0;" data-id="noisy-header">Simplified model data</p>
-    <div>
-        <img data-src="images/noisies/good-template-labeled.png" alt="" style="height: 350px;">
-  
-        <div class="noise-holder" id="noise-10">
-            <script>
-                const noiseHolder = document.getElementById('noise-10');
-                for (i = 0; i < 10; i++) {
-                    let new_noise = document.createElement('img');
-                    new_noise.src = `images/noisies/noise-${i}.png`;
-                    noiseHolder.appendChild(new_noise);
-                }
-            </script>
-        </div>
-  
-        <img data-id="average-im" data-src="images/noisies/ten-av.png" alt="" class="fragment" style="height: 350px;" data-fragment-index="1">
-        <p class="caption fragment" style="margin-top: -20px; padding-top: 0;" data-id="av-counter" data-fragment-index="1">Average of ten noisy images</p>
-    </div>
-</section>
-<section data-auto-animate="" data-background-color="black">
-    <p style="margin: 0; padding: 0;" data-id="noisy-header">Simplified model data</p>
-    <div>
-        <img data-src="images/noisies/good-template-labeled.png" alt="" style="height: 350px; margin-bottom: 0;">
-  
-        <div class="noise-holder hundred-holder" id="noise-100">
-            <script>
-                let hundNoise = document.getElementById('noise-100');
-                for (i = 0; i < 100; i++) {
-                    let new_noise = document.createElement('img');
-                    new_noise.src = `images/noisies/noise-${i}.png`;
-                    new_noise.style = 'height: 50px';
-                    hundNoise.appendChild(new_noise);
-                }
-            </script>
-        </div>
-  
-        <img data-id="average-im" data-src="images/noisies/hund_av.png" alt="" style="height: 350px; margin-top: 0;">
-        <p class="caption" style="margin-top: -20px; padding-top: 0;" data-id="av-counter">Average of 100 noisy images</p>
-    </div>
-</section>
-
-<section data-auto-animate="" data-background-color="black">
-    <p style="margin: 0; padding: 0;" data-id="noisy-header">Simplified model data</p>
-    <img style="width: 480px;" data-src="images/noisies/good-template-labeled.png" alt="">
-    <img style="width: 480px;" data-src="images/noisies/hund_av.png" alt="">
-</section>
-
-<section data-auto-animate="" data-background-color="black">
-    <p style="margin: 0; padding: 0;" data-id="noisy-header">Simplified model data</p>
-    <div style="display: flex; flex-direction: row; justify-content: center;">
-        <div class="im-cap" style="width: 25%;">
-            <img data-src="images/noisies/good-template-labeled.png" alt="" style="width: 100%;">
-            <p>Ideal image (no noise)</p>
-        </div>
-        <div class="im-cap" style="width: 25%;">
-            <img data-src="images/noisies/noise-0.png" alt="" style="width: 100%;">
-            <p>Single noisy image</p>
-        </div>
-        <div class="im-cap" style="width: 25%;">
-            <img data-src="images/noisies/ten-av.png" alt="" style="width: 100%;">
-            <p>Average of ten images</p>
-        </div>
-        <div class="im-cap" style="width: 25%;">
-            <img data-src="images/noisies/hund_av.png" alt="" style="width: 100%;">
-            <p>Average of 100 images</p>
-        </div>
     </div>
 </section>
 
