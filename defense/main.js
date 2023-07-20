@@ -99,6 +99,7 @@ const purificationBinding = document.querySelector('#binding-vid');
 const purificationWash = document.querySelector('#wash-vid');
 const purificationCut = document.querySelector('#cut-vid');
 const purificationElute = document.querySelector('#elute-vid');
+const purificationTitle = document.querySelector('#purification-title');
 
 function resetAndPlay(vid) {
     vid.currentTime = 0;
@@ -107,6 +108,10 @@ function resetAndPlay(vid) {
 function resetAndPause(vid) {
     vid.currentTime = 0;
     vid.pause();
+}
+
+function udpatePurificationTitle(newText) {
+    purificationTitle.innerHTML = newText;
 }
 
 Reveal.on('fragmentshown', event => {
@@ -168,27 +173,35 @@ Reveal.on('fragmentshown', event => {
             break;
         case 'play-dna-vid':
             resetAndPlay(purificationDna);
+            udpatePurificationTitle('Inject DNA');
             break;
         case 'expression-vid':
             resetAndPlay(purificationExpression);
+            udpatePurificationTitle('Express the channel');
             break;
         case 'membrane-insertion-vid':
             resetAndPlay(purificationMembrane);
+            udpatePurificationTitle('The channel enters the membrane');
             break;
         case 'solubilize-vid':
             resetAndPlay(purificationSolubilize);
+            udpatePurificationTitle('Solubilize the membrane');
             break;
         case 'binding-vid':
             resetAndPlay(purificationBinding);
+            udpatePurificationTitle('Bind ENaC to large beads');
             break;
         case 'wash-vid':
             resetAndPlay(purificationWash);
+            udpatePurificationTitle('Discard everything but the beads');
             break;
         case 'cut-vid':
             resetAndPlay(purificationCut);
+            udpatePurificationTitle('Cut ENaC off the bead');
             break;
         case 'elute-vid':
             resetAndPlay(purificationElute);
+            udpatePurificationTitle('Keep everything not attached to a bead');
             break;
     }
 })
@@ -255,6 +268,38 @@ Reveal.on('fragmenthidden', event => {
         case 'play-cleavage-cartoon':
             cleavageCartoon.currentTime = 0;
             cleavageCartoon.pause();
+            break;
+        case 'play-dna-vid':
+            purificationDna.currentTime = 0;
+            udpatePurificationTitle('The cell');
+            break;
+        case 'expression-vid':
+            resetAndPlay(purificationDna);
+            udpatePurificationTitle('Inject DNA');
+            break;
+        case 'membrane-insertion-vid':
+            resetAndPlay(purificationExpression);
+            udpatePurificationTitle('Express the channel');
+            break;
+        case 'solubilize-vid':
+            resetAndPlay(purificationMembrane);
+            udpatePurificationTitle('The channel enters the membrane');
+            break;
+        case 'binding-vid':
+            resetAndPlay(purificationSolubilize);
+            udpatePurificationTitle('Solubilize the membrane');
+            break;
+        case 'wash-vid':
+            resetAndPlay(purificationBinding);
+            udpatePurificationTitle('Bind ENaC to large beads');
+            break;
+        case 'cut-vid':
+            resetAndPlay(purificationWash);
+            udpatePurificationTitle('Discard everything but the beads');
+            break;
+        case 'elute-vid':
+            resetAndPlay(purificationCut);
+            udpatePurificationTitle('Cut ENaC off the bead');
             break;
     }
 })
