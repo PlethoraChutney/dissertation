@@ -240,6 +240,10 @@ span.tryp {
     animation: sine-wiggle ease-in-out 1s infinite;
 }
 
+.reveal .fragment.visible.lowlight {
+    opacity: 25%;
+}
+
 /* Acknowledgements */
 
 section#acknowledgements .emph {

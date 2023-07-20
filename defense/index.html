@@ -397,17 +397,39 @@
 </section>
 
 <section data-auto-animate="">
-    <h2>Amiloride inhibits ENaC</h2>
-    <div class="fit-two r-stretch">
-        <img data-src="images/enac-overview/finals/simple-cartoon.svg" alt="" class="bordered">
-        <img data-src="images/oocytes/pre-trypsin.svg" alt="" class="bordered">
-    </div>
+    <h2>That's cool!</h2>
+    <h2 class="fragment">Uhh...how does it work?</h2>
 </section>
-<section data-auto-animate="" data-auto-animate-unmatched="false">
-    <h2>GRIP removal opens ENaC</h2>
-    <div class="fit-two r-stretch">
-        <img data-src="images/enac-overview/finals/simple-cartoon_cleaved.svg" alt="" class="bordered">
-        <img data-src="images/oocytes/post-trypsin.svg" alt="" class="bordered">
+
+<section>
+    <p>A brief and unhinged aside on</p>
+    <h1>ASIC</h1>
+</section>
+<section
+    data-background-image="images/asic-car-metaphor/michael-jin_car-crash.jpg"
+>
+</section>
+<section
+    data-background-image="images/asic-car-metaphor/isaac-mehegan_car-dad.jpg"
+>
+</section>
+<section
+    data-background-image="images/asic-car-metaphor/harley-davidson_motorcycle.jpg"
+>
+</section>
+<section
+    data-background-image="images/asic-car-metaphor/engin-akyurt_angry-uncle.jpg"
+>
+</section>
+<section
+    data-background-image="images/asic-car-metaphor/foto-sushi_smiling-uncle.jpg"
+>
+    <div class="fragment" style="background-color: #FFFFFFDD;">
+        <h2>ASIC</h2>
+        <p>
+            We care about related proteins (like ASIC) because they're easier to
+            understand and they still tell us something about our protein of interest.
+        </p>
     </div>
 </section>
 
@@ -417,11 +439,16 @@
         <video data-src="blender/asic-morph/transition.mp4" class="fragment" id="asic-transition"></video>
         <video data-src="blender/asic-morph/zoom.mp4" loop class="fragment" id="asic-zoom"></video>
     </div>
+    <p>ASIC doesn't have a GRIP domain, but it does have a finger and thumb.</p>
 </section>
 
 <section data-auto-animate="">
     <h2 class="fragment semi-fade-out" data-fragment-index="1">So we kinda know what ENaC looks like</h2>
-    <h2 class="fragment" data-fragment-index="1">I want to figure out how it works</h2>
+    <h2 class="fragment fade-in-then-semi-out" data-fragment-index="1">And we know how ASIC works</h2>
+    <h2 class="fragment fade-in">I want to figure out what is different about ENaC</h2>
+</section>
+<section data-auto-animate="">
+    <h2>I want to figure out what is different about ENaC</h2>
     <ul style="margin-top: 2rem;" id="target-container">
         <li class="fragment fade-left strike-me">
             How is ENaC so specific for potassium over sodium?
@@ -435,24 +462,19 @@
     </ul>
     <span class="fragment" id="highlight-the-target"></span>
 </section>
+<!-- -------------------------------------------------------------------------------------------- -->
+<!-- Does trypsin cut ENaC? -->
 <section data-auto-animate="">
     <div style="width: 66%; margin: auto;">
-        <h3 style="text-align: left; margin: 0.5rem 0;" class="fragment fade-left">Does trypsin cut ENaC?</h3>
+        <h3 style="text-align: left; margin: 0.5rem 0;">Does trypsin cut ENaC?</h3>
     </div>
 </section>
-
 <section data-auto-animate="">
-    <h2>GRIP removal opens ENaC</h2>
-    <div class="fit-two r-stretch">
-        <div class="im-cap" style="width: 600px;">
-            <img data-src="images/enac-overview/finals/simple-cartoon_cleaved.svg" alt="" class="bordered" style="height: 45%;">
-            <img data-src="images/oocytes/post-trypsin.svg" alt="" class="bordered" style="height: 45%;">
-        </div>
-        <div class="r-stack im-cap">
-            <img data-src="images/oocytes/na-only.png" alt="" class="bordered">
-            <img data-src="images/oocytes/na-k.png" alt="" class="bordered fragment fade-in">
-            <img data-src="images/oocytes/na-k-li.png" alt="" class="bordered fragment fade-in">
-        </div>
+    <div style="width: 66%; margin: auto;">
+        <h3 style="text-align: left; margin: 0.5rem 0;">Does trypsin cut ENaC?</h3>
+    </div>
+    <div class="fit-one r-stretch">
+        <img src="images/what-is-trypsin.svg" alt="" class="bordered">
     </div>
 </section>
 
@@ -466,7 +488,8 @@
         <img data-src="images/trypsin-western/silver-stain.png" alt="" class="bordered fragment fade-in">
     </div>
 </section>
-
+<!-- -------------------------------------------------------------------------------------------- -->
+<!-- Does trypsin open the channel? -->
 <section data-auto-animate="">
     <div style="width: 66%; margin: auto;">
         <h3 style="text-align: left; margin: 0.5rem 0;">Does trypsin cut ENaC? <span class="fragment">✔️</span></h3>
@@ -474,16 +497,60 @@
             style="text-align: left; border-top: 1px solid var(--r-heading-color); margin: 0.5rem 0;"
             class="fragment fade-left"
         >
-            Does cleavage move the finger and thumb?
+            Does cutting out the GRIP open the channel?
+        </h3>
+    </div>
+</section>
+
+<section data-auto-animate="">
+    <div class="fit-one r-stretch r-stack">
+        <img src="images/oocytes/ephys_cell.png" alt="" class="bordered">
+        <img src="images/oocytes/ephys_enac.png" alt="" class="bordered fragment fade-in">
+        <img src="images/oocytes/ephys_current.png" alt="" class="bordered fragment fade-in">
+        <img src="images/oocytes/ephys_meter.png" alt="" class="bordered fragment fade-in">
+        <img src="images/oocytes/ephys_axes.png" alt="" class="bordered fragment fade-in">
+        <img src="images/oocytes/ephys_pre-tryp.png" alt="" class="bordered fragment fade-in">
+        <img src="images/oocytes/ephys_post-tryp.png" alt="" class="bordered fragment fade-in">
+    </div>
+</section>
+
+<section data-auto-animate="">
+    <div class="fit-one r-stretch r-stack">
+        <img src="images/oocytes/data_x-axis.png" alt="" class="bordered">
+        <img src="images/oocytes/data_y-axis.png" alt="" class="bordered fragment fade-in">
+        <img src="images/oocytes/data_sodium.png" alt="" class="bordered fragment fade-in">
+        <img src="images/oocytes/data_potassium.png" alt="" class="bordered fragment fade-in">
+        <img src="images/oocytes/data_lithium.png" alt="" class="bordered fragment fade-in">
+    </div>
+</section>
+
+<!-- -------------------------------------------------------------------------------------------- -->
+<!-- Does this move the ECD? -->
+<section data-auto-animate="">
+    <div style="width: 66%; margin: auto;">
+        <h3 style="text-align: left; margin: 0.5rem 0;">Does trypsin cut ENaC? ✔️</h3>
+        <h3
+            style="text-align: left; border-top: 1px solid var(--r-heading-color); margin: 0.5rem 0;"
+        >
+            Does cutting out the GRIP open the channel? <span class="fragment">✔️</span>
+        </h3>
+        <h3
+            style="text-align: left; border-top: 1px solid var(--r-heading-color); margin: 0.5rem 0;"
+            class="fragment fade-left"
+        >
+            Do the finger and thumb move when the channel opens?
         </h3>
     </div>
 </section>
 
 <section data-auto-animate="" data-background-image="blender/inhib-peptide/gamma-inhib.png" data-hide-slide-number="true">
+    <div class="r-stretch"></div>
+    <p style="color: white;">Remember: the GRIP is unique to ENaC</p>
 </section>
 
 <section data-auto-animate="">
     <h2>Cleavage does <em>not</em> move the ECD</h2>
+    <p>We want to see if the inhibitory peptide gets removed, and if that lets the finger and thumb collapse</p>
     <div class="fit-one r-stretch r-stack">
         <img data-src="images/cleavage/cartoon-only.png" alt="" class="bordered">
         <img data-src="images/cleavage/cartoon-model.png" alt="" class="bordered fragment fade-in">
@@ -495,32 +562,28 @@
     <p class="fragment">(That's basically nothing.)</p>
 </section>
 
+<!-- -------------------------------------------------------------------------------------------- -->
+<!-- Does this move the ECD? -->
 <section data-auto-animate="">
     <div style="width: 66%; margin: auto;">
         <h3 style="text-align: left; margin: 0.5rem 0;">Does trypsin cut ENaC? ✔️</h3>
         <h3
             style="text-align: left; border-top: 1px solid var(--r-heading-color); margin: 0.5rem 0;"
-            class="fragment fade-left"
         >
-            Does cleavage move the finger and thumb? <span class="fragment">❌</span>
+            Does cutting out the GRIP open the channel? ✔️
         </h3>
         <h3
             style="text-align: left; border-top: 1px solid var(--r-heading-color); margin: 0.5rem 0;"
             class="fragment fade-left"
-        >Does cleavage open the pore?</h3>
-    </div>
-</section>
-
-<section data-auto-animate="">
-    <h2>ASIC's TMD has a distinctive fold</h2>
-    <div class="fit-one r-stretch">
-        <img data-src="../parts/introduction/figures/hg-motif/hg-motif.png" alt="" class="bordered">
-    </div>
-</section>
-<section data-auto-animate="">
-    <h2>ENaC's TMD is probably similar</h2>
-    <div class="fit-one r-stretch">
-        <img data-src="../parts/introduction/figures/pore-cartoon/pore-cartoon.png" alt="" class="bordered">
+        >
+            Do the finger and thumb move when the channel opens? <span class="fragment">❌</span>
+        </h3>
+        <h3
+            style="text-align: left; border-top: 1px solid var(--r-heading-color); margin: 0.5rem 0;"
+            class="fragment fade-left"
+        >
+            Does cleavage open the pore?
+        </h3>
     </div>
 </section>
 
@@ -536,9 +599,8 @@
 <!-- -------------------------------------------------------------------------------------------- -->
 
 <section data-auto-animate="">
-    <h1>
-        But<br/>
-        proteins<br/>
+    <h1 style="font-size: 8rem;">
+        Proteins<br/>
         <span class="animate-wiggle">wiggle!</span>
     </h1>
 </section>

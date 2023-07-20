@@ -65,11 +65,17 @@ function playUntil(movie, stopTime) {
 
 function toggleStrikethroughs(addOrRemove) {
     Object.values(highlightContainer.children).forEach(el => {
-        if (el.classList.contains('strike-me')) {
+        if (!el.classList.contains('strike-me')) {
             if (addOrRemove === 'add') {
-                el.classList.toggle('strikethrough');
+                el.classList.add('emph');
             } else {
-                el.classList.remove('strikethrough');
+                el.classList.remove('emph');
+            }
+        } else {
+            if (addOrRemove === 'add') {
+                el.classList.add('lowlight');
+            } else {
+                el.classList.remove('lowlight');
             }
         }
     });
