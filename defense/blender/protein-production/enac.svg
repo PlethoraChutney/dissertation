@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1920 1080" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(0.862871,1.49454,-1.49454,0.862871,224.611,-1635.02)">
+        <g id="ENaC">
+            <path d="M1286.5,239.015C1286.5,238.215 1287.15,237.566 1287.95,237.566C1288.75,237.566 1289.4,238.215 1289.4,239.015C1289.4,259.053 1280.91,266.444 1272.37,275.712C1264.22,284.547 1256.1,295.21 1256.1,321.577C1256.1,322.377 1255.45,323.026 1254.65,323.026C1253.85,323.026 1253.2,322.377 1253.2,321.577C1253.2,294.067 1261.74,282.966 1270.24,273.748C1278.34,264.962 1286.5,258.011 1286.5,239.015Z" style="fill:rgb(58,163,79);"/>
+            <rect id="Channel1" x="1254.65" y="100.29" width="66.604" height="138.725" style="fill:rgb(227,101,84);"/>
+            <circle cx="1254.65" cy="321.577" r="16.651" style="fill:rgb(58,163,79);"/>
+        </g>
+    </g>
+</svg>

@@ -91,6 +91,24 @@ const asicTransition = document.querySelector('#asic-transition');
 const asicZoom = document.querySelector('#asic-zoom');
 const cleavageCartoon = document.querySelector('#cleavage-cartoon-video');
 
+const purificationDna = document.querySelector('#dna-vid');
+const purificationExpression = document.querySelector('#expression-vid');
+const purificationMembrane = document.querySelector('#membrane-insertion-vid');
+const purificationSolubilize = document.querySelector('#solubilize-vid');
+const purificationBinding = document.querySelector('#binding-vid');
+const purificationWash = document.querySelector('#wash-vid');
+const purificationCut = document.querySelector('#cut-vid');
+const purificationElute = document.querySelector('#elute-vid');
+
+function resetAndPlay(vid) {
+    vid.currentTime = 0;
+    vid.play();
+}
+function resetAndPause(vid) {
+    vid.currentTime = 0;
+    vid.pause();
+}
+
 Reveal.on('fragmentshown', event => {
     switch (event.fragment.id) {
         case 'play-subunit-overview':
@@ -147,6 +165,30 @@ Reveal.on('fragmentshown', event => {
         case 'play-cleavage-cartoon':
             cleavageCartoon.currentTime = 0;
             cleavageCartoon.play();
+            break;
+        case 'play-dna-vid':
+            resetAndPlay(purificationDna);
+            break;
+        case 'expression-vid':
+            resetAndPlay(purificationExpression);
+            break;
+        case 'membrane-insertion-vid':
+            resetAndPlay(purificationMembrane);
+            break;
+        case 'solubilize-vid':
+            resetAndPlay(purificationSolubilize);
+            break;
+        case 'binding-vid':
+            resetAndPlay(purificationBinding);
+            break;
+        case 'wash-vid':
+            resetAndPlay(purificationWash);
+            break;
+        case 'cut-vid':
+            resetAndPlay(purificationCut);
+            break;
+        case 'elute-vid':
+            resetAndPlay(purificationElute);
             break;
     }
 })

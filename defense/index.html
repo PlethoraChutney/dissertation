@@ -61,26 +61,16 @@
     <div class="r-stretch fit-one">
         <h2 
             data-id="we-love-salt" 
-            style="color: #0f171b; margin-bottom: 300px;" 
+            style="color: #405f6b; margin-bottom: 300px;" 
             class="r-fit-text"
         >
-            Do we love salt?
+            But salt doesn't<br>always taste good
         </h2>
     </div>
     <p class="citation" style="color: white;">Photo by Ant Rozetsky on Unsplash</p>
 </section>
 
-<section data-auto-animate="" data-background-color="white">
-    <h2 
-        data-id="we-love-salt" 
-        style="color: #023390";
-    >
-        Do we love salt?
-    </h2>
-    <div class="fit-one r-stretch">
-        <img src="images/fake-salt.jpg" alt="">
-    </div>
-    <p class="citation">Edward Centrella at Your Brain on Sci</p>
+<section data-auto-animate="" data-background-image="images/fake-salt-compare.jpg">
 </section>
 
 <section data-auto-animate="" data-background-image="images/ball-compare/ball-compare.png">
@@ -92,18 +82,37 @@
 </section>
 
 <section data-auto-animate="">
-    <h2>Our taste of salt</h2>
+    <h2>Salt can taste bad</h2>
     <div class="v-flex" style="align-items: flex-start; width: 75%; margin: auto;">
-        <div class="h-flex" style="gap: 3rem;">
-            <img src="images/chips-small.png" alt="" style="width: 250px; border: 1px solid black;">
-            <p>We can discriminate salt concentrations</p>
-        </div>
-        <div class="h-flex" style="gap: 3rem;">
-            <img src="images/ball-compare/ion-cartoon.svg" alt="" style="width: 250px; border: 1px solid black; background-color: white;">
-            <p>We can discriminate between sodium and potassium</p>
+        <div class="fit-two r-stretch">
+            <div class="im-cap">
+                <img src="images/ocean-small.jpg" alt="" style="width: 500px; border: 1px solid black;">
+                <p>Too much salt</p>
+            </div>
+            <div class="im-cap">
+                <img src="images/ball-compare/ball-compare_small.png" alt="" style="width: 500px; border: 1px solid black; background-color: white;">
+                <p>Salt made of the wrong ion</p>
+            </div>
         </div>
     </div>
-    <p>And we do it all near-instantly!</p>
+    <p class="fragment fade-left">Both of these processes are controlled by the Epithelial Sodium Channel</p>
+</section>
+
+<section data-auto-animate="">
+    <h2>Epithelial Sodium Channel (ENaC)</h2>
+    <div class="fit-one r-stretch r-stack">
+        <img src="images/enac-explainer/gate.png" alt="" class="bordered">
+        <img src="images/enac-explainer/pore.png" alt="" class="bordered fragment fade-in">
+        <img src="images/enac-explainer/selectivity.png" alt="" class="bordered fragment fade-in">
+        <img src="images/enac-explainer/amiloride.png" alt="" class="bordered fragment fade-in">
+    </div>
+</section>
+<section data-auto-animate="">
+    <h2>Epithelial Sodium Channel (ENaC)</h2>
+    <div class="fit-one r-stretch r-stack">
+        <img src="images/enac-explainer/amiloride.png" alt="" class="bordered">
+    </div>
+    <p>But why do we need an ion channel in the first place?</p>
 </section>
 
 <section data-auto-animate="" data-background-color="white">
@@ -111,6 +120,73 @@
         <video src="blender/lipid-bilayer/bilayer-alone.mp4" data-autoplay loop></video>
         <video src="blender/lipid-bilayer/bilayer-pan.mp4" id="bilayer-pan-video" class="fragment"></video>
         <video src="blender/lipid-bilayer/bilayer-enac.mp4" id = "bilayer-enac-video" class="fragment" loop></video>
+    </div>
+</section>
+
+<section data-auto-animate="">
+    <h2>How do we know all this?</h2>
+    <div class="fit-two r-stretch" style="align-items: flex-start;">
+        <div class="fragment fade-left" style="height: max-content; margin-top: 2rem; width: 50%;" data-fragment-index="1">
+            <h3>Function</h3>
+            <h4 style="border-bottom: 1px solid var(--r-heading-color); padding-bottom: 5px;">
+                What the protein does
+            </h4>
+            <div style="width: 100%;">
+                <ul>
+                    <li class="fragment fade-left" data-fragment-index="3">What happens to currents through the channel?</li>
+                    <li class="fragment fade-left" data-fragment-index="4">How much ENaC ends up at the surface of the cell?</li>
+                    <li class="fragment fade-left" data-fragment-index="5">How selective is the channel for sodium over potassium?</li>
+                </ul>
+            </div>
+        </div>
+        <div class="fragment fade-left" style="height: max-content; margin-top: 2rem; width: 50%;" data-fragment-index="2">
+            <h3>Structure</h3>
+            <h4 style="border-bottom: 1px solid var(--r-heading-color); padding-bottom: 5px;">
+                How the protein's atoms are arranged
+            </h4>
+            <div style="width: 100%;">
+                <ul>
+                    <li class="fragment fade-left" data-fragment-index="6">Which parts of this protein have the same 3D shape in different organisms?</li>
+                    <li class="fragment fade-left" data-fragment-index="7">How does this part of the channel move when it opens and closes?</li>
+                    <li class="fragment fade-left" data-fragment-index="8">What about these particular atoms makes them so important?</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-background-image="blender/how-do-we-look/how-do-we-look.png" data-hide-slide-number="true">
+    <div class="fit-one" style="justify-content: flex-start;">
+        <h1 style="text-align: left; color: #FFBF6E;">How<br/>do we<br/><i>look at</i><br/>proteins?</h1>
+    </div>
+</section>
+
+<section data-auto-animate="">
+    <h2>How do we look at proteins?</h2>
+    <div style="margin-top: 2rem;">
+        <ol>
+            <li class="fragment fade-left">Make the protein</li>
+            <li class="fragment fade-left">Purify the protein</li>
+            <li class="fragment fade-left">Image the protein</li>
+        </ol>
+    </div>
+</section>
+
+<section data-auto-animate="">
+    <h2>Make the protein</h2>
+</section>
+
+<section data-auto-animate="">
+    <div class="fit-one r-stretch r-stack">
+        <video src="blender/protein-production/dna.mp4" class="bordered" id="dna-vid"></video>
+        <span id="play-dna-vid" class="fragment"></span>
+        <video src="blender/protein-production/expression.mp4" class="bordered fragment fade-in" id="expression-vid"></video>
+        <video src="blender/protein-production/membrane-insertion.mp4" class="bordered fragment fade-in" id="membrane-insertion-vid"></video>
+        <video src="blender/protein-production/solubilize.mp4" class="bordered fragment fade-in" id="solubilize-vid"></video>
+        <video src="blender/protein-production/binding.mp4" class="bordered fragment fade-in" id="binding-vid"></video>
+        <video src="blender/protein-production/wash.mp4" class="bordered fragment fade-in" id="wash-vid"></video>
+        <video src="blender/protein-production/cut.mp4" class="bordered fragment fade-in" id="cut-vid"></video>
+        <video src="blender/protein-production/elute.mp4" class="bordered fragment fade-in" id="elute-vid"></video>
     </div>
 </section>
 
@@ -305,12 +381,6 @@
     <div class="fit-one r-stretch">
         <video src="images/ecd-turn-label.mp4" class="bordered" id="ecd-turn-video"></video>
         <span class="fragment" id="ecd-turn"></span>
-    </div>
-</section>
-
-<section data-background-image="blender/how-do-we-look/how-do-we-look.png" data-hide-slide-number="true">
-    <div class="fit-one" style="justify-content: flex-start;">
-        <h1 style="text-align: left; color: #FFBF6E;">How<br/>do we<br/><i>look at</i><br/>proteins?</h1>
     </div>
 </section>
 <!-- -------------------------------------------------------------------------------------------- -->
