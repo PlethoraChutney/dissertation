@@ -214,11 +214,12 @@
     </div>
 </section>
 
-<section data-background-image="blender/how-do-we-look/how-do-we-look.png" data-hide-slide-number="true">
+<section data-background-image="blender/how-do-we-look/how-do-we-look.png" data-hide-slide-number="true" data-background-color="black">
     <div class="r-stretch"></div>
     <div class="r-stack">
-        <p class="fragment fade-in-then-out" style="color: white;">Proteins are too small to be seen with visible light</p>
-        <p class="fragment fade-in-then-out" style="color: white;">How can we get a 3D map from 2D images?</p>
+        <p class="fragment fade-in-then-out">Proteins are too small to be seen with visible light</p>
+        <p class="fragment fade-in-then-out">We image them with electron beams instead &mdash; cryo-electron microscopy</p>
+        <p class="fragment fade-in-then-out">How can we get a 3D map from 2D images?</p>
     </div>
 </section>
 
@@ -239,6 +240,7 @@
         <img data-src="blender/letter-block/letter-block-shadows.png" alt="" class="bordered">
         <video data-src="blender/letter-block/letter-block-rotate.mp4" data-autoplay loop class="bordered"></video>
     </div>
+    <p class="fragment">This is "solving" a structure</p>
 </section>
 
 <section data-auto-animate="">
@@ -351,13 +353,13 @@
         <video data-src="blender/overview/overview-atoms.mp4" id="overview-video"></video>
         <span class="fragment" id="play-subunit-overview"></span>
         <video
-            src="blender/what-is-a-residue/single-residue.mp4"
+            data-src="blender/what-is-a-residue/single-residue.mp4"
             loop
             id="single-residue-video"
             class="fragment fade-in bordered drop-shadow"
         ></video>
         <video
-            src="blender/what-is-a-residue/residue-chain.mp4"
+            data-src="blender/what-is-a-residue/residue-chain.mp4"
             id="residue-chain-video"
             class="fragment fade-in bordered drop-shadow"
         ></video>
@@ -869,6 +871,7 @@
     <div class="fit-one r-stretch r-stack">
         <video data-src="blender/micelle-tilt/micelle-tilt_overview.mp4" id="micelle-tilt_overview"></video>
         <span class="fragment" id="play-micelle-overview"></span>
+        <img data-src="images/memb-tilt.png" alt="" class="fragment fade-in">
         <video data-src="blender/micelle-tilt/sugar-1.mp4" class="fragment" id="sugar-1"></video>
         <video data-src="blender/micelle-tilt/sugar-2.mp4" class="fragment" id="sugar-2"></video>
     </div>
