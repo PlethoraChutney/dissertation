@@ -99,6 +99,12 @@
 </section>
 
 <section data-auto-animate="">
+    <h2>Before we begin</h2>
+    <p>There's not a very neat story here.</p>
+    <p class="fragment fade-left">I want you to come on a journey with me.</p>
+</section>
+
+<section data-auto-animate="">
     <h2>Epithelial Sodium Channel (ENaC)</h2>
     <div class="fit-one r-stretch r-stack">
         <img data-src="images/enac-explainer/gate.png" alt="" class="bordered">
@@ -121,6 +127,10 @@
         <video data-src="blender/lipid-bilayer/bilayer-pan.mp4" id="bilayer-pan-video" class="fragment"></video>
         <video data-src="blender/lipid-bilayer/bilayer-enac.mp4" id = "bilayer-enac-video" class="fragment" loop></video>
     </div>
+</section>
+
+<section data-auto-animate="">
+    <h2>Why should I care?</h2>
 </section>
 
 <section data-auto-animate="">
@@ -391,55 +401,76 @@
 <section data-auto-animate="">
     <h2>ENaC opens when the GRIP domain is removed</h2>
     <div class="fit-one r-stretch">
-        <video src="blender/cleavage-svg/cleavage.mp4" class="bordered" id="cleavage-cartoon-video"></video>
+        <video data-src="blender/cleavage-svg/cleavage.mp4" class="bordered" id="cleavage-cartoon-video"></video>
         <span id="play-cleavage-cartoon" class="fragment"></span>
     </div>
 </section>
 
 <section data-auto-animate="">
     <h2>That's cool!</h2>
-    <h2 class="fragment">Uhh...how does it work?</h2>
+    <h2 class="fragment">Uhh...why do we think it works like that?</h2>
 </section>
 
 <section>
     <p>A brief and unhinged aside on</p>
     <h1>ASIC</h1>
 </section>
+
 <section
     data-background-image="images/asic-car-metaphor/michael-jin_car-crash.jpg"
+    data-transition="none"
 >
+<div class="r-stretch"></div>
+<p class="citation">Michael Jin on Unsplash</p>
 </section>
+
 <section
     data-background-image="images/asic-car-metaphor/isaac-mehegan_car-dad.jpg"
+    data-transition="none"
 >
+<div class="r-stretch"></div>
+<p class="citation">Isaac Mehegan on Unsplash</p>
 </section>
+
 <section
     data-background-image="images/asic-car-metaphor/harley-davidson_motorcycle.jpg"
+    data-transition="none"
 >
+<div class="r-stretch"></div>
+<p class="citation">Harley Davidson on Unsplash</p>
 </section>
+
 <section
     data-background-image="images/asic-car-metaphor/engin-akyurt_angry-uncle.jpg"
+    data-transition="none"
 >
+<div class="r-stretch"></div>
+<p class="citation">Engin Akyurt on Unsplash</p>
 </section>
+
 <section
     data-background-image="images/asic-car-metaphor/foto-sushi_smiling-uncle.jpg"
+    data-transition="none"
 >
-    <div class="fragment" style="background-color: #FFFFFFDD;">
-        <h2>ASIC</h2>
-        <p>
-            We care about related proteins (like ASIC) because they're easier to
-            understand and they still tell us something about our protein of interest.
-        </p>
+    <div class="r-stretch v-flex">
+        <div class="fragment" style="background-color: #FFFFFFDD;">
+            <h2>Why ASIC?</h2>
+            <p>
+                Aside from being interesting in their own right, related channels can
+                tell us something about the one we study.
+            </p>
+        </div>
     </div>
+    <p class="citation">Foto Sushi on Unsplash</p>
 </section>
 
 <section data-auto-animate="" data-background-color="#a2dfdd">
     <div class="fit-one r-stretch r-stack">
         <video data-src="blender/asic-morph/overview.mp4" loop data-autoplay></video>
-        <video data-src="blender/asic-morph/transition.mp4" class="fragment" id="asic-transition"></video>
+        <video data-src="blender/asic-morph/transition.mp4" class="fragment" data-fragment-index="1" id="asic-transition"></video>
         <video data-src="blender/asic-morph/zoom.mp4" loop class="fragment" id="asic-zoom"></video>
     </div>
-    <p>ASIC doesn't have a GRIP domain, but it does have a finger and thumb.</p>
+    <p class="fragment" data-fragment-index="1">ASIC doesn't have a GRIP domain, but it does have a finger and thumb.</p>
 </section>
 
 <section data-auto-animate="">
@@ -450,7 +481,7 @@
 <section data-auto-animate="">
     <h2>I want to figure out what is different about ENaC</h2>
     <ul style="margin-top: 2rem;" id="target-container">
-        <li class="fragment fade-left strike-me">
+        <li class="strike-me">
             How is ENaC so specific for potassium over sodium?
         </li>
         <li class="fragment fade-left strike-me">
@@ -691,20 +722,37 @@
 
 <section data-auto-animate="">
     <h2>The TMD is likely misfolded</h2>
-    <div class="fit-one r-stretch r-stack">
-        <img data-src="images/tmd-misfolded/tmd-overview.png" alt="" class="bordered">
-        <img data-src="images/tmd-misfolded/side-only.png" alt="" class="bordered fragment">
-        <img data-src="images/tmd-misfolded/side-and-top.png" alt="" class="bordered fragment">
+    <div class="fit-one r-stretch">
+        <img data-src="images/enac-explainer/pore-only.png" alt="" class="bordered"">
+    </div>
+    <p>We're looking for a clear pore down the TMD,<br>and whether that pore changes when we treat with trypsin</p>
+</section>
+<section data-auto-animate="">
+    <h2>The TMD is likely misfolded</h2>
+    <div class="fit-one r-stretch">
+        <img data-src="images/enac-explainer/pore-only.png" alt="" class="bordered" style="width: 400px;">
+        <div class="r-stack">
+            <img data-src="images/tmd-misfolded/tmd-overview.png" alt="" class="bordered">
+            <img data-src="images/tmd-misfolded/side-only.png" alt="" class="bordered fragment">
+            <img data-src="images/tmd-misfolded/side-and-top.png" alt="" class="bordered fragment">
+        </div>
     </div>
 </section>
 
+<!-- -------------------------------------------------------------------------------------------- -->
+<!-- What did we learn? -->
 <section data-auto-animate="">
     <div style="width: 66%; margin: auto;">
         <h3 style="text-align: left; margin: 0.5rem 0;">Does trypsin cut ENaC? ✔️</h3>
         <h3
             style="text-align: left; border-top: 1px solid var(--r-heading-color); margin: 0.5rem 0;"
         >
-            Does cleavage move the finger and thumb? ❌
+            Does cutting out the GRIP open the channel? ✔️
+        </h3>
+        <h3
+            style="text-align: left; border-top: 1px solid var(--r-heading-color); margin: 0.5rem 0;"
+        >
+            Do the finger and thumb move when the channel opens? ❌
         </h3>
         <h3
             style="text-align: left; border-top: 1px solid var(--r-heading-color); margin: 0.5rem 0;"
@@ -713,13 +761,54 @@
         </h3>
     </div>
 </section>
+
+<section data-auto-animate="">
+    <div class="read-text">
+        <h2>What does it mean that we didn't see what we expected?</h2>
+    </div>
+</section>
+
+<section
+    data-auto-animate=""
+    data-background-image="blender/inhib-peptide/gamma-inhib.png"
+    data-background-color="black"
+    data-background-opacity="0.5"
+>
+    <h2>GRIP as a wedge</h2>
+</section>
+<section
+    data-auto-animate=""
+    data-background-video="blender/asic-morph/zoom.mp4"
+    data-background-video-loop="true"
+    data-background-color="black"
+    data-background-opacity="0.4"
+>
+    <h2>Finger/thumb collapse</h2>
+</section>
+<section
+    data-auto-animate=""
+    data-background-video="blender/lipid-bilayer/bilayer-enac.mp4"
+    data-background-video-loop="true"
+    data-background-color="black"
+    data-background-opacity="0.3"
+>
+    <h2>A TM2-lined pore</h2>
+</section>
+
+<!-- -------------------------------------------------------------------------------------------- -->
+<!-- What else came of this? -->
 <section data-auto-animate="">
     <div style="width: 66%; margin: auto;">
         <h3 style="text-align: left; margin: 0.5rem 0;">Does trypsin cut ENaC? ✔️</h3>
         <h3
             style="text-align: left; border-top: 1px solid var(--r-heading-color); margin: 0.5rem 0;"
         >
-            Does cleavage move the finger and thumb? ❌
+            Does cutting out the GRIP open the channel? ✔️
+        </h3>
+        <h3
+            style="text-align: left; border-top: 1px solid var(--r-heading-color); margin: 0.5rem 0;"
+        >
+            Do the finger and thumb move when the channel opens? ❌
         </h3>
         <h3
             style="text-align: left; border-top: 1px solid var(--r-heading-color); margin: 0.5rem 0;"
@@ -727,7 +816,27 @@
             Does cleavage open the pore? 🤷
         </h3>
     </div>
-    <p>Can we learn anything else?</p>
+</section>
+<section data-auto-animate="">
+    <div style="width: 66%; margin: auto;">
+        <h3 style="text-align: left; margin: 0.5rem 0;">Does trypsin cut ENaC? ✔️</h3>
+        <h3
+            style="text-align: left; border-top: 1px solid var(--r-heading-color); margin: 0.5rem 0;"
+        >
+            Does cutting out the GRIP open the channel? ✔️
+        </h3>
+        <h3
+            style="text-align: left; border-top: 1px solid var(--r-heading-color); margin: 0.5rem 0;"
+        >
+            Do the finger and thumb move when the channel opens? ❌
+        </h3>
+        <h3
+            style="text-align: left; border-top: 1px solid var(--r-heading-color); margin: 0.5rem 0;"
+        >
+            Does cleavage open the pore? 🤷
+        </h3>
+    </div>
+    <p>Did we learn anything else?</p>
 </section>
 
 <section data-auto-animate="">
@@ -789,12 +898,21 @@
 
 <section
     data-auto-animate=""
+    data-background-image="blender/palm-tyr/palm-tyr.png"
+    data-hide-slide-number="true"
+>
+    <h2 style="color: white;">Mutate the &beta;6-&alpha;4 linkers</h2>
+    <div class="r-stretch fit-one">
+    </div>
+</section>
+<section
+    data-auto-animate=""
     data-background-image="images/zdenek-machacek_mouse.jpg"
     data-hide-slide-number="true"
 >
     <div class="r-stretch fit-one">
     </div>
-    <h2 style="color: white;">Try other orthologs</h2>
+    <h2 style="color: white;">Try ENaCs from other animals</h2>
     <p class="citation">Zdeněk Macháček on Unsplash</p>
 </section>
 <section
@@ -806,15 +924,6 @@
     <div class="r-stretch fit-one">
     </div>
     <p class="citation">Erik Binggeser on Unsplash</p>
-</section>
-<section
-    data-auto-animate=""
-    data-background-image="blender/palm-tyr/palm-tyr.png"
-    data-hide-slide-number="true"
->
-    <h2 style="color: white;">Mutate the &beta;6-&alpha;4 linkers</h2>
-    <div class="r-stretch fit-one">
-    </div>
 </section>
 
 <section>
