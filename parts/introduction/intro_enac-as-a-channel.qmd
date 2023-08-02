@@ -98,7 +98,7 @@ Indeed, the same study indicates that &beta;ENaC becomes less mobile upon SPLUNC
 A deeper investigation of the various chaperones and processes involved in ENaC assembly and dissociation would be interesting but is outside the scope of this work.
 For our purposes, ENaC is the &alpha;&beta;&gamma; heterotrimer.
 
-### Functional Domains
+### Functional Domains {#sec_intro-enac-domains}
 
 ![Cartoon representation of an ENaC subunit. Each domain is labeled, and important functions are noted next to the labels.](figures/domain-cartoon/enac-overview.png){#fig-intro_domain-cartoon}
 

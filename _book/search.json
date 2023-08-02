@@ -14,6 +14,27 @@
     "text": "Acknowledgements\nWe’ll get here."
   },
   {
+    "objectID": "overview.html#the-enacdeg-family",
+    "href": "overview.html#the-enacdeg-family",
+    "title": "ENaC - An Overview",
+    "section": "The ENaC/DEG family",
+    "text": "The ENaC/DEG family\nThe epithelial sodium channel (ENaC) is, perhaps obviously, a member of the ENaC/DEG family of ion channels. These channels are trimeric, pass cationic currents, are voltage-insensitive, and are inhibited by the small molecule amiloride (and its derivatives). The overall topology of these channels is similar, with the greatest sequence (and, presumably, structural) diversity found in the distal ECD (furthest from the membrane). Current structural study suggests a conserved overall gating mechanism as well.\nAside from ENaC, the best-studied members of the ENaC/DEG family are the eponymous degenerin (DEG) channel and the acid-sensing ion channel, ASIC. DEG is expressed in C. elegans and is involved in mechanosensation. ASIC is expressed in a variety of organisms (including humans) and opens in response to acidic extracellular conditions. ASIC has by far the best-described structure of the family."
+  },
+  {
+    "objectID": "overview.html#enac-structure",
+    "href": "overview.html#enac-structure",
+    "title": "ENaC - An Overview",
+    "section": "ENaC Structure",
+    "text": "ENaC Structure\n\n\n\nAn overview of ENaC structure.\n\n\nENaC is a triheteromeric ion channel comprising three subunits, the α, β, and γ subunits. Each subunit shares an overall similar topology, and so I describe them here without reference to a specific one.For most figures in this document, I color the α subunit blue, the β subunit red, and the γ subunit magenta.\nThe transmembrane domain, or TMD, contains the pore and selectivity filter. The extracellular domain, or ECD, contains domains important for regulating open probability (PO) and other functional characteristics. There are also short intracellular N- and C-terminal tails which regulate surface expression.\nThe ECD is further subdivided into six domains, named after the parts of a hand. The palm and β-ball form a rigid backbone and make the plurality of the contacts with the other subunits. The knuckle, finger, and thumb likely move during channel gating and contain important glycosylation sites.\nThe GRIP domain is unique to ENaC. ENaC opens when the GRIP domain is excised from the channel. The canonical proteases responsible for channel opening are: furin, which cuts the α subunit twice and γ subunit once; and prostasin, which cuts the γ subunit again.\n\n\n\nAn exaggerated model of ENaC opening. Left: an uncleaved subunit. Right: after GRIP is removed from the channel, the finger and thumb collapse together, pulling the TMD away from the pore axis and opening a fenestration.\n\n\nRemoval of the GRIP domain is thought to allow the finger and thumb to collapse together. This movement is coordinated with movement of the palm away from the pore axis, which in turn opens a fenestration just above the membrane. Ions enter at this fenestration and pass down a pore formed by the second transmembrane helix, TM2.\nAlong this pore, ions larger than sodium are filtered out by size. It is thought that this selectivity filter is formed by a three-residue loop connecting swapped domains of TM2, but an un-swapped conformation is also possible.\nThe above summary of ENaC’s presumed gating mechanism is based largely off cross-linking electrophysiology studies and ASIC’s well-described gating mechanism. In ASIC, protons allow for finger/thumb collapse (recall that ASIC does not have a GRIP domain). However, ASIC rapidly desensitizes and ENaC does not."
+  },
+  {
+    "objectID": "overview.html#enac-function",
+    "href": "overview.html#enac-function",
+    "title": "ENaC - An Overview",
+    "section": "ENaC Function",
+    "text": "ENaC Function"
+  },
+  {
     "objectID": "parts/introduction/intro_enac-in-the-body.html#sec-intro_enac-in-body",
     "href": "parts/introduction/intro_enac-in-the-body.html#sec-intro_enac-in-body",
     "title": "1  ENaC Physiology and Regulation",

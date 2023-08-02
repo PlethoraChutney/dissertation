@@ -1,4 +1,4 @@
-# ENaC Physiology and Regulation
+# ENaC Physiology and Regulation {#sec-intro_physiology}
 
 As a guide to the importance of ENaC for human health, I will begin with a background in the physiological functions of the channel.
 @sec-intro_as-a-channel provides a deeper investigation of ENaC's structure/function relationships.

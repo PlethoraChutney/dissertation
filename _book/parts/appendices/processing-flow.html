@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.340">
+<meta name="generator" content="quarto-1.3.433">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -62,7 +62,8 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -126,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
       <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../parts/appendices/mat-meth.html">Appendices</a></li><li class="breadcrumb-item"><a href="../../parts/appendices/processing-flow.html"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Image Processing</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -147,6 +148,12 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Frontmatter</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ENaC - An Overview</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -284,37 +291,37 @@ ul.task-list li input[type="checkbox"] {
 <p>Below are the image processing workflows for each map. The human CKO digitonin map workflow includes more detail for the initial steps — these steps are the same for each map, and so are elided in the others. In each case, maps are contoured to 0.5. Additionally, particle and movie numbers are rounded for ease of comparison. See <a href="mat-meth.html#tbl-data-collection">Table&nbsp;<span>A.3</span></a> for precise numbers.</p>
 <div id="fig-cko-final" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="figures/processing-overviews/hum-pko/human-cko.png" class="lightbox" title="Human CKO processing pipeline. The TMD volumes are gaussian filtered to reduce noise." data-gallery="quarto-lightbox-gallery-1"><img src="figures/processing-overviews/hum-pko/human-cko.png" class="img-fluid figure-img"></a></p>
+<p><a href="figures/processing-overviews/hum-pko/human-cko.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Human CKO processing pipeline. The TMD volumes are gaussian filtered to reduce noise."><img src="figures/processing-overviews/hum-pko/human-cko.png" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;B.1: Human CKO processing pipeline. The TMD volumes are gaussian filtered to reduce noise.</figcaption>
 </figure>
 </div>
 <div id="fig-cko-nd" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="figures/processing-overviews/hum-pko-nd/cko-nd.png" class="lightbox" title="Human CKO nanodisc pipeline. Masks are contoured to 0.5. Note that the CKO/DEG map was provided in the form of low-pass filtered templates for particle picking, but never to an alignment." data-gallery="quarto-lightbox-gallery-2"><img src="figures/processing-overviews/hum-pko-nd/cko-nd.png" class="img-fluid figure-img"></a></p>
+<p><a href="figures/processing-overviews/hum-pko-nd/cko-nd.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Human CKO nanodisc pipeline. Masks are contoured to 0.5. Note that the CKO/DEG map was provided in the form of low-pass filtered templates for particle picking, but never to an alignment."><img src="figures/processing-overviews/hum-pko-nd/cko-nd.png" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;B.2: Human CKO nanodisc pipeline. Masks are contoured to 0.5. Note that the CKO/DEG map was provided in the form of low-pass filtered templates for particle picking, but never to an alignment.</figcaption>
 </figure>
 </div>
 <div id="fig-cko-deg-final" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="figures/processing-overviews/hum-pko-deg/cko-deg-difab.png" class="lightbox" title="Human CKO/DEG Difab pipeline." data-gallery="quarto-lightbox-gallery-3"><img src="figures/processing-overviews/hum-pko-deg/cko-deg-difab.png" class="img-fluid figure-img"></a></p>
+<p><a href="figures/processing-overviews/hum-pko-deg/cko-deg-difab.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Human CKO/DEG Difab pipeline."><img src="figures/processing-overviews/hum-pko-deg/cko-deg-difab.png" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;B.3: Human CKO/DEG Difab pipeline.</figcaption>
 </figure>
 </div>
 <div id="fig-cd-monofab-final" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="figures/processing-overviews/hum-pko-deg_monofab/cko-deg-monofab.png" class="lightbox" title="Human CKO/DEG Monofab pipeline." data-gallery="quarto-lightbox-gallery-4"><img src="figures/processing-overviews/hum-pko-deg_monofab/cko-deg-monofab.png" class="img-fluid figure-img"></a></p>
+<p><a href="figures/processing-overviews/hum-pko-deg_monofab/cko-deg-monofab.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Human CKO/DEG Monofab pipeline."><img src="figures/processing-overviews/hum-pko-deg_monofab/cko-deg-monofab.png" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;B.4: Human CKO/DEG Monofab pipeline.</figcaption>
 </figure>
 </div>
 <div id="fig-mouse-uncleaved-final" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="figures/processing-overviews/mouse-uncleave/mouse-uncleave.png" class="lightbox" title="Mouse uncleaved pipeline." data-gallery="quarto-lightbox-gallery-5"><img src="figures/processing-overviews/mouse-uncleave/mouse-uncleave.png" class="img-fluid figure-img"></a></p>
+<p><a href="figures/processing-overviews/mouse-uncleave/mouse-uncleave.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Mouse uncleaved pipeline."><img src="figures/processing-overviews/mouse-uncleave/mouse-uncleave.png" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;B.5: Mouse uncleaved pipeline.</figcaption>
 </figure>
 </div>
 <div id="fig-mouse-tryp-final" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="figures/processing-overviews/mouse-trypsin/mouse-trypsin.png" class="lightbox" title="Mouse trypsin pipeline. ECD mask is contoured to 0.5. The chimeric mask used to refine the TMD is contoured at 0.5 (orange) and 0.125 (blue). Note that the ECD is not contained within the mask beyond 0.25." data-gallery="quarto-lightbox-gallery-6"><img src="figures/processing-overviews/mouse-trypsin/mouse-trypsin.png" class="img-fluid figure-img"></a></p>
+<p><a href="figures/processing-overviews/mouse-trypsin/mouse-trypsin.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Mouse trypsin pipeline. ECD mask is contoured to 0.5. The chimeric mask used to refine the TMD is contoured at 0.5 (orange) and 0.125 (blue). Note that the ECD is not contained within the mask beyond 0.25."><img src="figures/processing-overviews/mouse-trypsin/mouse-trypsin.png" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;B.6: Mouse trypsin pipeline. ECD mask is contoured to 0.5. The chimeric mask used to refine the TMD is contoured at 0.5 (orange) and 0.125 (blue). Note that the ECD is not contained within the mask beyond 0.25.</figcaption>
 </figure>
 </div>
@@ -683,7 +690,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","loop":true,"descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":true,"closeEffect":"zoom","descPosition":"bottom","selector":".lightbox","openEffect":"zoom"});</script>
 
 
 
