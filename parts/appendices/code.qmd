@@ -90,10 +90,10 @@ I'll work this example in R, but it could just as easily be done in python, Matl
 library(tidyverse)
 
 example_trace <- tibble(
-        rt = -100:200/100 + 9,
-        signal = dnorm(rt, mean = 10, sd = 0.1) + 0.3 * dnorm(rt, mean = 9.8, sd = 0.2),
-        noise = rnorm(301, sd = 0.05)
-    ) |>
+    rt = -100:200 / 100 + 9,
+    signal = dnorm(rt, mean = 10, sd = 0.1) + 0.3 * dnorm(rt, mean = 9.8, sd = 0.2),
+    noise = rnorm(301, sd = 0.05)
+) |>
     mutate(signal = signal + noise)
 
 data_plot <- example_trace |>
@@ -103,10 +103,10 @@ data_plot <- example_trace |>
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()
     ) +
-    geom_line(color = 'grey') +
+    geom_line(color = "grey") +
     labs(
-        x = 'Retention Time (min)',
-        y = 'Absorbance'
+        x = "Retention Time (min)",
+        y = "Absorbance"
     )
 
 data_plot
@@ -163,32 +163,32 @@ plot_gauss <- function(scale, mean, sd) {
     \(x) scale * dnorm(x, mean = mean, sd = sd)
 }
 fit_unbound <- plot_gauss(
-            get_val('ub_amount'),
-            ub_rt, get_val('ub_sd')
-        )
+    get_val("ub_amount"),
+    ub_rt, get_val("ub_sd")
+)
 fit_bound <- plot_gauss(
-            get_val('b_amount'),
-            b_rt, get_val('b_sd')
-        )
+    get_val("b_amount"),
+    b_rt, get_val("b_sd")
+)
 
 data_plot + 
     geom_function(
         fun = fit_unbound,
-        color = 'blue',
-        linetype = 'dotted',
+        color = "blue",
+        linetype = "dotted",
         n = 1000,
         linewidth = 1
     ) +
     geom_function(
         fun = fit_bound,
-        color = 'forestgreen',
-        linetype = 'dotted',
+        color = "forestgreen",
+        linetype = "dotted",
         n = 1000,
         linewidth = 1
     ) +
     geom_function(
         fun = \(x) fit_unbound(x) + fit_bound(x),
-        color = 'black',
+        color = "black",
         n = 1000
     )
 ```

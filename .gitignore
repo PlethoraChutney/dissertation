@@ -21,3 +21,4 @@ comments.docx
 **/frames/
 *.exr
 *.pdb
+~$*.docx

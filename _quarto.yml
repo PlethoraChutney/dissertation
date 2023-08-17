@@ -1,6 +1,9 @@
 project:
   type: book
-  post-render: ./replace_title_page.sh
+  pre-render: 
+    - ./sort_glossary.sh
+  post-render:
+    - ./replace_title_page.sh
 
 book:
   title: ENaC isn't ASIC
@@ -11,7 +14,7 @@ book:
   date: "7/21/2023"
   chapters:
     - index.qmd
-    - overview.qmd
+    - parts/overview.qmd
     - part: parts/introduction.qmd
       chapters:
        - parts/introduction/intro_enac-in-the-body.qmd
@@ -24,6 +27,7 @@ book:
       chapters: 
         - parts/conclusion/conclusion-doc.qmd
     - parts/references.qmd
+    - parts/glossary.qmd
   appendices: 
     - parts/appendices/mat-meth.qmd
     - parts/appendices/processing-flow.qmd
@@ -103,3 +107,5 @@ format:
     reference-doc: dissertation-reference.docx
     filters:
       - no_asides.lua
+  epub: 
+    epub-cover-image: figures/other/domain-cartoon_ECD.png

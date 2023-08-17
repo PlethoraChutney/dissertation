@@ -1,0 +1,26 @@
+# Glossary {.unnumbered}
+
+ASIC
+: the Acid Sensing Ion Channel. A well-studied member of the ENaC/DEG family opened by low extracellular pH.
+
+ENaC
+: the Epithelial Sodium Channel.
+
+FaNaC
+: the FMRFamide peptide–activated sodium channel. A member of the ENaC/DEG family found only in mollusks and gated by a small peptide.
+
+GRIP domain
+: the Gating Relief of Inhibition by Proteolysis domain. Wedged between the finger and the thumb, when this domain is cleaved by proteases in the &alpha; and &gamma; subunits, the channel opens.
+
+Open probability
+: The proportion of time that a given channel spends in the open state.
+
+P~O~
+: see open probability.
+
+SSI
+: see sodium self-inhibition.
+
+Sodium self-inhibition
+: The process by which high extracellular sodium concentrations decrease ENaC currents.
+
