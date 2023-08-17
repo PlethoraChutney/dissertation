@@ -12,7 +12,10 @@ glossary = {}
 for i in range(len(glossary_lines)):
     line = glossary_lines[i]
     if ": " in line:
-        glossary[glossary_lines[i - 1]] = line
+        title = glossary_lines[i - 1]
+        if title[0].lower() == title[0]:
+            title = "".join(title[0].upper() + title[1:])
+        glossary[title] = line
 
 sorted_keys = list(glossary.keys())
 sorted_keys.sort()

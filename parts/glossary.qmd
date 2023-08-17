@@ -1,26 +1,140 @@
 # Glossary {.unnumbered}
 
+14-3-3
+: a protein which binds and inhibits phosphorylated proteins, including *Nedd4*.
+
+ACMA
+: a fluorescent dye. When ACMA intercalates into a lipid bilayer, it is quenched by a pH gradient across that bilayer.
+
 ASIC
-: the Acid Sensing Ion Channel. A well-studied member of the ENaC/DEG family opened by low extracellular pH.
+: the Acid Sensing Ion Channel family. A well-studied member of the ENaC/DEG superfamily opened by low extracellular pH. In this document, I use ASIC to refer to ASIC1 unless specified.
+
+ASL
+: airway surface liquid, a layer of mucous which protects the lung.
+
+Acidic Pocket
+: unfortunately, this name is used to refer to two separate things in the literature. In ASIC, the acidic pocket is between the finger and thumb; the channel opens when the acidic pocket is protonated. In ENaC, the acidic pocket comprises residues from the finger and &beta;-ball and is thought to be involved in *sodium self-inhibition*.
+
+Aldosterone
+: a mineralocorticoid hormone essential for regulation of blood pressure and plasma sodium and potassium levels.
+
+Amiloride
+: a small molecule which blocks ENaC/DEG superfamily ion channels. ENaC binds amiloride several orders of magnitude tighter than other members of the ENaC/DEG superfamily.
+
+Benzamil
+: a derivative of *amiloride* with a higher affinity for ENaC.
+
+C2 domain
+: a lipid- and protein-binding domain.
+
+CCCP
+: a proton ionophore
+
+CF
+: cystic fibrosis.
+
+CKO
+: an ENaC construct with intracellular cysteines knocked out. See @tbl-human-constructs for more information.
+
+CKO/DEG
+: *CKO* ENaC with additional mutations to bias the channel toward the open state. See @tbl-human-constructs for more information.
+
+DDM
+: n-dodecyl-&beta;-D-maltoside, a detergent commonly used to solubilize membrane proteins.
+
+DM
+: n-decyl-&beta;-D-maltoside, a detergent commonly used to solubilize membrane proteins.
+
+ECD
+: the extracellular domain, comprising the palm, knuckle, finger, GRIP, &beta;-ball, and thumb domains.
 
 ENaC
 : the Epithelial Sodium Channel.
 
 FaNaC
-: the FMRFamide peptide–activated sodium channel. A member of the ENaC/DEG family found only in mollusks and gated by a small peptide.
+: the FMRFamide peptide–activated sodium channel family. A member of the ENaC/DEG superfamily found only in mollusks and gated by a small peptide.
+
+Fab
+: the antigen-binding portion of an antibody.
+
+GAS belt
+: a domain swapping loop of TM2 observed in most ASIC structures to date. In ASIC, the GAS belt comprises a Gly-Ala-Ser triad which forms the selectivity filter.
 
 GRIP domain
 : the Gating Relief of Inhibition by Proteolysis domain. Wedged between the finger and the thumb, when this domain is cleaved by proteases in the &alpha; and &gamma; subunits, the channel opens.
 
+HECT domain
+: the domain of a *HECT ligase* responsible for transferring a ubiquitin molecule from an E2 ligase to the substrate.
+
+HECT ligase
+: a family of E3 ligases. Most HECT ligases discussed in this work comprise a *C2 domain*, a number of *WW domains*, and a *HECT domain*.
+
+HG motif
+: a highly-conserved His-Gly pair which is essential for proper function of ENaC. In ASIC, the HG motif is found in a re-entrant loop which buttresses the GAS belt
+
+I
+: current. Often used to refer to currents of a specific ion, e.g., I~Na^+^~ for sodium current.
+
+IC~50~
+: concentration of an inhibitor at which the inhibited process is at 50% of its uninhibited value.
+
+Macroscopic current
+: the current recorded from an entire expression system, e.g., a whole-cell current; cf. *unitary current*.
+
+N
+: the number of ion channels at the surface of a cell
+
+NP~O~
+: *N* times *P~O~* (the number of channels times their open probability). Essentially the *macroscopic current* divided by the *unitary current*.
+
+Nedd4
+: a family of HECT ligases, including the eponymous Nedd4 and Nedd4-2 (also referred to as Nedd4L)
+
 Open probability
 : The proportion of time that a given channel spends in the open state.
 
+PHA
+: pseudohypoaldosteronism. In this text, I discuss only type 1 PHA (PHA1), in which the patient has high plasma potassium and low plasma sodium but normal circulating aldosterone levels.
+
+PIP
+: phosphatidyl inositol, a phospholipid. Most often found in as a triphosphate (PIP~3~ or PI3P) or bisphosphate (PIP~2~ or PI2P).
+
+PY motif
+: a motif following the form PPXY which is bound by WW domains.
+
+Phenamil
+: a derivative of *amiloride* with a higher affinity for ENaC.
+
 P~O~
-: see open probability.
+: see *open probability*.
+
+SGK
+: Serum- and glucocorticoid-induced kinase, a serine/threonine kinase with a multitude of roles in cell signaling.
 
 SSI
-: see sodium self-inhibition.
+: see *sodium self-inhibition*.
 
 Sodium self-inhibition
 : The process by which high extracellular sodium concentrations decrease ENaC currents.
+
+Styrene-Maleic Acid
+: a copolymer used to directly solubilize a membrane into nanodiscs of native lipids
+
+TM
+: a transmembrane helix, usually followed by a number (e.g., TM1)
+
+TMD
+: the transmembrane domain, comprising both TMs from all three subunits (six helices total).
+
+TRC
+: taste receptor cells. These cells express channels which respond to a single one of the five basic tastes: salty, sweet, sour, bitter, or umami.
+
+Unitary current
+: currents observed through a single channel; cf. *macroscopic current*.
+
+Valinomycin
+: a potassium ionophore
+
+WW domain
+: a protein-protein interaction domain. WW domains bind *PY motifs*.
 

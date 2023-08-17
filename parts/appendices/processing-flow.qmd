@@ -1,7 +1,7 @@
 # Image Processing
 Below are the image processing workflows for each map.
 The human CKO digitonin map workflow includes more detail for the initial steps &mdash; these steps are the same for each map, and so are elided in the others.
-In each case, maps are contoured to 0.5.
+In each case, masks are contoured to 0.5.
 Additionally, particle and movie numbers are rounded for ease of comparison.
 See @tbl-data-collection for precise numbers.
 

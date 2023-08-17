@@ -277,6 +277,12 @@ div.csl-indent {
  <span class="menu-text">References</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../parts/glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glossary</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
@@ -355,7 +361,7 @@ div.csl-indent {
 
 <section id="appia" class="level2 page-columns page-full" data-number="D.1">
 <h2 data-number="D.1" class="anchored" data-anchor-id="appia"><span class="header-section-number">D.1</span> Appia</h2>
-<div class="page-columns page-full"><p>Modern structural biology makes extensive use of size-exclusion chromatography (SEC). The two types of SEC I encountered most often were <em>analytic chromatography</em>, in which samples are assessed for monodispersity and relative amount; and <em>preparative chromatography</em>, in which samples are purified based on their size. In an environment where only a heuristic assessment of these parameters is important (e.g., assessing whether a sample is homogeneous enough to make grids of, or whether a protein interacts with another) these parameters can be assessed by eye (<a href="#fig-appia-peaks">Figure&nbsp;<span>D.1</span></a>). However, chromatography instrument manufacturers must include capacity for more complex analyses in their software. This necessarily makes the software more complex and arcane in the service of features that biochemists rarely need. To solve this mismatch I created Appia, a web-based chromatography visualization package<span class="citation" data-cites="posert2023"><sup><a href="../references.html#ref-posert2023" role="doc-biblioref">1</a></sup></span>. In this section I will provide a brief summery of Appia’s functionality and intended use, the installation process, and then some guidance for adding support for new chromatography instruments.</p><div class="no-row-height column-margin column-container"><span class="">Appia can be installed via <code>pip</code>, or the source can be inspected at <a href="https://github.com/plethorachutney/appia">my github</a>.</span></div></div>
+<div class="page-columns page-full"><p>Modern structural biology makes extensive use of size-exclusion chromatography (SEC). The two types of SEC I encountered most often were <em>analytic chromatography</em>, in which samples are assessed for monodispersity and relative amount; and <em>preparative chromatography</em>, in which samples are purified based on their size. In an environment where only a heuristic assessment of these parameters is important (e.g., assessing whether a sample is homogeneous enough to make grids of, or whether a protein interacts with another) these parameters can be assessed by eye (<a href="#fig-appia-peaks">Figure&nbsp;<span>D.1</span></a>). However, chromatography instrument manufacturers must include capacity for more complex analyses in their software. This necessarily makes the software more complex and arcane in the service of features that biochemists rarely need. To solve this mismatch I created Appia, a web-based chromatography visualization package<span class="citation" data-cites="posert2023"><sup><a href="../references.html#ref-posert2023" role="doc-biblioref">1</a></sup></span>. In this section I will provide a brief summary of Appia’s functionality and intended use, the installation process, and then some guidance for adding support for new chromatography instruments.</p><div class="no-row-height column-margin column-container"><span class="">Appia can be installed via <code>pip</code>, or the source can be inspected at <a href="https://github.com/plethorachutney/appia">my github</a>.</span></div></div>
 <div id="fig-appia-peaks" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><a href="figures/code/peaks.png" class="lightbox" title="Heuristic chromatography parameters are easily assessed by eye. Users can approximate affinity for the stationary phase (size, in the case of SEC), quantity, homogeneity, and the number of distinct species by inspecting peak shifts, peak height, peak width, and number of peaks respectively." data-gallery="quarto-lightbox-gallery-1"><img src="figures/code/peaks.png" class="img-fluid figure-img"></a></p>
@@ -460,7 +466,7 @@ div.csl-indent {
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    b_rt, <span class="fu">get_val</span>(<span class="st">"b_sd"</span>)</span>
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>data_plot <span class="sc">+</span> </span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>data_plot <span class="sc">+</span></span>
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_function</span>(</span>
 <span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>        <span class="at">fun =</span> fit_unbound,</span>
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>        <span class="at">color =</span> <span class="st">"blue"</span>,</span>
@@ -913,7 +919,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","loop":true,"closeEffect":"zoom","descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":true,"descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom"});</script>
 
 
 

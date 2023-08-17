@@ -12,7 +12,7 @@ In an environment where only a heuristic assessment of these parameters is impor
 However, chromatography instrument manufacturers must include capacity for more complex analyses in their software.
 This necessarily makes the software more complex and arcane in the service of features that biochemists rarely need.
 To solve this mismatch I created Appia, a web-based chromatography visualization package [@posert2023].[Appia can be installed via `pip`, or the source can be inspected at [my github](https://github.com/plethorachutney/appia).]{.aside}
-In this section I will provide a brief summery of Appia's functionality and intended use, the installation process, and then some guidance for adding support for new chromatography instruments.
+In this section I will provide a brief summary of Appia's functionality and intended use, the installation process, and then some guidance for adding support for new chromatography instruments.
 
 ![Heuristic chromatography parameters are easily assessed by eye. Users can approximate affinity for the stationary phase (size, in the case of SEC), quantity, homogeneity, and the number of distinct species by inspecting peak shifts, peak height, peak width, and number of peaks respectively.](figures/code/peaks.png){#fig-appia-peaks}
 
@@ -171,7 +171,7 @@ fit_bound <- plot_gauss(
     b_rt, get_val("b_sd")
 )
 
-data_plot + 
+data_plot +
     geom_function(
         fun = fit_unbound,
         color = "blue",
