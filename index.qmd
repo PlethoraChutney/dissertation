@@ -1,4 +1,54 @@
 # Frontmatter {.unnumbered}
 ## Acknowledgements {.unnumbered}
 
-We'll get here.
+It's impossible to acknowledge everyone who contributes to something like a PhD, and I won't attempt to do so.
+I will, however, mention people without whom and places without which I can be certain I would not have finished this whole thing.
+
+First, my partner, Lindsey.
+My life is brighter and my path easier because you're in it.
+
+Next, my dearest friends.
+I received some excellent advice when I was interviewing at graduate schools: "You only applied to places where the science interested you, and is of good quality. Now pay attention to the people who are here with you. You'll be spending six years with them."
+I decided to come to OHSU (which was *not* where I heard that advice) because I felt I could build a warm, kind, and supportive community here.
+I was right.
+So here is that community, presented in a computationally-randomized order.
+
+I think I would have chased a more "prestigious" school without Tuck's guidance, and for that and everything else, I am ever grateful.
+
+Ryan, what more is there to say after a literal dozen years of friendship. Thank you for being a steadfast companion, always willing to lend an ear or crack a window.
+
+Casey and Ryan, you both mean the world to me and we miss you in Portland. I try to embody your Manic Host Energy whenever I'm entertaining. See you at thanksgiving.
+
+Varchas, one of my favorite memories from the past six years is coming out into the dining room and seeing an empty box of Hi-Chews next to you at 6:30am, followed by an hour-long education in Indian politics. I cherish you.
+
+Madeleine, what a joy it is to experience a conversion from "friend's partner" to "friend". I know I can rely on you and confide in you, and I hope you feel the same for me. Thank you for encouraging me to reach, and for pushing me over the finish line. See you at Vida.
+
+John, not sure how you made it in this list. Can I still edit this?
+
+Nigel, it's hard to make friends as an adult but you make it easy.
+
+Sam and Becca (aka The Pod), you helped me survive 2020 and thrive since. Thank you for agreeing with me about Lindsey's pronunciation of \begingroup{}\symbolfont/tʃeɪz ˈlɒ̃ɡ/\endgroup{}.
+
+Thank you to Noah and Caz and especially Emlyn for some of the greatest Monday nights dice can dream of.
+
+Alexis, you inspire me to keep trying new things and to trust I can learn to be creative.
+
+Britt, the chaos you bring out in me is almost certainly good for me. Probably. I eagerly await your next midnight update on the home datacenter.
+
+Gaelen, my number one hype man. I'm waiting in the wings to get you out the door too. I'm glad I tricked you into staying in Portland.
+
+Liz, come on back to the West Coast. I'm glad you followed the science you're interested in, but I'm happier you're coming back.
+
+Of course, to get a PhD in a lab science, you do unfortunately have to do some lab work.
+I did not enjoy this, but it was made bearable by my wonderful lab mates, Sigrid, Alex, and James.
+I also want to thank Nate, Zad, and Johannes from the Gouaux lab for helping me learn both how to do science and how to work in a high-pressure environment.
+Sarah, too, deserves some accolades for being an early guinea pig for me figuring out how to teach people cryoEM.
+
+My cat, Nooch, certainly made this more difficult if anything, but it feels appropriate to at least mention her.
+
+I consider myself lucky that as I approached a committee meeting I was more anxious about making Jonathan, Swetha, Dave, and Steve proud than about how they'd treat me.
+Thank you all for your kindness and guidance.
+Steve deserves special mention for helping me through the last year or so of the process and making sure I never read *too* deeply into my garbage TMD maps.
+
+Finally, thank you to Shoofly and Honey Latte, where I wrote my dissertation and defense seminar.
+All told, it took me $624.43 of coffee, pastries, and breakfast burritos to write this document.
