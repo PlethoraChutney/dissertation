@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ENaC isn’t ASIC - Appendix B — Image Processing</title>
+<title>ENaC isn’t ASIC - Appendix C — Image Processing</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
 <link href="../../parts/appendices/validation.html" rel="next">
-<link href="../../parts/appendices/mat-meth.html" rel="prev">
+<link href="../../parts/appendices/graveyard.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -91,7 +91,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../defense/" rel="" target=""><i class="bi bi-projector" role="img">
+    <a class="nav-link" href="https://dissertation.posertinlab.com/defense" rel="" target=""><i class="bi bi-projector" role="img">
 </i> 
  <span class="menu-text">Defense Slides</span></a>
   </li>  
@@ -124,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../parts/appendices/mat-meth.html">Appendices</a></li><li class="breadcrumb-item"><a href="../../parts/appendices/processing-flow.html"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Image Processing</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../parts/appendices/mat-meth.html">Appendices</a></li><li class="breadcrumb-item"><a href="../../parts/appendices/processing-flow.html"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Image Processing</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -248,20 +248,26 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../parts/appendices/graveyard.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">The Graveyard</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../parts/appendices/processing-flow.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Image Processing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Image Processing</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../parts/appendices/validation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Map Validation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Map Validation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../parts/appendices/code.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Code and Computation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Code and Computation</span></span></a>
   </div>
 </li>
       </ul>
@@ -279,7 +285,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Appendix B — Image Processing</h1>
+<h1 class="title">Appendix C — Image Processing</h1>
 </div>
 
 
@@ -298,37 +304,37 @@ ul.task-list li input[type="checkbox"] {
 <div id="fig-cko-final" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><a href="figures/processing-overviews/hum-pko/human-cko.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Human CKO processing pipeline. The TMD volumes are gaussian filtered to reduce noise."><img src="figures/processing-overviews/hum-pko/human-cko.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Figure&nbsp;B.1: Human CKO processing pipeline. The TMD volumes are gaussian filtered to reduce noise.</figcaption>
+<figcaption class="figure-caption">Figure&nbsp;C.1: Human CKO processing pipeline. The TMD volumes are gaussian filtered to reduce noise.</figcaption>
 </figure>
 </div>
 <div id="fig-cko-nd" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><a href="figures/processing-overviews/hum-pko-nd/cko-nd.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Human CKO nanodisc pipeline. Masks are contoured to 0.5. Note that the CKO/DEG map was provided in the form of low-pass filtered templates for particle picking, but never to an alignment."><img src="figures/processing-overviews/hum-pko-nd/cko-nd.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Figure&nbsp;B.2: Human CKO nanodisc pipeline. Masks are contoured to 0.5. Note that the CKO/DEG map was provided in the form of low-pass filtered templates for particle picking, but never to an alignment.</figcaption>
+<figcaption class="figure-caption">Figure&nbsp;C.2: Human CKO nanodisc pipeline. Masks are contoured to 0.5. Note that the CKO/DEG map was provided in the form of low-pass filtered templates for particle picking, but never to an alignment.</figcaption>
 </figure>
 </div>
 <div id="fig-cko-deg-final" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><a href="figures/processing-overviews/hum-pko-deg/cko-deg-difab.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Human CKO/DEG Difab pipeline."><img src="figures/processing-overviews/hum-pko-deg/cko-deg-difab.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Figure&nbsp;B.3: Human CKO/DEG Difab pipeline.</figcaption>
+<figcaption class="figure-caption">Figure&nbsp;C.3: Human CKO/DEG Difab pipeline.</figcaption>
 </figure>
 </div>
 <div id="fig-cd-monofab-final" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><a href="figures/processing-overviews/hum-pko-deg_monofab/cko-deg-monofab.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Human CKO/DEG Monofab pipeline."><img src="figures/processing-overviews/hum-pko-deg_monofab/cko-deg-monofab.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Figure&nbsp;B.4: Human CKO/DEG Monofab pipeline.</figcaption>
+<figcaption class="figure-caption">Figure&nbsp;C.4: Human CKO/DEG Monofab pipeline.</figcaption>
 </figure>
 </div>
 <div id="fig-mouse-uncleaved-final" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><a href="figures/processing-overviews/mouse-uncleave/mouse-uncleave.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Mouse uncleaved pipeline."><img src="figures/processing-overviews/mouse-uncleave/mouse-uncleave.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Figure&nbsp;B.5: Mouse uncleaved pipeline.</figcaption>
+<figcaption class="figure-caption">Figure&nbsp;C.5: Mouse uncleaved pipeline.</figcaption>
 </figure>
 </div>
 <div id="fig-mouse-tryp-final" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><a href="figures/processing-overviews/mouse-trypsin/mouse-trypsin.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Mouse trypsin pipeline. ECD mask is contoured to 0.5. The chimeric mask used to refine the TMD is contoured at 0.5 (orange) and 0.125 (blue). Note that the ECD is not contained within the mask beyond 0.25."><img src="figures/processing-overviews/mouse-trypsin/mouse-trypsin.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Figure&nbsp;B.6: Mouse trypsin pipeline. ECD mask is contoured to 0.5. The chimeric mask used to refine the TMD is contoured at 0.5 (orange) and 0.125 (blue). Note that the ECD is not contained within the mask beyond 0.25.</figcaption>
+<figcaption class="figure-caption">Figure&nbsp;C.6: Mouse trypsin pipeline. ECD mask is contoured to 0.5. The chimeric mask used to refine the TMD is contoured at 0.5 (orange) and 0.125 (blue). Note that the ECD is not contained within the mask beyond 0.25.</figcaption>
 </figure>
 </div>
 
@@ -685,18 +691,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../parts/appendices/mat-meth.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Materials and Methods</span></span>
+      <a href="../../parts/appendices/graveyard.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">The Graveyard</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../../parts/appendices/validation.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Map Validation</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Map Validation</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","loop":true,"descPosition":"bottom","selector":".lightbox"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":true,"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom"});</script>
 
 
 

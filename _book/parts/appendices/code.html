@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ENaC isn’t ASIC - Appendix D — Code and Computation</title>
+<title>ENaC isn’t ASIC - Appendix E — Code and Computation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -143,7 +143,7 @@ div.csl-indent {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../defense/" rel="" target=""><i class="bi bi-projector" role="img">
+    <a class="nav-link" href="https://dissertation.posertinlab.com/defense" rel="" target=""><i class="bi bi-projector" role="img">
 </i> 
  <span class="menu-text">Defense Slides</span></a>
   </li>  
@@ -176,7 +176,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../parts/appendices/mat-meth.html">Appendices</a></li><li class="breadcrumb-item"><a href="../../parts/appendices/code.html"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Code and Computation</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../parts/appendices/mat-meth.html">Appendices</a></li><li class="breadcrumb-item"><a href="../../parts/appendices/code.html"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Code and Computation</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -300,20 +300,26 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../parts/appendices/graveyard.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">The Graveyard</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../parts/appendices/processing-flow.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Image Processing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Image Processing</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../parts/appendices/validation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Map Validation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Map Validation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../parts/appendices/code.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Code and Computation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Code and Computation</span></span></a>
   </div>
 </li>
       </ul>
@@ -328,14 +334,14 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#appia" id="toc-appia" class="nav-link active" data-scroll-target="#appia"><span class="header-section-number">D.1</span> Appia</a>
+  <li><a href="#appia" id="toc-appia" class="nav-link active" data-scroll-target="#appia"><span class="header-section-number">E.1</span> Appia</a>
   <ul class="collapse">
-  <li><a href="#structure" id="toc-structure" class="nav-link" data-scroll-target="#structure"><span class="header-section-number">D.1.1</span> Structure</a></li>
-  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation"><span class="header-section-number">D.1.2</span> Installation</a></li>
-  <li><a href="#peak-fitting-with-gaussian-mixture-models" id="toc-peak-fitting-with-gaussian-mixture-models" class="nav-link" data-scroll-target="#peak-fitting-with-gaussian-mixture-models"><span class="header-section-number">D.1.3</span> Peak fitting with Gaussian Mixture Models</a></li>
-  <li><a href="#writing-a-new-processor" id="toc-writing-a-new-processor" class="nav-link" data-scroll-target="#writing-a-new-processor"><span class="header-section-number">D.1.4</span> Writing a new processor</a></li>
+  <li><a href="#structure" id="toc-structure" class="nav-link" data-scroll-target="#structure"><span class="header-section-number">E.1.1</span> Structure</a></li>
+  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation"><span class="header-section-number">E.1.2</span> Installation</a></li>
+  <li><a href="#peak-fitting-with-gaussian-mixture-models" id="toc-peak-fitting-with-gaussian-mixture-models" class="nav-link" data-scroll-target="#peak-fitting-with-gaussian-mixture-models"><span class="header-section-number">E.1.3</span> Peak fitting with Gaussian Mixture Models</a></li>
+  <li><a href="#writing-a-new-processor" id="toc-writing-a-new-processor" class="nav-link" data-scroll-target="#writing-a-new-processor"><span class="header-section-number">E.1.4</span> Writing a new processor</a></li>
   </ul></li>
-  <li><a href="#model-building-tools" id="toc-model-building-tools" class="nav-link" data-scroll-target="#model-building-tools"><span class="header-section-number">D.2</span> Model-building tools</a></li>
+  <li><a href="#model-building-tools" id="toc-model-building-tools" class="nav-link" data-scroll-target="#model-building-tools"><span class="header-section-number">E.2</span> Model-building tools</a></li>
   </ul>
 </nav>
     </div>
@@ -344,7 +350,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Appendix D — Code and Computation</h1>
+<h1 class="title">Appendix E — Code and Computation</h1>
 </div>
 
 
@@ -359,34 +365,34 @@ div.csl-indent {
 
 </header>
 
-<section id="appia" class="level2 page-columns page-full" data-number="D.1">
-<h2 data-number="D.1" class="anchored" data-anchor-id="appia"><span class="header-section-number">D.1</span> Appia</h2>
-<div class="page-columns page-full"><p>Modern structural biology makes extensive use of size-exclusion chromatography (SEC). The two types of SEC I encountered most often were <em>analytic chromatography</em>, in which samples are assessed for monodispersity and relative amount; and <em>preparative chromatography</em>, in which samples are purified based on their size. In an environment where only a heuristic assessment of these parameters is important (e.g., assessing whether a sample is homogeneous enough to make grids of, or whether a protein interacts with another) these parameters can be assessed by eye (<a href="#fig-appia-peaks">Figure&nbsp;<span>D.1</span></a>). However, chromatography instrument manufacturers must include capacity for more complex analyses in their software. This necessarily makes the software more complex and arcane in the service of features that biochemists rarely need. To solve this mismatch I created Appia, a web-based chromatography visualization package<span class="citation" data-cites="posert2023"><sup><a href="../references.html#ref-posert2023" role="doc-biblioref">1</a></sup></span>. In this section I will provide a brief summary of Appia’s functionality and intended use, the installation process, and then some guidance for adding support for new chromatography instruments.</p><div class="no-row-height column-margin column-container"><span class="">Appia can be installed via <code>pip</code>, or the source can be inspected at <a href="https://github.com/plethorachutney/appia">my github</a>.</span></div></div>
+<section id="appia" class="level2 page-columns page-full" data-number="E.1">
+<h2 data-number="E.1" class="anchored" data-anchor-id="appia"><span class="header-section-number">E.1</span> Appia</h2>
+<div class="page-columns page-full"><p>Modern structural biology makes extensive use of size-exclusion chromatography (SEC). The two types of SEC I encountered most often were <em>analytic chromatography</em>, in which samples are assessed for monodispersity and relative amount; and <em>preparative chromatography</em>, in which samples are purified based on their size. In an environment where only a heuristic assessment of these parameters is important (e.g., assessing whether a sample is homogeneous enough to make grids of, or whether a protein interacts with another) these parameters can be assessed by eye (<a href="#fig-appia-peaks">Figure&nbsp;<span>E.1</span></a>). However, chromatography instrument manufacturers must include capacity for more complex analyses in their software. This necessarily makes the software more complex and arcane in the service of features that biochemists rarely need. To solve this mismatch I created Appia, a web-based chromatography visualization package<span class="citation" data-cites="posert2023"><sup><a href="../references.html#ref-posert2023" role="doc-biblioref">1</a></sup></span>. In this section I will provide a brief summary of Appia’s functionality and intended use, the installation process, and then some guidance for adding support for new chromatography instruments.</p><div class="no-row-height column-margin column-container"><span class="">Appia can be installed via <code>pip</code>, or the source can be inspected at <a href="https://github.com/plethorachutney/appia">my github</a>.</span></div></div>
 <div id="fig-appia-peaks" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><a href="figures/code/peaks.png" class="lightbox" title="Heuristic chromatography parameters are easily assessed by eye. Users can approximate affinity for the stationary phase (size, in the case of SEC), quantity, homogeneity, and the number of distinct species by inspecting peak shifts, peak height, peak width, and number of peaks respectively." data-gallery="quarto-lightbox-gallery-1"><img src="figures/code/peaks.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Figure&nbsp;D.1: Heuristic chromatography parameters are easily assessed by eye. Users can approximate affinity for the stationary phase (size, in the case of SEC), quantity, homogeneity, and the number of distinct species by inspecting peak shifts, peak height, peak width, and number of peaks respectively.</figcaption>
+<figcaption class="figure-caption">Figure&nbsp;E.1: Heuristic chromatography parameters are easily assessed by eye. Users can approximate affinity for the stationary phase (size, in the case of SEC), quantity, homogeneity, and the number of distinct species by inspecting peak shifts, peak height, peak width, and number of peaks respectively.</figcaption>
 </figure>
 </div>
-<section id="structure" class="level3" data-number="D.1.1">
-<h3 data-number="D.1.1" class="anchored" data-anchor-id="structure"><span class="header-section-number">D.1.1</span> Structure</h3>
-<p>Appia is divided into two conceptual parts: the local processor and the web interface. The local processor is written entirely in python and processes all supported data formats into a unified Appia experiment. Several options are available at processing time, such as applying a scaling factor for various manufacturers or automatic trace plotting. Additionally, the local processor includes a user settings system. This system stores information such as flow rates to apply to a specific chromatography method and database login information. Experiments, to Appia, are collections of analytic and preparative traces. Importantly, Appia is agnostic as to the origins of the data in a single experiment — experiments may contain traces from any number of manufacturers and/or instruments, provided Appia has a processor for that manufacturer. The experiments are stored on the local machine in both long (appropriate for ggplot2 and other grammar-of-graphics plotting systems) and wide (appropriate for, e.g., Excel or Prism) formats (<a href="#fig-appia-tidy">Figure&nbsp;<span>D.2</span></a>). These experiments are packaged with an experiment ID and uploaded to the other half of Appia, Appia Web.</p>
+<section id="structure" class="level3" data-number="E.1.1">
+<h3 data-number="E.1.1" class="anchored" data-anchor-id="structure"><span class="header-section-number">E.1.1</span> Structure</h3>
+<p>Appia is divided into two conceptual parts: the local processor and the web interface. The local processor is written entirely in python and processes all supported data formats into a unified Appia experiment. Several options are available at processing time, such as applying a scaling factor for various manufacturers or automatic trace plotting. Additionally, the local processor includes a user settings system. This system stores information such as flow rates to apply to a specific chromatography method and database login information. Experiments, to Appia, are collections of analytic and preparative traces. Importantly, Appia is agnostic as to the origins of the data in a single experiment — experiments may contain traces from any number of manufacturers and/or instruments, provided Appia has a processor for that manufacturer. The experiments are stored on the local machine in both long (appropriate for ggplot2 and other grammar-of-graphics plotting systems) and wide (appropriate for, e.g., Excel or Prism) formats (<a href="#fig-appia-tidy">Figure&nbsp;<span>E.2</span></a>). These experiments are packaged with an experiment ID and uploaded to the other half of Appia, Appia Web.</p>
 <div id="fig-appia-tidy" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><a href="figures/code/tidy-explainer.png" class="lightbox" title="Data formats saved by Appia and available for user download. Traces made up of individual samples (A) are represented as a single row in the long format (B). The wide format (C) instead represents the independent variable with its own column (Time, red), the response variable with the table body (Signal, white), and all other variables in column headers (various colors)." data-gallery="quarto-lightbox-gallery-2"><img src="figures/code/tidy-explainer.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Figure&nbsp;D.2: Data formats saved by Appia and available for user download. Traces made up of individual samples (A) are represented as a single row in the long format (B). The wide format (C) instead represents the independent variable with its own column (Time, red), the response variable with the table body (Signal, white), and all other variables in column headers (various colors).</figcaption>
+<figcaption class="figure-caption">Figure&nbsp;E.2: Data formats saved by Appia and available for user download. Traces made up of individual samples (A) are represented as a single row in the long format (B). The wide format (C) instead represents the independent variable with its own column (Time, red), the response variable with the table body (Signal, white), and all other variables in column headers (various colors).</figcaption>
 </figure>
 </div>
-<p>Appia Web provides a browser-based GUI and centralized trace database. The database is a CouchDB database containing a simple dictionary of experiments stored under their experiment IDs. The browser-based GUI is written in python and plotly dash, and loads user-requested data from the database and presents it using a series of line plots. Analytic data is presented with one line per sample per channel, while preparative data is presented as a single line per injection with fractions highlighted by fill. Analytic data is also presented with a normalization applied, such that the maximum of each trace is 1 and the minimum is 0. The user may select a region of the analytic traces and re-normalize them to set the maximum over that range to 1, scaling the rest of the trace linearly (<a href="#fig-appia-normalization">Figure&nbsp;<span>D.3</span></a>). This normalization process is intended to aid in comparison of relative peak heights between different samples which may have a different total amount of material, or to compare peaks within a trace compared to some standard peak height. Importantly, this process uses the simple readout of peak height. More complex analyses or analyses requiring quantitative accuracy are outside the scope of Appia and should use manufacturer-provided peak calling and fitting. Users can also download images and raw data from Appia Web.</p>
+<p>Appia Web provides a browser-based GUI and centralized trace database. The database is a CouchDB database containing a simple dictionary of experiments stored under their experiment IDs. The browser-based GUI is written in python and plotly dash, and loads user-requested data from the database and presents it using a series of line plots. Analytic data is presented with one line per sample per channel, while preparative data is presented as a single line per injection with fractions highlighted by fill. Analytic data is also presented with a normalization applied, such that the maximum of each trace is 1 and the minimum is 0. The user may select a region of the analytic traces and re-normalize them to set the maximum over that range to 1, scaling the rest of the trace linearly (<a href="#fig-appia-normalization">Figure&nbsp;<span>E.3</span></a>). This normalization process is intended to aid in comparison of relative peak heights between different samples which may have a different total amount of material, or to compare peaks within a trace compared to some standard peak height. Importantly, this process uses the simple readout of peak height. More complex analyses or analyses requiring quantitative accuracy are outside the scope of Appia and should use manufacturer-provided peak calling and fitting. Users can also download images and raw data from Appia Web.</p>
 <div id="fig-appia-normalization" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><a href="figures/code/normalization.png" class="lightbox" title="Appia’s normalization process. A user-selected region is used to linearly scale all traces such that their maximum value over that region is 1." data-gallery="quarto-lightbox-gallery-3"><img src="figures/code/normalization.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Figure&nbsp;D.3: Appia’s normalization process. A user-selected region is used to linearly scale all traces such that their maximum value over that region is 1.</figcaption>
+<figcaption class="figure-caption">Figure&nbsp;E.3: Appia’s normalization process. A user-selected region is used to linearly scale all traces such that their maximum value over that region is 1.</figcaption>
 </figure>
 </div>
 </section>
-<section id="installation" class="level3" data-number="D.1.2">
-<h3 data-number="D.1.2" class="anchored" data-anchor-id="installation"><span class="header-section-number">D.1.2</span> Installation</h3>
+<section id="installation" class="level3" data-number="E.1.2">
+<h3 data-number="E.1.2" class="anchored" data-anchor-id="installation"><span class="header-section-number">E.1.2</span> Installation</h3>
 <p>Appia can be used solely to locally process chromatography data into a standard format for later plotting. However, we recommend installing a processing installation on each instrument computer and a single centralized Appia Web installation on some networked computer. This allows for single-click processing and upload of data to a central repository which users can then inspect, manipulate, and download from their personal computers without installing Appia. To facilitate this process, I have created Docker images for Appia Web. Images are available for both x86-64 and ARM architectures, and docker-compose templates are available in the project repository. Running one of these templates creates and networks the database and Appia Web automatically, requiring only that the user expose the correct ports (5984 for CouchDB and 8080 for Appia Web).</p>
 <p>Below is an example process for installing Appia Web on a Windows PC which is accessible at <code>example.ohsu.edu</code>:</p>
 <ol type="1">
@@ -403,15 +409,15 @@ div.csl-indent {
 </ol>
 <p>Now when a user finishes a chromatography experiment, they first export it to whatever format Appia expects (typically the default text format) and run (assuming the files end in <code>.txt</code>) <code>appia process *.txt -d</code> to upload the data to the web interface. The files will automatically be organized and stored on the local computer as well. This command can be wrapped in a script to avoid the need for users to interact with the command line.</p>
 </section>
-<section id="peak-fitting-with-gaussian-mixture-models" class="level3" data-number="D.1.3">
-<h3 data-number="D.1.3" class="anchored" data-anchor-id="peak-fitting-with-gaussian-mixture-models"><span class="header-section-number">D.1.3</span> Peak fitting with Gaussian Mixture Models</h3>
-<p>One useful form of analysis that Appia cannot perform on its own, but that can be performed with Appia’s data output, is a Gaussian Mixture Model (GMM). In GMMs, we (perhaps obviously) treat our signal as a mixture of pure gaussian processes. This is especially useful when analyzing chromatography of species with known retention times. For instance, suppose that we know that a Fab binds a target, which shifts the target’s retention time from 10 minutes to 9.8 minutes. The Fab’s retention time is well outside this region, perhaps at 24 minutes, and so we can ignore unbound Fab. If we mix these proteins and look at the signal around 10 minutes, we might observe a peak like <a href="#fig-example-data">Figure&nbsp;<span>D.4</span></a>. We want to know what proportion of the target has shifted to the 9.8 minute retention time, since that will tell us how much has bound. However, it’s impossible to tell this by looking at the data, or even by using manufacturer-written peak integrating algorithms. However, since we know the retention times of each component, we can model the mixture ourselves. I’ll work this example in R, but it could just as easily be done in python, Matlab, or whatever modeling software the reader prefers.</p>
+<section id="peak-fitting-with-gaussian-mixture-models" class="level3" data-number="E.1.3">
+<h3 data-number="E.1.3" class="anchored" data-anchor-id="peak-fitting-with-gaussian-mixture-models"><span class="header-section-number">E.1.3</span> Peak fitting with Gaussian Mixture Models</h3>
+<p>One useful form of analysis that Appia cannot perform on its own, but that can be performed with Appia’s data output, is a Gaussian Mixture Model (GMM). In GMMs, we (perhaps obviously) treat our signal as a mixture of pure gaussian processes. This is especially useful when analyzing chromatography of species with known retention times. For instance, suppose that we know that a Fab binds a target, which shifts the target’s retention time from 10 minutes to 9.8 minutes. The Fab’s retention time is well outside this region, perhaps at 24 minutes, and so we can ignore unbound Fab. If we mix these proteins and look at the signal around 10 minutes, we might observe a peak like <a href="#fig-example-data">Figure&nbsp;<span>E.4</span></a>. We want to know what proportion of the target has shifted to the 9.8 minute retention time, since that will tell us how much has bound. However, it’s impossible to tell this by looking at the data, or even by using manufacturer-written peak integrating algorithms. However, since we know the retention times of each component, we can model the mixture ourselves. I’ll work this example in R, but it could just as easily be done in python, Matlab, or whatever modeling software the reader prefers.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-example-data" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><a href="code_files/figure-html/fig-example-data-1.png" class="lightbox" title="Example data of a mixture between a protein and a Fab." data-gallery="quarto-lightbox-gallery-4"><img src="code_files/figure-html/fig-example-data-1.png" class="img-fluid figure-img" width="672"></a></p>
-<figcaption class="figure-caption">Figure&nbsp;D.4: Example data of a mixture between a protein and a Fab.</figcaption>
+<figcaption class="figure-caption">Figure&nbsp;E.4: Example data of a mixture between a protein and a Fab.</figcaption>
 </figure>
 </div>
 </div>
@@ -447,7 +453,7 @@ div.csl-indent {
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">start =</span> guesses</span>
 <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>The <code>results</code> variable now contains the fitted values for each component. To see how well the data have been fit, we can plot each component separately, or their sum, as in <a href="#fig-fitted-gauss">Figure&nbsp;<span>D.5</span></a>.</p>
+<p>The <code>results</code> variable now contains the fitted values for each component. To see how well the data have been fit, we can plot each component separately, or their sum, as in <a href="#fig-fitted-gauss">Figure&nbsp;<span>E.5</span></a>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># helper function to extract values</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>get_val <span class="ot">&lt;-</span> <span class="cf">function</span>(val_name) {</span>
@@ -490,15 +496,15 @@ div.csl-indent {
 <div id="fig-fitted-gauss" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><a href="code_files/figure-html/fig-fitted-gauss-1.png" class="lightbox" title="Fitted values plotted atop data. Bound and unbound are green and blue respectively, with the additive model in black." data-gallery="quarto-lightbox-gallery-5"><img src="code_files/figure-html/fig-fitted-gauss-1.png" class="img-fluid figure-img" width="672"></a></p>
-<figcaption class="figure-caption">Figure&nbsp;D.5: Fitted values plotted atop data. Bound and unbound are green and blue respectively, with the additive model in black.</figcaption>
+<figcaption class="figure-caption">Figure&nbsp;E.5: Fitted values plotted atop data. Bound and unbound are green and blue respectively, with the additive model in black.</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>We see the data fit well — we now have a model for the components of our experiment. To assess, for instance, the amount of protein in each peak, we could from here use the well-known equations for the area of a gaussian to find the peak area for each population, or just take their height as a heuristic. If this simple sum of gaussians model does not fit, you could consider adding a constant (for a constant non-zero baseline) or parameters for a linear function (for a linearly changing baseline) to the fit formula.</p>
 </section>
-<section id="writing-a-new-processor" class="level3 page-columns page-full" data-number="D.1.4">
-<h3 data-number="D.1.4" class="anchored" data-anchor-id="writing-a-new-processor"><span class="header-section-number">D.1.4</span> Writing a new processor</h3>
+<section id="writing-a-new-processor" class="level3 page-columns page-full" data-number="E.1.4">
+<h3 data-number="E.1.4" class="anchored" data-anchor-id="writing-a-new-processor"><span class="header-section-number">E.1.4</span> Writing a new processor</h3>
 <p><em>This section is intended for the advanced reader who wishes to add support for a chromatography instrument to Appia.</em></p>
 <p>Processors are each a class which inherits from either <code>HplcProcessor</code> or <code>FplcProcessor</code> (for analytic or preparative data, respectively). At the time of writing, Appia supports the following data formats:</p>
 <ul>
@@ -532,20 +538,20 @@ div.csl-indent {
 <p>The parent classes provide a few conveniences for you. For example, the <code>flow_rate</code> and <code>column_volume</code> getters will prompt the user for the relevant info, if necessary, and then offer to store it in the user settings. It will also handle overrides of various parameters, which are accepted through <code>kwargs</code>. Additionally, <code>appia.processors.core</code> provides the <code>normalize()</code> function, which handles trace normalization. I encourage you to take a look at the <code>Processors</code> I’ve already written before embarking on writing your own.</p>
 </section>
 </section>
-<section id="model-building-tools" class="level2 page-columns page-full" data-number="D.2">
-<h2 data-number="D.2" class="anchored" data-anchor-id="model-building-tools"><span class="header-section-number">D.2</span> Model-building tools</h2>
+<section id="model-building-tools" class="level2 page-columns page-full" data-number="E.2">
+<h2 data-number="E.2" class="anchored" data-anchor-id="model-building-tools"><span class="header-section-number">E.2</span> Model-building tools</h2>
 <p>I’ve written a few tools to aid with model building and general structure analysis. They’re all available <a href="https://github.com/plethorachutney/model-building-tools">on my github</a>.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <div id="fig-ca-bilder" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><a href="figures/code/ca-bilder.png" class="lightbox" title="An image from ca_bilder.py highlighting the movement of the finger and thumb between the resting and desensitized states of ASIC1." data-gallery="quarto-lightbox-gallery-6"><img src="figures/code/ca-bilder.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Figure&nbsp;D.6: An image from <code>ca_bilder.py</code> highlighting the movement of the finger and thumb between the resting and desensitized states of ASIC1.</figcaption>
+<figcaption class="figure-caption">Figure&nbsp;E.6: An image from <code>ca_bilder.py</code> highlighting the movement of the finger and thumb between the resting and desensitized states of ASIC1.</figcaption>
 </figure>
 </div>
-</div></div><p><code>ca_bilder.py</code> creates a <code>.bild</code> file visualizing Cα shifts between two given models. Cylinders are drawn between each pair of Cα atoms, colored by the distance. The colors are scaled per-model, with the darkest color corresponding to the greatest shift. The models must be aligned before they are run through the script. If the models are multi-chain, cylinders will be drawn between the same chain ID. If the models are of two different proteins, you must provide a FASTA alignment and indicate which chain belongs to which sequence. These visualizations can be useful to highlight when certain domains move while others stay still, such as ASIC1’s gating cycle (<a href="#fig-ca-bilder">Figure&nbsp;<span>D.6</span></a>).</p>
+</div></div><p><code>ca_bilder.py</code> creates a <code>.bild</code> file visualizing Cα shifts between two given models. Cylinders are drawn between each pair of Cα atoms, colored by the distance. The colors are scaled per-model, with the darkest color corresponding to the greatest shift. The models must be aligned before they are run through the script. If the models are multi-chain, cylinders will be drawn between the same chain ID. If the models are of two different proteins, you must provide a FASTA alignment and indicate which chain belongs to which sequence. These visualizations can be useful to highlight when certain domains move while others stay still, such as ASIC1’s gating cycle (<a href="#fig-ca-bilder">Figure&nbsp;<span>E.6</span></a>).</p>
 <p><code>check_for_glyc.py</code> searches a PDB model for the sequence NXS/T, the canonical N-linked glycosylation sequence. All asparagines matching this requirement are added to a ChimeraX command HTML file. Opening this file with ChimeraX creates a list of clickable asparagine names. Clicking these links orients the camera on the appropriate residue and removes the link from the list, creating a checklist of sorts. If the model and map are both open, this is a convenient way to step through all potential glycosylation sites in a model and assess whether they are indeed glycosylated. The user may then add sugars via the normal commands.</p>
-<p><code>model_map.py</code>, <code>orientation_plotter.py</code>, <code>phenix-table-reader.py</code>, and the three R scripts all read information from PHENIX or 3DFSC output and produce more aesthetically appealing plots. <code>phenix-table-reader.py</code> is a convenient way to automatically update a Table 1 (for instance, <a href="mat-meth.html#tbl-model-building-refinement">Table&nbsp;<span>A.4</span></a>) during the model building process. Output from the other scripts can be seen in <a href="validation.html"><span>Appendix&nbsp;C</span></a>.</p>
+<p><code>model_map.py</code>, <code>orientation_plotter.py</code>, <code>phenix-table-reader.py</code>, and the three R scripts all read information from PHENIX or 3DFSC output and produce more aesthetically appealing plots. <code>phenix-table-reader.py</code> is a convenient way to automatically update a Table 1 (for instance, <a href="mat-meth.html#tbl-model-building-refinement">Table&nbsp;<span>A.4</span></a>) during the model building process. Output from the other scripts can be seen in <a href="validation.html"><span>Appendix&nbsp;D</span></a>.</p>
 <p><code>mutator.py</code> checks the sequence of a model against a FASTA sequence and alerts the user to any mismatches. It also creates a ChimeraX command file which can be run to mutate the model to match the FASTA file. Any known deviations can be passed to the script as a <code>.txt</code> file with one mutation per line in a ChimeraX-like format. For instance, if chain A has a C→K mutation at position 260, the <code>.txt</code> file should have a line reading <code>/A:C260K</code>.</p>
 <p><code>translator.py</code> is currently ENaC specific, but could be generalized by a user. It is a simple script to translate residue numbers between the same gene of different organisms using a FASTA file. It is mostly useful when reading or writing and trying to incorporate data from multiple organisms. An example of this script in use:</p>
 <pre><code>$ translator.py mA260
@@ -912,14 +918,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../../parts/appendices/validation.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Map Validation</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Map Validation</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":true,"descPosition":"bottom","openEffect":"zoom","selector":".lightbox"});</script>
 
 
 

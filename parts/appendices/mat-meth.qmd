@@ -23,7 +23,7 @@ Cells were harvested 24&nbsp;hours later, washed with TBS, flash frozen in liqui
 
 ## ENaC Purification
 
-### Human ENaC
+### Human ENaC {#sec-matmeth_human-enac-purification}
 
 Throughout this protocol, quantities of resin and buffer are given "per flask".
 I grow cell culture in quantities of 800&nbsp;mL culture per flask, meaning that, e.g., pelleted cells from 1.6 L of cells require twice the quoted quantities of buffer and resin.
@@ -311,20 +311,20 @@ Once a dish had been exposed to the trypsin solution, the dish was replaced with
 
 library(tidyverse)
 library(gt)
-constructs <- read_csv('figures/matmeth/table-one/constructs.csv', na = '')
+constructs <- read_csv("figures/matmeth/table-one/constructs.csv", na = "")
 
 constructs |>
-  gt(
-    rowname_col = 'Parameter'
-  ) |>
-  fmt_markdown(columns = c('Parameter')) |>
-  # unicode 2014 is an em dash
-  sub_missing(missing_text = '\u2014') |> 
-  tab_style_body(
-    cell_borders(sides = c('right'), weight = 2, color = '#CCCCCC'),
-    fn = (\(x) TRUE),
-    extents = c('stub')
-  )
+    gt(
+        rowname_col = "Parameter"
+    ) |>
+    fmt_markdown(columns = c("Parameter")) |>
+    # unicode 2014 is an em dash
+    sub_missing(missing_text = "\u2014") |>
+    tab_style_body(
+        cell_borders(sides = c("right"), weight = 2, color = "#CCCCCC"),
+        fn = (\(x) TRUE),
+        extents = c("stub")
+    )
 ```
 
 ```{r}
@@ -334,37 +334,37 @@ constructs |>
 #| results: asis
 #| label: tbl-grid-prep
 #| tbl-cap: Grid preparation parameters
-grids <- read_csv('figures/matmeth/table-one/grid-prep.csv', na = '')
+grids <- read_csv("figures/matmeth/table-one/grid-prep.csv", na = "")
 
 grids |>
-  gt(
-    rowname_col = 'Parameter'
-  ) |>
-  tab_spanner(
-    label = 'hCKO',
-    columns = c('Digitonin', 'Nanodisc')
-  ) |> 
-  tab_spanner(
-    label = 'hCKO/DEG',
-    columns = c('Difab', 'Monofab')
-  ) |> 
-  tab_spanner(
-    label = 'mouse',
-    columns = c('Uncleaved', 'Trypsin')
-  ) |>
-  fmt_markdown(columns = c('Parameter')) |>
-  # unicode 2014 is an em dash
-  sub_missing(missing_text = '\u2014') |> 
-  tab_style_body(
-    cell_borders(sides = c('right'), weight = 2, color = '#CCCCCC'),
-    fn = (\(x) TRUE),
-    extents = c('stub')
-  ) |>
-  cols_align(align = 'center') |>
-  tab_footnote(
-    footnote = 'All grids are Quantifoil grids with gold mesh',
-    locations = cells_stub(rows = 'Grid Type')
-  )
+    gt(
+        rowname_col = "Parameter"
+    ) |>
+    tab_spanner(
+        label = "hCKO",
+        columns = c("Digitonin", "Nanodisc")
+    ) |>
+    tab_spanner(
+        label = "hCKO/DEG",
+        columns = c("Difab", "Monofab")
+    ) |>
+    tab_spanner(
+        label = "mouse",
+        columns = c("Uncleaved", "Trypsin")
+    ) |>
+    fmt_markdown(columns = c("Parameter")) |>
+    # unicode 2014 is an em dash
+    sub_missing(missing_text = "\u2014") |>
+    tab_style_body(
+        cell_borders(sides = c("right"), weight = 2, color = "#CCCCCC"),
+        fn = (\(x) TRUE),
+        extents = c("stub")
+    ) |>
+    cols_align(align = "center") |>
+    tab_footnote(
+        footnote = "All grids are Quantifoil grids with gold mesh",
+        locations = cells_stub(rows = "Grid Type")
+    )
 ```
 
 ```{r}
@@ -374,65 +374,65 @@ grids |>
 #| results: asis
 #| label: tbl-data-collection
 #| tbl-cap: Data collection and image processing parameters
-grids <- read_csv('figures/matmeth/table-one/data-collection.csv', na = '')
+grids <- read_csv("figures/matmeth/table-one/data-collection.csv", na = "")
 
 grids |>
-  gt(
-    rowname_col = 'Parameter'
-  ) |>
-  tab_spanner(
-    label = 'hCKO',
-    columns = c('Digitonin', 'Nanodisc')
-  ) |> 
-  tab_spanner(
-    label = 'hCKO/DEG',
-    columns = c('Difab', 'Monofab')
-  ) |> 
-  tab_spanner(
-    label = 'mouse',
-    columns = c('Uncleaved', 'Trypsin')
-  ) |>
-  fmt_markdown(columns = c('Parameter')) |>
-  # unicode 2014 is an em dash
-  sub_missing(missing_text = '\u2014') |> 
-  tab_style_body(
-    cell_borders(sides = c('right'), weight = 2, color = '#CCCCCC'),
-    fn = (\(x) TRUE),
-    extents = c('stub')
-  ) |>
-  cols_align(align = 'center') |>
-  tab_footnote(
-    footnote = 'Electron flux is 1 e\u207b/\u00C5\u00b2/frame',
-    locations = cells_stub(rows = 'Frames')
-  ) |>
-  tab_footnote(
-    footnote = 'All datsets collected in super-resolution mode and Fourier-cropped back to this physical size.',
-    locations = cells_stub(rows = 'Pixel Size (&Aring;/pix)')
-  ) |>
-  tab_footnote(
-    footnote = 'Nominal pixel sizes given by the microscopy facility.',
-    locations = cells_stub(rows = 'Pixel Size (&Aring;/pix)')
-  ) |>
-  tab_footnote(
-    footnote = 'These values were used for processing and are listed to the precision given by the microscopy facility at the time of collection.',
-    locations = cells_stub(rows = 'Pixel Size (&Aring;/pix)')
-  ) |>
-  tab_footnote(
-    footnote = 'A dash indicates that a focused map for this region was not used in model building',
-    locations = cells_stub(rows = c(
-      'ECD resolution (&Aring;)',
-      'Whole protein resolution (&Aring;)',
-      'ECD sharpening factor',
-      'Whole protein sharpening factor'
-    ))
-  ) |>
-  tab_footnote(
-    footnote = 'GSFSC resolution',
-    locations = cells_stub(rows = c(
-      'ECD resolution (&Aring;)',
-      'Whole protein resolution (&Aring;)'
-    ))
-  )
+    gt(
+        rowname_col = "Parameter"
+    ) |>
+    tab_spanner(
+        label = "hCKO",
+        columns = c("Digitonin", "Nanodisc")
+    ) |>
+    tab_spanner(
+        label = "hCKO/DEG",
+        columns = c("Difab", "Monofab")
+    ) |>
+    tab_spanner(
+        label = "mouse",
+        columns = c("Uncleaved", "Trypsin")
+    ) |>
+    fmt_markdown(columns = c("Parameter")) |>
+    # unicode 2014 is an em dash
+    sub_missing(missing_text = "\u2014") |>
+    tab_style_body(
+        cell_borders(sides = c("right"), weight = 2, color = "#CCCCCC"),
+        fn = (\(x) TRUE),
+        extents = c("stub")
+    ) |>
+    cols_align(align = "center") |>
+    tab_footnote(
+        footnote = "Electron flux is 1 e\u207b/\u00C5\u00b2/frame",
+        locations = cells_stub(rows = "Frames")
+    ) |>
+    tab_footnote(
+        footnote = "All datsets collected in super-resolution mode and Fourier-cropped back to this physical size.",
+        locations = cells_stub(rows = "Pixel Size (&Aring;/pix)")
+    ) |>
+    tab_footnote(
+        footnote = "Nominal pixel sizes given by the microscopy facility.",
+        locations = cells_stub(rows = "Pixel Size (&Aring;/pix)")
+    ) |>
+    tab_footnote(
+        footnote = "These values were used for processing and are listed to the precision given by the microscopy facility at the time of collection.",
+        locations = cells_stub(rows = "Pixel Size (&Aring;/pix)")
+    ) |>
+    tab_footnote(
+        footnote = "A dash indicates that a focused map for this region was not used in model building",
+        locations = cells_stub(rows = c(
+            "ECD resolution (&Aring;)",
+            "Whole protein resolution (&Aring;)",
+            "ECD sharpening factor",
+            "Whole protein sharpening factor"
+        ))
+    ) |>
+    tab_footnote(
+        footnote = "GSFSC resolution",
+        locations = cells_stub(rows = c(
+            "ECD resolution (&Aring;)",
+            "Whole protein resolution (&Aring;)"
+        ))
+    )
 ```
 
 ```{r}
@@ -442,52 +442,53 @@ grids |>
 #| results: asis
 #| label: tbl-model-building-refinement
 #| tbl-cap: Model building, refinement, and validation parameters
-grids <- read_csv('figures/matmeth/table-one/processed_tables.csv', na = '', col_types = 'cccccccc')
+grids <- read_csv("figures/matmeth/table-one/processed_tables.csv", na = "", col_types = "cccccccc")
 
 grids |>
-  select(-Section) |>
-  add_row(
-    Parameter = 'Starting Model',
-    Digitonin = '6WTH',
-    Difab = 'CKO digitonin',
-    Monofab = '6WTH',
-    Nanodisc = "CKO/DEG difab",
-    Uncleaved = "AlphaFold",
-    Trypsin = "mouse uncleaved",
-    .before = 1) |>
-  add_row(
-    Parameter = 'Q-score',
-    Digitonin = '0.80',
-    Difab = '0.71',
-    Monofab = '0.71',
-    Nanodisc = "0.71",
-    Uncleaved = "0.68",
-    Trypsin = "0.72"
-  ) |>
-  gt(
-    rowname_col = 'Parameter'
-  ) |>
-  tab_spanner(
-    label = 'hCKO',
-    columns = c('Digitonin', 'Nanodisc')
-  ) |> 
-  tab_spanner(
-    label = 'hCKO/DEG',
-    columns = c('Difab', 'Monofab')
-  ) |> 
-  tab_spanner(
-    label = 'mouse',
-    columns = c('Uncleaved', 'Trypsin')
-  ) |>
-  fmt_markdown(columns = c('Parameter')) |>
-  # unicode 2014 is an em dash
-  sub_missing(missing_text = '\u2014') |> 
-  tab_style_body(
-    cell_borders(sides = c('right'), weight = 2, color = '#CCCCCC'),
-    fn = (\(x) TRUE),
-    extents = c('stub')
-  ) |>
-  cols_align(align = 'center')
+    select(-Section) |>
+    add_row(
+        Parameter = "Starting Model",
+        Digitonin = "6WTH",
+        Difab = "CKO digitonin",
+        Monofab = "6WTH",
+        Nanodisc = "CKO/DEG difab",
+        Uncleaved = "AlphaFold",
+        Trypsin = "mouse uncleaved",
+        .before = 1
+    ) |>
+    add_row(
+        Parameter = "Q-score",
+        Digitonin = "0.80",
+        Difab = "0.71",
+        Monofab = "0.71",
+        Nanodisc = "0.71",
+        Uncleaved = "0.68",
+        Trypsin = "0.72"
+    ) |>
+    gt(
+        rowname_col = "Parameter"
+    ) |>
+    tab_spanner(
+        label = "hCKO",
+        columns = c("Digitonin", "Nanodisc")
+    ) |>
+    tab_spanner(
+        label = "hCKO/DEG",
+        columns = c("Difab", "Monofab")
+    ) |>
+    tab_spanner(
+        label = "mouse",
+        columns = c("Uncleaved", "Trypsin")
+    ) |>
+    fmt_markdown(columns = c("Parameter")) |>
+    # unicode 2014 is an em dash
+    sub_missing(missing_text = "\u2014") |>
+    tab_style_body(
+        cell_borders(sides = c("right"), weight = 2, color = "#CCCCCC"),
+        fn = (\(x) TRUE),
+        extents = c("stub")
+    ) |>
+    cols_align(align = "center")
 ```
 
 \elandscape{}

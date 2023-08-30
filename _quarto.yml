@@ -30,6 +30,7 @@ book:
     - parts/glossary.qmd
   appendices: 
     - parts/appendices/mat-meth.qmd
+    - parts/appendices/graveyard.qmd
     - parts/appendices/processing-flow.qmd
     - parts/appendices/validation.qmd
     - parts/appendices/code.qmd
@@ -37,7 +38,7 @@ book:
     logo: figures/other/domain-cartoon_ECD.png
     left:
       - text: "Defense Slides"
-        href: "defense/"
+        href: "https://dissertation.posertinlab.com/defense"
         icon: projector
   search:
     location: navbar

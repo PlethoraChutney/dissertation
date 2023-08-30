@@ -1,0 +1,241 @@
+# The Graveyard {#sec-graveyard}
+
+In this appendix, I will go into more detail on experiments that did not work, or that did not produce interpretable results.
+I will also discuss dead ends on the protein purification pathway to guide future efforts.
+This section is isolated from the main body of the text since it is only interesting to those who may follow after me.
+As such, a basic familiarity with lab protocols is assumed.
+
+## Nedd4-2
+
+Early on, my work included purification of Nedd4-2 with an eye toward both a functional assay for Nedd4-2/ENaC interaction and a structure of the bound complex.
+Nedd4-2 comprises structured domains connected by disordered linkers, and so it should come as no surprise that this proved too difficult and time consuming and was dropped [@pohl2021; @joshi2022].
+However, it may be that adding Nedd4-2 helps to resolve ENaC's TMD and even regions of the intracellular loops, so future research into the topic may yet prove fruitful.
+
+### Expression and purification
+#### Insect cells and TALON
+
+Nedd4-2 was initially expressed in Sf9 cells as a C-terminal GFP fusion.
+Cells were infected at an MOI of 5 and left to express protein at 21&nbsp;&deg;C for 48&nbsp;hours.
+Cells were collected via centrifugation (100k&nbsp;xg for 45&nbsp;minutes) and frozen in liquid nitrogen until use.
+
+Cells were thawed and resuspended in 100&nbsp;mL TBS per flask, then sonicated for a total of 5&nbsp;minutes of 10&nbsp;seconds on, 30&nbsp;seconds off, power level&nbsp;7.
+Crude lysate was centrifuged for 45&nbsp;minutes at 100,000&nbsp;xg and clarified lysate collected.
+
+Clarified lysate was bound to 10&nbsp;mL TALON resin per flask and washed with 5&nbsp;CV TBS followed by 2&nbsp;CV TBS plus 10&nbsp;mM imidazole.
+Finally, 1&nbsp;mL fractions are collected from a 4&nbsp;CV elution with 250&nbsp;mM imidazole.
+These fractions are concentrated and sized on a Superose 6 Increase 10/300 column (@fig-graveyard_nedd4-purification).
+The SEC protocol for Nedd4-2 is essentially unchanged from that for ENaC (@sec-matmeth_human-enac-purification), with the exception that TBS alone (i.e., without detergent) is used as a running buffer.
+
+```{r nedd4_purification}
+#| echo: false
+#| messages: false
+#| warning: false
+#| label: fig-graveyard_nedd4-purification
+#| fig-cap: FSEC analysis of a fraction of Nedd4-2 expressed in Sf9 cells. This sample has been purified by both TALON and SEC.
+library(tidyverse)
+
+read_csv("figures/graveyard/exp029_long-chrom.csv") |>
+    mutate(
+        Channel = if_else(grepl("280", Channel), "Trp", "GFP")
+    ) |>
+    filter(
+        Sample == "Sizing 8"
+    ) |>
+    ggplot(aes(Time, Signal, color = Channel)) +
+    geom_line(linewidth = 1) +
+    theme_minimal() +
+    theme(
+        panel.grid.major = element_line(color = "#F0F0F0", linewidth = 0.2),
+        panel.grid.minor = element_blank(),
+        legend.position = "top"
+    ) +
+    scale_color_manual(
+        values = c("#2BAD32", "#FA579A")
+    ) +
+    labs(
+        x = "Retention Time (min)",
+        y = "Fluorescence (AFU)"
+    )
+```
+
+There are several problems with this protocol.
+First, tagging a Nedd4-family ligase on its C-terminus renders it completely non-functional.
+This is probably why yield is so high and pure --- the protein is incapable of affecting itself or the cell in any way.
+Second, most of the field uses material prepared from *E. coli*, and it's generally best to follow convention.
+Finally, Nedd4-2 harbors a cryptic thrombin site, so GFP cleavage also cleaves the protein.
+
+#### *E. coli* and strep tags
+
+I thus moved to expression of strep-tagged material in *E. coli*.
+The Nedd4-2 gene was cloned into pJAC148 and transformed into BL21(DE3) cells.
+At OD~600~&nbsp;0.75, expression was induced with 250&nbsp;&mu;M IPTG and transferred to a 16&deg;C incubator and allowed to express overnight.
+Cells were pelleted and frozen with liquid nitrogen.
+
+Following a standard strep purification protocol, the material looks significantly worse than that purified by IMAC (@fig-graveyard_twinstrep-n42).
+I believe this is most likely due to the fact that this material is actually functional, which means it is capable of self-degradation.
+It also likely puts the *E. coli* cells under significantly more stress than non-functional material.
+
+![Twin-strep purification of Nedd4-2 expressed in *E. coli*. **Top**: SEC trace of twin-strep purified material. Indicated fractions are further analyzed by SDS-PAGE. **Bottom**: SDS-PAGE analysis of the indicated fractions. Note that only fractions 18 and 19 contain Nedd4-2.](figures/graveyard/Exp88-neddprep.png){#fig-graveyard_twinstrep-n42}
+
+This material, obviously, contains a large leading peak centered around 11&nbsp;mL.
+Since there seems to be no protein at all in this peak, but it is after the void volume, I suspect it is nucleotide contamination.[I do not have A~260~/A~280~ measurements for this material, unfortunately]{.aside}
+In any case, this protocol seemed the most reliable means by which I could purify large amounts of (potentially) active Nedd4-2.
+
+### ENaC Binding
+
+The Nedd4-2 purified from both Sf9 cells and *E. coli* binds ENaC.
+A simple, single-replicate experiment shows increased movement of GFP-tagged Nedd4-2 from its unbound peak to a peak eluting before ENaC (@fig-graveyard_nedd42-bindings).
+This is, of course, not an entirely rigorous experiment.
+Most concerning is the fact that increased ENaC does not always translate to an increase in the presumptive Nedd4-2 bound ENaC species.
+
+```{r nedd4-2_binding}
+#| echo: false
+#| warning: false
+#| messages: false
+#| fig-cap: "Binding experiment. 170&nbsp;nM of GFP-tagged Nedd4-2 was bound to 1, 5, or 10 times as much untagged ENaC. Increasing ENaC concentrations results in increasing amounts of the species eluting around 12&nbsp;mL, but not monotonically. **Top**: raw, unnormalized GFP fluorescence. **Bottom**: fluorescence normalized to the maximum peak height in the trace. ENaC is visible in this normalized trace due to a small amount of remaining material which did not have its GFP tag cleaved during purification."
+#| label: fig-graveyard_nedd42-bindings
+
+library(MetBrewer)
+read_csv("figures/graveyard/exp101.csv") |>
+    group_by(Sample, Channel) |>
+    mutate(Normalized = Signal / max(Signal)) |>
+    rename("Raw" = "Signal") |>
+    pivot_longer(
+        cols = c(Raw, Normalized),
+        names_to = "Normalization",
+        values_to = "Signal"
+    ) |>
+    mutate(Normalization = fct_relevel(
+        Normalization,
+        "Raw",
+        "Normalized"
+    )) |>
+    mutate(Channel = if_else(Channel == "2475ChA ex488/em509", "GFP", "Trp")) |>
+    mutate(mL = Time * 0.5) |>
+    mutate(Sample = case_when(
+        Sample == "1-to-01" ~ "1:1",
+        Sample == "1-to-05" ~ "1:5",
+        Sample == "1-to-10" ~ "1:10",
+        TRUE ~ Sample
+    )) |>
+    mutate(Sample = as.factor(Sample)) |>
+    ggplot(aes(mL, Signal)) +
+    theme_minimal() +
+    geom_line(
+        aes(
+            color = fct_relevel(
+                Sample,
+                "1:10",
+                "1:5",
+                "1:1",
+                "ENaC",
+                "Nedd4-2"
+            )
+        ),
+        linewidth = 1
+    ) +
+    coord_cartesian(xlim = c(7.5, 20)) +
+    facet_grid(
+        rows = vars(Normalization),
+        scales = "free_y"
+    ) +
+    scale_color_met_d("Greek") +
+    labs(color = "Sample")
+```
+
+### Ubiquitination assay
+
+If this project had progressed, we would have needed a way to assess whether our purified Nedd4-2 was functional or not.
+My idea for this was an *in vitro* ubiquitination assay.
+Ideally, we'd take tagged ubiquitin (Ub), an E1, an E2, and our purified Nedd4-2 and incubate them together.
+Next we'd detect ubiquitination of ENaC via western blot.
+Only the mixture with all of these components should have ubiquitinated ENaC.
+
+I made a few attempts at this, and none of them really worked.
+It's not worth reproducing the exact protocols here &mdash; for the truly interested reader, they are in Lab Meetings 2, 3, and 4.
+The two major categories I tried were what I'd call a "minimal" or "supplementary" ubiquitination assays.
+
+The minimal assay involved purchasing an *in vitro* ubiquitination kit and replacing the company's E3 enzyme with the same molar amount of my purified Nedd4-2 (as assayed by nanodrop).
+Using this assay I was potentially able to detect a moderate amount of ubiquitination of ENaC (@fig-graveyard_exp78-wb).
+However, overall signal is low, and there appears to be some ENaC-Ub signal in lanes without purified Nedd4-2.
+Additionally, longer incubation times do not result in stronger ENaC-Ub signal.
+I take it from this assay that our purified material was not functional.
+
+![A western blot of the minimal *in vitro* ubiquitination assay. The **left blot** is against &gamma; ENaC; the **right blot** is against a FLAG tag present on the ubiquitin used during the assay. Purified ENaC and Nedd4-2 are used in combination with commercial Ube1 and Ube2 along with the FLAG Ub as indicated in each lane. Note that minimal movement of ENaC out of the expected bands is observed on the left, and little accumulation of signal is seen on the right.](figures/graveyard/Exp78_labeled_bw_WB.png){#fig-graveyard_exp78-wb}
+
+However, my western blots are never great, and it may be that refinement of the detection technique is required.
+For instance, another of my blots for the minimal assay did seem to show some ubiquitination by our purified Nedd4-2 (@fig-graveyard_exp88-wb).
+Regardless, this inconsistency means the assay needs work in addition to whatever work needs doing on Nedd4-2 and ENaC themselves.
+
+![**Left**: A western blot against ENaC &gamma;. The high molecular weight band is ENaC in the stacking gel. **Right**: quantification of the upper, middle, and lower bands (B01, 02, and 03 respectively). Note that as B01 increases, B02 decreases.](figures/graveyard/Exp88-WB.png){#fig-graveyard_exp88-wb}
+
+For a supplementary assay, I add purified Nedd4-2 to rabbit reticulocyte lysate.
+The idea was to check for increased ubiquitination when more E3 enzyme is added.
+I never ended up running this assay because it made less sense than the minimal assay, and I abandoned Nedd4-2 before I could get to it.
+
+### What should be done?
+If I were starting over, I'd find a good positive control to make sure we could test the function of our Nedd4-2.
+That the purified Nedd4-2 is much more important than that it binds ENaC.
+Next, an assessment of the necessary ratios and concentrations for stable complex formation would be useful.
+I expect that some form of cross-linking would be required to guarantee complex formation on the grid without overcrowding.
+
+Ultimately, though, I think I was right to abandon this facet of my project.
+The domains of Nedd4-2 have already been resolved, and it seems to be largely unstructured aside from those domains.
+Rather than rely on it to help align the intracellular and transmembrane domains, I would try a megabody or other scaffolding system.
+
+## Scintillation Proximity Assay
+
+As discussed in @sec-results_spa, SPA never worked for anybody in our entire lab, working across three proteins.
+As a reminder, our main problem was that specific and non-specific counts were essentially indistinguishable.
+
+Ideally, non-specific counts increase linearly and specific counts increase logarithmically with increasing substrate, and signal-to-background ratios should be around 1.5 [@harder2012].
+Our background and "specific" counts both increased linearly with more substrate, leading me to believe that our "specific" counts are merely unaccounted-for background.
+Additionally, our signal-to-background ratio typically falls between 0.2 and 0.01 (one to two orders of magnitude too low).
+Finally, our "specific" counts are often negative.
+
+If you're saying to yourself, "Well then it just seems like your protein isn't binding the ligand at all" I'd agree with you.
+I don't think playing around the edges here will fix anything.
+It is worth noting that the same exact trends occur in ASIC, which we know has a properly-folded TMD by cryoEM.
+This indicates that there is likely something fundamentally wrong with our process, rather than (or, more likely, in addition to) something wrong with our purified ENaC.
+
+### BSA
+
+It's fairly common practice to include additives to reduce non-specific binding in SPA assays.
+We tried BSA, which is typically added at around 5%.
+Surveying a number of percentages around there yields no improvement in background or specific counts (@fig-graveyard_spa-bsa).
+
+![Addition of BSA does not improve SPA results. **Left**: ENaC held at a constant concentration with increasing proportion of BSA added shows no improvement in specific counts.](figures/graveyard/spa-bsa.png){#fig-graveyard_spa-bsa}
+
+Changing the acidity of the mixture, alongside the pH, does not improve background or specific counts (@fig-graveyard_spa-bsa-ph).
+I also include this plot to show that specific counts are, more often than not, negative.
+
+![Changing the pH of the mixture from 7.4 to 6.0 does not improve counts, and specific counts are often negative. Lines follow the mean for each condition.](figures/graveyard/Exp124-spa.png){#fig-graveyard_spa-bsa-ph}
+
+### Data collection time
+
+The time at which data are collected changes the result (@fig-graveyard_spa-timeline).
+Counts are recorded from a plate, and the amount of incubation required to reach a steady signal must be determined empirically.
+However, with low specific counts, the selection of recording time can dramatically change the interpretation of results.
+
+![The plate is re-recorded approximately every 10 minutes. Note that high ligand concentrations (upper facets) maintain a steady signal, while low ligand concentrations (lower facets) are too noisy to reliably determine. Thus, datasets recorded only 10 minutes apart might show dramatically different Specific (Experimental - Control) counts for low concentrations, which would significantly affect fitted K~d~ values. Note, also, that despite their stability, specific counts at high ligand concentrations are almost entirely negative.](figures/graveyard/Exp137_all-counts.png){#fig-graveyard_spa-timeline}
+
+### Membrane memetic
+
+Switching from digitonin to nanodiscs yields a marginal improvement in that specific counts are generally positive (@fig-graveyard_spa-nanodiscs).
+However, specific counts still increase linearly with ligand concentration well beyond the reported K~d~ of ENaC for benzamil (approximately 10&nbsp;nM), calling into question whether they are truly specific.
+Additionally, the signal-to-background ratio remains below 1.0.
+
+![SPA data collected from nanodiscs does not result in better specific counts or lower total counts. Bars represent the standard error of the mean for three replicates, but are too small to see in the higher-concentration plots.](figures/graveyard/Exp144_01-all-counts-timecourse.png){#fig-graveyard_spa-nanodiscs}
+
+### Bead type
+
+Use of nanoSPA's smaller, lower-background beads does improve total counts, i.e., reduces the background counts (@fig-graveyard_nanospa-background).
+It is, however, extremely important to note here that **none of the samples in this experiment had any ENaC**.
+There thus **cannot be** any specific counts &mdash; there is no protein for benzamil to bind!
+It is thus very concerning to me that the counts in this experiment follow the same trend as our proper, ENaC-containing experiments, with low but present "specific" signal.
+
+![Comparison of nanoSPA and Perkin Elmer (PE) beads. In this context, "background" and "total" differ only in that "background" does not have any detergent added and "total" does. Note that nanoSPA beads quickly level off to a steady signal while PE beads increase for several hours. Note also that "specific" counts, which should be zero in all cases, are lower in nanoSPA beads than PE. Bars represent the standard error of the mean for three replicates, but are too small to see in the higher-concentration plots.](figures/graveyard/Exp148_01-all-counts-timecourse.png){#fig-graveyard_nanospa-background}
+
+Along this line, addition of ENaC nanodiscs to the nanoSPA bead mixture does not elicit any increase in counts, or even any noticeable difference from the ENaC-less experiment (@fig-graveyard_nanospa-enac).
+
+![nanoSPA beads with ENaC added. Bars represent the standard error of the mean for three replicates, but are too small to see in the higher-concentration plots.](figures/graveyard/Exp158_01-all-counts-timecourse.png){#fig-graveyard_nanospa-enac}

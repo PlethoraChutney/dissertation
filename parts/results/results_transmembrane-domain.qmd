@@ -47,7 +47,7 @@ I will cover my work on developing functional assays here, since they would be m
 For the most part, I worked on two functional assays: the scintillation proximity assay (SPA) and the flux assay.
 Much of the work I present on SPA was performed alongside Alex Houser and especially James Cahill.
 
-### The scintillation proximity assay does not show promise for ENaC/DEG family members
+### The scintillation proximity assay does not show promise for ENaC/DEG family members {#sec-results_spa}
 
 ```{r}
 #| echo: false
