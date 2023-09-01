@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -67,6 +86,8 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -282,7 +303,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#the-enacdeg-family" id="toc-the-enacdeg-family" class="nav-link active" data-scroll-target="#the-enacdeg-family">The ENaC/DEG family</a></li>
+  <li><a href="#a-bit-of-ion-channel-terminology" id="toc-a-bit-of-ion-channel-terminology" class="nav-link active" data-scroll-target="#a-bit-of-ion-channel-terminology">A bit of ion channel terminology</a></li>
+  <li><a href="#the-enacdeg-family" id="toc-the-enacdeg-family" class="nav-link" data-scroll-target="#the-enacdeg-family">The ENaC/DEG family</a></li>
   <li><a href="#enac-structure" id="toc-enac-structure" class="nav-link" data-scroll-target="#enac-structure">ENaC Structure</a></li>
   <li><a href="#enac-function-and-regulation" id="toc-enac-function-and-regulation" class="nav-link" data-scroll-target="#enac-function-and-regulation">ENaC Function and Regulation</a></li>
   </ul>
@@ -310,6 +332,16 @@ ul.task-list li input[type="checkbox"] {
 
 <p>Structural biology is ultimately the study of particular domains and residues, but this knowledge most interesting and useful in the context of physiological processes. As such, it can be difficult to order the chapters of an introduction. Placing the structure before the function grounds discussion of mutations and disease, but leaves the structure unmoored from biomedical relevance. Conversely, placing function first leaves the reader without a clear understanding of which domains are important for which reasons, which is vital for a focused discussion of the protein.</p>
 <p>To dodge the question of which is the cart and which is the course, I present here an exceedingly brief (and less heavily cited) discussion of ENaC structure and function. Everything covered here is covered in more detail in the Introduction. ENaC biology is discussed in <a href="introduction/intro_enac-in-the-body.html"><span>Chapter&nbsp;1</span></a>, while details on the ENaC/DEG family and ENaC structure can be found in <a href="introduction/intro_enac-as-a-channel.html"><span>Chapter&nbsp;2</span></a>.</p>
+<section id="a-bit-of-ion-channel-terminology" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="a-bit-of-ion-channel-terminology">A bit of ion channel terminology</h2>
+<p>Ion channels are essential components of cellular life, present in everything from bacteria on up to humans. The minimal ion channel spans the lipid bilayer and allows ions to flow through a pore down their concentration gradient. We can measure the flow of ions through a single channel as a current (called the <em>unitary current</em>).</p>
+<div class="page-columns page-full"><p>However, most ion channels have some mechanism by which the flow of ions can be controlled. We thus say an ion channel can be “open” or “closed”, i.e., it can allow ions to flow through itself or not. This process is called <em>gating</em>, and is most often controlled by either voltage (voltage-gated ion channels) or some ligand (ligand-gated ion channels).</p><div class="no-row-height column-margin column-container"><span class="">ENaC is a bit unique in that the ligand is a part of the channel itself, but that’s beside the point</span></div></div>
+<p>We can further quantify a channel’s “openness” by how much time it spends in the open state vs.&nbsp;the closed state. A channel with an <em>open probability</em> (P<sub>O</sub>) of 0.75 spends approximately 75% of its time in the open state and 25% of its time in the closed state.</p>
+<p>Open probability and unitary currents are both properties of <em>single channels</em>. Groups of channels (for instance, all of the channels in a cell) do not have a measurable P<sub>O</sub>, since the group will not be homogeneous.</p>
+<p>For instance, say there is a collection of 100 ion channels. Twenty of those channels are bound to ligand, and seventeen of those channels are open. Eighty channels are not bound to ligand, and twenty-two of those channels are open. Do we only consider the ligand-bound channels, making the P<sub>O</sub> <span class="math inline">\(\frac{17}{20}\)</span>? Or maybe we should consider only the apo channels, making it <span class="math inline">\(\frac{22}{80}\)</span>? Or perhaps we consider the whole population: <span class="math inline">\(\frac{39}{100}\)</span>? Or is it maybe the mean P<sub>O</sub> of both groups, <span class="math inline">\(\frac{\frac{17}{20} + \frac{22}{80}}{2}\)</span>?</p>
+<p>In practice, we’d probably describe this set of 100 channels as two populations: the open population with a P<sub>O</sub> of 0.85 and the closed population with a P<sub>O</sub> of 0.275. Ligand binding would move a channel from the closed to the open population, and ligand dissociation would move it back to the closed population.</p>
+<p>Typical electrophysiology experiments measure the <em>macroscopic current</em>: how many ions flow through all of the channels of a given type in a cell. This is represented as <em>I</em>, with the current due to a particular ion, e.g., sodium as <em>I<sub>Na<sup>+</sup></sub></em>. Ion channels are often selective for a particular ion or set of ions. For instance, a sodium-specific ion channel will allow Na<sup>+</sup> but not other ions through, while a cation-selective channel will allow Ca<sup>2+</sup> and K<sup>+</sup> but not Cl<sup>-</sup>. Macroscopic current is affected by the number of channels in each gating state, the P<sub>O</sub> of those states, the unitary current of the open channels, and the number of channels in the membrane (<em>N</em>). Further review is available from Hille or Ackerman and Clapham<span class="citation" data-cites="hille2001 ackerman1997"><sup><a href="references.html#ref-hille2001" role="doc-biblioref">1</a>,<a href="references.html#ref-ackerman1997" role="doc-biblioref">2</a></sup></span>.</p>
+</section>
 <section id="the-enacdeg-family" class="level2">
 <h2 class="anchored" data-anchor-id="the-enacdeg-family">The ENaC/DEG family</h2>
 <p>The epithelial sodium channel (ENaC) is, perhaps obviously, a member of the ENaC/DEG family of ion channels. These channels are trimeric, pass cationic currents, are voltage-insensitive, and are inhibited by the small molecule amiloride (and its derivatives). The overall topology of these channels is similar, with the greatest sequence (and, presumably, structural) diversity found in the distal ECD (furthest from the membrane). Current structural study suggests a conserved overall gating mechanism as well.</p>
@@ -337,7 +369,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Along this pore, ions larger than sodium are filtered out by size. It is thought that this selectivity filter is formed by a three-residue loop connecting swapped domains of TM2, but an un-swapped conformation is also possible.</p>
 <p>The above summary of ENaC’s presumed gating mechanism is based largely off cross-linking electrophysiology studies and ASIC’s well-described gating mechanism. In ASIC, protons allow for finger/thumb collapse (recall that ASIC does not have a GRIP domain). However, ASIC rapidly desensitizes and ENaC does not.</p>
 </section>
-<section id="enac-function-and-regulation" class="level2">
+<section id="enac-function-and-regulation" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="enac-function-and-regulation">ENaC Function and Regulation</h2>
 <p>The regulation and function of ENaC in the body is not entirely understood, but broadly, ENaC functions as the rate-limiting step of sodium reabsorption in tissues which express it. Thus, control of ENaC expression also controls water retention and reabsorption in those tissues.</p>
 <div class="quarto-figure quarto-figure-center">
@@ -346,11 +378,26 @@ ul.task-list li input[type="checkbox"] {
 <figcaption class="figure-caption">Function and regulation of ENaC in the kidney. Each component is covered in more detail in <a href="introduction/intro_enac-in-the-body.html#sec-regulation"><span>Section&nbsp;1.2</span></a>, but the essential observation is that ENaC is the rate-limiting step in sodium reabsorption.</figcaption>
 </figure>
 </div>
-<p>ENaC is best studied in the kidney, where it plays a pivotal role in blood pressure regulation. When the kidney detects reduced blood pressure, ENaC activity increases. The resulting increase in ENaC-mediated flow of sodium into the kidney results in increased water retention, thus raising blood pressure. This activity increase is a result of greater ENaC synthesis, a greater proportion of channels at the plasma membrane, and a greater proportion of channels with an excised GRIP domain.</p>
+<p>ENaC is best studied in the kidney, where it plays a pivotal role in blood pressure regulation. When the kidney detects reduced blood pressure, it initiates a cascade which results in increased circulating levels of the mineralocorticoid hormone aldosterone. Aldosterone increases overall expression of ENaC, the proportion of ENaC at the cell surface, and the proportion of channels which are open (i.e., have an excised GRIP domain). For more detail on aldosterone and ENaC regulation in the kidney, see <a href="introduction/intro_enac-in-the-body.html#sec-intro_aldosterone"><span>Section&nbsp;1.2.1</span></a>.</p>
+
+<div class="no-row-height column-margin column-container"><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../figures/aldosterone.svg" class="lightbox" title="Aldosterone" data-gallery="quarto-lightbox-gallery-4"><img src="../figures/aldosterone.svg" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Aldosterone</figcaption>
+</figure>
+</div></div><p>Cells with more ENaC at the surface allow more sodium to pass from the lumen to the interstitial fluid. This in turn results in increased water retention, thus raising blood volume and pressure.</p>
 <p>Since the channel is activated primarily by proteolysis, ENaCs cannot close again once opened. Open channels are tagged for retrieval from the plasma membrane and degradation via ubiquitination on the N-termini each of the three subunits. Additionally, ENaC is sensitive to membrane composition and requires PIP<sub>2</sub> to open.</p>
 <p>This is, I believe, enough of a background to move on to a full introduction of the topics covered in the remaining document. The reader is also encouraged to check the glossary for unfamiliar terms and abbreviations.</p>
 
 
+<div id="refs" class="references csl-bib-body" role="list" style="display: none">
+<div id="ref-hille2001" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">Hille, B. (2001). Ion <span>Channels</span> of <span>Excitable Membranes</span> 3rd ed. (<span>Sinauer Associates</span>).</div>
+</div>
+<div id="ref-ackerman1997" class="csl-entry" role="listitem">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">Ackerman, M.J., and Clapham, D.E. (1997). Ion <span>Channels</span> — <span>Basic Science</span> and <span>Clinical Disease</span>. N Engl J Med <em>336</em>, 1575–1586. <a href="https://doi.org/10.1056/NEJM199705293362207">10.1056/NEJM199705293362207</a>.</div>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -715,7 +762,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","loop":true,"openEffect":"zoom","descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":true,"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","descPosition":"bottom"});</script>
 
 
 

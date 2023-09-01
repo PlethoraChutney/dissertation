@@ -9,10 +9,46 @@ To dodge the question of which is the cart and which is the course, I present he
 Everything covered here is covered in more detail in the Introduction.
 ENaC biology is discussed in @sec-intro_physiology, while details on the ENaC/DEG family and ENaC structure can be found in @sec-intro_as-a-channel.
 
+## A bit of ion channel terminology
+
+Ion channels are essential components of cellular life, present in everything from bacteria on up to humans.
+The minimal ion channel spans the lipid bilayer and allows ions to flow through a pore down their concentration gradient.
+We can measure the flow of ions through a single channel as a current (called the *unitary current*).
+
+However, most ion channels have some mechanism by which the flow of ions can be controlled.
+We thus say an ion channel can be "open" or "closed", i.e., it can allow ions to flow through itself or not.
+This process is called *gating*, and is most often controlled by either voltage (voltage-gated ion channels) or some ligand (ligand-gated ion channels).[ENaC is a bit unique in that the ligand is a part of the channel itself, but that's beside the point]{.aside}
+
+We can further quantify a channel's "openness" by how much time it spends in the open state vs. the closed state.
+A channel with an *open probability* (P~O~) of 0.75 spends approximately 75% of its time in the open state and 25% of its time in the closed state.
+
+Open probability and unitary currents are both properties of *single channels*.
+Groups of channels (for instance, all of the channels in a cell) do not have a measurable P~O~, since the group will not be homogeneous.
+
+For instance, say there is a collection of 100 ion channels.
+Twenty of those channels are bound to ligand, and seventeen of those channels are open.
+Eighty channels are not bound to ligand, and twenty-two of those channels are open.
+Do we only consider the ligand-bound channels, making the P~O~ $\frac{17}{20}$?
+Or maybe we should consider only the apo channels, making it $\frac{22}{80}$?
+Or perhaps we consider the whole population: $\frac{39}{100}$?
+Or is it maybe the mean P~O~ of both groups,  $\frac{\frac{17}{20} + \frac{22}{80}}{2}$?
+
+In practice, we'd probably describe this set of 100 channels as two populations: the open population with a P~O~ of 0.85 and the closed population with a P~O~ of 0.275.
+Ligand binding would move a channel from the closed to the open population, and ligand dissociation would move it back to the closed population.
+
+Typical electrophysiology experiments measure the *macroscopic current*: how many ions flow through all of the channels of a given type in a cell.
+This is represented as *I*, with the current due to a particular ion, e.g., sodium as *I~Na^+^~*.
+Ion channels are often selective for a particular ion or set of ions.
+For instance, a sodium-specific ion channel will allow Na^+^ but not other ions through, while a cation-selective channel will allow Ca^2+^ and K^+^ but not Cl^-^.
+Macroscopic current is affected by the number of channels in each gating state, the P~O~ of those states, the unitary current of the open channels, and the number of channels in the membrane (*N*).
+Further review is available from Hille or Ackerman and Clapham [@hille2001; @ackerman1997].
+
 ## The ENaC/DEG family
 
 The epithelial sodium channel (ENaC) is, perhaps obviously, a member of the ENaC/DEG family of ion channels.
 These channels are trimeric, pass cationic currents, are voltage-insensitive, and are inhibited by the small molecule amiloride (and its derivatives).
+Amiloride blocks current through ENaC/DEG channels by binding a surface in the extracellular to the selectivity filter and blocking the pore.
+
 The overall topology of these channels is similar, with the greatest sequence (and, presumably, structural) diversity found in the distal ECD (furthest from the membrane).
 Current structural study suggests a conserved overall gating mechanism as well.
 
@@ -63,9 +99,16 @@ Thus, control of ENaC expression also controls water retention and reabsorption 
 ](introduction/figures/kidney-cartoon/kidney-cartoon.png)
 
 ENaC is best studied in the kidney, where it plays a pivotal role in blood pressure regulation.
-When the kidney detects reduced blood pressure, ENaC activity increases.
-The resulting increase in ENaC-mediated flow of sodium into the kidney results in increased water retention, thus raising blood pressure.
-This activity increase is a result of greater ENaC synthesis, a greater proportion of channels at the plasma membrane, and a greater proportion of channels with an excised GRIP domain.
+When the kidney detects reduced blood pressure, it initiates a cascade which results in increased circulating levels of the mineralocorticoid hormone aldosterone.
+Aldosterone increases overall expression of ENaC, the proportion of ENaC at the cell surface, and the proportion of channels which are open (i.e., have an excised GRIP domain).
+For more detail on aldosterone and ENaC regulation in the kidney, see @sec-intro_aldosterone.
+
+:::{.content-visible unless-format="docx"}
+![Aldosterone](/figures/aldosterone.svg){.aside}
+:::
+
+Cells with more ENaC at the surface allow more sodium to pass from the lumen to the interstitial fluid.
+This in turn results in increased water retention, thus raising blood volume and pressure.
 
 Since the channel is activated primarily by proteolysis, ENaCs cannot close again once opened.
 Open channels are tagged for retrieval from the plasma membrane and degradation via ubiquitination on the N-termini each of the three subunits.

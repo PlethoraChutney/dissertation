@@ -44,7 +44,7 @@ Mouse models of Liddle syndrome complicate the situation somewhat.
 Mice with homozygous mutant Liddle &beta;ENaC fed a normal salt diet do not develop the characteristic high blood pressure, low potassium, and acidosis as humans do [@pradervand1999].
 These phenotypes only develop with a high-salt diet.
 Moreover, these mice are still able to retrieve ENaC from the cell surface in the colon (unlike human Liddle patients) [@bertog2008].
-It is thus not clear that the mouse model of Liddle syndrome is fully applicable to the human disease.
+It is thus not clear that the mouse model of Liddle syndrome is fully applicable to the human disease.[This may be due to incomplete penetrance of the mutant gene or differences in human and mouse Nedd4-2 function. For instance, if mouse Nedd4-2 does not require both the &beta; and &gamma; PY motifs, the channels could still be retrieved from the membrane.]{.aside}
 
 Loss-of-function mutations also cause severe phenotypes.
 Type 1 pseudohypoaldosteronism (PHA1) was first described in a severely dehydrated infant who did not respond to aldosterone treatment [@cheek1958].
@@ -67,7 +67,7 @@ Patients with CF also lose salt but, unlike patients with PHA1, the causative mu
 Pathogenic CFTR mutations dramatically reduce chloride permeability, resulting in poor reabsorption of Cl^-^ in the lungs [@quinton1983].
 Reduced chloride absorption increases the absorption of sodium to maintain electrostatic balance.
 The cells then absorb more water to maintain osmolarity.
-This, in turn, dehydrates and thickens the ASL, which damages the underlying tissue and prevents mucous clearance [@zabner1998; @randell2006; @button2012].
+This, in turn, dehydrates and thickens the airway surface liquid (ASL), which damages the underlying tissue and prevents mucous clearance [@zabner1998; @randell2006; @button2012].
 
 The interplay between CFTR and ENaC in CF patients is complicated and not fully understood.
 Treatment of normal, but not CF, lung epithelia with amiloride augments Cl^-^ transport [@knowles1983].
@@ -75,12 +75,14 @@ Cells co-expressing CFTR and ENaC show smaller ENaC currents than do cells expre
 Mice which overexpress &beta;ENaC in the airway show CF-like symptoms, including reduced airway liquid height and mucous clearance [@mall2004].[Interestingly, mice overexpressing the &alpha; or &gamma; subunits did not show CF-like symptoms. The authors point to prior research showing that &alpha;&beta;-only channels have a higher P~O~ than &alpha;&beta;&gamma; [@fyfe1998].]{.aside}
 It would seem that the function of the two ion channels is linked both by electrochemical gradients and potentially other regulatory partners.
 
-The picture turns out not to be so neat.
-Double-mutant mice which overexpress &beta;ENaC and CFTR have normal Cl^-^ secretion but neither a concomitant decrease in Na^+^ absorption nor a rescue of the CF-like phenotype [@grubb2012].
-Additionally, Liddle syndrome patients have increased sodium absorption throughout their body but neither they nor Liddle syndrome mice develop lung disease [@mall2010].
-Human patients with *reduced* &beta;ENaC function develop CF-like phenotypes of lung infection and elevated sweat chloride, but PHA1 patients produce excessive airway liquid without infection [@sheridan2005; @kerem1999].
+The relationship between ENaC-mediated Na^+^ absorption and CF or CF-like disease turns out not to be so neat.
+In mice which overexpress &beta;ENaC and CFTR, one would expect the CF-like symptoms from increased &beta;ENaC expression to be rescued by increased Cl^-^ secretion.
+In actuality, said mice exhibit neither of these traits [@grubb2012].
+Additionally, Liddle syndrome patients have increased sodium absorption in all ENaC-expressing tissues but neither they nor Liddle syndrome mice develop CF-like lung disease [@mall2010].
+In the opposite pattern of the mouse models, human patients with *reduced* &beta;ENaC function develop CF-like phenotypes of lung infection and elevated sweat chloride [@sheridan2005].
+More confusingly, PHA1 patients (which have reduced ENaC expression in all tissues) produce excessive airway liquid as in CF-like disease, but this liquid does not become infected [@kerem1999].
 
-There are many hypotheses as to how these contradictions may be resolved, reviewed well by Collawn and colleagues, but more work on the subject is desperately needed [@collawn2012].
+There are many hypotheses as to how these contradictions may be resolved, reviewed well by Collawn and colleagues, but more work on the subject is desperately needed [@collawn2012].[For instance, it could be that &beta;ENaC and/or CFTR are being knocked into the wrong cell types, or that the time scale of the effect is longer than is currently thought.]{.aside}
 The important point for our purposes is that, as with Liddle syndrome, the mouse CF model does not recapitulate human disease well.
 Indeed, mice with CFTR mutations which are pathogenic in humans do not develop lung disease at all [@grubb1999].
 
@@ -118,7 +120,7 @@ Canonical ENaCs are composed of one each of the &beta;, &gamma;, and either &alp
 However, the combination of &alpha;ENaC knock-out mice and ENaC expression patterns makes it likely that channels with only one or two ENaC subunit types, while rare, are physiologically relevant.
 
 I note here that we cannot say these channels are homomeric &alpha;ENaC channels.
-They may be assemblies of ENaC with other ENaC/DEG family members or as-yet unknown other proteins.
+They may be assemblies of ENaC with other ENaC/DEG family members or as-yet unknown other proteins.[The composition of the channel likely affects their sensitivity to amiloride as well, although since the entire ENaC/DEG family is blocked by amiloride at one concentration or another one would expect that these combinations would be as well.]{.aside}
 Regardless of the ultimate identity of the amiloride-sensitive salt taste receptor, the patterns observed in taste are difficult to explain if the only physiologically relevant ENaC is the (&alpha;/&delta;)&beta;&gamma; triheteromer, which makes it an interesting and valuable system for further study.
 
 ### ENaC in blood vessels {#sec-intro_blood-vessels}
@@ -155,7 +157,7 @@ A discussion of molecular mechanisms by which ENaC P~O~ is modulated benefits fr
 This overview of ENaC regulation is necessarily brief and limited to the kidney (@fig-intro_kidney-reg), since that system is best understood.
 Fortunately, the patterns observed in the kidney largely hold in other tissues with the notable exception of aldosterone-induced expression.
 
-### Aldosterone
+### Aldosterone {#sec-intro_aldosterone}
 
 Aldosterone is the primary mineralocorticoid hormone and the main mechanism by which the body regulates plasma sodium levels.
 When the kidney is not receiving enough salt, it initiates a cascade to (among many other effects) increase activity of ENaC via the hormone aldosterone.[For a review of the Renin-Angiotensin-Aldosterone System consider Weir and Dzau [@weir1999]. For a review more focused on aldosterone alone, Stockand's is quite thorough and readable [@stockand2002].]{.aside}
@@ -267,7 +269,7 @@ It is likely, then, that 14-3-3 regulates Nedd4-2 both by blocking its catalytic
 ## Conclusion
 
 ENaC is a tightly regulated ion channel implicated in a vast array of biological functions, from blood pressure control to the pleasurable taste of salty food.
-I have provided here a brief overview of the tissues in which ENaC expression is responsive to aldosterone (the body's main salt regulatory hormone) as well as the proteins involved on coordinating its expression.
+I have provided here a brief overview of the tissues in which ENaC expression is responsive to aldosterone (the body's main salt regulatory hormone) as well as the proteins involved in coordinating its expression.
 
 I hope I have also highlighted the great amount we do not know about the channel.
 ENaC's function and regulation in the kidney is well-studied, but the trends observed in that tissue do not translate well to the lung (in which Liddle syndrome patients do not develop disease) or tongue (in which no heterotrimeric channels seem to exist).
