@@ -62,6 +62,9 @@ div.csl-indent {
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -305,7 +308,13 @@ div.csl-indent {
   <li><a href="#a-new-approach-is-needed-for-the-transmembrane-domain" id="toc-a-new-approach-is-needed-for-the-transmembrane-domain" class="nav-link" data-scroll-target="#a-new-approach-is-needed-for-the-transmembrane-domain"><span class="header-section-number">5.2.2</span> A new approach is needed for the transmembrane domain</a></li>
   <li><a href="#electrophysiology" id="toc-electrophysiology" class="nav-link" data-scroll-target="#electrophysiology"><span class="header-section-number">5.2.3</span> Electrophysiology</a></li>
   </ul></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">5.3</span> Conclusion</a></li>
+  <li><a href="#conjecture" id="toc-conjecture" class="nav-link" data-scroll-target="#conjecture"><span class="header-section-number">5.3</span> Conjecture</a>
+  <ul class="collapse">
+  <li><a href="#we-need-a-functional-assay" id="toc-we-need-a-functional-assay" class="nav-link" data-scroll-target="#we-need-a-functional-assay"><span class="header-section-number">5.3.1</span> We need a functional assay</a></li>
+  <li><a href="#find-a-better-construct-for-the-tmd" id="toc-find-a-better-construct-for-the-tmd" class="nav-link" data-scroll-target="#find-a-better-construct-for-the-tmd"><span class="header-section-number">5.3.2</span> Find a better construct for the TMD</a></li>
+  <li><a href="#there-are-other-interesting-regions-of-the-channel" id="toc-there-are-other-interesting-regions-of-the-channel" class="nav-link" data-scroll-target="#there-are-other-interesting-regions-of-the-channel"><span class="header-section-number">5.3.3</span> There are other interesting regions of the channel</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">5.4</span> Conclusion</a></li>
   </ul>
 </nav>
     </div>
@@ -363,8 +372,36 @@ div.csl-indent {
 <p>Additionally, the FaNaC paper raises an interesting question: is the bulky residue in the β9-α4 linker necessary for proper gating? Conservation of the surrounding residues and an adjacent <em>cis</em>-proline would suggest so. An investigation of this loop is interesting whether the channels can gate or not — the best kind of experiment.</p>
 </section>
 </section>
-<section id="conclusion" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">5.3</span> Conclusion</h2>
+<section id="conjecture" class="level2 page-columns page-full" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="conjecture"><span class="header-section-number">5.3</span> Conjecture</h2>
+<p>What do I think should be done next, if I’m so smart?</p>
+<section id="we-need-a-functional-assay" class="level3" data-number="5.3.1">
+<h3 data-number="5.3.1" class="anchored" data-anchor-id="we-need-a-functional-assay"><span class="header-section-number">5.3.1</span> We need a functional assay</h3>
+<p>Why doesn’t our channel seem to undergo structural changes when it’s sodium self-inhibited? Why can’t we see our TMD? Why doesn’t the GRIP domain release from the ECD when it’s cleaved? All of these questions and more are essentially unanswerable without knowing <em>whether our channels are functional in the first place</em>. All of the mysterious observations from my work are fully satisfied by the conjecture that <em>we’re looking at misfolded garbage</em>.</p>
+<p>As such, my first priority moving forward would be the development and implementation of a functional assay. As I discussed in <a href="../appendices/graveyard.html#sec-graveyard_spa"><span>Section&nbsp;B.2</span></a>, the SPA assay shows no sign of working any time soon, and isn’t even truly a functional assay.</p>
+<p>The sodium flux assay is, on the other hand, already halfway to usefulness. Using a known-good ion channel (ASIC comes to mind, but any sodium-specific ion channel will do) would help push it to completion by isolating the “protein is good” variable from the “assay works” variable. With more confidence in the fact that our purified material has some bearing on what is present in the cells, we can move back to structural study.</p>
+</section>
+<section id="find-a-better-construct-for-the-tmd" class="level3 page-columns page-full" data-number="5.3.2">
+<h3 data-number="5.3.2" class="anchored" data-anchor-id="find-a-better-construct-for-the-tmd"><span class="header-section-number">5.3.2</span> Find a better construct for the TMD</h3>
+<p>As discussed in <a href="../results/results_transmembrane-domain.html#sec-tmd_abandon-cko"><span>Section&nbsp;3.3.2</span></a>, the CKO and DEG mutations should both be abandoned. They never made sense in the first place, and they did not accomplish their stated goals of stabilizing the TMD and holding the TMD and ECD in open states, respectively. Returning to a wild-type-like construct will make our results more interpretable.</p>
+<div class="page-columns page-full"><p>To find a satisfactory gene for further study, we should first perform thermo-FSEC assays on a wide range of ENaC orthologs. Thermal stability, like SPA, is not an assay for function. It is, however, high-throughput, and channels which are stable are more likely to remain functional once purified.</p><div class="no-row-height column-margin column-container"><span class="">In this context, a thermo-FSEC assay is the typical FSEC assessment of particle homogeneity with the added step of heating a sample from 4 through 90&nbsp;°C. Essentially, measuring peak height degradation with increasing temperature is used as a proxy for temperature stability.</span></div></div>
+<p>I would then take the most-stable 10% of these constructs and perform whatever functional assay we end up developing on all of them. Any gene with significant flux could be screened using the same cryoEM concentrations and grid parameters I’ve determined in this work. We thus know we’d be starting with the most functional, most stable material we can find, rather than picking genes at essentially random as was done previously. Any promising maps could have their purification and grid parameters refined while simultaneously performing proper electrophysiological studies to ensure selectivity and currents are within reason.</p>
+<p>One potential objection to this method is that we do not know whether our symmetry-breaking Fabs will bind to all forms of ENaC. My response is two-fold. First, it is easy to determine this during the high-throughput thermo-FSEC experiments by adding a condition with Fabs and looking for a shift. Second, my Fab-less nanodisc dataset demonstrates that &lt;&nbsp;3&nbsp;Å maps can be achieved without the use of Fabs.</p>
+<p>Moreover, solving maps just to solve maps is pointless. Fabs bind tightly and predictably to human and mouse ENaC, and look where that got us.</p>
+</section>
+<section id="there-are-other-interesting-regions-of-the-channel" class="level3" data-number="5.3.3">
+<h3 data-number="5.3.3" class="anchored" data-anchor-id="there-are-other-interesting-regions-of-the-channel"><span class="header-section-number">5.3.3</span> There are other interesting regions of the channel</h3>
+<p>I think it was a mistake for me to focus exclusively on the TMD. Instead, there are exciting mutations in the ECD with described functional consequences that we already have map. For instance, mutation of a disulfide in the α subunit palm (αC479) results in Liddle syndrome, and we have high-quality map density for both halves of this disulfide (<a href="#fig-conclusion_disulfide">Figure&nbsp;<span>5.1</span></a>).</p>
+<div id="fig-conclusion_disulfide" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><a href="figures/disulfide.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="The human CKO/DEG map surrounding the disulfide between αC479 and αC394."><img src="figures/disulfide.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Figure&nbsp;5.1: The human CKO/DEG map surrounding the disulfide between αC479 and αC394.</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="conclusion" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">5.4</span> Conclusion</h2>
 <p>After six years of work, I’m left with more questions than I had at the start. For decades, the ENaC field has been moving away from the gating model of “ASIC with an internal ligand”. Rather, ENaC P<sub>O</sub> is fine-tuned by a variety of internal and external signals. I believe that my findings here are consistent with that premise. I hope that this work is eventually a small piece of our understanding of this deceptively complicated channel.</p>
 <!-- Move this to the end of content so the margins are right in citations -->
 
@@ -786,6 +823,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","loop":true,"descPosition":"bottom","openEffect":"zoom"});</script>
 
 
 

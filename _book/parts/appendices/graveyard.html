@@ -308,12 +308,13 @@ div.csl-indent {
   <li><a href="#ubiquitination-assay" id="toc-ubiquitination-assay" class="nav-link" data-scroll-target="#ubiquitination-assay"><span class="header-section-number">B.1.3</span> Ubiquitination assay</a></li>
   <li><a href="#what-should-be-done" id="toc-what-should-be-done" class="nav-link" data-scroll-target="#what-should-be-done"><span class="header-section-number">B.1.4</span> What should be done?</a></li>
   </ul></li>
-  <li><a href="#scintillation-proximity-assay" id="toc-scintillation-proximity-assay" class="nav-link" data-scroll-target="#scintillation-proximity-assay"><span class="header-section-number">B.2</span> Scintillation Proximity Assay</a>
+  <li><a href="#sec-graveyard_spa" id="toc-sec-graveyard_spa" class="nav-link" data-scroll-target="#sec-graveyard_spa"><span class="header-section-number">B.2</span> Scintillation Proximity Assay</a>
   <ul class="collapse">
   <li><a href="#bsa" id="toc-bsa" class="nav-link" data-scroll-target="#bsa"><span class="header-section-number">B.2.1</span> BSA</a></li>
   <li><a href="#data-collection-time" id="toc-data-collection-time" class="nav-link" data-scroll-target="#data-collection-time"><span class="header-section-number">B.2.2</span> Data collection time</a></li>
   <li><a href="#membrane-memetic" id="toc-membrane-memetic" class="nav-link" data-scroll-target="#membrane-memetic"><span class="header-section-number">B.2.3</span> Membrane memetic</a></li>
   <li><a href="#bead-type" id="toc-bead-type" class="nav-link" data-scroll-target="#bead-type"><span class="header-section-number">B.2.4</span> Bead type</a></li>
+  <li><a href="#what-should-be-done-1" id="toc-what-should-be-done-1" class="nav-link" data-scroll-target="#what-should-be-done-1"><span class="header-section-number">B.2.5</span> What should be done?</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -414,8 +415,8 @@ div.csl-indent {
 <p>Ultimately, though, I think I was right to abandon this facet of my project. The domains of Nedd4-2 have already been resolved, and it seems to be largely unstructured aside from those domains. Rather than rely on it to help align the intracellular and transmembrane domains, I would try a megabody or other scaffolding system.</p>
 </section>
 </section>
-<section id="scintillation-proximity-assay" class="level2" data-number="B.2">
-<h2 data-number="B.2" class="anchored" data-anchor-id="scintillation-proximity-assay"><span class="header-section-number">B.2</span> Scintillation Proximity Assay</h2>
+<section id="sec-graveyard_spa" class="level2" data-number="B.2">
+<h2 data-number="B.2" class="anchored" data-anchor-id="sec-graveyard_spa"><span class="header-section-number">B.2</span> Scintillation Proximity Assay</h2>
 <p>As discussed in <a href="../results/results_transmembrane-domain.html#sec-results_spa"><span>Section&nbsp;3.2.1</span></a>, SPA never worked for anybody in our entire lab, working across three proteins. As a reminder, our main problem was that specific and non-specific counts were essentially indistinguishable.</p>
 <p>Ideally, non-specific counts increase linearly and specific counts increase logarithmically with increasing substrate, and signal-to-background ratios should be around 1.5<span class="citation" data-cites="harder2012"><sup><a href="../references.html#ref-harder2012" role="doc-biblioref">3</a></sup></span>. Our background and “specific” counts both increased linearly with more substrate, leading me to believe that our “specific” counts are merely unaccounted-for background. Additionally, our signal-to-background ratio typically falls between 0.2 and 0.01 (one to two orders of magnitude too low). Finally, our “specific” counts are often negative.</p>
 <p>If you’re saying to yourself, “Well then it just seems like your protein isn’t binding the ligand at all” I’d agree with you. I don’t think playing around the edges here will fix anything. It is worth noting that the same exact trends occur in ASIC, which we know has a properly-folded TMD by cryoEM. This indicates that there is likely something fundamentally wrong with our process, rather than (or, more likely, in addition to) something wrong with our purified ENaC.</p>
@@ -472,6 +473,11 @@ div.csl-indent {
 <figcaption class="figure-caption">Figure&nbsp;B.11: nanoSPA beads with ENaC added. Bars represent the standard error of the mean for three replicates, but are too small to see in the higher-concentration plots.</figcaption>
 </figure>
 </div>
+</section>
+<section id="what-should-be-done-1" class="level3" data-number="B.2.5">
+<h3 data-number="B.2.5" class="anchored" data-anchor-id="what-should-be-done-1"><span class="header-section-number">B.2.5</span> What should be done?</h3>
+<p>In my opinion, nothing. This assay is a dead end, or at least requires much more work than the more promising flux assay.</p>
+<p>I personally also would like to note that, despite how it is used in several labs at OHSU, SPA is fundamentally a <em>binding assay</em>. It <em>does not</em> provide any information about whether an ion channel is capable of passing currents, let alone the specificity of those currents. As such, it is not truly a functional assay. Spending more time working on an assay that doesn’t even tell us what we need to know seems like a lose-lose to me.</p>
 
 
 <div id="refs" class="references csl-bib-body" role="list" style="display: none">
@@ -850,7 +856,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","descPosition":"bottom","closeEffect":"zoom","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","loop":true,"openEffect":"zoom","descPosition":"bottom"});</script>
 
 
 

@@ -98,6 +98,56 @@ Additionally, the FaNaC paper raises an interesting question: is the bulky resid
 Conservation of the surrounding residues and an adjacent *cis*-proline would suggest so.
 An investigation of this loop is interesting whether the channels can gate or not &mdash; the best kind of experiment.
 
+## Conjecture
+
+What do I think should be done next, if I'm so smart?
+
+### We need a functional assay
+
+Why doesn't our channel seem to undergo structural changes when it's sodium self-inhibited?
+Why can't we see our TMD?
+Why doesn't the GRIP domain release from the ECD when it's cleaved?
+All of these questions and more are essentially unanswerable without knowing *whether our channels are functional in the first place*.
+All of the mysterious observations from my work are fully satisfied by the conjecture that *we're looking at misfolded garbage*.
+
+As such, my first priority moving forward would be the development and implementation of a functional assay.
+As I discussed in @sec-graveyard_spa, the SPA assay shows no sign of working any time soon, and isn't even truly a functional assay.
+
+The sodium flux assay is, on the other hand, already halfway to usefulness.
+Using a known-good ion channel (ASIC comes to mind, but any sodium-specific ion channel will do) would help push it to completion by isolating the "protein is good" variable from the "assay works" variable.
+With more confidence in the fact that our purified material has some bearing on what is present in the cells, we can move back to structural study.
+
+### Find a better construct for the TMD
+
+As discussed in @sec-tmd_abandon-cko, the CKO and DEG mutations should both be abandoned.
+They never made sense in the first place, and they did not accomplish their stated goals of stabilizing the TMD and holding the TMD and ECD in open states, respectively.
+Returning to a wild-type-like construct will make our results more interpretable.
+
+To find a satisfactory gene for further study, we should first perform thermo-FSEC assays on a wide range of ENaC orthologs[In this context, a thermo-FSEC assay is the typical FSEC assessment of particle homogeneity with the added step of heating a sample from 4 through 90&nbsp;&deg;C. Essentially, measuring peak height degradation with increasing temperature is used as a proxy for temperature stability.]{.aside}.
+Thermal stability, like SPA, is not an assay for function.
+It is, however, high-throughput, and channels which are stable are more likely to remain functional once purified.
+
+I would then take the most-stable 10% of these constructs and perform whatever functional assay we end up developing on all of them.
+Any gene with significant flux could be screened using the same cryoEM concentrations and grid parameters I've determined in this work.
+We thus know we'd be starting with the most functional, most stable material we can find, rather than picking genes at essentially random as was done previously.
+Any promising maps could have their purification and grid parameters refined while simultaneously performing proper electrophysiological studies to ensure selectivity and currents are within reason.
+
+One potential objection to this method is that we do not know whether our symmetry-breaking Fabs will bind to all forms of ENaC.
+My response is two-fold.
+First, it is easy to determine this during the high-throughput thermo-FSEC experiments by adding a condition with Fabs and looking for a shift.
+Second, my Fab-less nanodisc dataset demonstrates that &lt;&nbsp;3&nbsp;&Aring; maps can be achieved without the use of Fabs.
+
+Moreover, solving maps just to solve maps is pointless.
+Fabs bind tightly and predictably to human and mouse ENaC, and look where that got us.
+
+### There are other interesting regions of the channel
+
+I think it was a mistake for me to focus exclusively on the TMD.
+Instead, there are exciting mutations in the ECD with described functional consequences that we already have map.
+For instance, mutation of a disulfide in the &alpha; subunit palm (&alpha;C479) results in Liddle syndrome, and we have high-quality map density for both halves of this disulfide (@fig-conclusion_disulfide).
+
+![The human CKO/DEG map surrounding the disulfide between &alpha;C479 and &alpha;C394.](figures/disulfide.png){#fig-conclusion_disulfide}
+
 ## Conclusion
 
 After six years of work, I'm left with more questions than I had at the start.

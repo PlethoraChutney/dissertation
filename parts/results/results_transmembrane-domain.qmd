@@ -162,7 +162,7 @@ Of course, all of the TMD maps to date are very low-resolution.
 Although I am confident in my TM assignments, it is possible that the wrong TM identity has been assigned to some of the densities.
 Hopefully future, higher-resolution maps of the TMD will settle the matter.
 
-### Cysteine knock-out mutations should be abandoned
+### Cysteine knock-out mutations should be abandoned {#sec-tmd_abandon-cko}
 
 The CKO mutations do increase ENaC yield, but their theoretical underpinning is not sound at all.[Recall that CKO channels have the following mutations in addition to protease site knockouts: &alpha;C63A, &beta;C30A, and &gamma;C33,41A]{.aside}
 Channels with either one of &gamma;C33A and/or &gamma;C41A exhibit reduced P~O~ and increased SSI compared with wild type despite no change in surface expression [@mukherjee14].

@@ -183,7 +183,7 @@ Ultimately, though, I think I was right to abandon this facet of my project.
 The domains of Nedd4-2 have already been resolved, and it seems to be largely unstructured aside from those domains.
 Rather than rely on it to help align the intracellular and transmembrane domains, I would try a megabody or other scaffolding system.
 
-## Scintillation Proximity Assay
+## Scintillation Proximity Assay {#sec-graveyard_spa}
 
 As discussed in @sec-results_spa, SPA never worked for anybody in our entire lab, working across three proteins.
 As a reminder, our main problem was that specific and non-specific counts were essentially indistinguishable.
@@ -239,3 +239,13 @@ It is thus very concerning to me that the counts in this experiment follow the s
 Along this line, addition of ENaC nanodiscs to the nanoSPA bead mixture does not elicit any increase in counts, or even any noticeable difference from the ENaC-less experiment (@fig-graveyard_nanospa-enac).
 
 ![nanoSPA beads with ENaC added. Bars represent the standard error of the mean for three replicates, but are too small to see in the higher-concentration plots.](figures/graveyard/Exp158_01-all-counts-timecourse.png){#fig-graveyard_nanospa-enac}
+
+### What should be done?
+
+In my opinion, nothing.
+This assay is a dead end, or at least requires much more work than the more promising flux assay.
+
+I personally also would like to note that, despite how it is used in several labs at OHSU, SPA is fundamentally a *binding assay*.
+It *does not* provide any information about whether an ion channel is capable of passing currents, let alone the specificity of those currents.
+As such, it is not truly a functional assay.
+Spending more time working on an assay that doesn't even tell us what we need to know seems like a lose-lose to me.
