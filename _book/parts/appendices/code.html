@@ -370,7 +370,7 @@ div.csl-indent {
 <div class="page-columns page-full"><p>Modern structural biology makes extensive use of size-exclusion chromatography (SEC). The two types of SEC I encountered most often were <em>analytic chromatography</em>, in which samples are assessed for monodispersity and relative amount; and <em>preparative chromatography</em>, in which samples are purified based on their size. In an environment where only a heuristic assessment of these parameters is important (e.g., assessing whether a sample is homogeneous enough to make grids of, or whether a protein interacts with another) these parameters can be assessed by eye (<a href="#fig-appia-peaks">Figure&nbsp;<span>E.1</span></a>). However, chromatography instrument manufacturers must include capacity for more complex analyses in their software. This necessarily makes the software more complex and arcane in the service of features that biochemists rarely need. To solve this mismatch I created Appia, a web-based chromatography visualization package<span class="citation" data-cites="posert2023"><sup><a href="../references.html#ref-posert2023" role="doc-biblioref">1</a></sup></span>. In this section I will provide a brief summary of Appia’s functionality and intended use, the installation process, and then some guidance for adding support for new chromatography instruments.</p><div class="no-row-height column-margin column-container"><span class="">Appia can be installed via <code>pip</code>, or the source can be inspected at <a href="https://github.com/plethorachutney/appia">my github</a>.</span></div></div>
 <div id="fig-appia-peaks" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="figures/code/peaks.png" class="lightbox" title="Heuristic chromatography parameters are easily assessed by eye. Users can approximate affinity for the stationary phase (size, in the case of SEC), quantity, homogeneity, and the number of distinct species by inspecting peak shifts, peak height, peak width, and number of peaks respectively." data-gallery="quarto-lightbox-gallery-1"><img src="figures/code/peaks.png" class="img-fluid figure-img"></a></p>
+<p><a href="figures/code/peaks.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Heuristic chromatography parameters are easily assessed by eye. Users can approximate affinity for the stationary phase (size, in the case of SEC), quantity, homogeneity, and the number of distinct species by inspecting peak shifts, peak height, peak width, and number of peaks respectively."><img src="figures/code/peaks.png" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;E.1: Heuristic chromatography parameters are easily assessed by eye. Users can approximate affinity for the stationary phase (size, in the case of SEC), quantity, homogeneity, and the number of distinct species by inspecting peak shifts, peak height, peak width, and number of peaks respectively.</figcaption>
 </figure>
 </div>
@@ -379,14 +379,14 @@ div.csl-indent {
 <p>Appia is divided into two conceptual parts: the local processor and the web interface. The local processor is written entirely in python and processes all supported data formats into a unified Appia experiment. Several options are available at processing time, such as applying a scaling factor for various manufacturers or automatic trace plotting. Additionally, the local processor includes a user settings system. This system stores information such as flow rates to apply to a specific chromatography method and database login information. Experiments, to Appia, are collections of analytic and preparative traces. Importantly, Appia is agnostic as to the origins of the data in a single experiment — experiments may contain traces from any number of manufacturers and/or instruments, provided Appia has a processor for that manufacturer. The experiments are stored on the local machine in both long (appropriate for ggplot2 and other grammar-of-graphics plotting systems) and wide (appropriate for, e.g., Excel or Prism) formats (<a href="#fig-appia-tidy">Figure&nbsp;<span>E.2</span></a>). These experiments are packaged with an experiment ID and uploaded to the other half of Appia, Appia Web.</p>
 <div id="fig-appia-tidy" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="figures/code/tidy-explainer.png" class="lightbox" title="Data formats saved by Appia and available for user download. Traces made up of individual samples (A) are represented as a single row in the long format (B). The wide format (C) instead represents the independent variable with its own column (Time, red), the response variable with the table body (Signal, white), and all other variables in column headers (various colors)." data-gallery="quarto-lightbox-gallery-2"><img src="figures/code/tidy-explainer.png" class="img-fluid figure-img"></a></p>
+<p><a href="figures/code/tidy-explainer.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Data formats saved by Appia and available for user download. Traces made up of individual samples (A) are represented as a single row in the long format (B). The wide format (C) instead represents the independent variable with its own column (Time, red), the response variable with the table body (Signal, white), and all other variables in column headers (various colors)."><img src="figures/code/tidy-explainer.png" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;E.2: Data formats saved by Appia and available for user download. Traces made up of individual samples (A) are represented as a single row in the long format (B). The wide format (C) instead represents the independent variable with its own column (Time, red), the response variable with the table body (Signal, white), and all other variables in column headers (various colors).</figcaption>
 </figure>
 </div>
 <p>Appia Web provides a browser-based GUI and centralized trace database. The database is a CouchDB database containing a simple dictionary of experiments stored under their experiment IDs. The browser-based GUI is written in python and plotly dash, and loads user-requested data from the database and presents it using a series of line plots. Analytic data is presented with one line per sample per channel, while preparative data is presented as a single line per injection with fractions highlighted by fill. Analytic data is also presented with a normalization applied, such that the maximum of each trace is 1 and the minimum is 0. The user may select a region of the analytic traces and re-normalize them to set the maximum over that range to 1, scaling the rest of the trace linearly (<a href="#fig-appia-normalization">Figure&nbsp;<span>E.3</span></a>). This normalization process is intended to aid in comparison of relative peak heights between different samples which may have a different total amount of material, or to compare peaks within a trace compared to some standard peak height. Importantly, this process uses the simple readout of peak height. More complex analyses or analyses requiring quantitative accuracy are outside the scope of Appia and should use manufacturer-provided peak calling and fitting. Users can also download images and raw data from Appia Web.</p>
 <div id="fig-appia-normalization" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="figures/code/normalization.png" class="lightbox" title="Appia’s normalization process. A user-selected region is used to linearly scale all traces such that their maximum value over that region is 1." data-gallery="quarto-lightbox-gallery-3"><img src="figures/code/normalization.png" class="img-fluid figure-img"></a></p>
+<p><a href="figures/code/normalization.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Appia’s normalization process. A user-selected region is used to linearly scale all traces such that their maximum value over that region is 1."><img src="figures/code/normalization.png" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;E.3: Appia’s normalization process. A user-selected region is used to linearly scale all traces such that their maximum value over that region is 1.</figcaption>
 </figure>
 </div>
@@ -416,7 +416,7 @@ div.csl-indent {
 <div class="cell-output-display">
 <div id="fig-example-data" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="code_files/figure-html/fig-example-data-1.png" class="lightbox" title="Example data of a mixture between a protein and a Fab." data-gallery="quarto-lightbox-gallery-4"><img src="code_files/figure-html/fig-example-data-1.png" class="img-fluid figure-img" width="672"></a></p>
+<p><a href="code_files/figure-html/fig-example-data-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Example data of a mixture between a protein and a Fab."><img src="code_files/figure-html/fig-example-data-1.png" class="img-fluid figure-img" width="672"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;E.4: Example data of a mixture between a protein and a Fab.</figcaption>
 </figure>
 </div>
@@ -495,7 +495,7 @@ div.csl-indent {
 <div class="cell-output-display">
 <div id="fig-fitted-gauss" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="code_files/figure-html/fig-fitted-gauss-1.png" class="lightbox" title="Fitted values plotted atop data. Bound and unbound are green and blue respectively, with the additive model in black." data-gallery="quarto-lightbox-gallery-5"><img src="code_files/figure-html/fig-fitted-gauss-1.png" class="img-fluid figure-img" width="672"></a></p>
+<p><a href="code_files/figure-html/fig-fitted-gauss-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Fitted values plotted atop data. Bound and unbound are green and blue respectively, with the additive model in black."><img src="code_files/figure-html/fig-fitted-gauss-1.png" class="img-fluid figure-img" width="672"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;E.5: Fitted values plotted atop data. Bound and unbound are green and blue respectively, with the additive model in black.</figcaption>
 </figure>
 </div>
@@ -545,7 +545,7 @@ div.csl-indent {
 <div class="no-row-height column-margin column-container"><div class="">
 <div id="fig-ca-bilder" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="figures/code/ca-bilder.png" class="lightbox" title="An image from ca_bilder.py highlighting the movement of the finger and thumb between the resting and desensitized states of ASIC1." data-gallery="quarto-lightbox-gallery-6"><img src="figures/code/ca-bilder.png" class="img-fluid figure-img"></a></p>
+<p><a href="figures/code/ca-bilder.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="An image from ca_bilder.py highlighting the movement of the finger and thumb between the resting and desensitized states of ASIC1."><img src="figures/code/ca-bilder.png" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Figure&nbsp;E.6: An image from <code>ca_bilder.py</code> highlighting the movement of the finger and thumb between the resting and desensitized states of ASIC1.</figcaption>
 </figure>
 </div>
@@ -925,7 +925,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":true,"descPosition":"bottom","closeEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","loop":true,"descPosition":"bottom","openEffect":"zoom"});</script>
 
 
 

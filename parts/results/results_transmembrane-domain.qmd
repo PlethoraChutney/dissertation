@@ -20,6 +20,7 @@ Perhaps of more value will be the following sections in which I cover experiment
 
 Our previous structural work was focused on wild-type-like channels, with undefined gating states [@noreng20].
 I wondered if channels with a defined open state might provide a more consistent, and therefore higher resolution, TMD.
+<!-- TODO: explain CKO and DEG in intro, or double-check that it is explained -->
 To this end, I created mutant channels (CKO/DEG) which contained two mutations expected to increase channel P~O~.
 The first, &beta;S520K, holds the channel open regardless of proteolytic cleavage state [@snyder2000].
 The second, &alpha;T240W, which reduces the affinity of the channel for the &alpha; inhibitory peptide [@kashlan2010].
@@ -27,6 +28,7 @@ I solved maps of the CKO/DEG channels with and without C8 PIP~2~, a ligand known
 
 ![The ENaC transmembrane domain adopts two conformations. TMDs of all six ENaC models separated by TM conformation, viewed from the intracellular side. Models are in the same position and at the same scale in each image, so positions are directly comparable. A grated circle is added in the same position to aid comparison between panels.](figures/TM-overview/tm-overview.png){#fig-tm-overview}
 
+<!-- TODO: figures on all six models -->
 In all six of our models, the visible TMs are arranged in a roughly triangular fashion around a central helix (@fig-tm-overview A).
 In CKO/DEG channels this helix is &gamma; TM2.
 In all other models, the central helix is &beta; TM2.
@@ -53,13 +55,16 @@ Much of the work I present on SPA was performed alongside Alex Houser and especi
 #| echo: false
 #| warning: false
 #| message: false
-#| column: margin
 #| label: fig-spa-example
 #| fig-cap: An example of SPA, in this case of CKO/DEG nanodiscs. Note that although the background counts have been subtracted, the relationship between ligand and counts is still linear.
 library(tidyverse)
+library(showtext)
+
+font_add_google("Montserrat")
+
+showtext_auto()
 
 data <- read_csv("figures/spa/Exp144_processed-data.csv")
-
 data %>%
     mutate(timepoint = case_when(
         Time == min(Time) ~ "Early",
@@ -72,7 +77,13 @@ data %>%
         timepoint == "Early"
     ) %>%
     ggplot(aes(x = Benz, y = mean)) +
-    theme_minimal(base_size = 24) +
+    theme_minimal(
+        base_family = "Montserrat",
+        base_size = 18
+    ) +
+    theme(
+        panel.grid.minor = element_blank()
+    ) +
     scale_x_log10(
         breaks = c(1e-10, 1e-9, 1e-8, 1e-7, 1e-6, 1e-5, 1e-4),
         labels = scales::trans_format("log10", scales::math_format(10^.x))
@@ -82,7 +93,12 @@ data %>%
         labels = scales::trans_format("log10", scales::math_format(10^.x))
     ) +
     annotation_logticks(sides = "bl") +
-    theme(panel.grid.minor = element_blank()) +
+    geom_smooth(
+        se = FALSE,
+        method = "lm",
+        color = "#D2D2D2",
+        linetype = "dashed"
+    ) +
     geom_errorbar(aes(ymin = lower, ymax = upper), width = 0.05) +
     geom_point() +
     labs(
@@ -98,7 +114,6 @@ If the ligand binds the protein, it is close enough to the beads that the &beta;
 These counts can be taken as a measurement of binding affinity.
 Some argue that measuring affinity for a pore-binding ligand is a proxy for measuring proper folding of the pore [@quick2007].
 
-I won't cover in detail all the forms of SPA I attempted; none of the various optimizations or tweaks made any real difference in detectable ligand binding (@fig-spa-example).
 Our main issue was non-specific binding.
 We could never measure the non-specific binding in its entirety, and so any signal that may potentially have been present was swamped out in noise.
 Changing from detergent sample to nanodiscs did not improve signal.

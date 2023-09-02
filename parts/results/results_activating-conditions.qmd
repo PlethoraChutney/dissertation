@@ -15,7 +15,7 @@ I wondered whether treatment with trypsin would result in movement of the finger
 It's important to note here that I had significant help from Arpita Bharadwaj, who performed the purification and initial characterization of the mouse material for these grids.
 Both uncleaved and trypsin-treated mouse ENaC were of similar map quality (3.24 and 3.30 &Aring; respectively with whole-protein masks).
 
-![Purified ENaC is cleaved by trypsin. **A**: Western blot for &alpha; (left) and &gamma; (right) ENaC. Purified mouse protein was treated with trypsin and aprotinin as indicated. Bands corresponding to full-length subunits are marked with an asterisk. **B**: Silver stain of material with and without trypsin treatment.](figures/trypsin-western/western-and-silver.png){#fig-cleavage-biochemistry}
+![Purified ENaC is cleaved by trypsin. **A**: Western blot for &alpha; (left) and &gamma; (right) ENaC. Purified mouse protein was treated with trypsin and aprotinin as indicated. Bands corresponding to full-length subunits are marked with an asterisk. **B**: Silver stain of material with and without trypsin treatment. Material for silver stain and western blot is from different expressions and purifications.](figures/trypsin-western/western-and-silver.png){#fig-cleavage-biochemistry}
 
 ![Trypsin treatment increases amiloride-sensitive currents in oocytes. **Left**: representative amiloride-sensitive current before (cyan) and after (orange) trypsin treatment. Only Na^+^ current is shown. **Right**: Average currents for all eight oocytes measured. All currents are scaled to pre-trypsin Na^+^ current to account for differential cell size and expression. Error bars represent 95% confidence interval. Values for individual oocytes are plotted as lines. P-values are from a paired t-test on *unnormalized* oocyte currents. Using normalized data does not change the significance decision for any ion.](figures/trypsin-western/oocytes.png){#fig-cleavage-oocytes}
 
@@ -37,6 +37,10 @@ However, I do not observe any blurring of the &gamma; thumb, which would be expe
 I must therefore conclude that the removal of the &gamma; inhibitory peptide is not sufficient, on its own, to induce such changes.
 Additionally, I note that these maps are the first indication that trypsin processing of the &alpha; subunit does not release its GRIP domain.
 This is surprising but perhaps not wholly unexpected; the &gamma; subunit is known to be essential for activation by trypsin but the same has not yet been shown for &alpha;ENaC[@diakov2008].
+
+Biochemical analysis indicates that ENaC is highly cleaved by trypsin, degrading the channel to fragments 37&nbsp;kDa and smaller.
+It may be that the material in our map is highly cleaved, but held together by surface contacts throughout the channel which are disrupted by the addition of SDS from the loading buffer.
+This hypothesis could be tested with a native gel.
 
 ### A strained tyrosine in the thumb
 
@@ -99,7 +103,7 @@ For the most part, the sugars are identical in all six models and make no protei
 These sugars likely play a role in other regulatory roles, such as channel trafficking and maturation or interaction with the extracellular matrix[@kashlan2018; @hughey04; @knoepp2020].
 However, two classes of glycan are particularly interesting: the micelle-proximal and the intersubunit glycans.
 
-![ENaC's glycosylation sites form important intersubunit interactions. **A**: Cartoon overview of intersubunit glycosylations. Dotted lines represent glycan chains. Hexagons represent sugars, circles represent potentially-interacting residues. Unfiltered maps for the first two sugars are presented to indicate confidence in Asn assignment. **B**: Silver-stained SDS-PAGE gel of protein treated with PNGase F. **C**: Intersubunit glycan from &beta;N260 to &alpha;D235, K495. **D**: Intersubunit interaction between glycans from &beta;N207 (red) and &gamma;N271 (magenta). In both C and D, the solid surface is a gaussian-blurred version of the sharp human CKO digitonin map (mesh).](figures/intersubunit-glyc/intersub-glyc.png){#fig-intersub-glyc}
+![ENaC's glycosylation sites form important intersubunit interactions. **A**: Cartoon overview of intersubunit glycosylations. Dotted lines represent glycan chains. Hexagons represent sugars, circles represent potentially-interacting residues. Unfiltered maps for the first two sugars are presented to indicate confidence in Asn assignment. **B**: Silver-stained SDS-PAGE gel of protein treated with PNGase F (approx. 36&nbsp;kDa). **C**: Intersubunit glycan from &beta;N260 to &alpha;D235, K495. **D**: Intersubunit interaction between glycans from &beta;N207 (red) and &gamma;N271 (magenta). In both C and D, the solid surface is a gaussian-blurred version of the sharp human CKO digitonin map (mesh).](figures/intersubunit-glyc/intersub-glyc.png){#fig-intersub-glyc}
 
 The intersubunit glycans stretch from one subunit to another (@fig-intersub-glyc A).
 I am able to model long chains for these glycans, with some maps supporting up to nine monosaccharides.
@@ -136,6 +140,7 @@ The maps are otherwise perfectly superimposable, with unchanged ECDs and TMDs.
 Loss of density for only the &gamma; GRIP domain is surprising but not entirely unexpected &mdash; channels lacking the &gamma; subunit or specific lysine residues in the &gamma; ECD are not activated by trypsin[@diakov2008].
 It is therefore possible that while the &alpha; GRIP domain is cleaved, it is not directly involved in trypsin-mediated channel activation.
 Based on biochemical data, I speculate that the &alpha; GRIP domain is also cleaved by trypsin, but the GRIP domain is still clearly visible in our cryoEM maps.
+This could be the result of non-covalent interactions between the &alpha; GRIP domain and the &alpha; finger and thumb.
 In any case, a lack of any observable channel rearrangement upon removal of the &gamma; inhibitory peptide (a state in which ENaC's P~O~ approaches 0.9) must lead us to a deeper consideration of ENaC gating[@bruns07].
 
 Although the best-studied mechanism of ENaC opening is GRIP proteolysis, multiple studies have found other stimuli which open the channel, including laminar shear stress and phospholipids (see @sec-intro_direct-reg for more detail).
@@ -157,8 +162,10 @@ Mutations in linkers between the TMD and ECD of other channels have dramatic eff
 I suspect that the ENaC ECD requires a fully-assembled six-TM pore region to respond to GRIP domain excision, but such a conclusion would require deeper investigation.
 A TMD/ECD decoupling would also explain the lack of ECD shift with the introduction of the DEG mutation, which has been shown to hold the channel in an open state, and for which I see dramatic TMD restructuring but no change in the ECD[@snyder2000].
 
-ENaC does not seem amenable to the standard means of membrane protein purification.
-It is possible that finding a more-stable ortholog would improve the quality of the TMD, as our mouse maps have significantly better TMD density than our human maps.
+I speculate, based on these results, that the structures of both human and mouse ENaC are deeply dependent on some input from the membrane.
+We know that ENaC requires PIP~2~ to open, and is opened when bound by PIP~3~ regardless of cleavage state (@sec-intro-phospholipids).
+It would not be entirely surprising, then, if other membrane features inform ENaC's folding state.
+It is possible that finding a more-stable ortholog, or one with a gating mechanism less dependent on membrane lipids, would improve the quality of the TMD, as our mouse maps have significantly better TMD density than our human maps.
 
 ### A role for the &beta;9-&alpha;4 linker in gating
 
@@ -177,7 +184,7 @@ In light of the important role this loop plays in FaNaC gating, and the conserve
 ### The acidic pocket's uncertain role in sodium self-inhibition
 
 Previous reports suggested that rearrangement of an acidic pocket in the &alpha; finger plays a key role in SSI[@kashlan2015].
-It is therefore highly surprising that this pocket does not change upon release of Na^+^.
+Our K^+^ maps are solved in the presence of sodium levels far below those known to release SSI, but the acidic pocket does not rearrange.
 However, there are species differences in ENaC SSI, and the functional work describing this acidic pocket was all performed on mouse ENaC, while our high- and low-Na^+^ models are both of human ENaC[@collier2009; @kashlan2015; @maarouf2009].
 
 In human (but not rat) ENaC, pH titration changes the magnitude of SSI but, crucially, not the K~i~ of Na^+^; a surprising result if surface-accessible acidic residues form the SSI Na^+^-binding site.

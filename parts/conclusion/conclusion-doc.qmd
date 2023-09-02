@@ -7,7 +7,7 @@ Despite its importance, little is known about the exact molecular mechanism by w
 
 Unlike ENaC, a great deal of structure/function information is available for the close relative ASIC.
 It is understandable, then, that the field has long assumed the mechanisms of these two channels are similar.
-In the "ASIC-like" model, the GRIP domain forms a wedge holds the finger and thumb apart.
+In the "ASIC-like" model, the GRIP domain forms a wedge which holds the finger and thumb apart.
 Proteolytic release of this wedge allows the finger and thumb to collapse.
 This collapse is transmitted through the palm to open a fenestration near the membrane, allowing ions to pour through the pore.
 Mutations in the ENaC palm have large effects on current in a pattern similar to that of ASIC [@chen2013; @yoder2018; @zhang2022].
@@ -24,11 +24,11 @@ In currently-available structures this acidic residue does not form hydrogen bon
 
 ENaC currents do diminish over time in the presence of high external sodium in a process called sodium self-inhibition (SSI).
 SSI is independent from Na^+^ currents and is relieved by proteolytic cleavage [@chraibi2002; @sheng06].
-SSI seems to large-scale rearrangement of the ECD, unlike ASIC desensitization [@zhang2023].
-Mutagenesis and cross-linking studies suggest that an acidic pocket comprising the finger, and &beta;-ball bind Na^+^ to close the channel [@kashlan2015; @bize07; @maarouf2009].
+SSI seems to induce a large-scale rearrangement of the ECD, unlike ASIC desensitization [@zhang2023].
+Mutagenesis and cross-linking studies suggest that an acidic pocket comprising the finger and &beta;-ball bind Na^+^ to close the channel [@kashlan2015; @bize07; @maarouf2009].
 
 The precise relationship between ENaC and ASIC's gating is, if anything, less clear as a result of the work presented in this document.
-With the highest resolution yet, detect a clear lack of movement when large-scale rearrangements are expected.
+With the highest resolution yet, we detect a clear lack of movement when large-scale rearrangements are expected.
 In the remaining space afforded to me, I will remind the reader what we've learned and wonder what it might mean for the field moving forward.
 
 ## Contrition and Contemplation
@@ -92,7 +92,7 @@ Not everyone likes structure &mdash; that's okay, there's something here for you
 I have identified several glycans which, based on their extended visibility in my maps, may serve a structural role.
 We also know, as covered in @sec-intro_mechano, that glycans are necessary for sensation of laminar shear stress.
 Electrophysiological studies of ENaCs with single asparagine mutations have not been performed by any lab, to my knowledge.
-Using my maps as a guide, it may be fruitful to investigate the sensitivity of ENaCs lacking the most visible (and, therefore, most stable) glycans to LSS.
+Using my maps as a guide, it may be fruitful to investigate the sensitivity of ENaCs lacking the most visible (presumably the most structurally constrained) glycans to LSS.
 
 Additionally, the FaNaC paper raises an interesting question: is the bulky residue in the &beta;9-&alpha;4 linker necessary for proper gating?
 Conservation of the surrounding residues and an adjacent *cis*-proline would suggest so.
