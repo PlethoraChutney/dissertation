@@ -1,0 +1,11 @@
+a,b,ident,sim
+alpha,beta,35.29,64.71
+alpha,gamma,11.76,23.53
+alpha,ASIC,11.76,29.41
+beta,gamma,0,23.53
+beta,ASIC,17.65,35.29
+gamma,ASIC,6.25,6.25
+alpha,alpha,100,100
+beta,beta,100,100
+gamma,gamma,100,100
+ASIC,ASIC,100,100

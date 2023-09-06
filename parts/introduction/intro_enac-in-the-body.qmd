@@ -18,10 +18,12 @@ This understanding is especially important when considering the limitations inhe
 
 Blood pressure must be maintained within a narrow window of acceptable values.
 Too low, and vital organs do not receive sufficient oxygen and nutrients to function, but too high and blood vessels sustain damage.
-It is not surprising, then, that the human body has evolved several mechanisms for responding to changes in blood pressure, each with their own timescale [@guyton1991].
+It is not surprising, then, that the human body has evolved several mechanisms for responding to changes in blood pressure, each with their own timescale ranging from milliseconds to weeks [@guyton1991].
 ENaC is the essential mechanism of the longest-term control, kidney excretion.
 
-In the principal cells of the kidney, sodium travels down its concentration gradient across the apical membrane via ENaC.
+![Simplified model of ENaC regulation in a principal cell of the distal nephron in the kidney.](figures/kidney-cartoon/kidney-cartoon.png){#fig-intro_kidney-reg}
+
+In the principal cells of the kidney, sodium travels down its concentration (into the cell) gradient across the apical membrane via ENaC (@fig-intro_kidney-reg).
 From there, it is transported across the basolateral membrane by the Na^+^/K^+^ ATPase.
 ENaC currents therefore induce retention of extra water to maintain the tightly controlled plasma sodium level.
 Thus, ENaC controls three essential functions of kidney filtration: first, the amount of sodium reabsorbed by the kidney; second, blood volume (and therefore pressure); and third, the amount of potassium passed from the plasma into the urine.
@@ -140,15 +142,13 @@ It therefore seems likely that ENaC is used by baroreceptors to sense blood pres
 ### ENaC in the colon
 
 ENaC plays an important role in sodium reabsorption in the colon.
-Colon expression of the &beta; and &gamma;, but not &alpha;, subunits increases in response to aldosterone treatment [@epple2000; @bertog2008].
+Colon expression of the &beta; and &gamma; subunits increases in response to aldosterone treatment, while &alpha; expression remains constant [@epple2000; @bertog2008].
 Patients with Crohn's disease, a chronic inflammatory bowel disease, have reduced sodium reabsorption in the colon, which leads to diarrhea [@sandle1990; @zeissig2008].
 Similarly, patients with ulcerative colitis have reduced ENaC expression due to inflammatory cytokines, resulting in water loss and diarrhea [@amasheh2004].
 To be clear, the colon relies on a wide array of systems to reabsorb ions and water.
 These results indicate that ENaC is one of the players in this process.
 
 ## Regulation {#sec-regulation}
-
-![Simplified model of ENaC regulation in a principal cell of the distal nephron in the kidney.](figures/kidney-cartoon/kidney-cartoon.png){#fig-intro_kidney-reg}
 
 It should come as no surprise that expression of ENaC is under tight control, given the number of important processes ENaC is implicated in.
 In this section I provide a general, by no means exhaustive review of proteins known to regulate ENaC at the expression level.
@@ -167,7 +167,7 @@ For the interested reader, Garty and Palmer's review of the complete picture of 
 Aldosterone response is divided into two phases, aptly named the early and late phases.
 In the early phase, aldosterone increases ENaC P~O~ in part via increased activity of serum and glucocorticoid-regulated kinase (SGK, @sec-intro_sgk) [@kemendy1992; @naray-fejes-toth2000].
 SGK's effect has mainly been attributed to inhibition of Nedd4-2 (@sec-intro_nedd42), while some labs also report a direct increase in ENaC P~O~ [@kellenberger98; @chen1999].
-Aldosterone also stimulates phosphatidylinositol 3-kinase (PI3K) and K-Ras, which physically couples ENaC and PI3K [@paunescu2000; @staruschenko2005].
+Aldosterone also stimulates phosphatidylinositol 3-kinase (PI3K) and K-Ras, which promotes the physical interaction of ENaC and PI3K [@paunescu2000; @staruschenko2005].
 Phospholipids have both short- and long-term effects on ENaC currents and are discussed further in @sec-intro-phospholipids.
 The majority of aldosterone's early-phase effect on sodium currents is due to increased P~O~ of existing channels, rather than delivery of new channels to the cell surface [@frindt2015].
 
@@ -188,7 +188,9 @@ Disruption of this mechanism is the most common cause of Liddle syndrome (@sec-i
 
 #### Nedd4-2 Structure
 
-Like many members of the HECT ligase family, Nedd4-2 has an N-terminal C2 domain, three or four (depending on the species) WW domains, and a C-terminal HECT domain.
+![The domains of Nedd4-2. Crystal structures for the C2 domain, WW domain, and the two flexible positions of the HECT domain from PDBs 3M7F, 4N7H, 2XBB, and 2XBF respectively.](figures/nedd4-2/nedd4-2.png){#fig-intro_nedd4-2}
+
+Like many members of the HECT ligase family, Nedd4-2 has an N-terminal C2 domain, three or four (depending on the species) WW domains, and a C-terminal HECT domain (@fig-intro_nedd4-2).
 As the astute reader has already guessed, humans also express a paralogous HECT E3 ligase, Nedd4, which does not regulate ENaC *in vivo* [@kamynina01; @snyder2004].
 It is important to note that expressing *either* of these two ligases heterologously *does* reduce ENaC currents.
 This makes evaluation of the Nedd4-2/ENaC literature complicated, as conclusions drawn from heterologous systems may not hold in the organism.
