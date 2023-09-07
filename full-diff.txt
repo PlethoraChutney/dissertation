@@ -1,0 +1,1765 @@
+===== Full Diff =====
+
+==============================
+===== ./index.qmd =====
+==============================
+
+diff --git a/index.qmd b/index.qmd
+index a90e89b..7ac7523 100644
+--- a/index.qmd
++++ b/index.qmd
+@@ -1,4 +1,54 @@
+ # Frontmatter {.unnumbered}
+ ## Acknowledgements {.unnumbered}
+ 
+-We'll get here.
+\ No newline at end of file
++It's impossible to acknowledge everyone who contributes to something like a PhD, and I won't attempt to do so.
++I will, however, mention people without whom and places without which I can be certain I would not have finished this whole thing.
++
++First, my partner, Lindsey.
++My life is brighter and my path easier because you're in it.
++
++Next, my dearest friends.
++I received some excellent advice when I was interviewing at graduate schools: "You only applied to places where the science interested you, and is of good quality. Now pay attention to the people who are here with you. You'll be spending six years with them."
++I decided to come to OHSU (which was *not* where I heard that advice) because I felt I could build a warm, kind, and supportive community here.
++I was right.
++So here is that community, presented in a computationally-randomized order.
++
++I think I would have chased a more "prestigious" school without Tuck's guidance, and for that and everything else, I am ever grateful.
++
++Ryan, what more is there to say after a literal dozen years of friendship. Thank you for being a steadfast companion, always willing to lend an ear or crack a window.
++
++Casey and Ryan, you both mean the world to me and we miss you in Portland. I try to embody your Manic Host Energy whenever I'm entertaining. See you at thanksgiving.
++
++Varchas, one of my favorite memories from the past six years is coming out into the dining room and seeing an empty box of Hi-Chews next to you at 6:30am, followed by an hour-long education in Indian politics. I cherish you.
++
++Madeleine, what a joy it is to experience a conversion from "friend's partner" to "friend". I know I can rely on you and confide in you, and I hope you feel the same for me. Thank you for encouraging me to reach, and for pushing me over the finish line. See you at Vida.
++
++John, not sure how you made it in this list. Can I still edit this?
++
++Nigel, it's hard to make friends as an adult but you make it easy.
++
++Sam and Becca (aka The Pod), you helped me survive 2020 and thrive since. Thank you for agreeing with me about Lindsey's pronunciation of \begingroup{}\symbolfont/tʃeɪz ˈlɒ̃ɡ/\endgroup{}.
++
++Thank you to Noah and Caz and especially Emlyn for some of the greatest Monday nights dice can dream of.
++
++Alexis, you inspire me to keep trying new things and to trust I can learn to be creative.
++
++Britt, the chaos you bring out in me is almost certainly good for me. Probably. I eagerly await your next midnight update on the home datacenter.
++
++Gaelen, my number one hype man. I'm waiting in the wings to get you out the door too. I'm glad I tricked you into staying in Portland.
++
++Liz, come on back to the West Coast. I'm glad you followed the science you're interested in, but I'm happier you're coming back.
++
++Of course, to get a PhD in a lab science, you do unfortunately have to do some lab work.
++I did not enjoy this, but it was made bearable by my wonderful lab mates, Sigrid, Alex, and James.
++I also want to thank Nate, Zad, and Johannes from the Gouaux lab for helping me learn both how to do science and how to work in a high-pressure environment.
++Sarah, too, deserves some accolades for being an early guinea pig for me figuring out how to teach people cryoEM.
++
++My cat, Nooch, certainly made this more difficult if anything, but it feels appropriate to at least mention her.
++
++I consider myself lucky that as I approached a committee meeting I was more anxious about making Jonathan, Swetha, Dave, and Steve proud than about how they'd treat me.
++Thank you all for your kindness and guidance.
++Steve deserves special mention for helping me through the last year or so of the process and making sure I never read *too* deeply into my garbage TMD maps.
++
++Finally, thank you to Shoofly and Honey Latte, where I wrote my dissertation and defense seminar.
++All told, it took me $624.43 of coffee, pastries, and breakfast burritos to write this document.
+\ No newline at end of file
+
+==============================
+===== ./parts/overview.qmd =====
+==============================
+
+diff --git a/parts/overview.qmd b/parts/overview.qmd
+new file mode 100644
+index 0000000..8104fe1
+--- /dev/null
++++ b/parts/overview.qmd
+@@ -0,0 +1,118 @@
++# ENaC - An Overview {.unnumbered}
++
++Structural biology is ultimately the study of particular domains and residues, but this knowledge most interesting and useful in the context of physiological processes.
++As such, it can be difficult to order the chapters of an introduction.
++Placing the structure before the function grounds discussion of mutations and disease, but leaves the structure unmoored from biomedical relevance.
++Conversely, placing function first leaves the reader without a clear understanding of which domains are important for which reasons, which is vital for a focused discussion of the protein.
++
++To dodge the question of which is the cart and which is the course, I present here an exceedingly brief (and less heavily cited) discussion of ENaC structure and function.
++Everything covered here is covered in more detail in the Introduction.
++ENaC biology is discussed in @sec-intro_physiology, while details on the ENaC/DEG family and ENaC structure can be found in @sec-intro_as-a-channel.
++
++## A bit of ion channel terminology
++
++Ion channels are essential components of cellular life, present in everything from bacteria on up to humans.
++The minimal ion channel spans the lipid bilayer and allows ions to flow through a pore down their concentration gradient.
++We can measure the flow of ions through a single channel as a current (called the *unitary current*).
++
++However, most ion channels have some mechanism by which the flow of ions can be controlled.
++We thus say an ion channel can be "open" or "closed", i.e., it can allow ions to flow through itself or not.
++This process is called *gating*, and is most often controlled by either voltage (voltage-gated ion channels) or some ligand (ligand-gated ion channels).[ENaC is a bit unique in that the ligand is a part of the channel itself, but that's beside the point]{.aside}
++
++We can further quantify a channel's "openness" by how much time it spends in the open state vs. the closed state.
++A channel with an *open probability* (P~O~) of 0.75 spends approximately 75% of its time in the open state and 25% of its time in the closed state.
++
++Open probability and unitary currents are both properties of *single channels*.
++Groups of channels (for instance, all of the channels in a cell) do not have a measurable P~O~, since the group will not be homogeneous.
++
++For instance, say there is a collection of 100 ion channels.
++Twenty of those channels are bound to ligand, and seventeen of those channels are open.
++Eighty channels are not bound to ligand, and twenty-two of those channels are open.
++Do we only consider the ligand-bound channels, making the P~O~ $\frac{17}{20}$?
++Or maybe we should consider only the apo channels, making it $\frac{22}{80}$?
++Or perhaps we consider the whole population: $\frac{39}{100}$?
++Or is it maybe the mean P~O~ of both groups,  $\frac{\frac{17}{20} + \frac{22}{80}}{2}$?
++
++In practice, we'd probably describe this set of 100 channels as two populations: the open population with a P~O~ of 0.85 and the closed population with a P~O~ of 0.275.
++Ligand binding would move a channel from the closed to the open population, and ligand dissociation would move it back to the closed population.
++
++Typical electrophysiology experiments measure the *macroscopic current*: how many ions flow through all of the channels of a given type in a cell.
++This is represented as *I*, with the current due to a particular ion, e.g., sodium as *I~Na^+^~*.
++Ion channels are often selective for a particular ion or set of ions.
++For instance, a sodium-specific ion channel will allow Na^+^ but not other ions through, while a cation-selective channel will allow Ca^2+^ and K^+^ but not Cl^-^.
++Macroscopic current is affected by the number of channels in each gating state, the P~O~ of those states, the unitary current of the open channels, and the number of channels in the membrane (*N*).
++Further review is available from Hille or Ackerman and Clapham [@hille2001; @ackerman1997].
++
++## The ENaC/DEG family
++
++The epithelial sodium channel (ENaC) is, perhaps obviously, a member of the ENaC/DEG family of ion channels.
++These channels are trimeric, pass cationic currents, are voltage-insensitive, and are inhibited by the small molecule amiloride (and its derivatives).
++Amiloride blocks current through ENaC/DEG channels by binding a surface in the extracellular to the selectivity filter and blocking the pore.
++
++The overall topology of these channels is similar, with the greatest sequence (and, presumably, structural) diversity found in the distal ECD (furthest from the membrane).
++Current structural study suggests a conserved overall gating mechanism as well.
++
++Aside from ENaC, the best-studied members of the ENaC/DEG family are the eponymous degenerin (DEG) channel and the acid-sensing ion channel, ASIC.
++DEG is expressed in *C. elegans* and is involved in mechanosensation.
++ASIC is expressed in a variety of organisms (including humans) and opens in response to acidic extracellular conditions.
++ASIC has by far the best-described structure of the family.
++
++
++## ENaC Structure
++
++![An overview of ENaC structure. Everything except the TMD is collectively called the ExtraCellular Domain (ECD).](introduction/figures/domain-cartoon/enac-overview.png)
++
++ENaC is a triheteromeric ion channel comprising three subunits, the &alpha;, &beta;, and &gamma; subunits.[For most figures in this document, I color the &alpha; subunit blue, the &beta; subunit red, and the &gamma; subunit magenta.]{.aside}
++Each subunit shares an overall similar topology, and so I describe them here without reference to a specific one.
++
++The transmembrane domain, or **TMD**, contains the pore and selectivity filter.
++The extracellular domain, or **ECD**, contains domains important for regulating open probability (P~O~) and other functional characteristics.
++There are also short intracellular N- and C-terminal tails which regulate surface expression.
++
++The ECD is further subdivided into six domains, named after the parts of a hand.
++The **palm** and **&beta;-ball** form a rigid backbone and make the plurality of the contacts with the other subunits.
++The **knuckle**, **finger**, and **thumb** likely move during channel gating and contain important glycosylation sites.
++
++The **GRIP** domain is unique to ENaC.
++ENaC opens when the GRIP domain is excised from the channel.
++The canonical proteases responsible for channel opening are: furin, which cuts the &alpha; subunit twice and &gamma; subunit once; and prostasin, which cuts the &gamma; subunit again.
++
++![An exaggerated model of ENaC opening. **Left**: an uncleaved subunit. **Right**: after GRIP is removed from the channel, the finger and thumb collapse together, pulling the TMD away from the pore axis and opening a fenestration.](../figures/other/opening-model.png)
++
++Removal of the GRIP domain is thought to allow the finger and thumb to collapse together.
++This movement is coordinated with movement of the palm away from the pore axis, which in turn opens a fenestration just above the membrane.
++Ions enter at this fenestration and pass down a pore formed by the second transmembrane helix, TM2.
++
++Along this pore, ions larger than sodium are filtered out by size.
++It is thought that this selectivity filter is formed by a three-residue loop connecting swapped domains of TM2, but an un-swapped conformation is also possible.
++
++The above summary of ENaC's presumed gating mechanism is based largely off cross-linking electrophysiology studies and ASIC's well-described gating mechanism.
++In ASIC, protons allow for finger/thumb collapse (recall that ASIC does not have a GRIP domain).
++However, ASIC rapidly desensitizes and ENaC does not.
++
++## ENaC Function and Regulation
++
++The regulation and function of ENaC in the body is not entirely understood, but broadly, ENaC functions as the rate-limiting step of sodium reabsorption in tissues which express it.
++Thus, control of ENaC expression also controls water retention and reabsorption in those tissues.
++
++![Function and regulation of ENaC in the kidney. Each component is covered in more detail in @sec-regulation, but the essential observation is that ENaC is the rate-limiting step in sodium reabsorption.
++](introduction/figures/kidney-cartoon/kidney-cartoon.png)
++
++ENaC is best studied in the kidney, where it plays a pivotal role in blood pressure regulation.
++When the kidney detects reduced blood pressure, it initiates a cascade which results in increased circulating levels of the mineralocorticoid hormone aldosterone.
++Aldosterone increases overall expression of ENaC, the proportion of ENaC at the cell surface, and the proportion of channels which are open (i.e., have an excised GRIP domain).
++For more detail on aldosterone and ENaC regulation in the kidney, see @sec-intro_aldosterone.
++
++:::{.content-visible unless-format="docx"}
++![Aldosterone](/figures/aldosterone.svg){.aside}
++:::
++
++Cells with more ENaC at the surface allow more sodium to pass from the lumen to the interstitial fluid.
++This in turn results in increased water retention, thus raising blood volume and pressure.
++
++Since the channel is activated primarily by proteolysis, ENaCs cannot close again once opened.
++Open channels are tagged for retrieval from the plasma membrane and degradation via ubiquitination on the N-termini each of the three subunits.
++Additionally, ENaC is sensitive to membrane composition and requires PIP~2~ to open.
++
++This is, I believe, enough of a background to move on to a full introduction of the topics covered in the remaining document.
++The reader is also encouraged to check the glossary for unfamiliar terms and abbreviations.
+\ No newline at end of file
+
+==============================
+===== ./parts/introduction/intro_enac-as-a-channel.qmd =====
+==============================
+
+diff --git a/parts/introduction/intro_enac-as-a-channel.qmd b/parts/introduction/intro_enac-as-a-channel.qmd
+index adefcc0..53eb87c 100644
+--- a/parts/introduction/intro_enac-as-a-channel.qmd
++++ b/parts/introduction/intro_enac-as-a-channel.qmd
+@@ -4,6 +4,51 @@ In this chapter I begin with an overview of ENaC electrophysiology.
+ From there, I move into a discussion of current knowledge about ENaC's structure/function relationships.
+ Finally, I provide a brief overview of proteins which directly modify ENaC's electrophysiological properties (rather than expression levels, which are covered in @sec-regulation).
+ 
++## ASIC
++
++ENaC is a member of the ENaC/DEG superfamily of sodium-selective ion channels.
++These ion channels share a common ancestor as far back as Cnidaria and, as their long evolutionary history might imply, fill a wide variety of roles in the organisms that express them [@aguilar-camacho2023].
++The structures of ENaC/DEG family members solved so far also hold to a common topology: the ion channels are trimeric, with large extracellular domains, two transmembrane helices per subunit, and short intracellular tails.
++
++The member of this family of which we have the greatest structural understanding is the acid-sensing ion channel (ASIC).
++All of the gating states of this channel have been solved, and a great deal is known about its gating mechanism and the conformational changes associated with channel opening, desensitization, and closing.
++Since existing functional study of ENaC suggests similar conformational changes, most researchers assume that the conformational changes associated with ENaC's gating mechanism will be similar.
++In this section I provide the reader with a brief introduction to ASIC and important similarities and differences between it and ENaC.
++
++The ASICs are themselves a family of ion channels, and the properties of each channel differ slightly from the others.
++There is also evidence that different ASIC proteins can form heterotrimeric ASIC channels.
++However, the only ASIC for which we have structural information is ASIC1a, and so I refer to that channel as ASIC for the rest of this document.
++I will explicitly refer to the ASIC family as necessary.
++
++### Gating
++
++![An overview of ASIC's gating mechanism. The channel starts in a resting state (top), with a de-protonated acidic pocket. This conformation holds the finger and thumb apart. When a proton bonds, the channel enters the open state (bottom right). Collapse of the finger and thumb causes conformational shifts of the palm and TMD, opening the fenestration and allowing the channel to pass current. The channel rapidly desensitizes (bottom left). The palm and TMD return to a closed conformation, while the finger and thumb remain protonated and in the same conformation as the open state.](figures/asic-mech/asic-mechanism.png){#fig-intro_asic-mechanism}
++
++ASIC's gating cycle involves three states: resting, open, and desensitized (@fig-intro_asic-mechanism).
++ASIC opens when its extracellular domain is exposed to acidic solution, with a half-maximum activation at pH 5.8 [@hesselager2004].
++This peak current then desensitizes with a time constant of 0.64 &mdash; a marked difference from ENaC currents, which do not desensitize.
++
++![ASIC's acidic pocket. Protonation of the acidic pocket collapses the finger and thumb, which propagates to an opening of the fenestration. **Left**: an overview of ASIC, with the acidic pocket highlighted. **Right**: a stereo view comparison of the acidic pocket between resting (grey, 5WKV) and open (white, 4NTW) states. Note that, once protonated, Asp 238 moves 7&nbsp;&Aring; to form interactions with the thumb.](figures/acidic-pocket-residues/acidic-pocket-residues.png){#fig-intro_asic-acidic-pocket}
++
++Protons open the channel by binding an acidic pocket located between the finger, thumb, and &beta;-ball domains (@fig-intro_asic-acidic-pocket).
++Binding of protons to titratable residues in this pocket result in the collapse of the finger and thumb.
++This collapse is in turn propagated through the thumb and palm to the TMD, which rotates and translates about the pore axis (@fig-intro_asic-mech-distances).
++This movement opens a fenestration just above the cell membrane, through which ions enter the pore (@fig-intro_asic-fenestration).
++
++![A diagram of ASIC's gating conformational changes. When resting ASIC (grey)are protonated (white), the finger and thumb collapse (right). This movement is coordinated with the movement of the lower palm and TMD away from the pore axis, which opens the extracellular fenestration (left).](figures/asic-mech-distances/asic-mech-distances.png){#fig-intro_asic-mech-distances}
++
++![The fenestration in ASIC. Membrane is for illustration purposes only and is not based on actual structural data. PDB: 4NTW.](figures/asic-fenestration/asic-fenestration.png){#fig-intro_asic-fenestration}
++
++The pore is lined by the second transmembrane helix from each subunit.
++Approximately two-thirds of the way down the pore, the helix breaks and short loop connects a domain swap to the adjacent TM2 helix (@fig-intro_asic-gas-belt).
++This loop, called the GAS belt due to its one-letter code sequence, forms the selectivity filter of ASIC.
++
++![The GAS belt of ASIC. **Left**: an overview of ASIC highlighting the domain swap. The three subunits are identical, but colored in shades of grey for clarity. **Right**: the GAS belt viewed from the extracellular side. Note that the alanine side chain points away from the pore. Only the final residue for the TM2 helix before the swap is shown to improve visibility of the GAS belt, but observe that the swapped TM2 helix continues the same trajectory as the upper half.](figures/asic-gas-belt/asic-gas-belt.png){#fig-intro_asic-gas-belt}
++
++Unlike ENaC, ASIC desensitizes.
++Rapidly upon opening, a short loop in ASIC's palm flips to a desensitized conformation, which decouples the ECD and TMD.
++Thus, the ECD remains proton-bound and open, while the TMD returns to a closed conformation and obstructs the fenestration, preventing ions from passing through.
++
+ ## ENaC Electrophysiology
+ 
+ ENaC currents are characterized by high Na^+^/K^+^ selectivity, high affinity for amiloride, and a desensitization-like process called sodium self-inhibition (SSI).
+@@ -17,7 +62,7 @@ ENaC is highly selective for Na^+^ over K^+^, with an estimated I~Na^+^~/I~K^+^~
+ The precise number depends on the study, since potassium currents through ENaC are often difficult to detect at all.
+ ENaC does not pass appreciable H^+^ currents until the extracellular solution reaches a pH of 5 or lower [@palmer1984].
+ 
+-Ions enter the channel through a fenestration just outside the membrane and travel down a pore formed by the second transmembrane helices of all three subunits [@kellenberger1999a; @li2003].
++Ions enter the channel through a fenestration just outside the membrane and travel down a pore formed by the second transmembrane helices of all three subunits, just as in ASIC [@kellenberger1999a; @li2003].
+ As discussed further in @sec-intro_conduction-tmd, ENaC's selectivity filter is composed of a triplet of residues in a domain-swapping loop between adjacent transmembrane helices.
+ Based on structures of related channels, this domain swap is expected to occur approximately halfway through the membrane [@baconguis2014].
+ The third residue of the &alpha; loop (a serine) plays an outsize role in determining channel selectivity [@kellenberger2001].
+@@ -32,17 +77,16 @@ The ENaC/DEG family of ion channels are all inhibited (to varying degrees) by th
+ Amiloride has the highest affinity for ENaC, with an IC~50~ of about 100&nbsp;nM.
+ More hydrophobic derivatives (e.g., benzamil or phenamil) bind approximately ten times tighter, indicating that amiloride binds ENaC at a hydrophobic patch (amiloride derivatives are reviewed well by Kleyman and Cragoe [@kleyman1988]).
+ 
+-Amiloride binds just above the selectivity filter in a voltage-dependent manner [@kellenberger1999a; @palmer1985].[Amiloride binding is reduced in high-K^+^ solutions, perhaps due to K^+^ getting "stuck" at the selectivity filter [@palmer1984].]{.aside}
++Amiloride binds just above (i.e., extracellular to) the selectivity filter in a voltage-dependent manner [@kellenberger1999a; @palmer1985].[Amiloride binding is reduced in high-K^+^ solutions, perhaps due to K^+^ getting "stuck" at the selectivity filter [@palmer1984].]{.aside}
+ Some mutagenesis studies indicate that amiloride interacts primarily with the &beta; and &gamma; subunits, while others (and evolutionary analysis) are more consistent with an extended interaction surface including the &alpha; subunit [@schild1997; @kellenberger1999a; @li2003].
+ Studies with sulfhydryl reagents suggest that the binding surface is only accessible when the channel is in the open state [@li2003].
+-Zinc also inhibits the channel by binding the same region of the channel as amiloride (albeit with a much lower affinity) [@schild1997].
+ 
+ ### P~O~ and sodium self-inhibition
+ 
+ ENaCs are characterized by long dwell times in both the open and closed states and a low likelihood of switching states [@palmer1986].
+ Proteolytic cleavage of the extracellular domain of the channel pushes the channel from a state with a P~O~ of nearly zero to a constitutively open state [@bruns07].
+ Conversely, intracellular acidification and Ca^2+^ both reduce channel P~O~ [@palmer1987; @chalfant1999].
+-Unlike the related channel ASIC, ENaC does not sense extracellular pH.
++Unlike the related Acid Sensing Ion Channel (ASIC), ENaC is not directly opened by changes in extracellular pH.
+ 
+ As they do not have a ligand *per se*, ENaCs do not desensitize in the traditional sense.
+ Steady-state macroscopic currents are, however, lower than peak currents [@fuchs77].
+@@ -50,13 +94,13 @@ This reduction in sodium current on the scale of seconds is called sodium self-i
+ 
+ SSI reduces ENaC currents as a direct result of extracellular Na^+^ concentrations, not the currents themselves [@chraibi2002].
+ Lower temperatures reduce the magnitude of SSI, resulting in greater steady-state ENaC currents [@chraibi2002; @askwith2001].
+-These findings, together with earlier kinetic work, suggest a gating model involving a single open and single closed state [@palmer1986; @eaton1990].
++ENaC is believed to have only a single open and single closed state [@palmer1986; @eaton1990].
+ 
+-As discussed in @sec-intro_proteolysis, ENaC is activated by proteolytic removal of a portion of its extracellular domain called the GRIP domain.
++As discussed in @sec-intro_proteolysis, ENaC is activated by proteolytic removal of a portion of its extracellular domain called the Gating Relief of Inhibition by Proteolysis (GRIP) domain.
+ This increase in current is a result of SSI relief [@chraibi2002; @sheng06].
+ It is reasonable to expect, then, that the sodium-binding site is composed at least in part by the GRIP domain.
+ Indeed, an acidic pocket fits this description and binds as-yet-unidentified ions [@kashlan2015; @noreng20].
+-SSI is also the mechanism by which extracellular pH regulates ENaC [@collier2009].
++While extracellular pH does not open ENaC, more acidic extracellular solutions reduce SSI magnitude, resulting in a larger steady-state current [@collier2009].
+ More basic extracellular solutions result in greater SSI magnitude and therefore lower steady-state currents.
+ 
+ Surprisingly, despite its effect on SSI magnitude, pH does not influence Na^+^ K~i~.
+@@ -65,10 +109,10 @@ Additionally, the effect of pH on SSI magnitude seems to be species-dependent, f
+ 
+ ## ENaC Structure {#sec-intro_structure}
+ 
+-![ENaC viewed from outside the cell (top) and parallel to the membrane (bottom). The TMD is not modeled here. This model includes Fabs used to break the channel pseudosymmetry. They are not part of ENaC. PDB: 6WTH.](figures/blender-ENaC/blender-enac.png){#fig-intro_blender-enac}
++![ENaC viewed from outside the cell (top) and parallel to the membrane (bottom). The TMD is not modeled here. This model includes two Fabs used to break the channel pseudosymmetry, one which binds &alpha; ENaC and one which binds &beta;. They are not part of ENaC. PDB: 6WTH.](figures/blender-ENaC/blender-enac.png){#fig-intro_blender-enac}
+ 
+-ENaC is a heterotrimeric protein comprising one copy each of &alpha;ENaC, &beta;ENaC, and &gamma;ENaC arranged clockwise when viewed from the extracellular side (@fig-intro_blender-enac) [@canessa1994; @noreng18].
+-Each subunit is approximately 30% identical to the others, and all three share a topology common to the entire ENaC/DEG family.[This is only marginally higher than the approximately 25% identity they each have with related channel ASIC1.]{.aside}
++ENaC is a heterotrimeric protein comprising one copy each of &alpha;ENaC, &beta;ENaC, and &gamma;ENaC arranged counterclockwise when viewed from the extracellular side (@fig-intro_blender-enac) [@canessa1994; @noreng18].
++Each subunit is approximately 30% identical to the others, and all three share a topology common to the entire ENaC/DEG family.[This is only marginally higher than the approximately 25% identity they each have with related channel ASIC1. The subunits are approximately 50% similar to each other and 30% similar to ASIC1.]{.aside}
+ In this section, I will cover structure/function relationships for the two main sections of ENaC: the extracellular and transmembrane domains (ECD and TMD, respectively).
+ 
+ I will also make extensive analogy to a closely related channel, the acid-sensing ion channel (ASIC).
+@@ -95,15 +139,15 @@ Aldosterone rarely induces expression of all three channels equally.
+ More strikingly, the regulatory protein SPLUNC1 binds to &beta;ENaC in the lumen and induces internalization of &alpha;- and &gamma;- (but *not* &beta;-) ENaC [@kim18].
+ It is not clear how a small (26&nbsp;kDa), secreted protein could separate &beta;ENaC from the &alpha; and &gamma; subunits on its own.
+ Indeed, the same study indicates that &beta;ENaC becomes less mobile upon SPLUNC1 binding, suggesting coupling to other, larger proteins.
+-A deeper investigation of the various chaperones and processes involved in ENaC assembly and dissociation would be interesting but is outside the scope of this work.
++A deeper investigation of the various chaperones and processes involved in ENaC assembly and dissociation would be interesting but, unfortunately, there is only a small body of existing literature on the topic.
+ For our purposes, ENaC is the &alpha;&beta;&gamma; heterotrimer.
+ 
+-### Functional Domains
++### Functional Domains {#sec_intro-enac-domains}
+ 
+ ![Cartoon representation of an ENaC subunit. Each domain is labeled, and important functions are noted next to the labels.](figures/domain-cartoon/enac-overview.png){#fig-intro_domain-cartoon}
+ 
+-Each subunit has short intracellular N- and C-terminal tails, two transmembrane helices (TM1 and TM2, which together form the transmembrane domain, TMD), and a relatively large extracellular domain (ECD), which is further subdivided into domains named for their vague resemblance to a left hand grasping a ball (@fig-intro_domain-cartoon).
+-All told, the &alpha;, &beta;, and &gamma; subunits are 75, 72, and 74&nbsp;kDa respectively.
++Each subunit has a mass of approximately 75&nbsp;kDa, with short intracellular N- and C-terminal tails and two transmembrane helices (TM1 and TM2, which together form the transmembrane domain, TMD).[The &alpha;, &beta;, and &gamma; subunits are 75, 72, and 74&nbsp;kDa respectively.]{.aside}
++The extracellular domain (ECD) comprises the bulk of the protein (approximately 50&nbsp;kDa), which is further subdivided into domains named for their vague resemblance to a left hand grasping a ball (@fig-intro_domain-cartoon).
+ Uncleaved channels typically run a bit higher (between 90 and 120&nbsp;kDa) on SDS-PAGE due to SDS binding and extensive glycosylation (@sec-intro_glycosylation).
+ 
+ #### Scaffolding &mdash; the palm, &beta;-ball, and knuckle
+@@ -120,6 +164,7 @@ When ASIC opens, the palm pivots around the &beta;-ball (orange) and moves inwar
+ This movement is coupled to the TMD, opening the pore.
+ The same overall mechanism is expected in ENaC and has support from cross-linking studies [@zhang2023].
+ The &alpha; and &beta; palm domains and the &alpha; knuckle also host glycosylation sites which are required for mechanosensitive gating (@sec-intro_mechano).
++Unfortunately, the research on ENaC glycosylation is relatively scant, and not much is known about tissue- or organism-specific glycosylation patterns.
+ 
+ In ASIC, the knuckle is largely uninvolved in gating and is considered a rather inert part of the palm/knuckle scaffold.
+ In contrast, ENaC's knuckle is an important source of heterogeneity between the three subunits.
+@@ -148,7 +193,8 @@ Indeed, the Kleyman laboratory has identified short segments of the GRIP domain
+ These peptides are part of the P1 strand of the GRIP domain and pack tightly against the remaining GRIP domain, &alpha;2 of the finger domain, and the upper edge of the thumb.
+ 
+ We have hypothesized that cleavage and subsequent removal of the P3 strand releases P1 and, therefore, decouples the finger and thumb [@noreng20].
+-From here, we and others have assumed that the gating mechanism is more-or-less that of ASIC: the finger and thumb collapse, and their movement pulls the palm and TMD away from the pore axis.
++From here, we and others have assumed that the gating mechanism is more-or-less that of ASIC: the finger and thumb collapse, and their movement pulls the palm and TMD away from the pore axis (@fig-intro_asic-mech-distances).
++However, without a map and model of the open and closed channels, we cannot rule out other mechanisms.
+ 
+ The new results from FaNaC call this assumption into question [@valeriakalienkova2023].
+ The finger and thumb do *not* collapse in FaNaC.
+@@ -168,15 +214,13 @@ ASIC and ENaC both have bulky residues (tryptophan and tyrosine, respectively) i
+ No map  of ENaC has reliable density for the transmembrane domain.
+ Nevertheless, we can infer a great deal from electrophysiological studies of ENaC and maps of other members of the ENaC/DEG family, mostly the well-studied ASIC.
+ 
+-ASIC's gating cycle comprises three states: resting, open, and desensitized.
++ASIC's gating cycle comprises three states: resting, open, and desensitized (@fig-intro_asic-mechanism).
+ The pore of the first solved structure of ASIC was asymmetric, but this truncated crystallization construct did not conduct sodium currents [@jasti07].
+ Subsequent structures of ASIC show symmetric pores throughout its gating cycle.
+ 
+ In the resting state of ASIC, negative charges clustered in the acidic pocket (formed by the finger, thumb, and &beta;-ball) hold the finger and thumb apart.
+ The separation of the thumb from the finger pushes the palm inward, holding the channel in a position which obstructs its lateral gate.
+ 
+-![The fenestration in ASIC. Membrane is for illustration purposes only and is not based on actual structural data. PDB: 4NTW.](figures/asic-fenestration/asic-fenestration.png){#fig-intro_asic-fenestration}
+-
+ When ASIC encounters low extracellular pH, the residues in the acidic pocket are protonated.
+ This relieves electrostatic repulsion and allows the finger/thumb interface to collapse, pulling the palm and TMD inward and opening a lateral fenestration just above the membrane (@fig-intro_asic-fenestration) [@baconguis2014].
+ 
+@@ -205,7 +249,7 @@ The HG motif supports the GAS belt through several hydrogen bonds and hydrophobi
+ 
+ Unlike ENaC, ASIC desensitizes.
+ In desensitized ASICs, the &beta;11-&beta;12 linker in the palm domain is flipped toward the channel center [@baconguis2012].
+-This decouples the still-collapsed finger and thumb domains from the lower palm and TMD, allowing the fenestration to close.
++This decouples the still-collapsed finger and thumb domains from the lower palm and TMD, allowing the fenestration to close (@fig-intro_asic-mechanism).
+ In essence, the desensitized channels have an open ECD but a closed TMD.
+ As ENaCs do not desensitize, the role of this linker is likely different.
+ However, the linker sequence is highly conserved between ASIC and ENaCs, and an L&rarr;Q mutation results in a significant increase in current [@chen2013].[There is a conspicuous A&rarr;D/E mutation between ASIC and ENaC, but this acidic residue does not form any obvious associations in models solved thus far.]{.aside}
+@@ -246,7 +290,9 @@ Furin plays a role in a vast array of biological processes including ENaC activa
+ 
+ Both furin and prostasin are enteropeptidases which cleave following polybasic tracts (i.e., stretches of amino acids with multiple Lys or Arg residues).
+ Both &alpha;ENaC and &gamma;ENaC have canonical cleavage sites in their GRIP domains which open the channel (@sec-intro_structure-gating) [@hughey2004].
+-Unfortunately, these sites are in regions we have not yet been able to model.
++Current research suggests that, during channel activation, furin cuts &alpha; twice and &gamma; once, while prostasin cuts &gamma; once.
++
++Unfortunately, these sites are in regions we have not yet been able to resolve.
+ The relative changes in P~O~ resulting from each cleavage event is still unclear, and seems to be tissue dependent[@hughey2004; @bruns07; @caldwell2005].
+ In addition to prostasin, &gamma;ENaC is also cleaved and activated by a wide repertoire of different proteases in different tissues [@adebamiro2007; @garcia-caballero2008; @caldwell2005; @garcia-caballero2011; @haerteis2012; @ji2015; @passero2012; @passero2008; @patel2012; @svenningsen2009; @tan2014].
+ 
+@@ -273,9 +319,10 @@ Cholesterol alone does not activate the channel, but it does facilitate the inte
+ This interaction is absolutely required for ENaC opening.
+ 
+ Treatment of inside-out patches with phosphatidylinositol bisphosphate (PIP~2~) increases ENaC P~O~ within seconds, and P~O~ is reduced again upon PIP~2~ removal, ruling out the possibility of PIP~2~-induced proteolytic cleavage [@ma2002; @pochynyuk2006].
+-Similarly, no change in channel number is observed in these experiments PIP~2~.
++Similarly, no change in channel number is observed in these experiments.
+ A correlation between ENaC currents and PIP~2~ levels is also observed in mouse trachea [@kunzelmann2005].
+-Note that PIP~2~ only augments ENaC currents up to a point than is necessary does not result in greater ENaC currents &mdash; that is, a lack of PIP~2~ reduces ENaC currents but PIP~2~ does not itself potentiate them [@markadieu2004].
++Note that PIP~2~ only augments ENaC currents up to a point &mdash; more PIP~2~ than is necessary does not result in greater ENaC currents.
++Put another way, a lack of PIP~2~ reduces ENaC currents but PIP~2~ does not itself potentiate them [@markadieu2004].
+ 
+ Unlike PIP~2~, phosphatidylinositol triphosphate (PIP~3~) does augment ENaC currents both directly and via a signaling cascade.
+ In its immediate effect, PIP~3~ binds &gamma;ENaC just after the second transmembrane domain to rapidly open the channel [@markadieu2004; @tong2004b; @pochynyuk2005].[Interestingly, mutation of negatively-charged residues in the &gamma;ENaC PIP~3~ binding site increases ENaC currents both with *and* without PIP~3~ [@pochynyuk2005].]{.aside}
+
+==============================
+===== ./parts/introduction/intro_enac-in-the-body.qmd =====
+==============================
+
+diff --git a/parts/introduction/intro_enac-in-the-body.qmd b/parts/introduction/intro_enac-in-the-body.qmd
+index f820d97..498ba1b 100644
+--- a/parts/introduction/intro_enac-in-the-body.qmd
++++ b/parts/introduction/intro_enac-in-the-body.qmd
+@@ -1,4 +1,4 @@
+-# ENaC Physiology and Regulation
++# ENaC Physiology and Regulation {#sec-intro_physiology}
+ 
+ As a guide to the importance of ENaC for human health, I will begin with a background in the physiological functions of the channel.
+ @sec-intro_as-a-channel provides a deeper investigation of ENaC's structure/function relationships.
+@@ -18,10 +18,12 @@ This understanding is especially important when considering the limitations inhe
+ 
+ Blood pressure must be maintained within a narrow window of acceptable values.
+ Too low, and vital organs do not receive sufficient oxygen and nutrients to function, but too high and blood vessels sustain damage.
+-It is not surprising, then, that the human body has evolved several mechanisms for responding to changes in blood pressure, each with their own timescale [@guyton1991].
++It is not surprising, then, that the human body has evolved several mechanisms for responding to changes in blood pressure, each with their own timescale ranging from milliseconds to weeks [@guyton1991].
+ ENaC is the essential mechanism of the longest-term control, kidney excretion.
+ 
+-In the principal cells of the kidney, sodium travels down its concentration gradient across the apical membrane via ENaC.
++![Simplified model of ENaC regulation in a principal cell of the distal nephron in the kidney.](figures/kidney-cartoon/kidney-cartoon.png){#fig-intro_kidney-reg}
++
++In the principal cells of the kidney, sodium travels down its concentration (into the cell) gradient across the apical membrane via ENaC (@fig-intro_kidney-reg).
+ From there, it is transported across the basolateral membrane by the Na^+^/K^+^ ATPase.
+ ENaC currents therefore induce retention of extra water to maintain the tightly controlled plasma sodium level.
+ Thus, ENaC controls three essential functions of kidney filtration: first, the amount of sodium reabsorbed by the kidney; second, blood volume (and therefore pressure); and third, the amount of potassium passed from the plasma into the urine.
+@@ -44,7 +46,7 @@ Mouse models of Liddle syndrome complicate the situation somewhat.
+ Mice with homozygous mutant Liddle &beta;ENaC fed a normal salt diet do not develop the characteristic high blood pressure, low potassium, and acidosis as humans do [@pradervand1999].
+ These phenotypes only develop with a high-salt diet.
+ Moreover, these mice are still able to retrieve ENaC from the cell surface in the colon (unlike human Liddle patients) [@bertog2008].
+-It is thus not clear that the mouse model of Liddle syndrome is fully applicable to the human disease.
++It is thus not clear that the mouse model of Liddle syndrome is fully applicable to the human disease.[This may be due to incomplete penetrance of the mutant gene or differences in human and mouse Nedd4-2 function. For instance, if mouse Nedd4-2 does not require both the &beta; and &gamma; PY motifs, the channels could still be retrieved from the membrane.]{.aside}
+ 
+ Loss-of-function mutations also cause severe phenotypes.
+ Type 1 pseudohypoaldosteronism (PHA1) was first described in a severely dehydrated infant who did not respond to aldosterone treatment [@cheek1958].
+@@ -67,7 +69,7 @@ Patients with CF also lose salt but, unlike patients with PHA1, the causative mu
+ Pathogenic CFTR mutations dramatically reduce chloride permeability, resulting in poor reabsorption of Cl^-^ in the lungs [@quinton1983].
+ Reduced chloride absorption increases the absorption of sodium to maintain electrostatic balance.
+ The cells then absorb more water to maintain osmolarity.
+-This, in turn, dehydrates and thickens the ASL, which damages the underlying tissue and prevents mucous clearance [@zabner1998; @randell2006; @button2012].
++This, in turn, dehydrates and thickens the airway surface liquid (ASL), which damages the underlying tissue and prevents mucous clearance [@zabner1998; @randell2006; @button2012].
+ 
+ The interplay between CFTR and ENaC in CF patients is complicated and not fully understood.
+ Treatment of normal, but not CF, lung epithelia with amiloride augments Cl^-^ transport [@knowles1983].
+@@ -75,12 +77,14 @@ Cells co-expressing CFTR and ENaC show smaller ENaC currents than do cells expre
+ Mice which overexpress &beta;ENaC in the airway show CF-like symptoms, including reduced airway liquid height and mucous clearance [@mall2004].[Interestingly, mice overexpressing the &alpha; or &gamma; subunits did not show CF-like symptoms. The authors point to prior research showing that &alpha;&beta;-only channels have a higher P~O~ than &alpha;&beta;&gamma; [@fyfe1998].]{.aside}
+ It would seem that the function of the two ion channels is linked both by electrochemical gradients and potentially other regulatory partners.
+ 
+-The picture turns out not to be so neat.
+-Double-mutant mice which overexpress &beta;ENaC and CFTR have normal Cl^-^ secretion but neither a concomitant decrease in Na^+^ absorption nor a rescue of the CF-like phenotype [@grubb2012].
+-Additionally, Liddle syndrome patients have increased sodium absorption throughout their body but neither they nor Liddle syndrome mice develop lung disease [@mall2010].
+-Human patients with *reduced* &beta;ENaC function develop CF-like phenotypes of lung infection and elevated sweat chloride, but PHA1 patients produce excessive airway liquid without infection [@sheridan2005; @kerem1999].
++The relationship between ENaC-mediated Na^+^ absorption and CF or CF-like disease turns out not to be so neat.
++In mice which overexpress &beta;ENaC and CFTR, one would expect the CF-like symptoms from increased &beta;ENaC expression to be rescued by increased Cl^-^ secretion.
++In actuality, said mice exhibit neither of these traits [@grubb2012].
++Additionally, Liddle syndrome patients have increased sodium absorption in all ENaC-expressing tissues but neither they nor Liddle syndrome mice develop CF-like lung disease [@mall2010].
++In the opposite pattern of the mouse models, human patients with *reduced* &beta;ENaC function develop CF-like phenotypes of lung infection and elevated sweat chloride [@sheridan2005].
++More confusingly, PHA1 patients (which have reduced ENaC expression in all tissues) produce excessive airway liquid as in CF-like disease, but this liquid does not become infected [@kerem1999].
+ 
+-There are many hypotheses as to how these contradictions may be resolved, reviewed well by Collawn and colleagues, but more work on the subject is desperately needed [@collawn2012].
++There are many hypotheses as to how these contradictions may be resolved, reviewed well by Collawn and colleagues, but more work on the subject is desperately needed [@collawn2012].[For instance, it could be that &beta;ENaC and/or CFTR are being knocked into the wrong cell types, or that the time scale of the effect is longer than is currently thought.]{.aside}
+ The important point for our purposes is that, as with Liddle syndrome, the mouse CF model does not recapitulate human disease well.
+ Indeed, mice with CFTR mutations which are pathogenic in humans do not develop lung disease at all [@grubb1999].
+ 
+@@ -118,7 +122,7 @@ Canonical ENaCs are composed of one each of the &beta;, &gamma;, and either &alp
+ However, the combination of &alpha;ENaC knock-out mice and ENaC expression patterns makes it likely that channels with only one or two ENaC subunit types, while rare, are physiologically relevant.
+ 
+ I note here that we cannot say these channels are homomeric &alpha;ENaC channels.
+-They may be assemblies of ENaC with other ENaC/DEG family members or as-yet unknown other proteins.
++They may be assemblies of ENaC with other ENaC/DEG family members or as-yet unknown other proteins.[The composition of the channel likely affects their sensitivity to amiloride as well, although since the entire ENaC/DEG family is blocked by amiloride at one concentration or another one would expect that these combinations would be as well.]{.aside}
+ Regardless of the ultimate identity of the amiloride-sensitive salt taste receptor, the patterns observed in taste are difficult to explain if the only physiologically relevant ENaC is the (&alpha;/&delta;)&beta;&gamma; triheteromer, which makes it an interesting and valuable system for further study.
+ 
+ ### ENaC in blood vessels {#sec-intro_blood-vessels}
+@@ -138,7 +142,7 @@ It therefore seems likely that ENaC is used by baroreceptors to sense blood pres
+ ### ENaC in the colon
+ 
+ ENaC plays an important role in sodium reabsorption in the colon.
+-Colon expression of the &beta; and &gamma;, but not &alpha;, subunits increases in response to aldosterone treatment [@epple2000; @bertog2008].
++Colon expression of the &beta; and &gamma; subunits increases in response to aldosterone treatment, while &alpha; expression remains constant [@epple2000; @bertog2008].
+ Patients with Crohn's disease, a chronic inflammatory bowel disease, have reduced sodium reabsorption in the colon, which leads to diarrhea [@sandle1990; @zeissig2008].
+ Similarly, patients with ulcerative colitis have reduced ENaC expression due to inflammatory cytokines, resulting in water loss and diarrhea [@amasheh2004].
+ To be clear, the colon relies on a wide array of systems to reabsorb ions and water.
+@@ -146,8 +150,6 @@ These results indicate that ENaC is one of the players in this process.
+ 
+ ## Regulation {#sec-regulation}
+ 
+-![Simplified model of ENaC regulation in a principal cell of the distal nephron in the kidney.](figures/kidney-cartoon/kidney-cartoon.png){#fig-intro_kidney-reg}
+-
+ It should come as no surprise that expression of ENaC is under tight control, given the number of important processes ENaC is implicated in.
+ In this section I provide a general, by no means exhaustive review of proteins known to regulate ENaC at the expression level.
+ A discussion of molecular mechanisms by which ENaC P~O~ is modulated benefits from further background in ENaC structure and is therefore covered in @sec-intro_direct-reg.
+@@ -155,7 +157,7 @@ A discussion of molecular mechanisms by which ENaC P~O~ is modulated benefits fr
+ This overview of ENaC regulation is necessarily brief and limited to the kidney (@fig-intro_kidney-reg), since that system is best understood.
+ Fortunately, the patterns observed in the kidney largely hold in other tissues with the notable exception of aldosterone-induced expression.
+ 
+-### Aldosterone
++### Aldosterone {#sec-intro_aldosterone}
+ 
+ Aldosterone is the primary mineralocorticoid hormone and the main mechanism by which the body regulates plasma sodium levels.
+ When the kidney is not receiving enough salt, it initiates a cascade to (among many other effects) increase activity of ENaC via the hormone aldosterone.[For a review of the Renin-Angiotensin-Aldosterone System consider Weir and Dzau [@weir1999]. For a review more focused on aldosterone alone, Stockand's is quite thorough and readable [@stockand2002].]{.aside}
+@@ -165,7 +167,7 @@ For the interested reader, Garty and Palmer's review of the complete picture of
+ Aldosterone response is divided into two phases, aptly named the early and late phases.
+ In the early phase, aldosterone increases ENaC P~O~ in part via increased activity of serum and glucocorticoid-regulated kinase (SGK, @sec-intro_sgk) [@kemendy1992; @naray-fejes-toth2000].
+ SGK's effect has mainly been attributed to inhibition of Nedd4-2 (@sec-intro_nedd42), while some labs also report a direct increase in ENaC P~O~ [@kellenberger98; @chen1999].
+-Aldosterone also stimulates phosphatidylinositol 3-kinase (PI3K) and K-Ras, which physically couples ENaC and PI3K [@paunescu2000; @staruschenko2005].
++Aldosterone also stimulates phosphatidylinositol 3-kinase (PI3K) and K-Ras, which promotes the physical interaction of ENaC and PI3K [@paunescu2000; @staruschenko2005].
+ Phospholipids have both short- and long-term effects on ENaC currents and are discussed further in @sec-intro-phospholipids.
+ The majority of aldosterone's early-phase effect on sodium currents is due to increased P~O~ of existing channels, rather than delivery of new channels to the cell surface [@frindt2015].
+ 
+@@ -186,7 +188,9 @@ Disruption of this mechanism is the most common cause of Liddle syndrome (@sec-i
+ 
+ #### Nedd4-2 Structure
+ 
+-Like many members of the HECT ligase family, Nedd4-2 has an N-terminal C2 domain, three or four (depending on the species) WW domains, and a C-terminal HECT domain.
++![The domains of Nedd4-2. Crystal structures for the C2 domain, WW domain, and the two flexible positions of the HECT domain from PDBs 3M7F, 4N7H, 2XBB, and 2XBF respectively.](figures/nedd4-2/nedd4-2.png){#fig-intro_nedd4-2}
++
++Like many members of the HECT ligase family, Nedd4-2 has an N-terminal C2 domain, three or four (depending on the species) WW domains, and a C-terminal HECT domain (@fig-intro_nedd4-2).
+ As the astute reader has already guessed, humans also express a paralogous HECT E3 ligase, Nedd4, which does not regulate ENaC *in vivo* [@kamynina01; @snyder2004].
+ It is important to note that expressing *either* of these two ligases heterologously *does* reduce ENaC currents.
+ This makes evaluation of the Nedd4-2/ENaC literature complicated, as conclusions drawn from heterologous systems may not hold in the organism.
+@@ -267,7 +271,7 @@ It is likely, then, that 14-3-3 regulates Nedd4-2 both by blocking its catalytic
+ ## Conclusion
+ 
+ ENaC is a tightly regulated ion channel implicated in a vast array of biological functions, from blood pressure control to the pleasurable taste of salty food.
+-I have provided here a brief overview of the tissues in which ENaC expression is responsive to aldosterone (the body's main salt regulatory hormone) as well as the proteins involved on coordinating its expression.
++I have provided here a brief overview of the tissues in which ENaC expression is responsive to aldosterone (the body's main salt regulatory hormone) as well as the proteins involved in coordinating its expression.
+ 
+ I hope I have also highlighted the great amount we do not know about the channel.
+ ENaC's function and regulation in the kidney is well-studied, but the trends observed in that tissue do not translate well to the lung (in which Liddle syndrome patients do not develop disease) or tongue (in which no heterotrimeric channels seem to exist).
+
+==============================
+===== ./parts/results.qmd =====
+==============================
+
+
+==============================
+===== ./parts/appendices/code.qmd =====
+==============================
+
+diff --git a/parts/appendices/code.qmd b/parts/appendices/code.qmd
+index 4abac26..73d2515 100644
+--- a/parts/appendices/code.qmd
++++ b/parts/appendices/code.qmd
+@@ -12,7 +12,7 @@ In an environment where only a heuristic assessment of these parameters is impor
+ However, chromatography instrument manufacturers must include capacity for more complex analyses in their software.
+ This necessarily makes the software more complex and arcane in the service of features that biochemists rarely need.
+ To solve this mismatch I created Appia, a web-based chromatography visualization package [@posert2023].[Appia can be installed via `pip`, or the source can be inspected at [my github](https://github.com/plethorachutney/appia).]{.aside}
+-In this section I will provide a brief summery of Appia's functionality and intended use, the installation process, and then some guidance for adding support for new chromatography instruments.
++In this section I will provide a brief summary of Appia's functionality and intended use, the installation process, and then some guidance for adding support for new chromatography instruments.
+ 
+ ![Heuristic chromatography parameters are easily assessed by eye. Users can approximate affinity for the stationary phase (size, in the case of SEC), quantity, homogeneity, and the number of distinct species by inspecting peak shifts, peak height, peak width, and number of peaks respectively.](figures/code/peaks.png){#fig-appia-peaks}
+ 
+@@ -90,10 +90,10 @@ I'll work this example in R, but it could just as easily be done in python, Matl
+ library(tidyverse)
+ 
+ example_trace <- tibble(
+-        rt = -100:200/100 + 9,
+-        signal = dnorm(rt, mean = 10, sd = 0.1) + 0.3 * dnorm(rt, mean = 9.8, sd = 0.2),
+-        noise = rnorm(301, sd = 0.05)
+-    ) |>
++    rt = -100:200 / 100 + 9,
++    signal = dnorm(rt, mean = 10, sd = 0.1) + 0.3 * dnorm(rt, mean = 9.8, sd = 0.2),
++    noise = rnorm(301, sd = 0.05)
++) |>
+     mutate(signal = signal + noise)
+ 
+ data_plot <- example_trace |>
+@@ -103,10 +103,10 @@ data_plot <- example_trace |>
+         panel.grid.major = element_blank(),
+         panel.grid.minor = element_blank()
+     ) +
+-    geom_line(color = 'grey') +
++    geom_line(color = "grey") +
+     labs(
+-        x = 'Retention Time (min)',
+-        y = 'Absorbance'
++        x = "Retention Time (min)",
++        y = "Absorbance"
+     )
+ 
+ data_plot
+@@ -163,32 +163,32 @@ plot_gauss <- function(scale, mean, sd) {
+     \(x) scale * dnorm(x, mean = mean, sd = sd)
+ }
+ fit_unbound <- plot_gauss(
+-            get_val('ub_amount'),
+-            ub_rt, get_val('ub_sd')
+-        )
++    get_val("ub_amount"),
++    ub_rt, get_val("ub_sd")
++)
+ fit_bound <- plot_gauss(
+-            get_val('b_amount'),
+-            b_rt, get_val('b_sd')
+-        )
++    get_val("b_amount"),
++    b_rt, get_val("b_sd")
++)
+ 
+-data_plot + 
++data_plot +
+     geom_function(
+         fun = fit_unbound,
+-        color = 'blue',
+-        linetype = 'dotted',
++        color = "blue",
++        linetype = "dotted",
+         n = 1000,
+         linewidth = 1
+     ) +
+     geom_function(
+         fun = fit_bound,
+-        color = 'forestgreen',
+-        linetype = 'dotted',
++        color = "forestgreen",
++        linetype = "dotted",
+         n = 1000,
+         linewidth = 1
+     ) +
+     geom_function(
+         fun = \(x) fit_unbound(x) + fit_bound(x),
+-        color = 'black',
++        color = "black",
+         n = 1000
+     )
+ ```
+
+==============================
+===== ./parts/appendices/mat-meth.qmd =====
+==============================
+
+diff --git a/parts/appendices/mat-meth.qmd b/parts/appendices/mat-meth.qmd
+index 32a5f04..f5cd9b8 100644
+--- a/parts/appendices/mat-meth.qmd
++++ b/parts/appendices/mat-meth.qmd
+@@ -23,7 +23,7 @@ Cells were harvested 24&nbsp;hours later, washed with TBS, flash frozen in liqui
+ 
+ ## ENaC Purification
+ 
+-### Human ENaC
++### Human ENaC {#sec-matmeth_human-enac-purification}
+ 
+ Throughout this protocol, quantities of resin and buffer are given "per flask".
+ I grow cell culture in quantities of 800&nbsp;mL culture per flask, meaning that, e.g., pelleted cells from 1.6 L of cells require twice the quoted quantities of buffer and resin.
+@@ -311,20 +311,20 @@ Once a dish had been exposed to the trypsin solution, the dish was replaced with
+ 
+ library(tidyverse)
+ library(gt)
+-constructs <- read_csv('figures/matmeth/table-one/constructs.csv', na = '')
++constructs <- read_csv("figures/matmeth/table-one/constructs.csv", na = "")
+ 
+ constructs |>
+-  gt(
+-    rowname_col = 'Parameter'
+-  ) |>
+-  fmt_markdown(columns = c('Parameter')) |>
+-  # unicode 2014 is an em dash
+-  sub_missing(missing_text = '\u2014') |> 
+-  tab_style_body(
+-    cell_borders(sides = c('right'), weight = 2, color = '#CCCCCC'),
+-    fn = (\(x) TRUE),
+-    extents = c('stub')
+-  )
++    gt(
++        rowname_col = "Parameter"
++    ) |>
++    fmt_markdown(columns = c("Parameter")) |>
++    # unicode 2014 is an em dash
++    sub_missing(missing_text = "\u2014") |>
++    tab_style_body(
++        cell_borders(sides = c("right"), weight = 2, color = "#CCCCCC"),
++        fn = (\(x) TRUE),
++        extents = c("stub")
++    )
+ ```
+ 
+ ```{r}
+@@ -334,37 +334,37 @@ constructs |>
+ #| results: asis
+ #| label: tbl-grid-prep
+ #| tbl-cap: Grid preparation parameters
+-grids <- read_csv('figures/matmeth/table-one/grid-prep.csv', na = '')
++grids <- read_csv("figures/matmeth/table-one/grid-prep.csv", na = "")
+ 
+ grids |>
+-  gt(
+-    rowname_col = 'Parameter'
+-  ) |>
+-  tab_spanner(
+-    label = 'hCKO',
+-    columns = c('Digitonin', 'Nanodisc')
+-  ) |> 
+-  tab_spanner(
+-    label = 'hCKO/DEG',
+-    columns = c('Difab', 'Monofab')
+-  ) |> 
+-  tab_spanner(
+-    label = 'mouse',
+-    columns = c('Uncleaved', 'Trypsin')
+-  ) |>
+-  fmt_markdown(columns = c('Parameter')) |>
+-  # unicode 2014 is an em dash
+-  sub_missing(missing_text = '\u2014') |> 
+-  tab_style_body(
+-    cell_borders(sides = c('right'), weight = 2, color = '#CCCCCC'),
+-    fn = (\(x) TRUE),
+-    extents = c('stub')
+-  ) |>
+-  cols_align(align = 'center') |>
+-  tab_footnote(
+-    footnote = 'All grids are Quantifoil grids with gold mesh',
+-    locations = cells_stub(rows = 'Grid Type')
+-  )
++    gt(
++        rowname_col = "Parameter"
++    ) |>
++    tab_spanner(
++        label = "hCKO",
++        columns = c("Digitonin", "Nanodisc")
++    ) |>
++    tab_spanner(
++        label = "hCKO/DEG",
++        columns = c("Difab", "Monofab")
++    ) |>
++    tab_spanner(
++        label = "mouse",
++        columns = c("Uncleaved", "Trypsin")
++    ) |>
++    fmt_markdown(columns = c("Parameter")) |>
++    # unicode 2014 is an em dash
++    sub_missing(missing_text = "\u2014") |>
++    tab_style_body(
++        cell_borders(sides = c("right"), weight = 2, color = "#CCCCCC"),
++        fn = (\(x) TRUE),
++        extents = c("stub")
++    ) |>
++    cols_align(align = "center") |>
++    tab_footnote(
++        footnote = "All grids are Quantifoil grids with gold mesh",
++        locations = cells_stub(rows = "Grid Type")
++    )
+ ```
+ 
+ ```{r}
+@@ -374,65 +374,65 @@ grids |>
+ #| results: asis
+ #| label: tbl-data-collection
+ #| tbl-cap: Data collection and image processing parameters
+-grids <- read_csv('figures/matmeth/table-one/data-collection.csv', na = '')
++grids <- read_csv("figures/matmeth/table-one/data-collection.csv", na = "")
+ 
+ grids |>
+-  gt(
+-    rowname_col = 'Parameter'
+-  ) |>
+-  tab_spanner(
+-    label = 'hCKO',
+-    columns = c('Digitonin', 'Nanodisc')
+-  ) |> 
+-  tab_spanner(
+-    label = 'hCKO/DEG',
+-    columns = c('Difab', 'Monofab')
+-  ) |> 
+-  tab_spanner(
+-    label = 'mouse',
+-    columns = c('Uncleaved', 'Trypsin')
+-  ) |>
+-  fmt_markdown(columns = c('Parameter')) |>
+-  # unicode 2014 is an em dash
+-  sub_missing(missing_text = '\u2014') |> 
+-  tab_style_body(
+-    cell_borders(sides = c('right'), weight = 2, color = '#CCCCCC'),
+-    fn = (\(x) TRUE),
+-    extents = c('stub')
+-  ) |>
+-  cols_align(align = 'center') |>
+-  tab_footnote(
+-    footnote = 'Electron flux is 1 e\u207b/\u00C5\u00b2/frame',
+-    locations = cells_stub(rows = 'Frames')
+-  ) |>
+-  tab_footnote(
+-    footnote = 'All datsets collected in super-resolution mode and Fourier-cropped back to this physical size.',
+-    locations = cells_stub(rows = 'Pixel Size (&Aring;/pix)')
+-  ) |>
+-  tab_footnote(
+-    footnote = 'Nominal pixel sizes given by the microscopy facility.',
+-    locations = cells_stub(rows = 'Pixel Size (&Aring;/pix)')
+-  ) |>
+-  tab_footnote(
+-    footnote = 'These values were used for processing and are listed to the precision given by the microscopy facility at the time of collection.',
+-    locations = cells_stub(rows = 'Pixel Size (&Aring;/pix)')
+-  ) |>
+-  tab_footnote(
+-    footnote = 'A dash indicates that a focused map for this region was not used in model building',
+-    locations = cells_stub(rows = c(
+-      'ECD resolution (&Aring;)',
+-      'Whole protein resolution (&Aring;)',
+-      'ECD sharpening factor',
+-      'Whole protein sharpening factor'
+-    ))
+-  ) |>
+-  tab_footnote(
+-    footnote = 'GSFSC resolution',
+-    locations = cells_stub(rows = c(
+-      'ECD resolution (&Aring;)',
+-      'Whole protein resolution (&Aring;)'
+-    ))
+-  )
++    gt(
++        rowname_col = "Parameter"
++    ) |>
++    tab_spanner(
++        label = "hCKO",
++        columns = c("Digitonin", "Nanodisc")
++    ) |>
++    tab_spanner(
++        label = "hCKO/DEG",
++        columns = c("Difab", "Monofab")
++    ) |>
++    tab_spanner(
++        label = "mouse",
++        columns = c("Uncleaved", "Trypsin")
++    ) |>
++    fmt_markdown(columns = c("Parameter")) |>
++    # unicode 2014 is an em dash
++    sub_missing(missing_text = "\u2014") |>
++    tab_style_body(
++        cell_borders(sides = c("right"), weight = 2, color = "#CCCCCC"),
++        fn = (\(x) TRUE),
++        extents = c("stub")
++    ) |>
++    cols_align(align = "center") |>
++    tab_footnote(
++        footnote = "Electron flux is 1 e\u207b/\u00C5\u00b2/frame",
++        locations = cells_stub(rows = "Frames")
++    ) |>
++    tab_footnote(
++        footnote = "All datsets collected in super-resolution mode and Fourier-cropped back to this physical size.",
++        locations = cells_stub(rows = "Pixel Size (&Aring;/pix)")
++    ) |>
++    tab_footnote(
++        footnote = "Nominal pixel sizes given by the microscopy facility.",
++        locations = cells_stub(rows = "Pixel Size (&Aring;/pix)")
++    ) |>
++    tab_footnote(
++        footnote = "These values were used for processing and are listed to the precision given by the microscopy facility at the time of collection.",
++        locations = cells_stub(rows = "Pixel Size (&Aring;/pix)")
++    ) |>
++    tab_footnote(
++        footnote = "A dash indicates that a focused map for this region was not used in model building",
++        locations = cells_stub(rows = c(
++            "ECD resolution (&Aring;)",
++            "Whole protein resolution (&Aring;)",
++            "ECD sharpening factor",
++            "Whole protein sharpening factor"
++        ))
++    ) |>
++    tab_footnote(
++        footnote = "GSFSC resolution",
++        locations = cells_stub(rows = c(
++            "ECD resolution (&Aring;)",
++            "Whole protein resolution (&Aring;)"
++        ))
++    )
+ ```
+ 
+ ```{r}
+@@ -442,52 +442,53 @@ grids |>
+ #| results: asis
+ #| label: tbl-model-building-refinement
+ #| tbl-cap: Model building, refinement, and validation parameters
+-grids <- read_csv('figures/matmeth/table-one/processed_tables.csv', na = '', col_types = 'cccccccc')
++grids <- read_csv("figures/matmeth/table-one/processed_tables.csv", na = "", col_types = "cccccccc")
+ 
+ grids |>
+-  select(-Section) |>
+-  add_row(
+-    Parameter = 'Starting Model',
+-    Digitonin = '6WTH',
+-    Difab = 'CKO digitonin',
+-    Monofab = '6WTH',
+-    Nanodisc = "CKO/DEG difab",
+-    Uncleaved = "AlphaFold",
+-    Trypsin = "mouse uncleaved",
+-    .before = 1) |>
+-  add_row(
+-    Parameter = 'Q-score',
+-    Digitonin = '0.80',
+-    Difab = '0.71',
+-    Monofab = '0.71',
+-    Nanodisc = "0.71",
+-    Uncleaved = "0.68",
+-    Trypsin = "0.72"
+-  ) |>
+-  gt(
+-    rowname_col = 'Parameter'
+-  ) |>
+-  tab_spanner(
+-    label = 'hCKO',
+-    columns = c('Digitonin', 'Nanodisc')
+-  ) |> 
+-  tab_spanner(
+-    label = 'hCKO/DEG',
+-    columns = c('Difab', 'Monofab')
+-  ) |> 
+-  tab_spanner(
+-    label = 'mouse',
+-    columns = c('Uncleaved', 'Trypsin')
+-  ) |>
+-  fmt_markdown(columns = c('Parameter')) |>
+-  # unicode 2014 is an em dash
+-  sub_missing(missing_text = '\u2014') |> 
+-  tab_style_body(
+-    cell_borders(sides = c('right'), weight = 2, color = '#CCCCCC'),
+-    fn = (\(x) TRUE),
+-    extents = c('stub')
+-  ) |>
+-  cols_align(align = 'center')
++    select(-Section) |>
++    add_row(
++        Parameter = "Starting Model",
++        Digitonin = "6WTH",
++        Difab = "CKO digitonin",
++        Monofab = "6WTH",
++        Nanodisc = "CKO/DEG difab",
++        Uncleaved = "AlphaFold",
++        Trypsin = "mouse uncleaved",
++        .before = 1
++    ) |>
++    add_row(
++        Parameter = "Q-score",
++        Digitonin = "0.80",
++        Difab = "0.71",
++        Monofab = "0.71",
++        Nanodisc = "0.71",
++        Uncleaved = "0.68",
++        Trypsin = "0.72"
++    ) |>
++    gt(
++        rowname_col = "Parameter"
++    ) |>
++    tab_spanner(
++        label = "hCKO",
++        columns = c("Digitonin", "Nanodisc")
++    ) |>
++    tab_spanner(
++        label = "hCKO/DEG",
++        columns = c("Difab", "Monofab")
++    ) |>
++    tab_spanner(
++        label = "mouse",
++        columns = c("Uncleaved", "Trypsin")
++    ) |>
++    fmt_markdown(columns = c("Parameter")) |>
++    # unicode 2014 is an em dash
++    sub_missing(missing_text = "\u2014") |>
++    tab_style_body(
++        cell_borders(sides = c("right"), weight = 2, color = "#CCCCCC"),
++        fn = (\(x) TRUE),
++        extents = c("stub")
++    ) |>
++    cols_align(align = "center")
+ ```
+ 
+ \elandscape{}
+
+==============================
+===== ./parts/appendices/validation.qmd =====
+==============================
+
+
+==============================
+===== ./parts/appendices/graveyard.qmd =====
+==============================
+
+diff --git a/parts/appendices/graveyard.qmd b/parts/appendices/graveyard.qmd
+new file mode 100644
+index 0000000..b4f0447
+--- /dev/null
++++ b/parts/appendices/graveyard.qmd
+@@ -0,0 +1,251 @@
++# The Graveyard {#sec-graveyard}
++
++In this appendix, I will go into more detail on experiments that did not work, or that did not produce interpretable results.
++I will also discuss dead ends on the protein purification pathway to guide future efforts.
++This section is isolated from the main body of the text since it is only interesting to those who may follow after me.
++As such, a basic familiarity with lab protocols is assumed.
++
++## Nedd4-2
++
++Early on, my work included purification of Nedd4-2 with an eye toward both a functional assay for Nedd4-2/ENaC interaction and a structure of the bound complex.
++Nedd4-2 comprises structured domains connected by disordered linkers, and so it should come as no surprise that this proved too difficult and time consuming and was dropped [@pohl2021; @joshi2022].
++However, it may be that adding Nedd4-2 helps to resolve ENaC's TMD and even regions of the intracellular loops, so future research into the topic may yet prove fruitful.
++
++### Expression and purification
++#### Insect cells and TALON
++
++Nedd4-2 was initially expressed in Sf9 cells as a C-terminal GFP fusion.
++Cells were infected at an MOI of 5 and left to express protein at 21&nbsp;&deg;C for 48&nbsp;hours.
++Cells were collected via centrifugation (100k&nbsp;xg for 45&nbsp;minutes) and frozen in liquid nitrogen until use.
++
++Cells were thawed and resuspended in 100&nbsp;mL TBS per flask, then sonicated for a total of 5&nbsp;minutes of 10&nbsp;seconds on, 30&nbsp;seconds off, power level&nbsp;7.
++Crude lysate was centrifuged for 45&nbsp;minutes at 100,000&nbsp;xg and clarified lysate collected.
++
++Clarified lysate was bound to 10&nbsp;mL TALON resin per flask and washed with 5&nbsp;CV TBS followed by 2&nbsp;CV TBS plus 10&nbsp;mM imidazole.
++Finally, 1&nbsp;mL fractions are collected from a 4&nbsp;CV elution with 250&nbsp;mM imidazole.
++These fractions are concentrated and sized on a Superose 6 Increase 10/300 column (@fig-graveyard_nedd4-purification).
++The SEC protocol for Nedd4-2 is essentially unchanged from that for ENaC (@sec-matmeth_human-enac-purification), with the exception that TBS alone (i.e., without detergent) is used as a running buffer.
++
++```{r nedd4_purification}
++#| echo: false
++#| messages: false
++#| warning: false
++#| label: fig-graveyard_nedd4-purification
++#| fig-cap: FSEC analysis of a fraction of Nedd4-2 expressed in Sf9 cells. This sample has been purified by both TALON and SEC.
++library(tidyverse)
++
++read_csv("figures/graveyard/exp029_long-chrom.csv") |>
++    mutate(
++        Channel = if_else(grepl("280", Channel), "Trp", "GFP")
++    ) |>
++    filter(
++        Sample == "Sizing 8"
++    ) |>
++    ggplot(aes(Time, Signal, color = Channel)) +
++    geom_line(linewidth = 1) +
++    theme_minimal() +
++    theme(
++        panel.grid.major = element_line(color = "#F0F0F0", linewidth = 0.2),
++        panel.grid.minor = element_blank(),
++        legend.position = "top"
++    ) +
++    scale_color_manual(
++        values = c("#2BAD32", "#FA579A")
++    ) +
++    labs(
++        x = "Retention Time (min)",
++        y = "Fluorescence (AFU)"
++    )
++```
++
++There are several problems with this protocol.
++First, tagging a Nedd4-family ligase on its C-terminus renders it completely non-functional.
++This is probably why yield is so high and pure --- the protein is incapable of affecting itself or the cell in any way.
++Second, most of the field uses material prepared from *E. coli*, and it's generally best to follow convention.
++Finally, Nedd4-2 harbors a cryptic thrombin site, so GFP cleavage also cleaves the protein.
++
++#### *E. coli* and strep tags
++
++I thus moved to expression of strep-tagged material in *E. coli*.
++The Nedd4-2 gene was cloned into pJAC148 and transformed into BL21(DE3) cells.
++At OD~600~&nbsp;0.75, expression was induced with 250&nbsp;&mu;M IPTG and transferred to a 16&deg;C incubator and allowed to express overnight.
++Cells were pelleted and frozen with liquid nitrogen.
++
++Following a standard strep purification protocol, the material looks significantly worse than that purified by IMAC (@fig-graveyard_twinstrep-n42).
++I believe this is most likely due to the fact that this material is actually functional, which means it is capable of self-degradation.
++It also likely puts the *E. coli* cells under significantly more stress than non-functional material.
++
++![Twin-strep purification of Nedd4-2 expressed in *E. coli*. **Top**: SEC trace of twin-strep purified material. Indicated fractions are further analyzed by SDS-PAGE. **Bottom**: SDS-PAGE analysis of the indicated fractions. Note that only fractions 18 and 19 contain Nedd4-2.](figures/graveyard/Exp88-neddprep.png){#fig-graveyard_twinstrep-n42}
++
++This material, obviously, contains a large leading peak centered around 11&nbsp;mL.
++Since there seems to be no protein at all in this peak, but it is after the void volume, I suspect it is nucleotide contamination.[I do not have A~260~/A~280~ measurements for this material, unfortunately]{.aside}
++In any case, this protocol seemed the most reliable means by which I could purify large amounts of (potentially) active Nedd4-2.
++
++### ENaC Binding
++
++The Nedd4-2 purified from both Sf9 cells and *E. coli* binds ENaC.
++A simple, single-replicate experiment shows increased movement of GFP-tagged Nedd4-2 from its unbound peak to a peak eluting before ENaC (@fig-graveyard_nedd42-bindings).
++This is, of course, not an entirely rigorous experiment.
++Most concerning is the fact that increased ENaC does not always translate to an increase in the presumptive Nedd4-2 bound ENaC species.
++
++```{r nedd4-2_binding}
++#| echo: false
++#| warning: false
++#| messages: false
++#| fig-cap: "Binding experiment. 170&nbsp;nM of GFP-tagged Nedd4-2 was bound to 1, 5, or 10 times as much untagged ENaC. Increasing ENaC concentrations results in increasing amounts of the species eluting around 12&nbsp;mL, but not monotonically. **Top**: raw, unnormalized GFP fluorescence. **Bottom**: fluorescence normalized to the maximum peak height in the trace. ENaC is visible in this normalized trace due to a small amount of remaining material which did not have its GFP tag cleaved during purification."
++#| label: fig-graveyard_nedd42-bindings
++
++library(MetBrewer)
++read_csv("figures/graveyard/exp101.csv") |>
++    group_by(Sample, Channel) |>
++    mutate(Normalized = Signal / max(Signal)) |>
++    rename("Raw" = "Signal") |>
++    pivot_longer(
++        cols = c(Raw, Normalized),
++        names_to = "Normalization",
++        values_to = "Signal"
++    ) |>
++    mutate(Normalization = fct_relevel(
++        Normalization,
++        "Raw",
++        "Normalized"
++    )) |>
++    mutate(Channel = if_else(Channel == "2475ChA ex488/em509", "GFP", "Trp")) |>
++    mutate(mL = Time * 0.5) |>
++    mutate(Sample = case_when(
++        Sample == "1-to-01" ~ "1:1",
++        Sample == "1-to-05" ~ "1:5",
++        Sample == "1-to-10" ~ "1:10",
++        TRUE ~ Sample
++    )) |>
++    mutate(Sample = as.factor(Sample)) |>
++    ggplot(aes(mL, Signal)) +
++    theme_minimal() +
++    geom_line(
++        aes(
++            color = fct_relevel(
++                Sample,
++                "1:10",
++                "1:5",
++                "1:1",
++                "ENaC",
++                "Nedd4-2"
++            )
++        ),
++        linewidth = 1
++    ) +
++    coord_cartesian(xlim = c(7.5, 20)) +
++    facet_grid(
++        rows = vars(Normalization),
++        scales = "free_y"
++    ) +
++    scale_color_met_d("Greek") +
++    labs(color = "Sample")
++```
++
++### Ubiquitination assay
++
++If this project had progressed, we would have needed a way to assess whether our purified Nedd4-2 was functional or not.
++My idea for this was an *in vitro* ubiquitination assay.
++Ideally, we'd take tagged ubiquitin (Ub), an E1, an E2, and our purified Nedd4-2 and incubate them together.
++Next we'd detect ubiquitination of ENaC via western blot.
++Only the mixture with all of these components should have ubiquitinated ENaC.
++
++I made a few attempts at this, and none of them really worked.
++It's not worth reproducing the exact protocols here &mdash; for the truly interested reader, they are in Lab Meetings 2, 3, and 4.
++The two major categories I tried were what I'd call a "minimal" or "supplementary" ubiquitination assays.
++
++The minimal assay involved purchasing an *in vitro* ubiquitination kit and replacing the company's E3 enzyme with the same molar amount of my purified Nedd4-2 (as assayed by nanodrop).
++Using this assay I was potentially able to detect a moderate amount of ubiquitination of ENaC (@fig-graveyard_exp78-wb).
++However, overall signal is low, and there appears to be some ENaC-Ub signal in lanes without purified Nedd4-2.
++Additionally, longer incubation times do not result in stronger ENaC-Ub signal.
++I take it from this assay that our purified material was not functional.
++
++![A western blot of the minimal *in vitro* ubiquitination assay. The **left blot** is against &gamma; ENaC; the **right blot** is against a FLAG tag present on the ubiquitin used during the assay. Purified ENaC and Nedd4-2 are used in combination with commercial Ube1 and Ube2 along with the FLAG Ub as indicated in each lane. Note that minimal movement of ENaC out of the expected bands is observed on the left, and little accumulation of signal is seen on the right.](figures/graveyard/Exp78_labeled_bw_WB.png){#fig-graveyard_exp78-wb}
++
++However, my western blots are never great, and it may be that refinement of the detection technique is required.
++For instance, another of my blots for the minimal assay did seem to show some ubiquitination by our purified Nedd4-2 (@fig-graveyard_exp88-wb).
++Regardless, this inconsistency means the assay needs work in addition to whatever work needs doing on Nedd4-2 and ENaC themselves.
++
++![**Left**: A western blot against ENaC &gamma;. The high molecular weight band is ENaC in the stacking gel. **Right**: quantification of the upper, middle, and lower bands (B01, 02, and 03 respectively). Note that as B01 increases, B02 decreases.](figures/graveyard/Exp88-WB.png){#fig-graveyard_exp88-wb}
++
++For a supplementary assay, I add purified Nedd4-2 to rabbit reticulocyte lysate.
++The idea was to check for increased ubiquitination when more E3 enzyme is added.
++I never ended up running this assay because it made less sense than the minimal assay, and I abandoned Nedd4-2 before I could get to it.
++
++### What should be done?
++If I were starting over, I'd find a good positive control to make sure we could test the function of our Nedd4-2.
++That the purified Nedd4-2 is much more important than that it binds ENaC.
++Next, an assessment of the necessary ratios and concentrations for stable complex formation would be useful.
++I expect that some form of cross-linking would be required to guarantee complex formation on the grid without overcrowding.
++
++Ultimately, though, I think I was right to abandon this facet of my project.
++The domains of Nedd4-2 have already been resolved, and it seems to be largely unstructured aside from those domains.
++Rather than rely on it to help align the intracellular and transmembrane domains, I would try a megabody or other scaffolding system.
++
++## Scintillation Proximity Assay {#sec-graveyard_spa}
++
++As discussed in @sec-results_spa, SPA never worked for anybody in our entire lab, working across three proteins.
++As a reminder, our main problem was that specific and non-specific counts were essentially indistinguishable.
++
++Ideally, non-specific counts increase linearly and specific counts increase logarithmically with increasing substrate, and signal-to-background ratios should be around 1.5 [@harder2012].
++Our background and "specific" counts both increased linearly with more substrate, leading me to believe that our "specific" counts are merely unaccounted-for background.
++Additionally, our signal-to-background ratio typically falls between 0.2 and 0.01 (one to two orders of magnitude too low).
++Finally, our "specific" counts are often negative.
++
++If you're saying to yourself, "Well then it just seems like your protein isn't binding the ligand at all" I'd agree with you.
++I don't think playing around the edges here will fix anything.
++It is worth noting that the same exact trends occur in ASIC, which we know has a properly-folded TMD by cryoEM.
++This indicates that there is likely something fundamentally wrong with our process, rather than (or, more likely, in addition to) something wrong with our purified ENaC.
++
++### BSA
++
++It's fairly common practice to include additives to reduce non-specific binding in SPA assays.
++We tried BSA, which is typically added at around 5%.
++Surveying a number of percentages around there yields no improvement in background or specific counts (@fig-graveyard_spa-bsa).
++
++![Addition of BSA does not improve SPA results. **Left**: ENaC held at a constant concentration with increasing proportion of BSA added shows no improvement in specific counts.](figures/graveyard/spa-bsa.png){#fig-graveyard_spa-bsa}
++
++Changing the acidity of the mixture, alongside the pH, does not improve background or specific counts (@fig-graveyard_spa-bsa-ph).
++I also include this plot to show that specific counts are, more often than not, negative.
++
++![Changing the pH of the mixture from 7.4 to 6.0 does not improve counts, and specific counts are often negative. Lines follow the mean for each condition.](figures/graveyard/Exp124-spa.png){#fig-graveyard_spa-bsa-ph}
++
++### Data collection time
++
++The time at which data are collected changes the result (@fig-graveyard_spa-timeline).
++Counts are recorded from a plate, and the amount of incubation required to reach a steady signal must be determined empirically.
++However, with low specific counts, the selection of recording time can dramatically change the interpretation of results.
++
++![The plate is re-recorded approximately every 10 minutes. Note that high ligand concentrations (upper facets) maintain a steady signal, while low ligand concentrations (lower facets) are too noisy to reliably determine. Thus, datasets recorded only 10 minutes apart might show dramatically different Specific (Experimental - Control) counts for low concentrations, which would significantly affect fitted K~d~ values. Note, also, that despite their stability, specific counts at high ligand concentrations are almost entirely negative.](figures/graveyard/Exp137_all-counts.png){#fig-graveyard_spa-timeline}
++
++### Membrane memetic
++
++Switching from digitonin to nanodiscs yields a marginal improvement in that specific counts are generally positive (@fig-graveyard_spa-nanodiscs).
++However, specific counts still increase linearly with ligand concentration well beyond the reported K~d~ of ENaC for benzamil (approximately 10&nbsp;nM), calling into question whether they are truly specific.
++Additionally, the signal-to-background ratio remains below 1.0.
++
++![SPA data collected from nanodiscs does not result in better specific counts or lower total counts. Bars represent the standard error of the mean for three replicates, but are too small to see in the higher-concentration plots.](figures/graveyard/Exp144_01-all-counts-timecourse.png){#fig-graveyard_spa-nanodiscs}
++
++### Bead type
++
++Use of nanoSPA's smaller, lower-background beads does improve total counts, i.e., reduces the background counts (@fig-graveyard_nanospa-background).
++It is, however, extremely important to note here that **none of the samples in this experiment had any ENaC**.
++There thus **cannot be** any specific counts &mdash; there is no protein for benzamil to bind!
++It is thus very concerning to me that the counts in this experiment follow the same trend as our proper, ENaC-containing experiments, with low but present "specific" signal.
++
++![Comparison of nanoSPA and Perkin Elmer (PE) beads. In this context, "background" and "total" differ only in that "background" does not have any detergent added and "total" does. Note that nanoSPA beads quickly level off to a steady signal while PE beads increase for several hours. Note also that "specific" counts, which should be zero in all cases, are lower in nanoSPA beads than PE. Bars represent the standard error of the mean for three replicates, but are too small to see in the higher-concentration plots.](figures/graveyard/Exp148_01-all-counts-timecourse.png){#fig-graveyard_nanospa-background}
++
++Along this line, addition of ENaC nanodiscs to the nanoSPA bead mixture does not elicit any increase in counts, or even any noticeable difference from the ENaC-less experiment (@fig-graveyard_nanospa-enac).
++
++![nanoSPA beads with ENaC added. Bars represent the standard error of the mean for three replicates, but are too small to see in the higher-concentration plots.](figures/graveyard/Exp158_01-all-counts-timecourse.png){#fig-graveyard_nanospa-enac}
++
++### What should be done?
++
++In my opinion, nothing.
++This assay is a dead end, or at least requires much more work than the more promising flux assay.
++
++I personally also would like to note that, despite how it is used in several labs at OHSU, SPA is fundamentally a *binding assay*.
++It *does not* provide any information about whether an ion channel is capable of passing currents, let alone the specificity of those currents.
++As such, it is not truly a functional assay.
++Spending more time working on an assay that doesn't even tell us what we need to know seems like a lose-lose to me.
+\ No newline at end of file
+
+==============================
+===== ./parts/appendices/processing-flow.qmd =====
+==============================
+
+diff --git a/parts/appendices/processing-flow.qmd b/parts/appendices/processing-flow.qmd
+index 74caf84..abf8d83 100644
+--- a/parts/appendices/processing-flow.qmd
++++ b/parts/appendices/processing-flow.qmd
+@@ -1,7 +1,7 @@
+ # Image Processing
+ Below are the image processing workflows for each map.
+ The human CKO digitonin map workflow includes more detail for the initial steps &mdash; these steps are the same for each map, and so are elided in the others.
+-In each case, maps are contoured to 0.5.
++In each case, masks are contoured to 0.5.
+ Additionally, particle and movie numbers are rounded for ease of comparison.
+ See @tbl-data-collection for precise numbers.
+ 
+
+==============================
+===== ./parts/conclusion.qmd =====
+==============================
+
+
+==============================
+===== ./parts/glossary.qmd =====
+==============================
+
+diff --git a/parts/glossary.qmd b/parts/glossary.qmd
+new file mode 100644
+index 0000000..3a81969
+--- /dev/null
++++ b/parts/glossary.qmd
+@@ -0,0 +1,143 @@
++# Glossary {.unnumbered}
++
++14-3-3
++: a protein which binds and inhibits phosphorylated proteins, including *Nedd4*.
++
++ACMA
++: a fluorescent dye. When ACMA intercalates into a lipid bilayer, it is quenched by a pH gradient across that bilayer.
++
++ASIC
++: the Acid Sensing Ion Channel family. A well-studied member of the ENaC/DEG superfamily opened by low extracellular pH. In this document, I use ASIC to refer to ASIC1 unless specified.
++
++ASL
++: airway surface liquid, a layer of mucous which protects the lung.
++
++Acidic Pocket
++: unfortunately, this name is used to refer to two separate things in the literature. In ASIC, the acidic pocket is between the finger and thumb; the channel opens when the acidic pocket is protonated. In ENaC, the acidic pocket comprises residues from the finger and &beta;-ball and is thought to be involved in *sodium self-inhibition*.
++
++Aldosterone
++: a mineralocorticoid hormone essential for regulation of blood pressure and plasma sodium and potassium levels.
++
++Amiloride
++: a small molecule which blocks ENaC/DEG superfamily ion channels. ENaC binds amiloride several orders of magnitude tighter than other members of the ENaC/DEG superfamily.
++
++Benzamil
++: a derivative of *amiloride* with a higher affinity for ENaC.
++
++C2 domain
++: a lipid- and protein-binding domain.
++
++CCCP
++: a proton ionophore
++
++CF
++: cystic fibrosis.
++
++CKO
++: an ENaC construct with intracellular cysteines knocked out. See @tbl-human-constructs for more information.
++
++CKO/DEG
++: *CKO* ENaC with additional mutations to bias the channel toward the open state. See @tbl-human-constructs for more information.
++
++DDM
++: n-dodecyl-&beta;-D-maltoside, a detergent commonly used to solubilize membrane proteins.
++
++DM
++: n-decyl-&beta;-D-maltoside, a detergent commonly used to solubilize membrane proteins.
++
++ECD
++: the extracellular domain, comprising the palm, knuckle, finger, GRIP, &beta;-ball, and thumb domains.
++
++ENaC
++: the Epithelial Sodium Channel.
++
++FaNaC
++: the FMRFamide peptide–activated sodium channel family. A member of the ENaC/DEG superfamily found only in mollusks and gated by a small peptide.
++
++Fab
++: the antigen-binding portion of an antibody.
++
++GAS belt
++: a domain swapping loop of TM2 observed in most ASIC structures to date. In ASIC, the GAS belt comprises a Gly-Ala-Ser triad which forms the selectivity filter.
++
++GRIP domain
++: the Gating Relief of Inhibition by Proteolysis domain. Wedged between the finger and the thumb, when this domain is cleaved by proteases in the &alpha; and &gamma; subunits, the channel opens.
++
++HECT domain
++: the domain of a *HECT ligase* responsible for transferring a ubiquitin molecule from an E2 ligase to the substrate.
++
++HECT ligase
++: a family of E3 ligases. Most HECT ligases discussed in this work comprise a *C2 domain*, a number of *WW domains*, and a *HECT domain*.
++
++HG motif
++: a highly-conserved His-Gly pair which is essential for proper function of ENaC. In ASIC, the HG motif is found in a re-entrant loop which buttresses the GAS belt
++
++I
++: current. Often used to refer to currents of a specific ion, e.g., I~Na^+^~ for sodium current.
++
++IC~50~
++: concentration of an inhibitor at which the inhibited process is at 50% of its uninhibited value.
++
++Macroscopic current
++: the current recorded from an entire expression system, e.g., a whole-cell current; cf. *unitary current*.
++
++N
++: the number of ion channels at the surface of a cell
++
++NP~O~
++: *N* times *P~O~* (the number of channels times their open probability). Essentially the *macroscopic current* divided by the *unitary current*.
++
++Nedd4
++: a family of HECT ligases, including the eponymous Nedd4 and Nedd4-2 (also referred to as Nedd4L)
++
++Open probability
++: The proportion of time that a given channel spends in the open state.
++
++PHA
++: pseudohypoaldosteronism. In this text, I discuss only type 1 PHA (PHA1), in which the patient has high plasma potassium and low plasma sodium but normal circulating aldosterone levels.
++
++PIP
++: phosphatidyl inositol, a phospholipid. Most often found in as a triphosphate (PIP~3~ or PI3P) or bisphosphate (PIP~2~ or PI2P).
++
++PY motif
++: a motif following the form PPXY which is bound by WW domains.
++
++Phenamil
++: a derivative of *amiloride* with a higher affinity for ENaC.
++
++P~O~
++: see *open probability*.
++
++SGK
++: Serum- and glucocorticoid-induced kinase, a serine/threonine kinase with a multitude of roles in cell signaling.
++
++SSI
++: see *sodium self-inhibition*.
++
++Sodium self-inhibition
++: The process by which high extracellular sodium concentrations decrease ENaC currents.
++
++Styrene-Maleic Acid
++: a copolymer used to directly solubilize a membrane into nanodiscs of native lipids
++
++TM
++: a transmembrane helix, usually followed by a number (e.g., TM1)
++
++TMD
++: the transmembrane domain, comprising both TMs from all three subunits (six helices total).
++
++TRC
++: taste receptor cells. These cells express channels which respond to a single one of the five basic tastes: salty, sweet, sour, bitter, or umami.
++
++Unitary current
++: currents observed through a single channel; cf. *macroscopic current*.
++
++Valinomycin
++: a potassium ionophore
++
++WT
++: wild-type; a construct which is identical to (or as close as is feasible) to the sequence one would find in the organism.
++
++WW domain
++: a protein-protein interaction domain. WW domains bind *PY motifs*.
++
+
+==============================
+===== ./parts/results/results_activating-conditions.qmd =====
+==============================
+
+diff --git a/parts/results/results_activating-conditions.qmd b/parts/results/results_activating-conditions.qmd
+index 968ea4b..0cc551a 100644
+--- a/parts/results/results_activating-conditions.qmd
++++ b/parts/results/results_activating-conditions.qmd
+@@ -15,9 +15,9 @@ I wondered whether treatment with trypsin would result in movement of the finger
+ It's important to note here that I had significant help from Arpita Bharadwaj, who performed the purification and initial characterization of the mouse material for these grids.
+ Both uncleaved and trypsin-treated mouse ENaC were of similar map quality (3.24 and 3.30 &Aring; respectively with whole-protein masks).
+ 
+-![Purified ENaC is cleaved by trypsin. **A**: Western blot for &alpha; (left) and &gamma; (right) ENaC. Purified mouse protein was treated with trypsin and aprotinin as indicated. Bands corresponding to full-length subunits are marked with an asterisk. **B**: Silver stain of material with and without trypsin treatment.](figures/trypsin-western/western-and-silver.png){#fig-cleavage-biochemistry}
++![Purified ENaC is cleaved by trypsin. **A**: Western blot for &alpha; (left) and &gamma; (right) ENaC. Purified mouse protein was treated with trypsin and aprotinin as indicated. Bands corresponding to full-length subunits are marked with an asterisk. **B**: Silver stain of material with and without trypsin treatment. Material for silver stain and western blot is from different expressions and purifications.](figures/trypsin-western/western-and-silver.png){#fig-cleavage-biochemistry}
+ 
+-![Trypsin treatment increases amiloride-sensitive currents in oocytes. **Left**: representative amiloride-sensitive current before (cyan) and after (orange) trypsin treatment. Only Na^+^ current is shown. **Right**: Average currents for all eight oocytes measured. All currents are scaled to pre-trypsin Na^+^ current to account for differential cell size and expression. Error bars represent 95% confidence interval. Values for individual oocytes are plotted as lines.](figures/trypsin-western/oocytes.png){#fig-cleavage-oocytes}
++![Trypsin treatment increases amiloride-sensitive currents in oocytes. **Left**: representative amiloride-sensitive current before (cyan) and after (orange) trypsin treatment. Only Na^+^ current is shown. **Right**: Average currents for all eight oocytes measured. All currents are scaled to pre-trypsin Na^+^ current to account for differential cell size and expression. Error bars represent 95% confidence interval. Values for individual oocytes are plotted as lines. P-values are from a paired t-test on *unnormalized* oocyte currents. Using normalized data does not change the significance decision for any ion.](figures/trypsin-western/oocytes.png){#fig-cleavage-oocytes}
+ 
+ ![cryoEM maps of mouse ENaC &gamma; (left) and &alpha; (right) subunit GRIP domains without (yellow) and with (purple) trypsin treatment. The inhibitory peptide is colored in each map.](figures/trypsin-western/maps-only.png){#fig-cleavage-maps}
+ 
+@@ -38,6 +38,10 @@ I must therefore conclude that the removal of the &gamma; inhibitory peptide is
+ Additionally, I note that these maps are the first indication that trypsin processing of the &alpha; subunit does not release its GRIP domain.
+ This is surprising but perhaps not wholly unexpected; the &gamma; subunit is known to be essential for activation by trypsin but the same has not yet been shown for &alpha;ENaC[@diakov2008].
+ 
++Biochemical analysis indicates that ENaC is highly cleaved by trypsin, degrading the channel to fragments 37&nbsp;kDa and smaller.
++It may be that the material in our map is highly cleaved, but held together by surface contacts throughout the channel which are disrupted by the addition of SDS from the loading buffer.
++This hypothesis could be tested with a native gel.
++
+ ### A strained tyrosine in the thumb
+ 
+ ![A strained tyrosine rotamer is present in the &gamma; subunit is released by trypsin cleavage. **A**: Human CKO &gamma;Y425 (right), with approximate position indicated by a star in the cartoon (left). Hydrogen bonds are colored blue for ideal geometry and orange for slightly strained distance. **B**: &gamma;Y425 (Y431 in mouse) colored by construct: human CKO, human CKO/DEG, mouse uncleaved, and mouse trypsin as red, blue, yellow, and purple respectively. **C**: &alpha;Y447 (Y474 in mouse) colored by construct. **D**: Comparison of the inhibitory peptides of &alpha; (blue), &beta; (red), and &gamma; (magenta). The displayed model is human CKO digitonin, but the peptides are superimposable in all six models.](figures/tyr-rotamer/all-tyr-figure.png){#fig-tyr-rotamer}
+@@ -99,7 +103,7 @@ For the most part, the sugars are identical in all six models and make no protei
+ These sugars likely play a role in other regulatory roles, such as channel trafficking and maturation or interaction with the extracellular matrix[@kashlan2018; @hughey04; @knoepp2020].
+ However, two classes of glycan are particularly interesting: the micelle-proximal and the intersubunit glycans.
+ 
+-![ENaC's glycosylation sites form important intersubunit interactions. **A**: Cartoon overview of intersubunit glycosylations. Dotted lines represent glycan chains. Hexagons represent sugars, circles represent potentially-interacting residues. Unfiltered maps for the first two sugars are presented to indicate confidence in Asn assignment. **B**: Silver-stained SDS-PAGE gel of protein treated with PNGase F. **C**: Intersubunit glycan from &beta;N260 to &alpha;D235, K495. **D**: Intersubunit interaction between glycans from &beta;N207 (red) and &gamma;N271 (magenta). In both C and D, the solid surface is a gaussian-blurred version of the sharp human CKO digitonin map (mesh).](figures/intersubunit-glyc/intersub-glyc.png){#fig-intersub-glyc}
++![ENaC's glycosylation sites form important intersubunit interactions. **A**: Cartoon overview of intersubunit glycosylations. Dotted lines represent glycan chains. Hexagons represent sugars, circles represent potentially-interacting residues. Unfiltered maps for the first two sugars are presented to indicate confidence in Asn assignment. **B**: Silver-stained SDS-PAGE gel of protein treated with PNGase F (approx. 36&nbsp;kDa). **C**: Intersubunit glycan from &beta;N260 to &alpha;D235, K495. **D**: Intersubunit interaction between glycans from &beta;N207 (red) and &gamma;N271 (magenta). In both C and D, the solid surface is a gaussian-blurred version of the sharp human CKO digitonin map (mesh).](figures/intersubunit-glyc/intersub-glyc.png){#fig-intersub-glyc}
+ 
+ The intersubunit glycans stretch from one subunit to another (@fig-intersub-glyc A).
+ I am able to model long chains for these glycans, with some maps supporting up to nine monosaccharides.
+@@ -136,6 +140,7 @@ The maps are otherwise perfectly superimposable, with unchanged ECDs and TMDs.
+ Loss of density for only the &gamma; GRIP domain is surprising but not entirely unexpected &mdash; channels lacking the &gamma; subunit or specific lysine residues in the &gamma; ECD are not activated by trypsin[@diakov2008].
+ It is therefore possible that while the &alpha; GRIP domain is cleaved, it is not directly involved in trypsin-mediated channel activation.
+ Based on biochemical data, I speculate that the &alpha; GRIP domain is also cleaved by trypsin, but the GRIP domain is still clearly visible in our cryoEM maps.
++This could be the result of non-covalent interactions between the &alpha; GRIP domain and the &alpha; finger and thumb.
+ In any case, a lack of any observable channel rearrangement upon removal of the &gamma; inhibitory peptide (a state in which ENaC's P~O~ approaches 0.9) must lead us to a deeper consideration of ENaC gating[@bruns07].
+ 
+ Although the best-studied mechanism of ENaC opening is GRIP proteolysis, multiple studies have found other stimuli which open the channel, including laminar shear stress and phospholipids (see @sec-intro_direct-reg for more detail).
+@@ -157,8 +162,10 @@ Mutations in linkers between the TMD and ECD of other channels have dramatic eff
+ I suspect that the ENaC ECD requires a fully-assembled six-TM pore region to respond to GRIP domain excision, but such a conclusion would require deeper investigation.
+ A TMD/ECD decoupling would also explain the lack of ECD shift with the introduction of the DEG mutation, which has been shown to hold the channel in an open state, and for which I see dramatic TMD restructuring but no change in the ECD[@snyder2000].
+ 
+-ENaC does not seem amenable to the standard means of membrane protein purification.
+-It is possible that finding a more-stable ortholog would improve the quality of the TMD, as our mouse maps have significantly better TMD density than our human maps.
++I speculate, based on these results, that the structures of both human and mouse ENaC are deeply dependent on some input from the membrane.
++We know that ENaC requires PIP~2~ to open, and is opened when bound by PIP~3~ regardless of cleavage state (@sec-intro-phospholipids).
++It would not be entirely surprising, then, if other membrane features inform ENaC's folding state.
++It is possible that finding a more-stable ortholog, or one with a gating mechanism less dependent on membrane lipids, would improve the quality of the TMD, as our mouse maps have significantly better TMD density than our human maps.
+ 
+ ### A role for the &beta;9-&alpha;4 linker in gating
+ 
+@@ -177,7 +184,7 @@ In light of the important role this loop plays in FaNaC gating, and the conserve
+ ### The acidic pocket's uncertain role in sodium self-inhibition
+ 
+ Previous reports suggested that rearrangement of an acidic pocket in the &alpha; finger plays a key role in SSI[@kashlan2015].
+-It is therefore highly surprising that this pocket does not change upon release of Na^+^.
++Our K^+^ maps are solved in the presence of sodium levels far below those known to release SSI, but the acidic pocket does not rearrange.
+ However, there are species differences in ENaC SSI, and the functional work describing this acidic pocket was all performed on mouse ENaC, while our high- and low-Na^+^ models are both of human ENaC[@collier2009; @kashlan2015; @maarouf2009].
+ 
+ In human (but not rat) ENaC, pH titration changes the magnitude of SSI but, crucially, not the K~i~ of Na^+^; a surprising result if surface-accessible acidic residues form the SSI Na^+^-binding site.
+
+==============================
+===== ./parts/results/results_transmembrane-domain.qmd =====
+==============================
+
+diff --git a/parts/results/results_transmembrane-domain.qmd b/parts/results/results_transmembrane-domain.qmd
+index 4c762c8..5e12ac0 100644
+--- a/parts/results/results_transmembrane-domain.qmd
++++ b/parts/results/results_transmembrane-domain.qmd
+@@ -16,6 +16,83 @@ We must conclude that the TMD of my maps is significantly disrupted, and analysi
+ I reproduce them in the first section of this chapter in case they are ever of interest.
+ Perhaps of more value will be the following sections in which I cover experiments that produced no valuable results so that future researchers do not retread the same ground.
+ 
++## Constructs
++
++To tackle the problem of the ENaC TMD, I solved the structure of six different combinations of condition and construct.
++These conditions are summarized in @tbl-human-constructs, but I will present them in greater detail here, along with their models.
++In addition to the mutations I discuss here, all human constructs had the canonical furin sites knocked out: &alpha;R178A, R204A and &gamma;R138A.
++It was our hope that knocking out furin sites would lead to a more defined ECD composition by preventing our expression system from cleaving the ECD.
++
++It is important to note that the described mutations were only applied to the human constructs we discuss.
++All mouse models are wild-type (with the exception of a few residues left from cleavage of GFP off the &gamma; subunit).
++
++### Cysteine Knock-Out
++
++![The CKO model.](figures/constructs/cko.png){#fig-results_cko}
++
++The cysteine knock-out (CKO) mutant had four C&rarr;A mutations: &alpha;C63A, &beta;C30A, and &gamma;C33A,C41A (@fig-results_cko).
++We mutated these positions because some (but not all) intracellular cysteine residues are known to be palmitoylated [@mukherjee14; @mueller10; @mueller12].
++
++We wondered if previous difficulty in solving the structure of the TMD may have been the result of aberrant palmitoylation, given that ENaC in our expression system exists at far higher concentration than would exist in a typical cell.
++CKO mutants did indeed express at higher levels than WT, and their peaks on SEC appeared more homogeneous.
++
++### DEG
++
++![The CKO/DEG model.](figures/constructs/cd-difab.png){#fig-results_cd-difab}
++
++The DEG mutation replaces serine 520 in human ENaC with the equivalent lysine from *C. elegans*'s DEG channel.
++This mutation keeps the channel in an open state regardless of whether the GRIP domain is cleaved or not [@snyder2000].
++In channels to which we apply the DEG mutation, we also apply a mutation in the GRIP domain which reduces the affinity of the channel for its inhibitory  peptide, &alpha;T240W [@kashlan2010].
++
++The DEG and GRIP mutations were applied to a background of human CKO channels.
++We thus call these channels, which we expect to be constitutively open, CKO/DEG channels (@fig-results_cd-difab).
++
++### Acid-shock
++
++For two maps (CKO digitonin and CKO/DEG difab), I briefly "shocked" the material by desalting it into a pH 6.0 solution (as opposed to our typical purification pH of 7.4).
++I did this to test if poorly-folded material from internal membranes might be more susceptible to cashing out in less-favored conditions.
++I did not end up detecting any difference in either the final yield, the yield before and after acid-shock, or the map quality.
++I therefore discontinued this practice after these two maps.
++
++### PIP~2~
++
++![The CKO/DEG monofab PIP~2~ model.](figures/constructs/cd-monofab.png){#fig-results_cd-monofab}
++
++As discussed in @sec-intro-phospholipids, ENaC requires PIP~2~ to open.
++I thus added 1&nbsp;mM C8 PIP~2~ to the CKO/DEG monofab samples just before grid preparation (@fig-results_cd-monofab).
++I did not notice any difference in TMD quality or conformation compared with the CKO/DEG difab map (which did not have PIP~2~ added), and so did not add the lipid to any other preparations in this work.
++
++### Nanodiscs
++
++![The CKO nanodisc model. Note that I was not able to resolve any features in the TMD.](figures/constructs/cko-nd.png){#fig-results_cko-nd}
++
++ENaC seems to interact significantly with the membrane (@sec-intro-membrane).
++I thus wondered if making grids with protein in lipids, as opposed to detergent, might improve the map quality.
++I thus solved a map of CKO protein in nanodiscs composed of POPC to test this hypothesis (@fig-results_cko-nd).
++
++This map had the worst TMD density of any of the conditions I tested.
++My nanodisc prep had very low yields (approximately 5%), and so there may be some issue that causes the material to unfold during nanodisc reconstitution.
++Another possibility is that the nanodisc is more ordered than a micelle, and so dominates the alignment of the TMD, blurring out TM helices.
++
++It is possible that other lipid combinations or reconstitution pipelines might improve results.
++This could be a promising avenue for future research, but I did not pursue that here.
++
++We had also been concerned that our use of Fabs might make it difficult or impossible to align our particles to the TMD, or that they may be changing the conformation of the ECD in some way.
++This protein preparation therefore did not include either of the fabs we use to break pseudosymmetry.
++Using the extensive ECD glycosylation I was still able to break pseudosymmetry, but did not detect any differences with and without Fabs (discussed more in @sec-results_ecd).
++
++### Mouse ENaC and trypsin
++
++![The models of uncleaved (left) and trypsin-treated (right) mouse ENaC.](figures/constructs/mouse.png){#fig-results_mouse}
++
++Finally, I investigated another homologue, mouse ENaC (@fig-results_mouse).
++Like human ENaC, mouse ENaC is an &alpha;&beta;&gamma; heterotrimer.
++This material was treated in largely the same way as human ENaC, and the results are presented together.
++
++I treated one of the two mouse maps presented here with trypsin.
++We expected this to induce a conformational change from the closed to open states, but did not see any significant difference in the ECD or TMD.
++This is discussed further in @sec-results_ecd.
++
+ ## The TMD is misfolded
+ 
+ Our previous structural work was focused on wild-type-like channels, with undefined gating states [@noreng20].
+@@ -47,19 +124,22 @@ I will cover my work on developing functional assays here, since they would be m
+ For the most part, I worked on two functional assays: the scintillation proximity assay (SPA) and the flux assay.
+ Much of the work I present on SPA was performed alongside Alex Houser and especially James Cahill.
+ 
+-### The scintillation proximity assay does not show promise for ENaC/DEG family members
++### The scintillation proximity assay does not show promise for ENaC/DEG family members {#sec-results_spa}
+ 
+ ```{r}
+ #| echo: false
+ #| warning: false
+ #| message: false
+-#| column: margin
+ #| label: fig-spa-example
+ #| fig-cap: An example of SPA, in this case of CKO/DEG nanodiscs. Note that although the background counts have been subtracted, the relationship between ligand and counts is still linear.
+ library(tidyverse)
++library(showtext)
+ 
+-data <- read_csv("figures/spa/Exp144_processed-data.csv")
++font_add_google("Montserrat")
++
++showtext_auto()
+ 
++data <- read_csv("figures/spa/Exp144_processed-data.csv")
+ data %>%
+     mutate(timepoint = case_when(
+         Time == min(Time) ~ "Early",
+@@ -72,7 +152,13 @@ data %>%
+         timepoint == "Early"
+     ) %>%
+     ggplot(aes(x = Benz, y = mean)) +
+-    theme_minimal(base_size = 24) +
++    theme_minimal(
++        base_family = "Montserrat",
++        base_size = 18
++    ) +
++    theme(
++        panel.grid.minor = element_blank()
++    ) +
+     scale_x_log10(
+         breaks = c(1e-10, 1e-9, 1e-8, 1e-7, 1e-6, 1e-5, 1e-4),
+         labels = scales::trans_format("log10", scales::math_format(10^.x))
+@@ -82,7 +168,12 @@ data %>%
+         labels = scales::trans_format("log10", scales::math_format(10^.x))
+     ) +
+     annotation_logticks(sides = "bl") +
+-    theme(panel.grid.minor = element_blank()) +
++    geom_smooth(
++        se = FALSE,
++        method = "lm",
++        color = "#D2D2D2",
++        linetype = "dashed"
++    ) +
+     geom_errorbar(aes(ymin = lower, ymax = upper), width = 0.05) +
+     geom_point() +
+     labs(
+@@ -98,7 +189,6 @@ If the ligand binds the protein, it is close enough to the beads that the &beta;
+ These counts can be taken as a measurement of binding affinity.
+ Some argue that measuring affinity for a pore-binding ligand is a proxy for measuring proper folding of the pore [@quick2007].
+ 
+-I won't cover in detail all the forms of SPA I attempted; none of the various optimizations or tweaks made any real difference in detectable ligand binding (@fig-spa-example).
+ Our main issue was non-specific binding.
+ We could never measure the non-specific binding in its entirety, and so any signal that may potentially have been present was swamped out in noise.
+ Changing from detergent sample to nanodiscs did not improve signal.
+@@ -162,7 +252,7 @@ Of course, all of the TMD maps to date are very low-resolution.
+ Although I am confident in my TM assignments, it is possible that the wrong TM identity has been assigned to some of the densities.
+ Hopefully future, higher-resolution maps of the TMD will settle the matter.
+ 
+-### Cysteine knock-out mutations should be abandoned
++### Cysteine knock-out mutations should be abandoned {#sec-tmd_abandon-cko}
+ 
+ The CKO mutations do increase ENaC yield, but their theoretical underpinning is not sound at all.[Recall that CKO channels have the following mutations in addition to protease site knockouts: &alpha;C63A, &beta;C30A, and &gamma;C33,41A]{.aside}
+ Channels with either one of &gamma;C33A and/or &gamma;C41A exhibit reduced P~O~ and increased SSI compared with wild type despite no change in surface expression [@mukherjee14].
+
+==============================
+===== ./parts/introduction.qmd =====
+==============================
+
+
+==============================
+===== ./parts/references.qmd =====
+==============================
+
+
+==============================
+===== ./parts/conclusion/conclusion-doc.qmd =====
+==============================
+
+diff --git a/parts/conclusion/conclusion-doc.qmd b/parts/conclusion/conclusion-doc.qmd
+index 0d7d27b..d8205e8 100644
+--- a/parts/conclusion/conclusion-doc.qmd
++++ b/parts/conclusion/conclusion-doc.qmd
+@@ -7,7 +7,7 @@ Despite its importance, little is known about the exact molecular mechanism by w
+ 
+ Unlike ENaC, a great deal of structure/function information is available for the close relative ASIC.
+ It is understandable, then, that the field has long assumed the mechanisms of these two channels are similar.
+-In the "ASIC-like" model, the GRIP domain forms a wedge holds the finger and thumb apart.
++In the "ASIC-like" model, the GRIP domain forms a wedge which holds the finger and thumb apart.
+ Proteolytic release of this wedge allows the finger and thumb to collapse.
+ This collapse is transmitted through the palm to open a fenestration near the membrane, allowing ions to pour through the pore.
+ Mutations in the ENaC palm have large effects on current in a pattern similar to that of ASIC [@chen2013; @yoder2018; @zhang2022].
+@@ -24,11 +24,11 @@ In currently-available structures this acidic residue does not form hydrogen bon
+ 
+ ENaC currents do diminish over time in the presence of high external sodium in a process called sodium self-inhibition (SSI).
+ SSI is independent from Na^+^ currents and is relieved by proteolytic cleavage [@chraibi2002; @sheng06].
+-SSI seems to large-scale rearrangement of the ECD, unlike ASIC desensitization [@zhang2023].
+-Mutagenesis and cross-linking studies suggest that an acidic pocket comprising the finger, and &beta;-ball bind Na^+^ to close the channel [@kashlan2015; @bize07; @maarouf2009].
++SSI seems to induce a large-scale rearrangement of the ECD, unlike ASIC desensitization [@zhang2023].
++Mutagenesis and cross-linking studies suggest that an acidic pocket comprising the finger and &beta;-ball bind Na^+^ to close the channel [@kashlan2015; @bize07; @maarouf2009].
+ 
+ The precise relationship between ENaC and ASIC's gating is, if anything, less clear as a result of the work presented in this document.
+-With the highest resolution yet, detect a clear lack of movement when large-scale rearrangements are expected.
++With the highest resolution yet, we detect a clear lack of movement when large-scale rearrangements are expected.
+ In the remaining space afforded to me, I will remind the reader what we've learned and wonder what it might mean for the field moving forward.
+ 
+ ## Contrition and Contemplation
+@@ -92,12 +92,62 @@ Not everyone likes structure &mdash; that's okay, there's something here for you
+ I have identified several glycans which, based on their extended visibility in my maps, may serve a structural role.
+ We also know, as covered in @sec-intro_mechano, that glycans are necessary for sensation of laminar shear stress.
+ Electrophysiological studies of ENaCs with single asparagine mutations have not been performed by any lab, to my knowledge.
+-Using my maps as a guide, it may be fruitful to investigate the sensitivity of ENaCs lacking the most visible (and, therefore, most stable) glycans to LSS.
++Using my maps as a guide, it may be fruitful to investigate the sensitivity of ENaCs lacking the most visible (presumably the most structurally constrained) glycans to LSS.
+ 
+ Additionally, the FaNaC paper raises an interesting question: is the bulky residue in the &beta;9-&alpha;4 linker necessary for proper gating?
+ Conservation of the surrounding residues and an adjacent *cis*-proline would suggest so.
+ An investigation of this loop is interesting whether the channels can gate or not &mdash; the best kind of experiment.
+ 
++## Conjecture
++
++What do I think should be done next, if I'm so smart?
++
++### We need a functional assay
++
++Why doesn't our channel seem to undergo structural changes when it's sodium self-inhibited?
++Why can't we see our TMD?
++Why doesn't the GRIP domain release from the ECD when it's cleaved?
++All of these questions and more are essentially unanswerable without knowing *whether our channels are functional in the first place*.
++All of the mysterious observations from my work are fully satisfied by the conjecture that *we're looking at misfolded garbage*.
++
++As such, my first priority moving forward would be the development and implementation of a functional assay.
++As I discussed in @sec-graveyard_spa, the SPA assay shows no sign of working any time soon, and isn't even truly a functional assay.
++
++The sodium flux assay is, on the other hand, already halfway to usefulness.
++Using a known-good ion channel (ASIC comes to mind, but any sodium-specific ion channel will do) would help push it to completion by isolating the "protein is good" variable from the "assay works" variable.
++With more confidence in the fact that our purified material has some bearing on what is present in the cells, we can move back to structural study.
++
++### Find a better construct for the TMD
++
++As discussed in @sec-tmd_abandon-cko, the CKO and DEG mutations should both be abandoned.
++They never made sense in the first place, and they did not accomplish their stated goals of stabilizing the TMD and holding the TMD and ECD in open states, respectively.
++Returning to a wild-type-like construct will make our results more interpretable.
++
++To find a satisfactory gene for further study, we should first perform thermo-FSEC assays on a wide range of ENaC orthologs[In this context, a thermo-FSEC assay is the typical FSEC assessment of particle homogeneity with the added step of heating a sample from 4 through 90&nbsp;&deg;C. Essentially, measuring peak height degradation with increasing temperature is used as a proxy for temperature stability.]{.aside}.
++Thermal stability, like SPA, is not an assay for function.
++It is, however, high-throughput, and channels which are stable are more likely to remain functional once purified.
++
++I would then take the most-stable 10% of these constructs and perform whatever functional assay we end up developing on all of them.
++Any gene with significant flux could be screened using the same cryoEM concentrations and grid parameters I've determined in this work.
++We thus know we'd be starting with the most functional, most stable material we can find, rather than picking genes at essentially random as was done previously.
++Any promising maps could have their purification and grid parameters refined while simultaneously performing proper electrophysiological studies to ensure selectivity and currents are within reason.
++
++One potential objection to this method is that we do not know whether our symmetry-breaking Fabs will bind to all forms of ENaC.
++My response is two-fold.
++First, it is easy to determine this during the high-throughput thermo-FSEC experiments by adding a condition with Fabs and looking for a shift.
++Second, my Fab-less nanodisc dataset demonstrates that &lt;&nbsp;3&nbsp;&Aring; maps can be achieved without the use of Fabs.
++
++Moreover, solving maps just to solve maps is pointless.
++Fabs bind tightly and predictably to human and mouse ENaC, and look where that got us.
++
++### There are other interesting regions of the channel
++
++I think it was a mistake for me to focus exclusively on the TMD.
++Instead, there are exciting mutations in the ECD with described functional consequences that we already have map.
++For instance, mutation of a disulfide in the &alpha; subunit palm (&alpha;C479) results in Liddle syndrome, and we have high-quality map density for both halves of this disulfide (@fig-conclusion_disulfide).
++
++![The human CKO/DEG map surrounding the disulfide between &alpha;C479 and &alpha;C394.](figures/disulfide.png){#fig-conclusion_disulfide}
++
+ ## Conclusion
+ 
+ After six years of work, I'm left with more questions than I had at the start.
+===== DONE =====
