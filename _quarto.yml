@@ -46,6 +46,7 @@ book:
   downloads:
     - pdf
     - docx
+    - epub
   output-file: posert-dissertation
 
 csl: cell.csl
