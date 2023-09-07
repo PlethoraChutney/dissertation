@@ -4,6 +4,51 @@ In this chapter I begin with an overview of ENaC electrophysiology.
 From there, I move into a discussion of current knowledge about ENaC's structure/function relationships.
 Finally, I provide a brief overview of proteins which directly modify ENaC's electrophysiological properties (rather than expression levels, which are covered in @sec-regulation).
 
+## ASIC
+
+ENaC is a member of the ENaC/DEG superfamily of sodium-selective ion channels.
+These ion channels share a common ancestor as far back as Cnidaria and, as their long evolutionary history might imply, fill a wide variety of roles in the organisms that express them [@aguilar-camacho2023].
+The structures of ENaC/DEG family members solved so far also hold to a common topology: the ion channels are trimeric, with large extracellular domains, two transmembrane helices per subunit, and short intracellular tails.
+
+The member of this family of which we have the greatest structural understanding is the acid-sensing ion channel (ASIC).
+All of the gating states of this channel have been solved, and a great deal is known about its gating mechanism and the conformational changes associated with channel opening, desensitization, and closing.
+Since existing functional study of ENaC suggests similar conformational changes, most researchers assume that the conformational changes associated with ENaC's gating mechanism will be similar.
+In this section I provide the reader with a brief introduction to ASIC and important similarities and differences between it and ENaC.
+
+The ASICs are themselves a family of ion channels, and the properties of each channel differ slightly from the others.
+There is also evidence that different ASIC proteins can form heterotrimeric ASIC channels.
+However, the only ASIC for which we have structural information is ASIC1a, and so I refer to that channel as ASIC for the rest of this document.
+I will explicitly refer to the ASIC family as necessary.
+
+### Gating
+
+![An overview of ASIC's gating mechanism. The channel starts in a resting state (top), with a de-protonated acidic pocket. This conformation holds the finger and thumb apart. When a proton bonds, the channel enters the open state (bottom right). Collapse of the finger and thumb causes conformational shifts of the palm and TMD, opening the fenestration and allowing the channel to pass current. The channel rapidly desensitizes (bottom left). The palm and TMD return to a closed conformation, while the finger and thumb remain protonated and in the same conformation as the open state.](figures/asic-mech/asic-mechanism.png){#fig-intro_asic-mechanism}
+
+ASIC's gating cycle involves three states: resting, open, and desensitized (@fig-intro_asic-mechanism).
+ASIC opens when its extracellular domain is exposed to acidic solution, with a half-maximum activation at pH 5.8 [@hesselager2004].
+This peak current then desensitizes with a time constant of 0.64 &mdash; a marked difference from ENaC currents, which do not desensitize.
+
+![ASIC's acidic pocket. Protonation of the acidic pocket collapses the finger and thumb, which propagates to an opening of the fenestration. **Left**: an overview of ASIC, with the acidic pocket highlighted. **Right**: a stereo view comparison of the acidic pocket between resting (grey, 5WKV) and open (white, 4NTW) states. Note that, once protonated, Asp 238 moves 7&nbsp;&Aring; to form interactions with the thumb.](figures/acidic-pocket-residues/acidic-pocket-residues.png){#fig-intro_asic-acidic-pocket}
+
+Protons open the channel by binding an acidic pocket located between the finger, thumb, and &beta;-ball domains (@fig-intro_asic-acidic-pocket).
+Binding of protons to titratable residues in this pocket result in the collapse of the finger and thumb.
+This collapse is in turn propagated through the thumb and palm to the TMD, which rotates and translates about the pore axis (@fig-intro_asic-mech-distances).
+This movement opens a fenestration just above the cell membrane, through which ions enter the pore (@fig-intro_asic-fenestration).
+
+![A diagram of ASIC's gating conformational changes. When resting ASIC (grey)are protonated (white), the finger and thumb collapse (right). This movement is coordinated with the movement of the lower palm and TMD away from the pore axis, which opens the extracellular fenestration (left).](figures/asic-mech-distances/asic-mech-distances.png){#fig-intro_asic-mech-distances}
+
+![The fenestration in ASIC. Membrane is for illustration purposes only and is not based on actual structural data. PDB: 4NTW.](figures/asic-fenestration/asic-fenestration.png){#fig-intro_asic-fenestration}
+
+The pore is lined by the second transmembrane helix from each subunit.
+Approximately two-thirds of the way down the pore, the helix breaks and short loop connects a domain swap to the adjacent TM2 helix (@fig-intro_asic-gas-belt).
+This loop, called the GAS belt due to its one-letter code sequence, forms the selectivity filter of ASIC.
+
+![The GAS belt of ASIC. **Left**: an overview of ASIC highlighting the domain swap. The three subunits are identical, but colored in shades of grey for clarity. **Right**: the GAS belt viewed from the extracellular side. Note that the alanine side chain points away from the pore. Only the final residue for the TM2 helix before the swap is shown to improve visibility of the GAS belt, but observe that the swapped TM2 helix continues the same trajectory as the upper half.](figures/asic-gas-belt/asic-gas-belt.png){#fig-intro_asic-gas-belt}
+
+Unlike ENaC, ASIC desensitizes.
+Rapidly upon opening, a short loop in ASIC's palm flips to a desensitized conformation, which decouples the ECD and TMD.
+Thus, the ECD remains proton-bound and open, while the TMD returns to a closed conformation and obstructs the fenestration, preventing ions from passing through.
+
 ## ENaC Electrophysiology
 
 ENaC currents are characterized by high Na^+^/K^+^ selectivity, high affinity for amiloride, and a desensitization-like process called sodium self-inhibition (SSI).
@@ -17,9 +62,7 @@ ENaC is highly selective for Na^+^ over K^+^, with an estimated I~Na^+^~/I~K^+^~
 The precise number depends on the study, since potassium currents through ENaC are often difficult to detect at all.
 ENaC does not pass appreciable H^+^ currents until the extracellular solution reaches a pH of 5 or lower [@palmer1984].
 
-![The fenestration in ASIC. Membrane is for illustration purposes only and is not based on actual structural data. PDB: 4NTW.](figures/asic-fenestration/asic-fenestration.png){#fig-intro_asic-fenestration}
-
-Ions enter the channel through a fenestration just outside the membrane and travel down a pore formed by the second transmembrane helices of all three subunits (@fig-intro_asic-fenestration) [@kellenberger1999a; @li2003].
+Ions enter the channel through a fenestration just outside the membrane and travel down a pore formed by the second transmembrane helices of all three subunits, just as in ASIC [@kellenberger1999a; @li2003].
 As discussed further in @sec-intro_conduction-tmd, ENaC's selectivity filter is composed of a triplet of residues in a domain-swapping loop between adjacent transmembrane helices.
 Based on structures of related channels, this domain swap is expected to occur approximately halfway through the membrane [@baconguis2014].
 The third residue of the &alpha; loop (a serine) plays an outsize role in determining channel selectivity [@kellenberger2001].
@@ -149,8 +192,6 @@ Based on this similar architecture and a slew of cross linking studies, it is th
 Indeed, the Kleyman laboratory has identified short segments of the GRIP domain (eight and eleven amino acids in &alpha; and &gamma;ENaC, respectively) which, when flowed over open channels, close them (@fig-intro_inhib-peptide) [@carattino2008; @kashlan2010; @passero2010].[The &alpha; peptide is LPHPLQRL, and RFSHRIPLLIF that of the &gamma; subunit.]{.aside}
 These peptides are part of the P1 strand of the GRIP domain and pack tightly against the remaining GRIP domain, &alpha;2 of the finger domain, and the upper edge of the thumb.
 
-![A diagram of ASIC's gating conformational changes. When resting ASIC (grey)are protonated (white), the finger and thumb collapse (right). This movement is coordinated with the movement of the lower palm and TMD away from the pore axis, which opens the extracellular fenestration (left).](figures/asic-mech-distances/asic-mech-distances.png){#fig-intro_asic-mech-distances}
-
 We have hypothesized that cleavage and subsequent removal of the P3 strand releases P1 and, therefore, decouples the finger and thumb [@noreng20].
 From here, we and others have assumed that the gating mechanism is more-or-less that of ASIC: the finger and thumb collapse, and their movement pulls the palm and TMD away from the pore axis (@fig-intro_asic-mech-distances).
 However, without a map and model of the open and closed channels, we cannot rule out other mechanisms.
@@ -172,8 +213,6 @@ ASIC and ENaC both have bulky residues (tryptophan and tyrosine, respectively) i
 
 No map  of ENaC has reliable density for the transmembrane domain.
 Nevertheless, we can infer a great deal from electrophysiological studies of ENaC and maps of other members of the ENaC/DEG family, mostly the well-studied ASIC.
-
-![ASIC mechanism, adapted from Yoder [@yoder2018].](figures/asic-mech/asic-mechanism.png){#fig-intro_asic-mechanism}
 
 ASIC's gating cycle comprises three states: resting, open, and desensitized (@fig-intro_asic-mechanism).
 The pore of the first solved structure of ASIC was asymmetric, but this truncated crystallization construct did not conduct sodium currents [@jasti07].
